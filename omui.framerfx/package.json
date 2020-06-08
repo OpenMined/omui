@@ -1,14 +1,15 @@
 {
-  "main": "dist/index.js",
+  "name": "omui-framer",
+  "description": "The OpenMined UI component system for usage in Framer",
   "author": "Patrick Cason <patrick@openmined.org>",
   "license": "Apache-2.0",
   "version": "0.1.0",
+  "main": "dist/index.js",
   "framer": {
     "id": "8330ea85-82f3-4763-af9e-52b7acd6741d"
   },
   "dependencies": {
-    "@framer/framer.default": "^1.71.0",
-    "styled-components": "5.1.1"
+    "@framer/framer.default": "^1.71.0"
   },
   "devDependencies": {
     "@types/react": "^16.8"

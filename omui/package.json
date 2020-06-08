@@ -1,0 +1,25 @@
+{
+  "name": "omui",
+  "description": "The OpenMined UI component system for usage in all our web applications",
+  "author": "Patrick Cason <patrick@openmined.org>",
+  "license": "Apache-2.0",
+  "version": "0.1.0",
+  "keywords": [
+    "design system",
+    "framer",
+    "omui",
+    "openmined",
+    "ui"
+  ],
+  "main": "index.tsx",
+  "dependencies": {
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "styled-components": "5.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "typescript": "^3.9.5"
+  }
+}
