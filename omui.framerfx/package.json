@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@framer/framer.default": "^1.71.0",
-    "styled-components": "^4.2.0"
+    "styled-components": "5.1.1"
   },
   "devDependencies": {
     "@types/react": "^16.8"
