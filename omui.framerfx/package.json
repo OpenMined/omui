@@ -1,0 +1,21 @@
+{
+  "main": "dist/index.js",
+  "license": "Apache-2.0",
+  "version": "1.0.0",
+  "framer": {
+    "id": "37243b65-3683-4b7d-b8b4-411332abc379"
+  },
+  "dependencies": {
+    "@framer/framer.default": "^1.71.0",
+    "styled-components": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8",
+    "framer": "^1.0"
+  },
+  "peerDependencies": {
+    "framer": "^1.0",
+    "react": "^16.8",
+    "react-dom": "^16.8"
+  }
+}
