@@ -1,17 +1,17 @@
 {
   "main": "dist/index.js",
+  "author": "Patrick Cason <patrick@openmined.org>",
   "license": "Apache-2.0",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "framer": {
-    "id": "37243b65-3683-4b7d-b8b4-411332abc379"
+    "id": "8330ea85-82f3-4763-af9e-52b7acd6741d"
   },
   "dependencies": {
     "@framer/framer.default": "^1.71.0",
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
-    "@types/react": "^16.8",
-    "framer": "^1.0"
+    "@types/react": "^16.8"
   },
   "peerDependencies": {
     "framer": "^1.0",

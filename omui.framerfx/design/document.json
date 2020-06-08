@@ -17,32 +17,25 @@
             "bottom" : null,
             "centerAnchorX" : 0.5,
             "centerAnchorY" : 0.5,
-            "children" : [
-
-            ],
             "clip" : true,
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
+            "codeComponentPackageVersion" : null,
             "codeComponentProps" : {
               "disabled" : false,
               "fluid" : true,
+              "kind" : "default",
               "text" : "Download App"
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
-            "deviceType" : null,
+            "duplicatedFrom" : null,
             "exportOptions" : [
 
             ],
             "fillColor" : "rgba(255,255,255,1)",
             "fillEnabled" : false,
-            "fillGradient" : {
-              "__class" : "LinearGradient",
-              "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
-            },
             "fillImage" : null,
+            "fillImageOriginalName" : null,
             "fillImagePixelHeight" : null,
             "fillImagePixelWidth" : null,
             "fillImageResize" : "fill",
@@ -66,6 +59,7 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
+            "replicaInfo" : null,
             "right" : 25,
             "rotation" : 0,
             "top" : null,
@@ -77,24 +71,42 @@
         "clip" : true,
         "codeOverrideEnabled" : false,
         "constraintsLocked" : false,
-        "deviceType" : null,
+        "duplicatedFrom" : null,
         "exportOptions" : [
 
         ],
         "fillColor" : "white",
         "fillEnabled" : true,
-        "fillGradient" : {
-          "__class" : "LinearGradient",
-          "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
-        },
         "fillImage" : null,
+        "fillImageOriginalName" : null,
         "fillImagePixelHeight" : null,
         "fillImagePixelWidth" : null,
         "fillImageResize" : "fill",
+        "fillLinearGradient" : {
+          "__class" : "LinearGradient",
+          "alpha" : 1,
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
+        },
         "fillType" : "color",
+        "framePreset" : null,
+        "guidesX" : [
+
+        ],
+        "guidesY" : [
+
+        ],
         "height" : 200,
         "heightType" : 0,
         "id" : "OM40QZetW",
@@ -106,10 +118,6 @@
         "left" : -153,
         "locked" : false,
         "name" : "Button",
-        "navigationTarget" : null,
-        "navigationTransition" : "push",
-        "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
-        "navigationTransitionDirection" : "left",
         "opacity" : 1,
         "originalid" : null,
         "parentid" : "iEDNh42Sf",
@@ -144,11 +152,9 @@
             "bottom" : null,
             "centerAnchorX" : 0.5,
             "centerAnchorY" : 0.5,
-            "children" : [
-
-            ],
             "clip" : true,
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
+            "codeComponentPackageVersion" : null,
             "codeComponentProps" : {
               "disabled" : false,
               "fluid" : true,
@@ -157,20 +163,14 @@
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
-            "deviceType" : null,
+            "duplicatedFrom" : null,
             "exportOptions" : [
 
             ],
             "fillColor" : "rgba(255,255,255,1)",
             "fillEnabled" : false,
-            "fillGradient" : {
-              "__class" : "LinearGradient",
-              "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
-            },
             "fillImage" : null,
+            "fillImageOriginalName" : null,
             "fillImagePixelHeight" : null,
             "fillImagePixelWidth" : null,
             "fillImageResize" : "fill",
@@ -194,6 +194,7 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
+            "replicaInfo" : null,
             "right" : 25,
             "rotation" : 0,
             "top" : null,
@@ -205,24 +206,42 @@
         "clip" : true,
         "codeOverrideEnabled" : false,
         "constraintsLocked" : false,
-        "deviceType" : null,
+        "duplicatedFrom" : null,
         "exportOptions" : [
 
         ],
         "fillColor" : "white",
         "fillEnabled" : true,
-        "fillGradient" : {
-          "__class" : "LinearGradient",
-          "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
-        },
         "fillImage" : null,
+        "fillImageOriginalName" : null,
         "fillImagePixelHeight" : null,
         "fillImagePixelWidth" : null,
         "fillImageResize" : "fill",
+        "fillLinearGradient" : {
+          "__class" : "LinearGradient",
+          "alpha" : 1,
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
+        },
         "fillType" : "color",
+        "framePreset" : null,
+        "guidesX" : [
+
+        ],
+        "guidesY" : [
+
+        ],
         "height" : 200,
         "heightType" : 0,
         "id" : "H3W3wB7VB",
@@ -234,10 +253,6 @@
         "left" : 48,
         "locked" : false,
         "name" : "Button Primary",
-        "navigationTarget" : null,
-        "navigationTransition" : "push",
-        "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
-        "navigationTransitionDirection" : "left",
         "opacity" : 1,
         "originalid" : null,
         "parentid" : "iEDNh42Sf",
@@ -279,11 +294,9 @@
             "bottom" : null,
             "centerAnchorX" : 0.5,
             "centerAnchorY" : 0.5,
-            "children" : [
-
-            ],
             "clip" : true,
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
+            "codeComponentPackageVersion" : null,
             "codeComponentProps" : {
               "disabled" : false,
               "fluid" : true,
@@ -292,20 +305,14 @@
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
-            "deviceType" : null,
+            "duplicatedFrom" : null,
             "exportOptions" : [
 
             ],
             "fillColor" : "rgba(255,255,255,1)",
             "fillEnabled" : false,
-            "fillGradient" : {
-              "__class" : "LinearGradient",
-              "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
-            },
             "fillImage" : null,
+            "fillImageOriginalName" : null,
             "fillImagePixelHeight" : null,
             "fillImagePixelWidth" : null,
             "fillImageResize" : "fill",
@@ -329,6 +336,7 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
+            "replicaInfo" : null,
             "right" : 25,
             "rotation" : 0,
             "top" : null,
@@ -340,24 +348,42 @@
         "clip" : true,
         "codeOverrideEnabled" : false,
         "constraintsLocked" : false,
-        "deviceType" : null,
+        "duplicatedFrom" : null,
         "exportOptions" : [
 
         ],
         "fillColor" : "white",
         "fillEnabled" : true,
-        "fillGradient" : {
-          "__class" : "LinearGradient",
-          "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
-        },
         "fillImage" : null,
+        "fillImageOriginalName" : null,
         "fillImagePixelHeight" : null,
         "fillImagePixelWidth" : null,
         "fillImageResize" : "fill",
+        "fillLinearGradient" : {
+          "__class" : "LinearGradient",
+          "alpha" : 1,
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
+        },
         "fillType" : "color",
+        "framePreset" : null,
+        "guidesX" : [
+
+        ],
+        "guidesY" : [
+
+        ],
         "height" : 200,
         "heightType" : 0,
         "id" : "YPzY2MZ7I",
@@ -369,10 +395,6 @@
         "left" : 249,
         "locked" : false,
         "name" : "Button Danger",
-        "navigationTarget" : null,
-        "navigationTransition" : "push",
-        "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
-        "navigationTransitionDirection" : "left",
         "opacity" : 1,
         "originalid" : null,
         "parentid" : "iEDNh42Sf",
@@ -407,32 +429,25 @@
             "bottom" : null,
             "centerAnchorX" : 0.5,
             "centerAnchorY" : 0.5,
-            "children" : [
-
-            ],
             "clip" : true,
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
+            "codeComponentPackageVersion" : null,
             "codeComponentProps" : {
               "disabled" : true,
               "fluid" : true,
+              "kind" : "default",
               "text" : "Download App"
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
-            "deviceType" : null,
+            "duplicatedFrom" : null,
             "exportOptions" : [
 
             ],
             "fillColor" : "rgba(255,255,255,1)",
             "fillEnabled" : false,
-            "fillGradient" : {
-              "__class" : "LinearGradient",
-              "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
-            },
             "fillImage" : null,
+            "fillImageOriginalName" : null,
             "fillImagePixelHeight" : null,
             "fillImagePixelWidth" : null,
             "fillImageResize" : "fill",
@@ -456,6 +471,7 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
+            "replicaInfo" : null,
             "right" : 25,
             "rotation" : 0,
             "top" : null,
@@ -467,24 +483,42 @@
         "clip" : true,
         "codeOverrideEnabled" : false,
         "constraintsLocked" : false,
-        "deviceType" : null,
+        "duplicatedFrom" : null,
         "exportOptions" : [
 
         ],
         "fillColor" : "white",
         "fillEnabled" : true,
-        "fillGradient" : {
-          "__class" : "LinearGradient",
-          "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
-        },
         "fillImage" : null,
+        "fillImageOriginalName" : null,
         "fillImagePixelHeight" : null,
         "fillImagePixelWidth" : null,
         "fillImageResize" : "fill",
+        "fillLinearGradient" : {
+          "__class" : "LinearGradient",
+          "alpha" : 1,
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
+        },
         "fillType" : "color",
+        "framePreset" : null,
+        "guidesX" : [
+
+        ],
+        "guidesY" : [
+
+        ],
         "height" : 200,
         "heightType" : 0,
         "id" : "Ics8HCHOs",
@@ -496,10 +530,6 @@
         "left" : 450,
         "locked" : false,
         "name" : "Button Disabled",
-        "navigationTarget" : null,
-        "navigationTransition" : "push",
-        "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
-        "navigationTransitionDirection" : "left",
         "opacity" : 1,
         "originalid" : null,
         "parentid" : "iEDNh42Sf",
@@ -534,11 +564,9 @@
             "bottom" : null,
             "centerAnchorX" : 0.76683291770573569,
             "centerAnchorY" : 0.5,
-            "children" : [
-
-            ],
             "clip" : true,
             "codeComponentIdentifier" : ".\/Input.tsx_Input",
+            "codeComponentPackageVersion" : null,
             "codeComponentProps" : {
               "disabled" : false,
               "error" : false,
@@ -546,20 +574,14 @@
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : true,
-            "deviceType" : null,
+            "duplicatedFrom" : null,
             "exportOptions" : [
 
             ],
             "fillColor" : "rgba(255,255,255,1)",
             "fillEnabled" : false,
-            "fillGradient" : {
-              "__class" : "LinearGradient",
-              "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
-            },
             "fillImage" : null,
+            "fillImageOriginalName" : null,
             "fillImagePixelHeight" : null,
             "fillImagePixelWidth" : null,
             "fillImageResize" : "fill",
@@ -583,6 +605,7 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
+            "replicaInfo" : null,
             "right" : 25,
             "rotation" : 0,
             "top" : null,
@@ -594,24 +617,42 @@
         "clip" : true,
         "codeOverrideEnabled" : false,
         "constraintsLocked" : false,
-        "deviceType" : null,
+        "duplicatedFrom" : null,
         "exportOptions" : [
 
         ],
         "fillColor" : "white",
         "fillEnabled" : true,
-        "fillGradient" : {
-          "__class" : "LinearGradient",
-          "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
-        },
         "fillImage" : null,
+        "fillImageOriginalName" : null,
         "fillImagePixelHeight" : null,
         "fillImagePixelWidth" : null,
         "fillImageResize" : "fill",
+        "fillLinearGradient" : {
+          "__class" : "LinearGradient",
+          "alpha" : 1,
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
+        },
         "fillType" : "color",
+        "framePreset" : null,
+        "guidesX" : [
+
+        ],
+        "guidesY" : [
+
+        ],
         "height" : 200,
         "heightType" : 0,
         "id" : "CxnJ9IuSB",
@@ -623,10 +664,6 @@
         "left" : -153,
         "locked" : false,
         "name" : "Input",
-        "navigationTarget" : null,
-        "navigationTransition" : "push",
-        "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
-        "navigationTransitionDirection" : "left",
         "opacity" : 1,
         "originalid" : null,
         "parentid" : "iEDNh42Sf",
@@ -668,30 +705,22 @@
             "bottom" : null,
             "centerAnchorX" : 0.5,
             "centerAnchorY" : 0.5,
-            "children" : [
-
-            ],
             "clip" : true,
             "codeComponentIdentifier" : ".\/Toggle.tsx_Toggle",
+            "codeComponentPackageVersion" : null,
             "codeComponentProps" : {
               "disabled" : false
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
-            "deviceType" : null,
+            "duplicatedFrom" : null,
             "exportOptions" : [
 
             ],
             "fillColor" : "rgba(255,255,255,1)",
             "fillEnabled" : false,
-            "fillGradient" : {
-              "__class" : "LinearGradient",
-              "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
-            },
             "fillImage" : null,
+            "fillImageOriginalName" : null,
             "fillImagePixelHeight" : null,
             "fillImagePixelWidth" : null,
             "fillImageResize" : "fill",
@@ -715,6 +744,7 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
+            "replicaInfo" : null,
             "right" : null,
             "rotation" : 0,
             "top" : null,
@@ -726,24 +756,42 @@
         "clip" : true,
         "codeOverrideEnabled" : false,
         "constraintsLocked" : false,
-        "deviceType" : null,
+        "duplicatedFrom" : null,
         "exportOptions" : [
 
         ],
         "fillColor" : "white",
         "fillEnabled" : true,
-        "fillGradient" : {
-          "__class" : "LinearGradient",
-          "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
-        },
         "fillImage" : null,
+        "fillImageOriginalName" : null,
         "fillImagePixelHeight" : null,
         "fillImagePixelWidth" : null,
         "fillImageResize" : "fill",
+        "fillLinearGradient" : {
+          "__class" : "LinearGradient",
+          "alpha" : 1,
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
+        },
         "fillType" : "color",
+        "framePreset" : null,
+        "guidesX" : [
+
+        ],
+        "guidesY" : [
+
+        ],
         "height" : 200,
         "heightType" : 0,
         "id" : "rqphh24Pt",
@@ -755,10 +803,6 @@
         "left" : 249,
         "locked" : false,
         "name" : "Toggle",
-        "navigationTarget" : null,
-        "navigationTransition" : "push",
-        "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
-        "navigationTransitionDirection" : "left",
         "opacity" : 1,
         "originalid" : null,
         "parentid" : "iEDNh42Sf",
@@ -800,11 +844,9 @@
             "bottom" : null,
             "centerAnchorX" : 0.5,
             "centerAnchorY" : 0.5,
-            "children" : [
-
-            ],
             "clip" : true,
             "codeComponentIdentifier" : ".\/Tooltip.tsx_Tooltip",
+            "codeComponentPackageVersion" : null,
             "codeComponentProps" : {
               "arrow" : "left",
               "error" : false,
@@ -812,20 +854,14 @@
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
-            "deviceType" : null,
+            "duplicatedFrom" : null,
             "exportOptions" : [
 
             ],
             "fillColor" : "rgba(255,255,255,1)",
             "fillEnabled" : false,
-            "fillGradient" : {
-              "__class" : "LinearGradient",
-              "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
-            },
             "fillImage" : null,
+            "fillImageOriginalName" : null,
             "fillImagePixelHeight" : null,
             "fillImagePixelWidth" : null,
             "fillImageResize" : "fill",
@@ -849,6 +885,7 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
+            "replicaInfo" : null,
             "right" : null,
             "rotation" : 0,
             "top" : null,
@@ -860,24 +897,42 @@
         "clip" : true,
         "codeOverrideEnabled" : false,
         "constraintsLocked" : false,
-        "deviceType" : null,
+        "duplicatedFrom" : null,
         "exportOptions" : [
 
         ],
         "fillColor" : "white",
         "fillEnabled" : true,
-        "fillGradient" : {
-          "__class" : "LinearGradient",
-          "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
-        },
         "fillImage" : null,
+        "fillImageOriginalName" : null,
         "fillImagePixelHeight" : null,
         "fillImagePixelWidth" : null,
         "fillImageResize" : "fill",
+        "fillLinearGradient" : {
+          "__class" : "LinearGradient",
+          "alpha" : 1,
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
+        },
         "fillType" : "color",
+        "framePreset" : null,
+        "guidesX" : [
+
+        ],
+        "guidesY" : [
+
+        ],
         "height" : 200,
         "heightType" : 0,
         "id" : "kHMOcM50H",
@@ -889,10 +944,6 @@
         "left" : 450,
         "locked" : false,
         "name" : "Tooltip",
-        "navigationTarget" : null,
-        "navigationTransition" : "push",
-        "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
-        "navigationTransitionDirection" : "left",
         "opacity" : 1,
         "originalid" : null,
         "parentid" : "iEDNh42Sf",
@@ -920,8 +971,10 @@
         "widthType" : 0
       },
       {
-        "__class" : "CodeComponentNode",
+        "__class" : "FrameNode",
         "aspectRatio" : null,
+        "blendingEnabled" : 0,
+        "blendingMode" : "normal",
         "borderBottom" : 1,
         "borderColor" : "#DDD",
         "borderEnabled" : 1,
@@ -936,8 +989,10 @@
         "centerAnchorY" : 0,
         "children" : [
           {
-            "__class" : "CodeComponentNode",
+            "__class" : "FrameNode",
             "aspectRatio" : null,
+            "blendingEnabled" : 0,
+            "blendingMode" : "normal",
             "bottom" : null,
             "centerAnchorX" : 0.5,
             "centerAnchorY" : 0.099783080260303691,
@@ -956,24 +1011,42 @@
                 "clip" : false,
                 "codeOverrideEnabled" : false,
                 "constraintsLocked" : false,
-                "deviceType" : null,
+                "duplicatedFrom" : null,
                 "exportOptions" : [
 
                 ],
                 "fillColor" : "var(--token-c09024f7-9e50-4a71-a347-75d942c31fc1, rgb(255, 255, 255)) \/* {\"name\":\"paneBg\"} *\/",
                 "fillEnabled" : true,
-                "fillGradient" : {
-                  "__class" : "LinearGradient",
-                  "alpha" : 1,
-                  "angle" : 0,
-                  "end" : "rgba(0,0,0,0)",
-                  "start" : "black"
-                },
                 "fillImage" : null,
+                "fillImageOriginalName" : null,
                 "fillImagePixelHeight" : null,
                 "fillImagePixelWidth" : null,
                 "fillImageResize" : "fill",
+                "fillLinearGradient" : {
+                  "__class" : "LinearGradient",
+                  "alpha" : 1,
+                  "angle" : 180,
+                  "stops" : [
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 0,
+                      "value" : "rgba(0,0,0,0)"
+                    },
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 1,
+                      "value" : "black"
+                    }
+                  ]
+                },
                 "fillType" : "color",
+                "framePreset" : null,
+                "guidesX" : [
+
+                ],
+                "guidesY" : [
+
+                ],
                 "height" : 44,
                 "heightType" : 0,
                 "id" : "yzh4VyT3k",
@@ -985,10 +1058,6 @@
                 "left" : 38,
                 "locked" : false,
                 "name" : null,
-                "navigationTarget" : null,
-                "navigationTransition" : "push",
-                "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
-                "navigationTransitionDirection" : "left",
                 "opacity" : 1,
                 "originalid" : null,
                 "parentid" : "JYpZYu5rv",
@@ -1010,49 +1079,63 @@
               }
             ],
             "clip" : true,
-            "codeComponentIdentifier" : "framer\/Stack",
-            "codeComponentProps" : {
-              "alignment" : "center",
-              "direction" : "horizontal",
-              "distribution" : "center",
-              "gap" : 30,
-              "padding" : 0,
-              "paddingBottom" : 0,
-              "paddingLeft" : 0,
-              "paddingPerSide" : true,
-              "paddingRight" : 0,
-              "paddingTop" : 0
-            },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
-            "deviceType" : null,
+            "duplicatedFrom" : null,
             "exportOptions" : [
 
             ],
             "fillColor" : "rgba(255,255,255,1)",
             "fillEnabled" : false,
-            "fillGradient" : {
-              "__class" : "LinearGradient",
-              "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
-            },
             "fillImage" : null,
+            "fillImageOriginalName" : null,
             "fillImagePixelHeight" : null,
             "fillImagePixelWidth" : null,
             "fillImageResize" : "fill",
+            "fillLinearGradient" : {
+              "__class" : "LinearGradient",
+              "alpha" : 1,
+              "angle" : 180,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ]
+            },
             "fillType" : "color",
+            "framePreset" : null,
+            "guidesX" : [
+
+            ],
+            "guidesY" : [
+
+            ],
             "height" : 80,
             "heightType" : 0,
             "id" : "JYpZYu5rv",
             "intrinsicHeight" : null,
             "intrinsicWidth" : null,
+            "isExternalMaster" : null,
+            "isMaster" : false,
+            "isTarget" : false,
             "left" : null,
             "locked" : false,
             "name" : null,
             "opacity" : 1,
             "originalid" : null,
+            "padding" : 0,
+            "paddingBottom" : 0,
+            "paddingLeft" : 0,
+            "paddingPerSide" : true,
+            "paddingRight" : 0,
+            "paddingTop" : 0,
             "parentid" : "CjvERYKN5",
             "previewSettings" : null,
             "radius" : 0,
@@ -1062,16 +1145,24 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
+            "replicaInfo" : null,
             "right" : null,
             "rotation" : 0,
+            "stackAlignment" : "center",
+            "stackDirection" : "horizontal",
+            "stackDistribution" : "center",
+            "stackEnabled" : true,
+            "stackGap" : 30,
             "top" : null,
             "visible" : true,
             "width" : 1,
             "widthType" : 3
           },
           {
-            "__class" : "CodeComponentNode",
+            "__class" : "FrameNode",
             "aspectRatio" : null,
+            "blendingEnabled" : 0,
+            "blendingMode" : "normal",
             "bottom" : null,
             "centerAnchorX" : 0.5,
             "centerAnchorY" : 0.099783080260303691,
@@ -1090,24 +1181,42 @@
                 "clip" : false,
                 "codeOverrideEnabled" : false,
                 "constraintsLocked" : false,
-                "deviceType" : null,
+                "duplicatedFrom" : null,
                 "exportOptions" : [
 
                 ],
                 "fillColor" : "var(--token-e10fc84d-f05a-43b1-a3fc-dcfb01e5bf90, rgb(119, 85, 204)) \/* {\"name\":\"primary\"} *\/",
                 "fillEnabled" : true,
-                "fillGradient" : {
-                  "__class" : "LinearGradient",
-                  "alpha" : 1,
-                  "angle" : 0,
-                  "end" : "rgba(0,0,0,0)",
-                  "start" : "black"
-                },
                 "fillImage" : null,
+                "fillImageOriginalName" : null,
                 "fillImagePixelHeight" : null,
                 "fillImagePixelWidth" : null,
                 "fillImageResize" : "fill",
+                "fillLinearGradient" : {
+                  "__class" : "LinearGradient",
+                  "alpha" : 1,
+                  "angle" : 180,
+                  "stops" : [
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 0,
+                      "value" : "rgba(0,0,0,0)"
+                    },
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 1,
+                      "value" : "black"
+                    }
+                  ]
+                },
                 "fillType" : "color",
+                "framePreset" : null,
+                "guidesX" : [
+
+                ],
+                "guidesY" : [
+
+                ],
                 "height" : 44,
                 "heightType" : 0,
                 "id" : "glzoCrTqK",
@@ -1119,10 +1228,6 @@
                 "left" : 0,
                 "locked" : false,
                 "name" : null,
-                "navigationTarget" : null,
-                "navigationTransition" : "push",
-                "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
-                "navigationTransitionDirection" : "left",
                 "opacity" : 1,
                 "originalid" : null,
                 "parentid" : "dg34AvjBz",
@@ -1144,49 +1249,63 @@
               }
             ],
             "clip" : true,
-            "codeComponentIdentifier" : "framer\/Stack",
-            "codeComponentProps" : {
-              "alignment" : "center",
-              "direction" : "horizontal",
-              "distribution" : "center",
-              "gap" : 30,
-              "padding" : 0,
-              "paddingBottom" : 0,
-              "paddingLeft" : 0,
-              "paddingPerSide" : true,
-              "paddingRight" : 0,
-              "paddingTop" : 0
-            },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
-            "deviceType" : null,
+            "duplicatedFrom" : null,
             "exportOptions" : [
 
             ],
             "fillColor" : "rgba(255,255,255,1)",
             "fillEnabled" : false,
-            "fillGradient" : {
-              "__class" : "LinearGradient",
-              "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
-            },
             "fillImage" : null,
+            "fillImageOriginalName" : null,
             "fillImagePixelHeight" : null,
             "fillImagePixelWidth" : null,
             "fillImageResize" : "fill",
+            "fillLinearGradient" : {
+              "__class" : "LinearGradient",
+              "alpha" : 1,
+              "angle" : 180,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ]
+            },
             "fillType" : "color",
+            "framePreset" : null,
+            "guidesX" : [
+
+            ],
+            "guidesY" : [
+
+            ],
             "height" : 80,
             "heightType" : 0,
             "id" : "dg34AvjBz",
             "intrinsicHeight" : null,
             "intrinsicWidth" : null,
+            "isExternalMaster" : null,
+            "isMaster" : false,
+            "isTarget" : false,
             "left" : null,
             "locked" : false,
             "name" : null,
             "opacity" : 1,
             "originalid" : null,
+            "padding" : 0,
+            "paddingBottom" : 0,
+            "paddingLeft" : 0,
+            "paddingPerSide" : true,
+            "paddingRight" : 0,
+            "paddingTop" : 0,
             "parentid" : "CjvERYKN5",
             "previewSettings" : null,
             "radius" : 0,
@@ -1196,16 +1315,24 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
+            "replicaInfo" : null,
             "right" : null,
             "rotation" : 0,
+            "stackAlignment" : "center",
+            "stackDirection" : "horizontal",
+            "stackDistribution" : "center",
+            "stackEnabled" : true,
+            "stackGap" : 30,
             "top" : null,
             "visible" : true,
             "width" : 1,
             "widthType" : 3
           },
           {
-            "__class" : "CodeComponentNode",
+            "__class" : "FrameNode",
             "aspectRatio" : null,
+            "blendingEnabled" : 0,
+            "blendingMode" : "normal",
             "bottom" : null,
             "centerAnchorX" : 0.5,
             "centerAnchorY" : 0.099783080260303691,
@@ -1224,24 +1351,42 @@
                 "clip" : false,
                 "codeOverrideEnabled" : false,
                 "constraintsLocked" : false,
-                "deviceType" : null,
+                "duplicatedFrom" : null,
                 "exportOptions" : [
 
                 ],
                 "fillColor" : "var(--token-ef2fa636-c420-4df3-b145-72d3e608a159, rgb(255, 68, 68)) \/* {\"name\":\"danger\"} *\/",
                 "fillEnabled" : true,
-                "fillGradient" : {
-                  "__class" : "LinearGradient",
-                  "alpha" : 1,
-                  "angle" : 0,
-                  "end" : "rgba(0,0,0,0)",
-                  "start" : "black"
-                },
                 "fillImage" : null,
+                "fillImageOriginalName" : null,
                 "fillImagePixelHeight" : null,
                 "fillImagePixelWidth" : null,
                 "fillImageResize" : "fill",
+                "fillLinearGradient" : {
+                  "__class" : "LinearGradient",
+                  "alpha" : 1,
+                  "angle" : 180,
+                  "stops" : [
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 0,
+                      "value" : "rgba(0,0,0,0)"
+                    },
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 1,
+                      "value" : "black"
+                    }
+                  ]
+                },
                 "fillType" : "color",
+                "framePreset" : null,
+                "guidesX" : [
+
+                ],
+                "guidesY" : [
+
+                ],
                 "height" : 44,
                 "heightType" : 0,
                 "id" : "cSDPmRdaN",
@@ -1253,10 +1398,6 @@
                 "left" : 0,
                 "locked" : false,
                 "name" : null,
-                "navigationTarget" : null,
-                "navigationTransition" : "push",
-                "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
-                "navigationTransitionDirection" : "left",
                 "opacity" : 1,
                 "originalid" : null,
                 "parentid" : "PGibGHytE",
@@ -1278,49 +1419,63 @@
               }
             ],
             "clip" : true,
-            "codeComponentIdentifier" : "framer\/Stack",
-            "codeComponentProps" : {
-              "alignment" : "center",
-              "direction" : "horizontal",
-              "distribution" : "center",
-              "gap" : 30,
-              "padding" : 0,
-              "paddingBottom" : 0,
-              "paddingLeft" : 0,
-              "paddingPerSide" : true,
-              "paddingRight" : 0,
-              "paddingTop" : 0
-            },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
-            "deviceType" : null,
+            "duplicatedFrom" : null,
             "exportOptions" : [
 
             ],
             "fillColor" : "rgba(255,255,255,1)",
             "fillEnabled" : false,
-            "fillGradient" : {
-              "__class" : "LinearGradient",
-              "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
-            },
             "fillImage" : null,
+            "fillImageOriginalName" : null,
             "fillImagePixelHeight" : null,
             "fillImagePixelWidth" : null,
             "fillImageResize" : "fill",
+            "fillLinearGradient" : {
+              "__class" : "LinearGradient",
+              "alpha" : 1,
+              "angle" : 180,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ]
+            },
             "fillType" : "color",
+            "framePreset" : null,
+            "guidesX" : [
+
+            ],
+            "guidesY" : [
+
+            ],
             "height" : 80,
             "heightType" : 0,
             "id" : "PGibGHytE",
             "intrinsicHeight" : null,
             "intrinsicWidth" : null,
+            "isExternalMaster" : null,
+            "isMaster" : false,
+            "isTarget" : false,
             "left" : null,
             "locked" : false,
             "name" : null,
             "opacity" : 1,
             "originalid" : null,
+            "padding" : 0,
+            "paddingBottom" : 0,
+            "paddingLeft" : 0,
+            "paddingPerSide" : true,
+            "paddingRight" : 0,
+            "paddingTop" : 0,
             "parentid" : "CjvERYKN5",
             "previewSettings" : null,
             "radius" : 0,
@@ -1330,16 +1485,24 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
+            "replicaInfo" : null,
             "right" : null,
             "rotation" : 0,
+            "stackAlignment" : "center",
+            "stackDirection" : "horizontal",
+            "stackDistribution" : "center",
+            "stackEnabled" : true,
+            "stackGap" : 30,
             "top" : null,
             "visible" : true,
             "width" : 1,
             "widthType" : 3
           },
           {
-            "__class" : "CodeComponentNode",
+            "__class" : "FrameNode",
             "aspectRatio" : null,
+            "blendingEnabled" : 0,
+            "blendingMode" : "normal",
             "bottom" : null,
             "centerAnchorX" : 0.5,
             "centerAnchorY" : 0.099783080260303691,
@@ -1358,24 +1521,42 @@
                 "clip" : false,
                 "codeOverrideEnabled" : false,
                 "constraintsLocked" : false,
-                "deviceType" : null,
+                "duplicatedFrom" : null,
                 "exportOptions" : [
 
                 ],
                 "fillColor" : "var(--token-1ce8a50f-dd31-4e55-ba15-6c84854d5d0c, rgb(34, 34, 34)) \/* {\"name\":\"body\"} *\/",
                 "fillEnabled" : true,
-                "fillGradient" : {
-                  "__class" : "LinearGradient",
-                  "alpha" : 1,
-                  "angle" : 0,
-                  "end" : "rgba(0,0,0,0)",
-                  "start" : "black"
-                },
                 "fillImage" : null,
+                "fillImageOriginalName" : null,
                 "fillImagePixelHeight" : null,
                 "fillImagePixelWidth" : null,
                 "fillImageResize" : "fill",
+                "fillLinearGradient" : {
+                  "__class" : "LinearGradient",
+                  "alpha" : 1,
+                  "angle" : 180,
+                  "stops" : [
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 0,
+                      "value" : "rgba(0,0,0,0)"
+                    },
+                    {
+                      "__class" : "GradientColorStop",
+                      "position" : 1,
+                      "value" : "black"
+                    }
+                  ]
+                },
                 "fillType" : "color",
+                "framePreset" : null,
+                "guidesX" : [
+
+                ],
+                "guidesY" : [
+
+                ],
                 "height" : 44,
                 "heightType" : 0,
                 "id" : "GFK4l6hhQ",
@@ -1387,10 +1568,6 @@
                 "left" : 38,
                 "locked" : false,
                 "name" : null,
-                "navigationTarget" : null,
-                "navigationTransition" : "push",
-                "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
-                "navigationTransitionDirection" : "left",
                 "opacity" : 1,
                 "originalid" : null,
                 "parentid" : "wzivOBm4I",
@@ -1412,49 +1589,63 @@
               }
             ],
             "clip" : true,
-            "codeComponentIdentifier" : "framer\/Stack",
-            "codeComponentProps" : {
-              "alignment" : "center",
-              "direction" : "horizontal",
-              "distribution" : "center",
-              "gap" : 30,
-              "padding" : 0,
-              "paddingBottom" : 0,
-              "paddingLeft" : 0,
-              "paddingPerSide" : true,
-              "paddingRight" : 0,
-              "paddingTop" : 0
-            },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
-            "deviceType" : null,
+            "duplicatedFrom" : null,
             "exportOptions" : [
 
             ],
             "fillColor" : "rgba(255,255,255,1)",
             "fillEnabled" : false,
-            "fillGradient" : {
-              "__class" : "LinearGradient",
-              "alpha" : 1,
-              "angle" : 0,
-              "end" : "rgba(0,0,0,0)",
-              "start" : "black"
-            },
             "fillImage" : null,
+            "fillImageOriginalName" : null,
             "fillImagePixelHeight" : null,
             "fillImagePixelWidth" : null,
             "fillImageResize" : "fill",
+            "fillLinearGradient" : {
+              "__class" : "LinearGradient",
+              "alpha" : 1,
+              "angle" : 180,
+              "stops" : [
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 0,
+                  "value" : "rgba(0,0,0,0)"
+                },
+                {
+                  "__class" : "GradientColorStop",
+                  "position" : 1,
+                  "value" : "black"
+                }
+              ]
+            },
             "fillType" : "color",
+            "framePreset" : null,
+            "guidesX" : [
+
+            ],
+            "guidesY" : [
+
+            ],
             "height" : 80,
             "heightType" : 0,
             "id" : "wzivOBm4I",
             "intrinsicHeight" : null,
             "intrinsicWidth" : null,
+            "isExternalMaster" : null,
+            "isMaster" : false,
+            "isTarget" : false,
             "left" : null,
             "locked" : false,
             "name" : null,
             "opacity" : 1,
             "originalid" : null,
+            "padding" : 0,
+            "paddingBottom" : 0,
+            "paddingLeft" : 0,
+            "paddingPerSide" : true,
+            "paddingRight" : 0,
+            "paddingTop" : 0,
             "parentid" : "CjvERYKN5",
             "previewSettings" : null,
             "radius" : 0,
@@ -1464,8 +1655,14 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
+            "replicaInfo" : null,
             "right" : null,
             "rotation" : 0,
+            "stackAlignment" : "center",
+            "stackDirection" : "horizontal",
+            "stackDistribution" : "center",
+            "stackEnabled" : true,
+            "stackGap" : 30,
             "top" : null,
             "visible" : true,
             "width" : 1,
@@ -1473,49 +1670,63 @@
           }
         ],
         "clip" : true,
-        "codeComponentIdentifier" : "framer\/Stack",
-        "codeComponentProps" : {
-          "alignment" : "center",
-          "direction" : "vertical",
-          "distribution" : "center",
-          "gap" : 20,
-          "padding" : 0,
-          "paddingBottom" : 0,
-          "paddingLeft" : 0,
-          "paddingPerSide" : false,
-          "paddingRight" : 0,
-          "paddingTop" : 0
-        },
         "codeOverrideEnabled" : false,
         "constraintsLocked" : false,
-        "deviceType" : null,
+        "duplicatedFrom" : null,
         "exportOptions" : [
 
         ],
         "fillColor" : "hsl(0, 0%, 93%)",
         "fillEnabled" : true,
-        "fillGradient" : {
-          "__class" : "LinearGradient",
-          "alpha" : 1,
-          "angle" : 0,
-          "end" : "rgba(0,0,0,0)",
-          "start" : "black"
-        },
         "fillImage" : null,
+        "fillImageOriginalName" : null,
         "fillImagePixelHeight" : null,
         "fillImagePixelWidth" : null,
         "fillImageResize" : "fill",
+        "fillLinearGradient" : {
+          "__class" : "LinearGradient",
+          "alpha" : 1,
+          "angle" : 180,
+          "stops" : [
+            {
+              "__class" : "GradientColorStop",
+              "position" : 0,
+              "value" : "rgba(0,0,0,0)"
+            },
+            {
+              "__class" : "GradientColorStop",
+              "position" : 1,
+              "value" : "black"
+            }
+          ]
+        },
         "fillType" : "color",
+        "framePreset" : null,
+        "guidesX" : [
+
+        ],
+        "guidesY" : [
+
+        ],
         "height" : 461,
         "heightType" : 0,
         "id" : "CjvERYKN5",
         "intrinsicHeight" : null,
         "intrinsicWidth" : null,
+        "isExternalMaster" : null,
+        "isMaster" : false,
+        "isTarget" : false,
         "left" : 710,
         "locked" : false,
         "name" : "Colors",
         "opacity" : 1,
         "originalid" : null,
+        "padding" : 0,
+        "paddingBottom" : 0,
+        "paddingLeft" : 0,
+        "paddingPerSide" : false,
+        "paddingRight" : 0,
+        "paddingTop" : 0,
         "parentid" : "iEDNh42Sf",
         "previewSettings" : null,
         "radius" : 0,
@@ -1525,14 +1736,29 @@
         "radiusPerCorner" : false,
         "radiusTopLeft" : 0,
         "radiusTopRight" : 0,
+        "replicaInfo" : null,
         "right" : null,
         "rotation" : 0,
+        "stackAlignment" : "center",
+        "stackDirection" : "vertical",
+        "stackDistribution" : "center",
+        "stackEnabled" : true,
+        "stackGap" : 20,
         "top" : -327,
         "visible" : true,
         "width" : 120,
         "widthType" : 0
       }
     ],
+    "disableBackdropFilters" : false,
+    "duplicatedFrom" : null,
+    "guidesX" : [
+
+    ],
+    "guidesY" : [
+
+    ],
+    "homeNodeId" : null,
     "id" : "iEDNh42Sf",
     "name" : null,
     "originalid" : null,
@@ -1634,5 +1860,5 @@
     ],
     "visible" : false
   },
-  "version" : 50
+  "version" : 66
 }
