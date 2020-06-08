@@ -11,7 +11,7 @@
     "openmined",
     "ui"
   ],
-  "main": "index.tsx",
+  "main": "index.js",
   "dependencies": {
     "@chakra-ui/core": "^0.8.0",
     "@emotion/core": "^10.0.28",

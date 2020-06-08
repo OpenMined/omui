@@ -1,7 +1,7 @@
 import { theme as defaultTheme } from '@chakra-ui/core';
 
 import { borders } from './borders';
-import { grayscale, alphas, colors, thirdParty } from './colors';
+import { base, alphas, colors, thirdParty } from './colors';
 import { opacities } from './opacities';
 import { radii } from './radii';
 import { shadows } from './shadows';
@@ -19,7 +19,7 @@ export default {
   borders,
   breakpoints,
   colors: {
-    ...grayscale,
+    ...base,
     ...alphas,
     ...colors,
     ...thirdParty,
