@@ -21,18 +21,18 @@ export type Props = {
 };
 
 // Component
-export const Button = ({ text, fluid, disabled, kind, children }: Props) => (
-  <StyledButton
+export const OGButton = ({ text, fluid, disabled, kind, children }: Props) => (
+  <StyledOGButton
     className={`${fluid ? 'fluid' : ''} ${disabled ? 'disabled' : ''} ${
       kind ? kind : ''
     }`}
   >
     {text || children}
-  </StyledButton>
+  </StyledOGButton>
 );
 
 // Styles
-const StyledButton = styled.button`
+const StyledOGButton = styled.button`
   background: ${theme.color.paneBg};
   border-radius: 4px;
   border: none;

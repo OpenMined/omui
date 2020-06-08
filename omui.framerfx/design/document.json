@@ -18,17 +18,19 @@
             "centerAnchorX" : 0.5,
             "centerAnchorY" : 0.5,
             "clip" : true,
-            "codeComponentIdentifier" : ".\/Button.tsx_Button",
+            "codeComponentIdentifier" : ".\/OGButton.tsx_OGButton",
             "codeComponentPackageVersion" : null,
             "codeComponentProps" : {
               "disabled" : false,
               "fluid" : true,
               "kind" : "default",
-              "text" : "Download App"
+              "text" : "Button"
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
-            "duplicatedFrom" : null,
+            "duplicatedFrom" : [
+              ".\/OGButton.tsx_OGButton"
+            ],
             "exportOptions" : [
 
             ],
@@ -42,12 +44,12 @@
             "fillType" : "color",
             "height" : 48,
             "heightType" : 0,
-            "id" : "fgCZg7OEQ",
-            "intrinsicHeight" : 60,
-            "intrinsicWidth" : null,
+            "id" : "LnN3HSSsB",
+            "intrinsicHeight" : 48,
+            "intrinsicWidth" : 150,
             "left" : 25,
             "locked" : false,
-            "name" : "Button",
+            "name" : null,
             "opacity" : 1,
             "originalid" : null,
             "parentid" : "OM40QZetW",
@@ -59,7 +61,6 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
-            "replicaInfo" : null,
             "right" : 25,
             "rotation" : 0,
             "top" : null,
@@ -153,17 +154,19 @@
             "centerAnchorX" : 0.5,
             "centerAnchorY" : 0.5,
             "clip" : true,
-            "codeComponentIdentifier" : ".\/Button.tsx_Button",
+            "codeComponentIdentifier" : ".\/OGButton.tsx_OGButton",
             "codeComponentPackageVersion" : null,
             "codeComponentProps" : {
               "disabled" : false,
               "fluid" : true,
               "kind" : "primary",
-              "text" : "Download App"
+              "text" : "Button"
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
-            "duplicatedFrom" : null,
+            "duplicatedFrom" : [
+              ".\/OGButton.tsx_OGButton"
+            ],
             "exportOptions" : [
 
             ],
@@ -177,12 +180,12 @@
             "fillType" : "color",
             "height" : 48,
             "heightType" : 0,
-            "id" : "MxIYo0VOz",
-            "intrinsicHeight" : 60,
-            "intrinsicWidth" : null,
+            "id" : "KMj8JZ4QJ",
+            "intrinsicHeight" : 48,
+            "intrinsicWidth" : 150,
             "left" : 25,
             "locked" : false,
-            "name" : "Button",
+            "name" : null,
             "opacity" : 1,
             "originalid" : null,
             "parentid" : "H3W3wB7VB",
@@ -194,7 +197,6 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
-            "replicaInfo" : null,
             "right" : 25,
             "rotation" : 0,
             "top" : null,
@@ -295,17 +297,19 @@
             "centerAnchorX" : 0.5,
             "centerAnchorY" : 0.5,
             "clip" : true,
-            "codeComponentIdentifier" : ".\/Button.tsx_Button",
+            "codeComponentIdentifier" : ".\/OGButton.tsx_OGButton",
             "codeComponentPackageVersion" : null,
             "codeComponentProps" : {
               "disabled" : false,
               "fluid" : true,
               "kind" : "danger",
-              "text" : "Download App"
+              "text" : "Button"
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
-            "duplicatedFrom" : null,
+            "duplicatedFrom" : [
+              ".\/OGButton.tsx_OGButton"
+            ],
             "exportOptions" : [
 
             ],
@@ -319,12 +323,12 @@
             "fillType" : "color",
             "height" : 48,
             "heightType" : 0,
-            "id" : "xrUA5ucM6",
-            "intrinsicHeight" : 60,
-            "intrinsicWidth" : null,
+            "id" : "vKldX_OLZ",
+            "intrinsicHeight" : 48,
+            "intrinsicWidth" : 150,
             "left" : 25,
             "locked" : false,
-            "name" : "Button",
+            "name" : null,
             "opacity" : 1,
             "originalid" : null,
             "parentid" : "YPzY2MZ7I",
@@ -336,7 +340,6 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
-            "replicaInfo" : null,
             "right" : 25,
             "rotation" : 0,
             "top" : null,
@@ -430,17 +433,19 @@
             "centerAnchorX" : 0.5,
             "centerAnchorY" : 0.5,
             "clip" : true,
-            "codeComponentIdentifier" : ".\/Button.tsx_Button",
+            "codeComponentIdentifier" : ".\/OGButton.tsx_OGButton",
             "codeComponentPackageVersion" : null,
             "codeComponentProps" : {
               "disabled" : true,
               "fluid" : true,
               "kind" : "default",
-              "text" : "Download App"
+              "text" : "Button"
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
-            "duplicatedFrom" : null,
+            "duplicatedFrom" : [
+              ".\/OGButton.tsx_OGButton"
+            ],
             "exportOptions" : [
 
             ],
@@ -454,12 +459,12 @@
             "fillType" : "color",
             "height" : 48,
             "heightType" : 0,
-            "id" : "ZZnhHxy5w",
-            "intrinsicHeight" : 60,
-            "intrinsicWidth" : null,
+            "id" : "QHyzD2vqL",
+            "intrinsicHeight" : 48,
+            "intrinsicWidth" : 150,
             "left" : 25,
             "locked" : false,
-            "name" : "Button",
+            "name" : null,
             "opacity" : 1,
             "originalid" : null,
             "parentid" : "Ics8HCHOs",
@@ -471,7 +476,6 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
-            "replicaInfo" : null,
             "right" : 25,
             "rotation" : 0,
             "top" : null,
@@ -1358,60 +1362,87 @@
         "centerAnchorY" : 0,
         "children" : [
           {
-            "__class" : "CodeComponentNode",
-            "aspectRatio" : null,
+            "__class" : "TextNode",
+            "autoSize" : true,
             "bottom" : null,
-            "centerAnchorX" : 0.5,
-            "centerAnchorY" : 0.5,
+            "centerAnchorX" : 0.4823848238482385,
+            "centerAnchorY" : 0.1267361111111111,
             "clip" : true,
-            "codeComponentIdentifier" : ".\/Button.tsx_Button",
-            "codeComponentPackageVersion" : "1.71.0",
-            "codeComponentProps" : {
-              "disabled" : false,
-              "fluid" : true,
-              "kind" : "primary",
-              "text" : "Button is here"
-            },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
-            "duplicatedFrom" : [
-              "RNOCSWFEr"
-            ],
+            "duplicatedFrom" : null,
             "exportOptions" : [
 
             ],
-            "fillColor" : "rgba(255,255,255,1)",
-            "fillEnabled" : false,
-            "fillImage" : null,
-            "fillImageOriginalName" : null,
-            "fillImagePixelHeight" : null,
-            "fillImagePixelWidth" : null,
-            "fillImageResize" : "fill",
-            "fillType" : "color",
-            "height" : 48,
+            "height" : 19,
             "heightType" : 0,
-            "id" : "tjIQ0QT8y",
-            "intrinsicHeight" : 48,
-            "intrinsicWidth" : 150,
-            "left" : 46.5,
+            "id" : "q_CSQZj4I",
+            "isTarget" : false,
+            "left" : null,
             "locked" : false,
             "name" : null,
             "opacity" : 1,
             "originalid" : null,
-            "parentid" : "mfXr3whnz",
-            "previewSettings" : null,
-            "radius" : 0,
-            "radiusBottomLeft" : 0,
-            "radiusBottomRight" : 0,
-            "radiusIsRelative" : false,
-            "radiusPerCorner" : false,
-            "radiusTopLeft" : 0,
-            "radiusTopRight" : 0,
-            "right" : 46.5,
+            "parentid" : "plduNHN0L",
+            "right" : null,
             "rotation" : 0,
-            "top" : null,
+            "styledText" : {
+              "__class" : "StyledTextDraft",
+              "blocks" : [
+                {
+                  "data" : {
+                    "emptyStyle" : [
+                      "FONT:Inter",
+                      "COLOR:rgb(0, 0, 0)",
+                      "SIZE:16",
+                      "LETTERSPACING:0",
+                      "LINEHEIGHT:1.2"
+                    ]
+                  },
+                  "depth" : 0,
+                  "entityRanges" : [
+
+                  ],
+                  "inlineStyleRanges" : [
+                    {
+                      "length" : 45,
+                      "offset" : 0,
+                      "style" : "FONT:Inter"
+                    },
+                    {
+                      "length" : 45,
+                      "offset" : 0,
+                      "style" : "COLOR:rgb(0, 0, 0)"
+                    },
+                    {
+                      "length" : 45,
+                      "offset" : 0,
+                      "style" : "SIZE:16"
+                    },
+                    {
+                      "length" : 45,
+                      "offset" : 0,
+                      "style" : "LETTERSPACING:0"
+                    },
+                    {
+                      "length" : 45,
+                      "offset" : 0,
+                      "style" : "LINEHEIGHT:1.2"
+                    }
+                  ],
+                  "key" : "11i8c",
+                  "text" : "Try to add a “Button” here, not an “OGButton\"",
+                  "type" : "unstyled"
+                }
+              ],
+              "entityMap" : {
+
+              }
+            },
+            "textVerticalAlignment" : "top",
+            "top" : 27,
             "visible" : true,
-            "width" : 150,
+            "width" : 346,
             "widthType" : 0
           }
         ],
@@ -1437,15 +1468,15 @@
         "guidesY" : [
 
         ],
-        "height" : 177,
+        "height" : 288,
         "heightType" : 0,
-        "id" : "mfXr3whnz",
+        "id" : "plduNHN0L",
         "intrinsicHeight" : null,
         "intrinsicWidth" : null,
         "isExternalMaster" : null,
         "isMaster" : false,
         "isTarget" : false,
-        "left" : 177,
+        "left" : 169,
         "locked" : false,
         "name" : null,
         "opacity" : 1,
@@ -1462,9 +1493,9 @@
         "replicaInfo" : null,
         "right" : null,
         "rotation" : 0,
-        "top" : -651,
+        "top" : -709,
         "visible" : true,
-        "width" : 243,
+        "width" : 369,
         "widthType" : 0
       }
     ],
