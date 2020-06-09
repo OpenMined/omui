@@ -50,7 +50,7 @@ const genSections = (num) => {
     sections[`section${idx}Title`] = {
       type: ControlType.String,
       title: `${idx} - Title`,
-      defaultValue: tempTitle,
+      defaultValue: `${tempTitle} - ${idx}`,
       hidden: (props) => props.numSections < idx,
     };
 

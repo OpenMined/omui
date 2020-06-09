@@ -17,11 +17,23 @@ export const typography = {
     defaultValue: 'body',
     options: Object.keys(theme.fonts),
   },
+  fontSize: {
+    type: ControlType.Enum,
+    title: 'Size',
+    defaultValue: 'md',
+    options: Object.keys(theme.fontSizes),
+  },
   fontWeight: {
     type: ControlType.Enum,
     title: 'Weight',
-    defaultValue: 'semibold',
+    defaultValue: 'normal',
     options: Object.keys(theme.fontWeights),
+  },
+  fontStyle: {
+    type: ControlType.Enum,
+    title: 'Style',
+    defaultValue: 'normal',
+    options: ['normal', 'italic'],
   },
   letterSpacing: {
     type: ControlType.Enum,

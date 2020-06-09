@@ -71,7 +71,10 @@ const controls: object = {
   },
   borderRadius,
   boxShadow,
-  ...typography,
+  // fontFamily: typography.fontFamily,
+  // fontWeight: typography.fontWeight,
+  // letterSpacing: typography.letterSpacing,
+  // textTransform: typography.textTransform,
   ...icons,
   ...stateful(['loading', 'active', 'disabled']),
   onClick: {

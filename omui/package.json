@@ -12,6 +12,9 @@
     "ui"
   ],
   "main": "index.js",
+  "scripts": {
+    "storybook": "start-storybook"
+  },
   "dependencies": {
     "@chakra-ui/core": "^0.8.0",
     "@emotion/core": "^10.0.28",
@@ -21,8 +24,14 @@
     "react-dom": "16.13.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@storybook/addon-knobs": "^5.3.19",
+    "@storybook/addon-storysource": "^5.3.19",
+    "@storybook/addon-viewport": "^5.3.19",
+    "@storybook/react": "^5.3.19",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
+    "babel-loader": "^8.1.0",
     "typescript": "^3.9.5"
   }
 }
