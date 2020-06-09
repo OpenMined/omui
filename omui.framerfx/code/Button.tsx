@@ -31,21 +31,25 @@ export const ButtonLarge = themeHOC(ProppedButton);
 
 // TODO: Figure out defaultProps Typescript issue
 // TODO: Auto-calculate these height and widths based on padding and text size
+ButtonTiny.displayName = 'Button (1. Extra Small)';
 ButtonTiny.defaultProps = {
   width: 56,
   height: 24,
   size: 'xs',
 };
+ButtonSmall.displayName = 'Button (2. Small)';
 ButtonSmall.defaultProps = {
   width: 69,
   height: 32,
   size: 'sm',
 };
+ButtonMedium.displayName = 'Button (3. Medium)';
 ButtonMedium.defaultProps = {
   width: 83,
   height: 40,
   size: 'md',
 };
+ButtonLarge.displayName = 'Button (4. Large)';
 ButtonLarge.defaultProps = {
   width: 105,
   height: 48,

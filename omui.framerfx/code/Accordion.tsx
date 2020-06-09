@@ -39,6 +39,7 @@ const ProppedAccordion = (props: Props) => (
 );
 
 export const Accordion = themeHOC(ProppedAccordion);
+Accordion.displayName = 'Accordion';
 
 const genSections = (num) => {
   const sections = {};
