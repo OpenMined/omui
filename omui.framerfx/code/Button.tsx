@@ -1,8 +1,8 @@
-import * as React from 'react';
-import * as OMUI from '../../../omui';
-import * as OMUITypes from '../../../omui/types';
+import React from 'react';
+import { Button as OMUIButton } from '../../omui';
+import { ButtonProps } from '../../omui/types';
 import { addPropertyControls, ControlType } from 'framer';
-import { themeHOC } from '../../utils/theme-hoc';
+import themeHOC from '../utils/theme-hoc';
 import {
   colors,
   borderRadius,
@@ -10,43 +10,43 @@ import {
   typography,
   icons,
   stateful,
-} from '../../utils/prop-controls';
+} from '../utils/prop-controls';
 
-type Props = OMUITypes.ButtonProps & {
+type Props = ButtonProps & {
   width: number;
   height: number;
   text: string;
 };
 
 const ProppedButton = (props: Props) => (
-  <OMUI.Button {...props} width="100%" height="100%">
+  <OMUIButton {...props} width="100%" height="100%">
     {props.text}
-  </OMUI.Button>
+  </OMUIButton>
 );
 
-export const Tiny = themeHOC(ProppedButton);
-export const Small = themeHOC(ProppedButton);
-export const Medium = themeHOC(ProppedButton);
-export const Large = themeHOC(ProppedButton);
+export const ButtonTiny = themeHOC(ProppedButton);
+export const ButtonSmall = themeHOC(ProppedButton);
+export const ButtonMedium = themeHOC(ProppedButton);
+export const ButtonLarge = themeHOC(ProppedButton);
 
 // TODO: Figure out defaultProps Typescript issue
 // TODO: Auto-calculate these height and widths based on padding and text size
-Tiny.defaultProps = {
+ButtonTiny.defaultProps = {
   width: 56,
   height: 24,
   size: 'xs',
 };
-Small.defaultProps = {
+ButtonSmall.defaultProps = {
   width: 69,
   height: 32,
   size: 'sm',
 };
-Medium.defaultProps = {
+ButtonMedium.defaultProps = {
   width: 83,
   height: 40,
   size: 'md',
 };
-Large.defaultProps = {
+ButtonLarge.defaultProps = {
   width: 105,
   height: 48,
   size: 'lg',
@@ -75,7 +75,7 @@ const controls: object = {
   },
 };
 
-addPropertyControls(Tiny, controls);
-addPropertyControls(Small, controls);
-addPropertyControls(Medium, controls);
-addPropertyControls(Large, controls);
+addPropertyControls(ButtonTiny, controls);
+addPropertyControls(ButtonSmall, controls);
+addPropertyControls(ButtonMedium, controls);
+addPropertyControls(ButtonLarge, controls);
