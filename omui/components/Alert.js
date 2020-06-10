@@ -7,15 +7,8 @@ import {
   CloseButton,
 } from '@chakra-ui/core';
 
-export const Alert = ({
-  title,
-  status,
-  variant,
-  closable,
-  children,
-  ...props
-}) => (
-  <ChakraAlert status={status} variant={variant} {...props}>
+export const Alert = ({ title, closable, children, ...props }) => (
+  <ChakraAlert {...props}>
     <AlertIcon />
     {title && <AlertTitle mr={2}>{title}</AlertTitle>}
     <AlertDescription>{children}</AlertDescription>

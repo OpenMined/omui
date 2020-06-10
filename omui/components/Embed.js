@@ -1,10 +1,24 @@
 import React from 'react';
-import { AspectRatioBox, Box } from '@chakra-ui/core';
+import { AspectRatioBox } from '@chakra-ui/core';
+import { Box } from './Box';
+import { convertRatios } from '../helpers/ratios';
 
-export const Embed = (props) => (
-  <AspectRatioBox>
-    <Box></Box>
+export const VideoEmbed = ({ ratio, title, src, ...props }) => (
+  <AspectRatioBox ratio={convertRatios(ratio)} {...props}>
+    <Box as="iframe" title={title} src={src} allowFullScreen />
   </AspectRatioBox>
 );
 
-Embed.defaultProps = {};
+VideoEmbed.defaultProps = {
+  ratio: 'normal',
+};
+
+export const MapEmbed = ({ ratio, title, src, ...props }) => (
+  <AspectRatioBox ratio={convertRatios(ratio)} {...props}>
+    <Box as="iframe" alt={title} src={src} />
+  </AspectRatioBox>
+);
+
+MapEmbed.defaultProps = {
+  ratio: 'normal',
+};

@@ -6,8 +6,8 @@ import {
   AlertDescription,
 } from '@chakra-ui/core';
 
-export const AlertBox = ({ title, status, variant, children, ...props }) => (
-  <Alert status={status} variant={variant} {...props}>
+export const AlertBox = ({ title, children, ...props }) => (
+  <Alert {...props}>
     <AlertIcon size={8} mr={0} />
     {title && (
       <ChakraAlertTitle mt={3} mb={1} fontSize="lg">

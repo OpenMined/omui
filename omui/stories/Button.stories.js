@@ -3,7 +3,7 @@ import { Button } from '../components/Button';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import {
   themeButtonColors,
-  themeSizes,
+  themeButtonSizes,
   themeButtonVariants,
 } from '../helpers/get-theme';
 
@@ -23,7 +23,7 @@ export const Default = () => {
 
   return (
     <Button
-      size={select('Size', themeSizes, size)}
+      size={select('Size', themeButtonSizes, size)}
       variant={select('Variant', themeButtonVariants, variant)}
       variantColor={select('Color', themeButtonColors, variantColor)}
       leftIcon={text('Left icon', leftIcon)}
