@@ -1,6 +1,11 @@
-// Chakra Components
-export { ThemeProvider, CSSReset } from '@chakra-ui/core';
-
-// Custom Components
 export { Accordion, AccordionItem } from './components/Accordion';
+export { Alert } from './components/Alert';
+export { AlertBox } from './components/AlertBox';
+export { Box } from './components/Box';
 export { Button } from './components/Button';
+export { Divider } from './components/Divider';
+export { Embed } from './components/Embed';
+export { Flex } from './components/Flex';
+export { Grid } from './components/Grid';
+export { Heading } from './components/Heading';
+export { Theme } from './components/Theme';
