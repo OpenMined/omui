@@ -1,7 +1,12 @@
 import { Button as ChakraButton } from '@chakra-ui/core';
 
-ChakraButton.defaultProps = {
-  fontWeight: 'medium',
-};
-
 export const Button = ChakraButton;
+
+Button.defaultProps = {
+  fontWeight: 'medium',
+  size: 'md',
+  variant: 'solid',
+  variantColor: 'blue',
+  leftIcon: '',
+  rightIcon: '',
+};

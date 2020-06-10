@@ -5,22 +5,8 @@ import {
   AccordionHeader,
   AccordionPanel,
   AccordionIcon,
-  Box,
+  Text,
 } from '@chakra-ui/core';
-
-AccordionPanel.defaultProps = {
-  pb: 4,
-};
-
-const AccordionTitle = ({ children, ...props }) => (
-  <Box flex="1" textAlign="left" {...props}>
-    {children}
-  </Box>
-);
-
-AccordionTitle.defaultProps = {
-  fontWeight: 'semibold',
-};
 
 export const Accordion = ({ children, ...props }) => (
   <ChakraAccordion {...props}>{children}</ChakraAccordion>
@@ -29,9 +15,11 @@ export const Accordion = ({ children, ...props }) => (
 export const AccordionItem = ({ title, children, ...props }) => (
   <ChakraAccordionItem key={title} {...props}>
     <AccordionHeader>
-      <AccordionTitle>{title}</AccordionTitle>
+      <Text flex="1" textAlign="left" fontWeight="semibold">
+        {title}
+      </Text>
       <AccordionIcon />
     </AccordionHeader>
-    <AccordionPanel>{children}</AccordionPanel>
+    <AccordionPanel pb={4}>{children}</AccordionPanel>
   </ChakraAccordionItem>
 );
