@@ -4,5 +4,5 @@ This project is our user interface component library, built in [React.js](https:
 
 The project is set up in two folder:
 
-- `omui` - The main React.js project, which uses [Chakra UI](https://chakra-ui.com/) and [Styled System](https://styled-system.com/) as our base. We also live develop our components using [Storybook](https://storybook.js.org/) and build them using [Rollup](https://rollupjs.org/).
+- `omui` - The main React.js project, which uses [Chakra UI](https://chakra-ui.com/) and [Styled System](https://styled-system.com/) as our base. We also live develop our components using [Storybook](https://storybook.js.org/) and build them using [Parcel](https://github.com/parcel-bundler/parcel).
 - `omui.framerfx` - The folder-based Framer project, which allows us to use real React components in our UI prototypes.

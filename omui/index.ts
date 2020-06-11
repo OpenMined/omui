@@ -6,8 +6,6 @@
   - Provide ample stories for each component
   - Migrate components over to Framer
   - Create MDX documentation for each component in Storybook
-  - Bundle with Rollup or Webpack
-  - Possibly convert to Typescript
   - Cypress testing
 */
 
