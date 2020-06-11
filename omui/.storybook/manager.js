@@ -2,5 +2,5 @@ import { addons } from '@storybook/addons';
 
 addons.setConfig({
   panelPosition: 'right',
-  selectedPanel: 'storybookjs/knobs/panel',
+  selectedPanel: 'storybookjs/knobs/panel'
 });

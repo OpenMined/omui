@@ -6,7 +6,7 @@ import {
   themeIconButtonSizes,
   themeButtonSizes,
   themeButtonColors,
-  themeButtonVariants,
+  themeButtonVariants
 } from '../helpers/get-theme';
 
 export default { title: 'Button', decorators: [withKnobs] };
@@ -16,7 +16,7 @@ const {
   variant,
   variantColor,
   leftIcon,
-  rightIcon,
+  rightIcon
 } = Button.defaultProps;
 
 export const Default = () => {

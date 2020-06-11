@@ -21,6 +21,6 @@
     "allowJs": true,
     "preserveSymlinks": true
   },
-  "include": ["components/*.tsx"],
+  "include": ["**/*.{ts|tsx}"],
   "exclude": ["node_modules", "build"]
 }

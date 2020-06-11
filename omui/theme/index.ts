@@ -11,7 +11,7 @@ import {
   fontSizes,
   fontWeights,
   letterSpacings,
-  lineHeights,
+  lineHeights
 } from './typography';
 import { zIndices } from './z-indices';
 
@@ -22,7 +22,7 @@ export default {
     ...base,
     ...alphas,
     ...colors,
-    ...thirdParty,
+    ...thirdParty
   },
   fonts,
   fontSizes,
@@ -36,8 +36,8 @@ export default {
   sizes: {
     containers,
     ...sizes,
-    ...largeSizes,
+    ...largeSizes
   },
   space: sizes,
-  zIndices,
+  zIndices
 };

@@ -1,3 +1,4 @@
+// TODO: Currently this file is unused... perhaps there's utility later, so we'll keep it around!
 import { css } from '@emotion/core';
 import Color from 'color';
 
@@ -28,7 +29,7 @@ export const generateAlphaColors = (color) => ({
   300: addOpacity(color, 0.16),
   200: addOpacity(color, 0.12),
   100: addOpacity(color, 0.08),
-  50: addOpacity(color, 0.04),
+  50: addOpacity(color, 0.04)
 });
 
 export const colorEmphasis = (color, emphasis) => {
@@ -48,7 +49,7 @@ export const colorEmphasis = (color, emphasis) => {
 
 export const generateStripe = ({
   size = '1rem',
-  color = 'rgba(255, 255, 255, 0.15)',
+  color = 'rgba(255, 255, 255, 0.15)'
 }) => css`
   background-image: linear-gradient(
     45deg,
