@@ -1,6 +1,6 @@
 import React from 'react';
 import { addDecorator } from '@storybook/react';
-import { Box, Theme } from '../';
+import { Box, Theme } from '../src';
 
 addDecorator((storyFn) => (
   <Theme>

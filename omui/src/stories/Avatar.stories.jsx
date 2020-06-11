@@ -46,7 +46,7 @@ export const Group = () => {
       size={select('Size', themeAvatarSizes, 'md')}
       max={number('Maximum visible avatars', 2, { min: 1, step: 1 })}
     >
-      {avatars.map(avatar => (
+      {avatars.map((avatar) => (
         <Avatar {...avatar} badge={badge} />
       ))}
     </AvatarGroup>

@@ -18,15 +18,18 @@ const whVars = [
 ];
 
 interface ModifiedImageProps extends ImageProps {
-  ratio: number | string;
+  ratio?: number | string;
 }
 
 export const Image = ({ ratio, ...props }: ModifiedImageProps) => {
-  const { ...whVars } = props;
-
   if (ratio) {
+    const { ...whVars } = props;
+    const ratioProps = { ...whVars };
+
+    if (ratio) ratioProps['ratio'] = convertRatios(ratio);
+
     return (
-      <AspectRatioBox {...whVars} ratio={convertRatios(ratio)}>
+      <AspectRatioBox {...ratioProps}>
         <ChakraImage objectFit="cover" {...props} />
       </AspectRatioBox>
     );

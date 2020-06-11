@@ -15,7 +15,7 @@
   "module": "build/index.esm.js",
   "scripts": {
     "storybook": "start-storybook",
-    "build": "parcel build index.ts",
+    "build": "parcel build src/index.ts",
     "analyze": "yarn build && source-map-explorer build/index.esm.js"
   },
   "husky": {

@@ -33,7 +33,7 @@ export const WithFallback = () => {
 export const WithRatio = () => {
   const standardRatio = select(
     'Aspect ratio',
-    ['square', 'normal', 'widescreen', 'custom'],
+    ['square', 'display', 'widescreen', 'custom'],
     'widescreen'
   );
   const customRatio =

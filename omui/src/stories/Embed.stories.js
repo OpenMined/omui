@@ -8,8 +8,8 @@ export default { title: 'Embed', decorators: [withKnobs] };
 export const Video = () => {
   const standardRatio = select(
     'Aspect ratio',
-    ['square', 'normal', 'widescreen', 'custom'],
-    VideoEmbed.defaultProps.ratio
+    ['square', 'display', 'widescreen', 'custom'],
+    'square'
   );
   const customRatio =
     standardRatio === 'custom'
@@ -29,8 +29,8 @@ export const Video = () => {
 export const Map = () => {
   const standardRatio = select(
     'Aspect ratio',
-    ['square', 'normal', 'widescreen', 'custom'],
-    MapEmbed.defaultProps.ratio
+    ['square', 'display', 'widescreen', 'custom'],
+    'square'
   );
   const customRatio =
     standardRatio === 'custom'

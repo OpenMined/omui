@@ -18,8 +18,8 @@ export const themeBadgeColors = Object.keys(colors);
 // Button
 export const themeIconButtonSizes = ['sm', 'md', 'lg'];
 export const themeButtonSizes = ['xs', 'sm', 'md', 'lg'];
-export const themeButtonColors = [].concat(
-  Object.keys(colors),
-  Object.keys(thirdParty)
-);
+export const themeButtonColors = [
+  ...Object.keys(colors),
+  ...Object.keys(thirdParty)
+];
 export const themeButtonVariants = ['solid', 'ghost', 'outline', 'link'];

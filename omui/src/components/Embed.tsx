@@ -17,15 +17,17 @@ export const VideoEmbed = ({ ratio, title, src, ...props }: EmbedProps) => {
     allowFullScreen: true
   };
 
+  if (ratio) props['ratio'] = convertRatios(ratio);
+
   return (
-    <AspectRatioBox ratio={convertRatios(ratio)} {...props}>
+    <AspectRatioBox {...props}>
       <Box {...videoEmbedProps} />
     </AspectRatioBox>
   );
 };
 
 VideoEmbed.defaultProps = {
-  ratio: 'normal'
+  ratio: null
 };
 
 export const MapEmbed = ({ ratio, title, src, ...props }: EmbedProps) => {
@@ -35,13 +37,15 @@ export const MapEmbed = ({ ratio, title, src, ...props }: EmbedProps) => {
     src
   };
 
+  if (ratio) props['ratio'] = convertRatios(ratio);
+
   return (
-    <AspectRatioBox ratio={convertRatios(ratio)} {...props}>
+    <AspectRatioBox {...props}>
       <Box {...mapEmbedProps} />
     </AspectRatioBox>
   );
 };
 
 MapEmbed.defaultProps = {
-  ratio: 'normal'
+  ratio: null
 };
