@@ -5,9 +5,16 @@ import {
   AlertTitle,
   AlertDescription,
   CloseButton,
+  IAlert
 } from '@chakra-ui/core';
 
-export const Alert = ({ title, closable, children, ...props }) => (
+interface AlertProps extends IAlert {
+  title?: string;
+  closable?: boolean;
+  children: string | React.ReactNode;
+}
+
+export const Alert = ({ title, closable, children, ...props }: AlertProps) => (
   <ChakraAlert {...props}>
     <AlertIcon />
     {title && <AlertTitle mr={2}>{title}</AlertTitle>}
@@ -19,5 +26,5 @@ export const Alert = ({ title, closable, children, ...props }) => (
 Alert.defaultProps = {
   status: 'error',
   variant: 'subtle',
-  closable: true,
+  closable: true
 };

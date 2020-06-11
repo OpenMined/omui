@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  withKnobs,
-  boolean,
-  select,
-  text,
-  number
-} from '@storybook/addon-knobs';
+import { withKnobs, select, text, number } from '@storybook/addon-knobs';
 
 import { Avatar, AvatarGroup } from '../';
 import { themeAvatarSizes, themeBadgeColors } from '../helpers/get-theme';
@@ -24,36 +18,37 @@ export const Default = () => (
 export const Group = () => {
   const badge = select('Badge color', ['', ...themeBadgeColors]);
 
+  const avatars = [
+    {
+      name: 'Ryan Florence',
+      src: 'https://bit.ly/ryan-florence'
+    },
+    {
+      name: 'Segun Adebayo',
+      src: 'https://bit.ly/sage-adebayo'
+    },
+    {
+      name: 'Kent Dodds',
+      src: 'https://bit.ly/kent-c-dodds'
+    },
+    {
+      name: 'Prosper Otemuyiwa',
+      src: 'https://bit.ly/prosper-baba'
+    },
+    {
+      name: 'Christian Nwamba',
+      src: 'https://bit.ly/code-beast'
+    }
+  ];
+
   return (
     <AvatarGroup
       size={select('Size', themeAvatarSizes, 'md')}
       max={number('Maximum visible avatars', 2, { min: 1, step: 1 })}
     >
-      <Avatar
-        name="Ryan Florence"
-        badge={badge}
-        src="https://bit.ly/ryan-florence"
-      />
-      <Avatar
-        name="Segun Adebayo"
-        badge={badge}
-        src="https://bit.ly/sage-adebayo"
-      />
-      <Avatar
-        name="Kent Dodds"
-        badge={badge}
-        src="https://bit.ly/kent-c-dodds"
-      />
-      <Avatar
-        name="Prosper Otemuyiwa"
-        badge={badge}
-        src="https://bit.ly/prosper-baba"
-      />
-      <Avatar
-        name="Christian Nwamba"
-        badge={badge}
-        src="https://bit.ly/code-beast"
-      />
+      {avatars.map(avatar => (
+        <Avatar {...avatar} badge={badge} />
+      ))}
     </AvatarGroup>
   );
 };

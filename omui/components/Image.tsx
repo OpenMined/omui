@@ -1,5 +1,9 @@
 import React from 'react';
-import { Image as ChakraImage, AspectRatioBox } from '@chakra-ui/core';
+import {
+  Image as ChakraImage,
+  AspectRatioBox,
+  ImageProps
+} from '@chakra-ui/core';
 import { convertRatios } from '../helpers/ratios';
 
 const whVars = [
@@ -10,10 +14,14 @@ const whVars = [
   'minH',
   'minHeight',
   'maxH',
-  'maxHeight',
+  'maxHeight'
 ];
 
-export const Image = ({ ratio, ...props }) => {
+interface ModifiedImageProps extends ImageProps {
+  ratio: number | string;
+}
+
+export const Image = ({ ratio, ...props }: ModifiedImageProps) => {
   const { ...whVars } = props;
 
   if (ratio) {
@@ -28,5 +36,5 @@ export const Image = ({ ratio, ...props }) => {
 };
 
 Image.defaultProps = {
-  ratio: null,
+  ratio: null
 };

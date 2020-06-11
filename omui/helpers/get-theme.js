@@ -13,7 +13,7 @@ export const themeAlertVariants = [
 export const themeAvatarSizes = ['2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl'];
 
 // Badge
-export const themeBadgeColors = Object.keys(colors).map(i => `${i}.500`);
+export const themeBadgeColors = Object.keys(colors);
 
 // Button
 export const themeIconButtonSizes = ['sm', 'md', 'lg'];

@@ -4,11 +4,17 @@ import {
   AlertIcon,
   AlertTitle as ChakraAlertTitle,
   AlertDescription,
+  IAlert
 } from '@chakra-ui/core';
 
-export const AlertBox = ({ title, children, ...props }) => (
+interface AlertBoxProps extends IAlert {
+  title?: string;
+  children: string | React.ReactNode;
+}
+
+export const AlertBox = ({ title, children, ...props }: AlertBoxProps) => (
   <Alert {...props}>
-    <AlertIcon size={8} mr={0} />
+    <AlertIcon size="8" mr={0} />
     {title && (
       <ChakraAlertTitle mt={3} mb={1} fontSize="lg">
         {title}
@@ -24,5 +30,5 @@ AlertBox.defaultProps = {
   flexDirection: 'column',
   justifyContent: 'center',
   textAlign: 'center',
-  py: 12,
+  py: 12
 };
