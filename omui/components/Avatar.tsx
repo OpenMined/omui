@@ -1,15 +1,23 @@
-import React from "react";
-import { Avatar as ChakraAvatar, IAvatar, AvatarBadge } from "@chakra-ui/core";
-import { Box } from "./Box";
+import React from 'react';
+import {
+  Avatar as ChakraAvatar,
+  AvatarGroup as ChakraAvatarGroup,
+  IAvatar,
+  AvatarBadge
+} from '@chakra-ui/core';
 
 interface AvatarProps extends IAvatar {
-  badge?: string; // we should have a list of valid colors here... don't know where to import from
+  badge?: string;
 }
 
-export const Avatar = (props: AvatarProps) => {
-  return (
-    <ChakraAvatar {...props}>
-      {props.badge && <AvatarBadge bg={props.badge} size="1em" />}
-    </ChakraAvatar>
-  );
+export const Avatar = ({ badge, ...props }: AvatarProps) => (
+  <ChakraAvatar {...props}>
+    {badge && <AvatarBadge bg={badge} size="1em" />}
+  </ChakraAvatar>
+);
+
+Avatar.defaultProps = {
+  size: 'md'
 };
+
+export const AvatarGroup = ChakraAvatarGroup;

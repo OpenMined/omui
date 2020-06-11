@@ -14,7 +14,7 @@
 export { Accordion, AccordionItem } from './components/Accordion';
 export { Alert } from './components/Alert';
 export { AlertBox } from './components/AlertBox';
-export { Avatar, AvatarGroup } from './components/Avatar'; // TODO: This isn't final
+export { Avatar, AvatarGroup } from './components/Avatar';
 export { Badge } from './components/Badge'; // TODO: This isn't final
 export { Box } from './components/Box'; // TODO: This isn't final
 export { Breadcrumb } from './components/Breadcrumb'; // TODO: This isn't final
