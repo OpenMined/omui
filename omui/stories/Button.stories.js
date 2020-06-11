@@ -1,9 +1,11 @@
 import React from 'react';
-import { Button } from '../components/Button';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
+
+import { Button, IconButton } from '../';
 import {
-  themeButtonColors,
+  themeIconButtonSizes,
   themeButtonSizes,
+  themeButtonColors,
   themeButtonVariants,
 } from '../helpers/get-theme';
 
@@ -28,6 +30,7 @@ export const Default = () => {
       variantColor={select('Color', themeButtonColors, variantColor)}
       leftIcon={text('Left icon', leftIcon)}
       rightIcon={text('Right icon', rightIcon)}
+      isDisabled={boolean('Is disabled?', false)}
       isLoading={isLoading}
       loadingText={loadingText}
     >
@@ -35,3 +38,15 @@ export const Default = () => {
     </Button>
   );
 };
+
+export const Icon = () => (
+  <IconButton
+    size={select('Size', themeIconButtonSizes, size)}
+    variant={select('Variant', themeButtonVariants, variant)}
+    variantColor={select('Color', themeButtonColors, variantColor)}
+    icon={text('Icon', 'phone')}
+    isRound={boolean('Is round?', IconButton.defaultProps.isRound)}
+    isDisabled={boolean('Is disabled?', false)}
+    isLoading={boolean('Is loading?', false)}
+  />
+);
