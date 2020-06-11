@@ -1,6 +1,7 @@
 import React from 'react';
 import { withKnobs, boolean, select, text } from '@storybook/addon-knobs';
-import { AlertBox } from '../components/AlertBox';
+
+import { AlertBox } from '../';
 import { themeAlertStatuses, themeAlertVariants } from '../helpers/get-theme';
 
 export default { title: 'AlertBox', decorators: [withKnobs] };

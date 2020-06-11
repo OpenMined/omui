@@ -11,7 +11,8 @@ export const themeAlertVariants = [
 ];
 
 // Button
-export const themeButtonSizes = Object.keys(containers);
+export const themeIconButtonSizes = ['sm', 'md', 'lg'];
+export const themeButtonSizes = ['xs', 'sm', 'md', 'lg'];
 export const themeButtonColors = [].concat(
   Object.keys(colors),
   Object.keys(thirdParty)

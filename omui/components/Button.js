@@ -1,4 +1,7 @@
-import { Button as ChakraButton } from '@chakra-ui/core';
+import {
+  Button as ChakraButton,
+  IconButton as ChakraIconButton,
+} from '@chakra-ui/core';
 
 export const Button = ChakraButton;
 
@@ -9,4 +12,13 @@ Button.defaultProps = {
   variantColor: 'blue',
   leftIcon: '',
   rightIcon: '',
+};
+
+export const IconButton = ChakraIconButton;
+
+IconButton.defaultProps = {
+  size: 'md',
+  variant: 'solid',
+  variantColor: 'blue',
+  isRound: false,
 };
