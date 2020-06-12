@@ -1,26 +1,37 @@
 import React from 'react';
 import { withKnobs, select, text, number } from '@storybook/addon-knobs';
 
-import { Avatar, AvatarGroup } from '../';
+import { Avatar, AvatarGroup } from '..';
 import { themeAvatarSizes, themeBadgeColors } from '../helpers/get-theme';
 
-export default { title: 'GrAvatar', decorators: [withKnobs] };
+export default { title: 'Avatar', decorators: [withKnobs] };
+
+const { size } = Avatar.defaultProps;
 
 export const Default = () => (
   <Avatar
     src={text('Source', 'https://bit.ly/sage-adebayo')}
-    size={select('Size', themeAvatarSizes, Avatar.defaultProps.size)}
+    size={select('Size', themeAvatarSizes, size)}
     badge={select('Badge color', ['', ...themeBadgeColors])}
-    name={text('Name', 'That guy')}
+    name={text('Name', 'Segun Adebayo')}
   />
 );
 
-export const WithFallback = () => (
+export const WithSilhouetteFallback = () => (
   <Avatar
-    src={text('Source', 'https://www.openmined.org/images/logo.png')}
-    size={select('Size', themeAvatarSizes, Avatar.defaultProps.size)}
+    src={text('Source', 'https://www.openmined.org/this-is-a-bad-url.png')}
+    size={select('Size', themeAvatarSizes, 'xl')}
     badge={select('Badge color', ['', ...themeBadgeColors])}
-    name={text('Name', '')}
+    name=""
+  />
+);
+
+export const WithNameFallback = () => (
+  <Avatar
+    src={text('Source', 'https://www.openmined.org/this-is-a-bad-url.png')}
+    size={select('Size', themeAvatarSizes, 'xl')}
+    badge={select('Badge color', ['', ...themeBadgeColors])}
+    name={text('Name', 'Hello World')}
   />
 );
 
