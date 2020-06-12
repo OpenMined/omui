@@ -4,7 +4,7 @@ import { withKnobs, select, text, number } from '@storybook/addon-knobs';
 import { Avatar, AvatarGroup } from '../';
 import { themeAvatarSizes, themeBadgeColors } from '../helpers/get-theme';
 
-export default { title: 'Avatar', decorators: [withKnobs] };
+export default { title: 'GrAvatar', decorators: [withKnobs] };
 
 export const Default = () => (
   <Avatar
@@ -12,6 +12,15 @@ export const Default = () => (
     size={select('Size', themeAvatarSizes, Avatar.defaultProps.size)}
     badge={select('Badge color', ['', ...themeBadgeColors])}
     name={text('Name', 'That guy')}
+  />
+);
+
+export const WithFallback = () => (
+  <Avatar
+    src={text('Source', 'https://www.openmined.org/images/logo.png')}
+    size={select('Size', themeAvatarSizes, Avatar.defaultProps.size)}
+    badge={select('Badge color', ['', ...themeBadgeColors])}
+    name={text('Name', '')}
   />
 );
 

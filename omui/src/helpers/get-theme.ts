@@ -14,6 +14,7 @@ export const themeAvatarSizes = ['2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl'];
 
 // Badge
 export const themeBadgeColors = Object.keys(colors);
+export const themeBadgeVariants = ['solid', 'subtle', 'outline'];
 
 // Button
 export const themeIconButtonSizes = ['sm', 'md', 'lg'];

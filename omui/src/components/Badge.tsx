@@ -1,4 +1,8 @@
-export { Badge } from '@chakra-ui/core';
+import { Badge as ChakraBadge } from '@chakra-ui/core';
 
-// TODO: Figure out what to do with Badge
-// TODO: Create various Storybook stories related to Chakra documentation
+export const Badge = ChakraBadge;
+
+Badge.defaultProps = {
+  variant: 'subtle',
+  variantColor: 'blue'
+};
