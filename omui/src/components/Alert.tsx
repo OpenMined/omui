@@ -19,7 +19,14 @@ export const Alert = ({ title, closable, children, ...props }: AlertProps) => (
     <AlertIcon />
     {title && <AlertTitle mr={2}>{title}</AlertTitle>}
     <AlertDescription>{children}</AlertDescription>
-    {closable && <CloseButton position="absolute" right="8px" top="8px" />}
+    {closable && (
+      <CloseButton
+        position="absolute"
+        right="2"
+        top="2"
+        _focus={{ outline: 'none' }}
+      />
+    )}
   </ChakraAlert>
 );
 

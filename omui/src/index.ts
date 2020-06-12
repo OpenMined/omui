@@ -8,6 +8,10 @@
   - Create MDX documentation for each component in Storybook: https://medium.com/storybookjs/rich-docs-with-storybook-mdx-61bc145ae7bc
   - Add a Storybook theme: https://storybook.js.org/docs/configurations/theming/
   - Cypress testing: https://itnext.io/cypress-storybook-keeping-test-scenario-data-and-component-rendering-in-one-place-c57b23cc1640
+
+  Current unknowns:
+  - Depending on the answer we get from this issue (https://github.com/chakra-ui/chakra-ui/issues/851)
+    - Change AccordionHeader, Button, and CloseButton (Alert)
 */
 
 export { Accordion, AccordionItem } from './components/Accordion';
