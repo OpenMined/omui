@@ -14,7 +14,7 @@ export { Alert } from './components/Alert';
 export { AlertBox } from './components/AlertBox';
 export { Avatar, AvatarGroup } from './components/Avatar';
 export { Badge } from './components/Badge';
-export { Box } from './components/Box'; // TODO: This isn't final
+export { Box } from './components/Box';
 export { Breadcrumb } from './components/Breadcrumb'; // TODO: This isn't final
 export { Button, IconButton } from './components/Button';
 export { Checkbox, CheckboxGroup } from './components/Checkbox'; // TODO: This isn't final
