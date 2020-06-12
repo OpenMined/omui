@@ -31,7 +31,7 @@ export const AccordionItem = ({
 
   return (
     <ChakraAccordionItem {...itemProps}>
-      <AccordionHeader>
+      <AccordionHeader _focus={{ outline: 'none' }}>
         <Text flex="1" textAlign="left" fontWeight="semibold">
           {title}
         </Text>

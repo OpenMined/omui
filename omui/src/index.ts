@@ -5,8 +5,9 @@
   - Double-check exporting (below)
   - Provide ample stories for each component
   - Migrate components over to Framer
-  - Create MDX documentation for each component in Storybook
-  - Cypress testing
+  - Create MDX documentation for each component in Storybook: https://medium.com/storybookjs/rich-docs-with-storybook-mdx-61bc145ae7bc
+  - Add a Storybook theme: https://storybook.js.org/docs/configurations/theming/
+  - Cypress testing: https://itnext.io/cypress-storybook-keeping-test-scenario-data-and-component-rendering-in-one-place-c57b23cc1640
 */
 
 export { Accordion, AccordionItem } from './components/Accordion';
@@ -15,7 +16,7 @@ export { AlertBox } from './components/AlertBox';
 export { Avatar, AvatarGroup } from './components/Avatar';
 export { Badge } from './components/Badge';
 export { Box } from './components/Box';
-export { Breadcrumb } from './components/Breadcrumb'; // TODO: This isn't final
+export { Breadcrumb } from './components/Breadcrumb';
 export { Button, IconButton } from './components/Button';
 export { Checkbox, CheckboxGroup } from './components/Checkbox'; // TODO: This isn't final
 export { Code } from './components/Code'; // TODO: This isn't final
@@ -31,7 +32,7 @@ export { Heading } from './components/Heading'; // TODO: This isn't final
 export { Icon } from './components/Icon'; // TODO: This isn't final
 export { Image } from './components/Image';
 export { Input } from './components/Input'; // TODO: This isn't final
-export { Link } from './components/Link'; // TODO: This isn't final
+export { Link } from './components/Link';
 export { List } from './components/List'; // TODO: This isn't final
 export { Menu } from './components/Menu'; // TODO: This isn't final
 export { Modal } from './components/Modal'; // TODO: This isn't final

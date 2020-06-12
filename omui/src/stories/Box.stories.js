@@ -1,7 +1,7 @@
 import React from 'react';
 import { withKnobs, text, select, number } from '@storybook/addon-knobs';
 
-import { Box, Flex, Badge, Text, Image, Icon } from '..';
+import { Box, Flex, Badge, Text, Image, Icon } from '../';
 import { sizes } from '../theme/sizes';
 import { themeBoxColors } from '../helpers/get-theme';
 
