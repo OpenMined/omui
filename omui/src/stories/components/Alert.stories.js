@@ -1,10 +1,13 @@
 import React from 'react';
 import { withKnobs, boolean, select, text } from '@storybook/addon-knobs';
 
-import { Alert } from '../';
-import { themeAlertStatuses, themeAlertVariants } from '../helpers/get-theme';
+import { Alert } from '../../';
+import {
+  themeAlertStatuses,
+  themeAlertVariants
+} from '../../helpers/get-theme';
 
-export default { title: 'Alert', decorators: [withKnobs] };
+export default { title: 'Components|Alert', decorators: [withKnobs] };
 
 const { status, variant, closable } = Alert.defaultProps;
 

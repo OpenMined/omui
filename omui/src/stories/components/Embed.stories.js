@@ -1,9 +1,9 @@
 import React from 'react';
 import { withKnobs, select, number, text } from '@storybook/addon-knobs';
 
-import { VideoEmbed, MapEmbed } from '../';
+import { VideoEmbed, MapEmbed } from '../../';
 
-export default { title: 'Embed', decorators: [withKnobs] };
+export default { title: 'Components|Embed', decorators: [withKnobs] };
 
 export const Video = () => {
   const standardRatio = select(

@@ -1,15 +1,15 @@
 import React from 'react';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 
-import { Button, IconButton } from '../';
+import { Button, IconButton } from '../../';
 import {
   themeIconButtonSizes,
   themeButtonSizes,
   themeButtonColors,
   themeButtonVariants
-} from '../helpers/get-theme';
+} from '../../helpers/get-theme';
 
-export default { title: 'Button', decorators: [withKnobs] };
+export default { title: 'Components|Button', decorators: [withKnobs] };
 
 const {
   size,

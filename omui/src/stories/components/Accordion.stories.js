@@ -1,9 +1,9 @@
 import React from 'react';
 import { Text } from '@chakra-ui/core';
 
-import { Accordion, AccordionItem } from '../';
+import { Accordion, AccordionItem } from '../../';
 
-export default { title: 'Accordion' };
+export default { title: 'Components|Accordion' };
 
 export const Default = () => (
   <Accordion>

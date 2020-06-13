@@ -1,9 +1,9 @@
 import React from 'react';
-import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
+import { withKnobs } from '@storybook/addon-knobs';
 
-import { Breadcrumb } from '../';
+import { Breadcrumb } from '../../';
 
-export default { title: 'Breadcrumb', decorators: [withKnobs] };
+export default { title: 'Components|Breadcrumb', decorators: [withKnobs] };
 
 export const Default = () => {
   const links = [

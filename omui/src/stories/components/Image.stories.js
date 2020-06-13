@@ -1,11 +1,11 @@
 import React from 'react';
 import { withKnobs, select, number, text } from '@storybook/addon-knobs';
 
-import { Image } from '../';
-import { largeSizes } from '../theme/sizes';
-import { radii } from '../theme/radii';
+import { Image } from '../../';
+import { largeSizes } from '../../theme/sizes';
+import { radii } from '../../theme/radii';
 
-export default { title: 'Image', decorators: [withKnobs] };
+export default { title: 'Components|Image', decorators: [withKnobs] };
 
 export const Default = () => {
   return (

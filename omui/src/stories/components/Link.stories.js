@@ -1,9 +1,9 @@
 import React from 'react';
-import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
+import { withKnobs, text } from '@storybook/addon-knobs';
 
-import { Link } from '..';
+import { Link } from '../../';
 
-export default { title: 'Link', decorators: [withKnobs] };
+export default { title: 'Components|Link', decorators: [withKnobs] };
 
 export const Default = () => (
   <Link href={text('Href', '#')}>

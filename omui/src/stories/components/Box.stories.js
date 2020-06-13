@@ -1,11 +1,11 @@
 import React from 'react';
 import { withKnobs, text, select, number } from '@storybook/addon-knobs';
 
-import { Box, Flex, Badge, Text, Image, Icon } from '../';
-import { sizes } from '../theme/sizes';
-import { themeBoxColors } from '../helpers/get-theme';
+import { Box, Flex, Badge, Text, Image, Icon } from '../../';
+import { sizes } from '../../theme/sizes';
+import { themeBoxColors } from '../../helpers/get-theme';
 
-export default { title: 'Box', decorators: [withKnobs] };
+export default { title: 'Components|Box', decorators: [withKnobs] };
 
 export const Default = () => (
   <Box
