@@ -9,7 +9,7 @@ import {
   themeButtonVariants
 } from '../../helpers/get-theme';
 
-export default { title: 'Components|Button', decorators: [withKnobs] };
+export default { title: 'Primitives|Button', decorators: [withKnobs] };
 
 const {
   size,

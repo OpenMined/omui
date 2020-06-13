@@ -23,7 +23,21 @@ addParameters({
           ]
         },
         {
-          category: 'Components'
+          category: 'Primitives',
+          order: [
+            'Overview',
+            'Box',
+            'Flex',
+            'Text',
+            'Heading',
+            'Button',
+            'Link',
+            'Image'
+          ]
+        },
+        {
+          category: 'Components',
+          order: ['Overview']
         }
       ];
 

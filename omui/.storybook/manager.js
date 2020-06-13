@@ -1,44 +1,30 @@
 import { addons } from '@storybook/addons';
 import { create } from '@storybook/theming';
+
+import logo from './logo.png';
 import { fonts } from '../src/theme/typography';
+import { colors, base, alphas } from '../src/theme/colors';
 
 const storybookTheme = create({
   // Base
   base: 'light',
 
   // Colors
-  colorPrimary: 'hotpink',
-  colorSecondary: 'deepskyblue',
-
-  // UI
-  appBg: 'white',
-  appContentBg: 'silver',
-  appBorderColor: 'grey',
-  appBorderRadius: 4,
+  colorPrimary: colors.teal['500'],
+  colorSecondary: colors.blue['500'],
 
   // Typography
   fontBase: fonts.body,
-  fontCode: 'monospace',
+  fontCode: fonts.mono,
 
   // Text colors
-  textColor: 'black',
-  textInverseColor: 'rgba(255,255,255,0.9)',
-
-  // Toolbar default and active colors
-  barTextColor: 'silver',
-  barSelectedColor: 'black',
-  barBg: 'hotpink',
-
-  // Form colors
-  inputBg: 'white',
-  inputBorder: 'silver',
-  inputTextColor: 'black',
-  inputBorderRadius: 4,
+  textColor: base.black,
+  textInverseColor: alphas.blackAlpha['800'],
 
   // Brand
-  brandTitle: 'My custom storybook',
-  brandUrl: 'https://example.com',
-  brandImage: 'https://placehold.it/350x150'
+  brandTitle: 'OpenMined',
+  brandUrl: 'https://openmined.org',
+  brandImage: logo
 });
 
 addons.setConfig({

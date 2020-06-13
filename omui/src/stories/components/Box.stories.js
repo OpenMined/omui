@@ -5,7 +5,7 @@ import { Box, Flex, Badge, Text, Image, Icon } from '../../';
 import { sizes } from '../../theme/sizes';
 import { themeBoxColors } from '../../helpers/get-theme';
 
-export default { title: 'Components|Box', decorators: [withKnobs] };
+export default { title: 'Primitives|Box', decorators: [withKnobs] };
 
 export const Default = () => (
   <Box
