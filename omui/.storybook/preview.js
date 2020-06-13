@@ -17,6 +17,8 @@ addParameters({
           category: 'Introduction',
           order: [
             'Getting Started',
+            'Brand Guide',
+            'Kitchen Sink',
             'For Researchers',
             'For Designers',
             'For Developers'
