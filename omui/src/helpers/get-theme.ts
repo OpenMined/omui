@@ -48,6 +48,68 @@ export const themeButtonColors = [
 ];
 export const themeButtonVariants = ['solid', 'ghost', 'outline', 'link'];
 
+// Code
+export const themeCodeLanguages = [
+  'markup',
+  'css',
+  'javascript',
+  'bash',
+  'c',
+  'csharp',
+  'cpp',
+  'clojure',
+  'docker',
+  'erlang',
+  'git',
+  'go',
+  'graphql',
+  'java',
+  'json',
+  'julia',
+  'kotlin',
+  'latex',
+  'markdown',
+  'objectivec',
+  'python',
+  'r',
+  'rust',
+  'jsx',
+  'tsx',
+  'swift',
+  'typescript',
+  'wasm'
+];
+export const themeCodePrettyLanguages = [
+  'HTML, XML, SVG',
+  'CSS',
+  'Javascript',
+  'Bash',
+  'C',
+  'C#',
+  'C++',
+  'Clojure',
+  'Docker',
+  'Erlang',
+  'Git',
+  'Go',
+  'GraphQL',
+  'Java',
+  'JSON',
+  'Julia',
+  'Kotlin',
+  'LaTeX',
+  'Markdown',
+  'Objective-C',
+  'Python',
+  'R',
+  'Rust',
+  'JSX (React Javascript)',
+  'TSX (React Typescript)',
+  'Swift',
+  'Typescript',
+  'WebAssembly'
+];
+
 // Heading
 export const themeHeadingFontSizes = ['2xl', 'xl', 'lg', 'md', 'sm', 'xs'];
 export const themeHeadingTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];

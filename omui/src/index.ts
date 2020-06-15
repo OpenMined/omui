@@ -22,7 +22,7 @@ export { Box } from './components/Box';
 export { Breadcrumb } from './components/Breadcrumb';
 export { Button, IconButton } from './components/Button';
 export { Checkbox, CheckboxGroup } from './components/Checkbox'; // TODO: This isn't final
-export { Code } from './components/Code'; // TODO: This isn't final
+export { Code, CodeEditor } from './components/Code';
 export { Collapse } from './components/Collapse'; // TODO: This isn't final
 export { Divider } from './components/Divider'; // TODO: This isn't final
 export { Drawer } from './components/Drawer'; // TODO: This isn't final
