@@ -10,18 +10,18 @@ addDecorator((storyFn) => (
 
 addParameters({
   options: {
+    showRoots: true,
     storySort: (a, b) => {
-      const separator = '|';
+      const separator = '/';
       const config = [
         {
           category: 'Introduction',
           order: [
             'Getting Started',
+            'Installation',
+            'Usage in Framer',
             'Brand Guide',
-            'Kitchen Sink',
-            'For Researchers',
-            'For Designers',
-            'For Developers'
+            'Kitchen Sink'
           ]
         },
         {

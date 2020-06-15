@@ -1,7 +1,85 @@
 import { Meta } from '@storybook/addon-docs/blocks';
+import LinkTo from '@storybook/addon-links/react';
 
-<Meta title="Primitives|Overview" />
+import { Theme, Link } from '../../';
+
+<Meta title="Primitives/Overview" />
 
 # Primitives
 
-Hello world, this is **just** a test!
+Primitives are components within OpenMined UI that are intended to mask existing HTML functionality, like composing a `<div>` (the `<Box>` component), implementing Flexbox (the `<Flex>` component), or displaying an image (the `<Image>` component) to name a few. In the following series of documents, we will describe these primitives and how they should be used in the context of developing a web application UI with OMUI.
+
+It's suggested that in order to understand the concept of primitives, that you first understand how styled props in Styled System (and Chakra) work. We suggest you read the following pieces of Chakra documentation before continuing on:
+
+- [Chakra Design Principles](https://chakra-ui.com/principles)
+- [Styled Props](https://chakra-ui.com/style-props)
+- [Responsive Styles](https://chakra-ui.com/responsive-styles)
+
+The current list of primitives for OMUI are based, more or less, on [Rebass](https://rebassjs.org/) (another [Styled System](https://styled-system.com/) project). Since each primitive is also present in Chakra, we will also link to their documentation below. Briefly, they are as follows:
+
+### Box
+
+A replacement for `<div>` to wrap or contain any other component or element.
+
+<a href="?path=/docs/primitives-box--default">OMUI Documentation</a> | <a
+  href="https://chakra-ui.com/box"
+  target="_blank"
+>
+  Chakra Documentation
+</a>
+
+### Flex
+
+A shorthand component for wrapping Flexbox functionality.
+
+<a href="?path=/docs/primitives-flex--default">OMUI Documentation</a> | <a
+  href="https://chakra-ui.com/flex"
+  target="_blank"
+>
+  Chakra Documentation
+</a>
+
+### Text
+
+A component for displaying text, by default renders a `<p>` tag.
+
+<a href="?path=/docs/primitives-text--default">OMUI Documentation</a> | <a
+  href="https://chakra-ui.com/text"
+  target="_blank"
+>
+  Chakra Documentation
+</a>
+
+### Heading
+
+A component for displaying heading text.
+
+[OMUI Documentation](/?path=/docs/primitives-heading--default) | <a href="https://chakra-ui.com/heading" target="_blank">Chakra Documentation</a>
+
+### Button
+
+A component that displays a standard button, with multiple configurations.
+
+[OMUI Documentation](/?path=/docs/primitives-button--default) | <a href="https://chakra-ui.com/button" target="_blank">Chakra Documentation</a>
+
+### Link
+
+A component that displays a hyperlink, by default renders an `<a>` tag.
+
+<a href="?path=/docs/primitives-link--default">OMUI Documentation</a> | <a
+  href="https://chakra-ui.com/link"
+  target="_blank"
+>
+  Chakra Documentation
+</a>
+
+### Image
+
+A component that displays an image, by default renders an `<img>` tag.
+
+<a href="?path=/docs/primitives-image--default">OMUI Documentation</a> | <a
+  href="https://chakra-ui.com/image"
+  target="_blank"
+>
+  Chakra Documentation
+</a>

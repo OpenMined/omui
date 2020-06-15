@@ -7,7 +7,7 @@ import {
   themeAlertVariants
 } from '../../helpers/get-theme';
 
-export default { title: 'Components|Alert', decorators: [withKnobs] };
+export default { title: 'Components/Alert', decorators: [withKnobs] };
 
 const { status, variant, closable } = Alert.defaultProps;
 

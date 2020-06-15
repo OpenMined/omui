@@ -7,7 +7,7 @@ import {
   themeAlertVariants
 } from '../../helpers/get-theme';
 
-export default { title: 'Components|Alert Box', decorators: [withKnobs] };
+export default { title: 'Components/Alert Box', decorators: [withKnobs] };
 
 const { status, variant } = AlertBox.defaultProps;
 

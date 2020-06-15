@@ -3,7 +3,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 
 import { Breadcrumb } from '../../';
 
-export default { title: 'Components|Breadcrumb', decorators: [withKnobs] };
+export default { title: 'Components/Breadcrumb', decorators: [withKnobs] };
 
 export const Default = () => {
   const links = [

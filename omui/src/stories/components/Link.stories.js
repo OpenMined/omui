@@ -3,7 +3,7 @@ import { withKnobs, text } from '@storybook/addon-knobs';
 
 import { Link } from '../../';
 
-export default { title: 'Primitives|Link', decorators: [withKnobs] };
+export default { title: 'Primitives/Link', decorators: [withKnobs] };
 
 export const Default = () => (
   <Link href={text('Href', '#')}>

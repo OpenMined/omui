@@ -1,0 +1,84 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { linkTo } from '@storybook/addon-links';
+
+import { Theme, Alert, AlertBox, Link } from '../../';
+
+<Meta title="Introduction/Installation" />
+
+# Installation
+
+<Theme>
+  <AlertBox title="Heads up!" mb={10}>
+    The following section is intended for <b>developers</b>. Designers may be
+    more interested in our{' '}
+    <Link onClick={linkTo('introduction-usage-in-framer--page')}>
+      usage in Framer
+    </Link>{' '}
+    documentation.
+  </AlertBox>
+</Theme>
+
+## Basic Installation
+
+If you're looking to begin developing a user-interface with OMUI, you can install the package directly via [Yarn](https://yarnpkg.com/):
+
+```bash
+yarn add @openmined/omui
+```
+
+Or if you prefer [NPM](https://npmjs.com):
+
+```bash
+npm install --save @openmined/omui
+```
+
+## Usage
+
+All components are exported via named exports - we don't have a default export. They can be imported at the top of any React file like such:
+
+```javascript
+import { Alert } from '@openmined/omui';
+```
+
+They can then be used in JSX like such:
+
+```jsx
+const MyGreatComponent = (props) => {
+  const alertTitle = 'Aww yeah...';
+  const alertStatus = 'success';
+  const alertText = 'Nice job using an alert, you did it right!';
+
+  return (
+    <Alert title={alertTitle} status={alertStatus}>
+      {alertText}
+    </Alert>
+  );
+};
+```
+
+This renders out to the screen like such:
+
+<Theme>
+  <Alert title="Aww yeah..." status="success" mb={10}>
+    Nice job using an alert, you did it right!
+  </Alert>
+</Theme>
+
+**But hey - there is one more step!** In order to use the beautiful theme that OMUI provides you, you need to wrap your entire React application in a `<Theme>` component. This already has the OMUI theme and any CSS resets loaded in, so you don't need to do this yourself. The following is roughly how you might wrap your React application, but your particular usage may vary slightly:
+
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Theme } from '@openmined/omui';
+
+import App from './App';
+
+const rootElement = document.getElementById('root');
+
+ReactDOM.render(
+  <Theme>
+    <App />
+  </Theme>,
+  rootElement
+);
+```

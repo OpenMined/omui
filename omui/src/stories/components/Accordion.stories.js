@@ -3,7 +3,7 @@ import { Text } from '@chakra-ui/core';
 
 import { Accordion, AccordionItem } from '../../';
 
-export default { title: 'Components|Accordion' };
+export default { title: 'Components/Accordion' };
 
 export const Default = () => (
   <Accordion>

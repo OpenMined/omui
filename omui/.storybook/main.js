@@ -3,7 +3,8 @@ module.exports = {
     '@storybook/addon-knobs/register',
     '@storybook/addon-storysource',
     '@storybook/addon-viewport/register',
-    '@storybook/addon-docs'
+    '@storybook/addon-docs',
+    '@storybook/addon-links/register'
   ],
   stories: ['../src/stories/**/*.stories.(js|mdx)'],
   webpackFinal: async (config) => {
