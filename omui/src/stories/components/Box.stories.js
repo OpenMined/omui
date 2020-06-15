@@ -3,14 +3,14 @@ import { withKnobs, text, select, number } from '@storybook/addon-knobs';
 
 import { Box, Flex, Badge, Text, Image, Icon } from '../../';
 import { sizes } from '../../theme/sizes';
-import { themeBoxColors } from '../../helpers/get-theme';
+import { themeAllPossibleColors } from '../../helpers/get-theme';
 
 export default { title: 'Primitives/Box', decorators: [withKnobs] };
 
 export const Default = () => (
   <Box
-    bg={select('Background', themeBoxColors, 'orange.200')}
-    color={select('Color', themeBoxColors, 'orange.700')}
+    bg={select('Background', themeAllPossibleColors, 'orange.200')}
+    color={select('Color', themeAllPossibleColors, 'orange.700')}
     padding={select('Padding', Object.keys(sizes), '4')}
   >
     {text('Text', 'A box is just a div tag with styled props')}

@@ -28,10 +28,10 @@ export { Divider } from './components/Divider'; // TODO: This isn't final
 export { Drawer } from './components/Drawer'; // TODO: This isn't final
 export { Editable } from './components/Editable'; // TODO: This isn't final
 export { VideoEmbed, MapEmbed } from './components/Embed';
-export { Flex } from './components/Flex'; // TODO: This isn't final
+export { Flex } from './components/Flex';
 export { FormControl } from './components/FormControl'; // TODO: This isn't final
 export { Grid } from './components/Grid'; // TODO: This isn't final
-export { Heading } from './components/Heading'; // TODO: This isn't final
+export { Heading } from './components/Heading';
 export { Icon } from './components/Icon'; // TODO: This isn't final
 export { Image } from './components/Image';
 export { Input } from './components/Input'; // TODO: This isn't final
@@ -53,7 +53,7 @@ export { Stat } from './components/Stat'; // TODO: This isn't final
 export { Switch } from './components/Switch'; // TODO: This isn't final
 export { Tabs } from './components/Tabs'; // TODO: This isn't final
 export { Tag } from './components/Tag'; // TODO: This isn't final
-export { Text } from './components/Text'; // TODO: This isn't final
+export { Text } from './components/Text';
 export { Textarea } from './components/Textarea'; // TODO: This isn't final
 export { Theme } from './components/Theme';
 export { useToast } from './components/Toast'; // TODO: This isn't final
