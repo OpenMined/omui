@@ -14,16 +14,7 @@ themeCodePrettyLanguages.forEach((lang, index) => {
   themeLanguages[lang] = themeCodeLanguages[index];
 });
 
-export default { title: 'Components/Code', decorators: [withKnobs] };
-
-export const Default = () => (
-  <Code
-    language={select('Language', themeLanguages, 'jsx')}
-    lineNumbers={boolean('Show line numbers?', true)}
-  >
-    {text(
-      'Code',
-      `import React, { useState } from "react";
+const sampleCode = `import React, { useState } from "react";
 
 function Example() {
   const [count, setCount] = useState(0);
@@ -35,8 +26,16 @@ function Example() {
       </button>
     </div>
   );
-}`
-    )}
+}`;
+
+export default { title: 'Components/Code', decorators: [withKnobs] };
+
+export const Default = () => (
+  <Code
+    language={select('Language', themeLanguages, 'jsx')}
+    lineNumbers={boolean('Show line numbers?', true)}
+  >
+    {text('Code', sampleCode)}
   </Code>
 );
 
@@ -51,34 +50,11 @@ Default.story = {
 export const Editable = () => (
   <CodeEditor
     language={select('Language', themeLanguages, 'jsx')}
-    lineNumbers={boolean('Show line numbers?', true)}
+    onChange={(code) => console.log('Got the code here', code)}
   >
-    {text(
-      'Code',
-      `import React, { useState } from "react";
-
-function Example() {
-  const [count, setCount] = useState(0);
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-    </div>
-  );
-}`
-    )}
+    {sampleCode}
   </CodeEditor>
 );
-
-Editable.story = {
-  parameters: {
-    knobs: {
-      escapeHTML: false
-    }
-  }
-};
 
 export const Inline = () => (
   <Text as="span">

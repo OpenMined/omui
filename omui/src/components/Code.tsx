@@ -1,13 +1,16 @@
-import React, { Fragment, useState } from 'react';
-import Highlight, { defaultProps } from 'prism-react-renderer';
-import Prism from 'prism-react-renderer/prism';
+import React, { useState, useEffect } from 'react';
+import Highlight, { defaultProps, Language } from 'prism-react-renderer';
 import theme from 'prism-react-renderer/themes/vsDark';
 import Editor from 'react-simple-code-editor';
+import { Global, css } from '@emotion/core';
+
+// @ts-ignore
+import Prism from 'prism-react-renderer/prism';
 
 import { Box } from './Box';
 import { fonts } from '../theme/typography';
 
-(typeof global !== 'undefined' ? global : window).Prism = Prism;
+(typeof global !== 'undefined' ? global : window)['Prism'] = Prism;
 
 require('prismjs/components/prism-markup');
 require('prismjs/components/prism-css');
@@ -38,19 +41,27 @@ require('prismjs/components/prism-swift');
 require('prismjs/components/prism-typescript');
 require('prismjs/components/prism-wasm');
 
+interface CodeProps {
+  children: string;
+  language: Language;
+  lineNumbers: boolean;
+  inline: boolean;
+}
+
 export const Code = ({
   children,
   language,
   lineNumbers = true,
   inline = false,
   ...props
-}) => {
+}: CodeProps) => {
   if (inline) lineNumbers = false;
 
   return (
     <Box {...props} display={inline ? 'inline' : 'block'}>
       <Highlight
         {...defaultProps}
+        // @ts-ignore
         theme={theme}
         code={children}
         language={language}
@@ -80,7 +91,7 @@ export const Code = ({
                     fontWeight="semibold"
                     pr={4}
                     userSelect="none"
-                    opacity="0.5"
+                    opacity={0.5}
                   >
                     {i + 1}
                   </Box>
@@ -99,8 +110,21 @@ export const Code = ({
   );
 };
 
-export const CodeEditor = (props) => {
-  const [code, setCode] = useState(props.children);
+interface CodeEditorProps {
+  children: string;
+  onChange: (code: string) => void;
+  language: Language;
+}
+
+export const CodeEditor = ({
+  children,
+  onChange,
+  language,
+  ...props
+}: CodeEditorProps) => {
+  const [code, setCode] = useState(children);
+
+  useEffect(() => onChange && onChange(code), [code]);
 
   const styles = {
     root: {
@@ -110,10 +134,11 @@ export const CodeEditor = (props) => {
     }
   };
 
-  const highlight = (code) => (
-    <Highlight {...defaultProps} theme={theme} code={code} language="jsx">
-      {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <Fragment>
+  const highlight = (code: string) => (
+    // @ts-ignore
+    <Highlight {...defaultProps} theme={theme} code={code} language={language}>
+      {({ tokens, getLineProps, getTokenProps }) => (
+        <>
           {tokens.map((line, i) => (
             <div {...getLineProps({ line, key: i })}>
               {line.map((token, key) => (
@@ -121,20 +146,41 @@ export const CodeEditor = (props) => {
               ))}
             </div>
           ))}
-        </Fragment>
+        </>
       )}
     </Highlight>
   );
 
   return (
-    <Editor
-      value={code}
-      onValueChange={setCode}
-      highlight={highlight}
-      style={styles.root}
-    />
+    <Box {...props} borderRadius="md" overflow="hidden">
+      <Box
+        bg="gray.600"
+        color="gray.400"
+        pt={2}
+        pb={1}
+        px={4}
+        fontSize="sm"
+        fontWeight="medium"
+      >
+        This code block is editable
+      </Box>
+      {/* TODO: We should figure out a better way to change this style... */}
+      <Global
+        styles={css`
+          .npm__react-simple-code-editor__textarea:focus {
+            outline: none;
+          }
+        `}
+      />
+      <Box bg={styles.root.backgroundColor} px={4} py={3}>
+        <Editor
+          value={code}
+          onValueChange={setCode}
+          highlight={highlight}
+          // @ts-ignore
+          style={styles.root}
+        />
+      </Box>
+    </Box>
   );
 };
-
-// TODO: Finish editor styling
-// TODO: Convert back to Typescript
