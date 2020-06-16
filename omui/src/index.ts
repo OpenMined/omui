@@ -24,7 +24,7 @@ export { Button, IconButton } from './components/Button';
 export { Checkbox, CheckboxGroup } from './components/Checkbox'; // TODO: This isn't final
 export { Code, CodeEditor } from './components/Code';
 export { Collapse } from './components/Collapse'; // TODO: This isn't final
-export { Divider } from './components/Divider'; // TODO: This isn't final
+export { Divider } from './components/Divider';
 export { Drawer } from './components/Drawer'; // TODO: This isn't final
 export { Editable } from './components/Editable'; // TODO: This isn't final
 export { VideoEmbed, MapEmbed } from './components/Embed';

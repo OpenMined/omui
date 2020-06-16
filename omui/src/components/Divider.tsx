@@ -1,4 +1,7 @@
-export { Divider } from '@chakra-ui/core';
+import { Divider as ChakraDivider } from '@chakra-ui/core';
 
-// TODO: Figure out what to do with Divider
-// TODO: Create various Storybook stories related to Chakra documentation
+export const Divider = ChakraDivider;
+
+Divider.defaultProps = {
+  borderColor: 'gray.400'
+};
