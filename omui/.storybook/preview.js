@@ -1,5 +1,6 @@
 import React from 'react';
 import { addDecorator, addParameters } from '@storybook/react';
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { Box, Theme } from '../src';
 
 addDecorator((storyFn) => (
@@ -80,6 +81,18 @@ addParameters({
       }
 
       return 0;
+    }
+  },
+  viewport: {
+    viewports: {
+      ...INITIAL_VIEWPORTS,
+      responsive: {
+        name: 'Responsive',
+        styles: {
+          width: 'calc(100% - 20px)',
+          height: 'calc(100% - 20px)'
+        }
+      }
     }
   }
 });

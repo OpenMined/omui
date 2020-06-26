@@ -137,12 +137,8 @@ export const ButtonVariants = {
 
 export default {
   baseStyle: {
-    lineHeight: '1.2',
     borderRadius: 'md',
-    fontWeight: 'semibold',
-    _focus: {
-      boxShadow: 'outline'
-    },
+    fontWeight: 'medium',
     _disabled: {
       opacity: 0.4,
       cursor: 'not-allowed',

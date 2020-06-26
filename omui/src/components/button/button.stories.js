@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
-import { PhoneIcon } from '@chakra-ui/icons';
+import { PhoneIcon, CalendarIcon } from '@chakra-ui/icons';
 
 import { Button, IconButton } from '../..';
 import {
@@ -12,19 +12,21 @@ import {
 
 export default { title: 'Primitives/Button', decorators: [withKnobs] };
 
-const { size, variant, colorScheme, leftIcon, rightIcon } = Button.defaultProps;
+const { size, variant, colorScheme } = Button.defaultProps;
 
 export const Default = () => {
   const isLoading = boolean('Is loading?', false);
   const loadingText = isLoading ? text('Loading text', 'Submitting...') : null;
+  const leftIcon = boolean('Left icon?', false);
+  const rightIcon = boolean('Right icon?', false);
 
   return (
     <Button
       size={select('Size', themeButtonSizes, size)}
       variant={select('Variant', themeButtonVariants, variant)}
       colorScheme={select('Color', themeButtonColors, colorScheme)}
-      leftIcon={text('Left icon', leftIcon)}
-      rightIcon={text('Right icon', rightIcon)}
+      leftIcon={leftIcon ? <PhoneIcon /> : null}
+      rightIcon={rightIcon ? <CalendarIcon /> : null}
       isDisabled={boolean('Is disabled?', false)}
       isLoading={isLoading}
       loadingText={loadingText}

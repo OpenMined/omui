@@ -6,13 +6,9 @@ import {
 export const Button = ChakraButton;
 
 Button.defaultProps = {
-  fontWeight: 'medium',
   size: 'md',
   variant: 'solid',
-  colorScheme: 'blue',
-  _focus: {
-    outline: 'none'
-  }
+  colorScheme: 'blue'
 };
 
 export const IconButton = ChakraIconButton;
