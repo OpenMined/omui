@@ -30,13 +30,13 @@ export const AccordionItem = ({
 
   return (
     <ChakraAccordionItem {...itemProps}>
-      <AccordionButton _focus={{ outline: 'none' }}>
+      <AccordionButton>
         <Box flex="1" textAlign="left">
           {title}
         </Box>
         <AccordionIcon />
       </AccordionButton>
-      <AccordionPanel pb={4}>{children}</AccordionPanel>
+      <AccordionPanel>{children}</AccordionPanel>
     </ChakraAccordionItem>
   );
 };

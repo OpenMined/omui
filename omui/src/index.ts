@@ -1,6 +1,8 @@
 /*
   High-level todo's:
   - Finish all components
+  - Consider adding any new components added by v1
+  - Go through all Chakra component configs and remove the one's that we don't need
   - Create a form component, similar to SR wizard (Patrick)
   - Double-check exporting (below)
   - Provide ample stories for each component

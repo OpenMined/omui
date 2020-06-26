@@ -40,7 +40,7 @@ export const ComplexExample = () => {
     `${numberCommas(val)} ${val === 1 ? word : word + 's'}`;
 
   return (
-    <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden">
+    <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
       <Image src={property.imageUrl} alt={property.imageAlt} />
       <Box p="6">
         <Flex alignItems="center">

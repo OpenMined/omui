@@ -1,4 +1,4 @@
-const Accordion = {
+export default {
   baseStyle: {
     Item: {
       borderTopWidth: '1px',
@@ -9,9 +9,6 @@ const Accordion = {
     },
     Button: {
       fontSize: '1rem',
-      _focus: {
-        boxShadow: 'outline'
-      },
       _hover: {
         bg: 'blackAlpha.50'
       },
@@ -29,5 +26,3 @@ const Accordion = {
     }
   }
 };
-
-export default Accordion;

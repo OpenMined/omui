@@ -12,7 +12,7 @@ export const Default = () => {
     <Image
       src={text('Source', 'https://www.openmined.org/images/logo.png')}
       boxSize={select('Size', Object.keys(largeSizes), 'xs')}
-      rounded={select('Border radius', Object.keys(radii), 'none')}
+      borderRadius={select('Border radius', Object.keys(radii), 'none')}
       alt={text('Title', 'My Image')}
     />
   );
@@ -24,7 +24,7 @@ export const WithFallback = () => {
       src={text('Source', 'https://www.openmined.org/images/logo.xxx')}
       fallbackSrc={text('Fallback source', 'https://via.placeholder.com/400')}
       boxSize={select('Size', Object.keys(largeSizes), 'xs')}
-      rounded={select('Border radius', Object.keys(radii), 'none')}
+      borderRadius={select('Border radius', Object.keys(radii), 'none')}
       alt={text('Title', 'My Image')}
     />
   );
@@ -44,7 +44,7 @@ export const WithRatio = () => {
   return (
     <Image
       src={text('Source', 'https://www.openmined.org/images/logo.png')}
-      rounded={select('Border radius', Object.keys(radii), 'none')}
+      borderRadius={select('Border radius', Object.keys(radii), 'none')}
       maxWidth={400}
       ratio={customRatio || standardRatio}
       alt={text('Title', 'My Image')}
