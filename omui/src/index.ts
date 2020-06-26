@@ -14,29 +14,29 @@
   - Cypress testing: https://itnext.io/cypress-storybook-keeping-test-scenario-data-and-component-rendering-in-one-place-c57b23cc1640
 */
 
-export { Accordion, AccordionItem } from './components/Accordion';
-export { Alert } from './components/Alert';
-export { AlertBox } from './components/AlertBox';
-export { Avatar, AvatarGroup } from './components/Avatar';
-export { Badge } from './components/Badge';
-export { Box } from './components/Box';
-export { Breadcrumb } from './components/Breadcrumb';
-export { Button, IconButton } from './components/Button';
+export { Accordion, AccordionItem } from './components/accordion/accordion';
+export { Alert } from './components/alert/alert';
+export { AlertBox } from './components/alert-box/alert-box';
+export { Avatar, AvatarGroup } from './components/avatar/avatar';
+export { Badge } from './components/badge/badge';
+export { Box } from './components/box/box';
+export { Breadcrumb } from './components/breadcrumb/breadcrumb';
+export { Button, IconButton } from './components/button/button';
 export { Checkbox, CheckboxGroup } from './components/Checkbox'; // TODO: This isn't final
-export { Code, CodeEditor } from './components/Code';
+export { Code, CodeEditor } from './components/code/code';
 export { Collapse } from './components/Collapse'; // TODO: This isn't final
-export { Divider } from './components/Divider';
+export { Divider } from './components/divider/divider';
 export { Drawer } from './components/Drawer'; // TODO: This isn't final
 export { Editable } from './components/Editable'; // TODO: This isn't final
-export { VideoEmbed, MapEmbed } from './components/Embed';
-export { Flex } from './components/Flex';
+export { VideoEmbed, MapEmbed } from './components/embed/embed';
+export { Flex } from './components/flex/flex';
 export { FormControl } from './components/FormControl'; // TODO: This isn't final
 export { Grid } from './components/Grid'; // TODO: This isn't final
-export { Heading } from './components/Heading';
+export { Heading } from './components/heading/heading';
 export { Icon } from './components/Icon'; // TODO: This isn't final
-export { Image } from './components/Image';
+export { Image } from './components/image/image';
 export { Input } from './components/Input'; // TODO: This isn't final
-export { Link } from './components/Link';
+export { Link } from './components/link/link';
 export { List } from './components/List'; // TODO: This isn't final
 export { Menu } from './components/Menu'; // TODO: This isn't final
 export { Modal } from './components/Modal'; // TODO: This isn't final
@@ -54,7 +54,7 @@ export { Stat } from './components/Stat'; // TODO: This isn't final
 export { Switch } from './components/Switch'; // TODO: This isn't final
 export { Tabs } from './components/Tabs'; // TODO: This isn't final
 export { Tag } from './components/Tag'; // TODO: This isn't final
-export { Text } from './components/Text';
+export { Text } from './components/text/text';
 export { Textarea } from './components/Textarea'; // TODO: This isn't final
 export { Theme } from './components/Theme';
 export { useToast } from './components/Toast'; // TODO: This isn't final

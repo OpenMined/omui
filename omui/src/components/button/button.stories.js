@@ -1,0 +1,47 @@
+import React from 'react';
+import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
+import { PhoneIcon } from '@chakra-ui/icons';
+
+import { Button, IconButton } from '../..';
+import {
+  themeIconButtonSizes,
+  themeButtonSizes,
+  themeButtonColors,
+  themeButtonVariants
+} from '../../helpers/get-theme';
+
+export default { title: 'Primitives/Button', decorators: [withKnobs] };
+
+const { size, variant, colorScheme, leftIcon, rightIcon } = Button.defaultProps;
+
+export const Default = () => {
+  const isLoading = boolean('Is loading?', false);
+  const loadingText = isLoading ? text('Loading text', 'Submitting...') : null;
+
+  return (
+    <Button
+      size={select('Size', themeButtonSizes, size)}
+      variant={select('Variant', themeButtonVariants, variant)}
+      colorScheme={select('Color', themeButtonColors, colorScheme)}
+      leftIcon={text('Left icon', leftIcon)}
+      rightIcon={text('Right icon', rightIcon)}
+      isDisabled={boolean('Is disabled?', false)}
+      isLoading={isLoading}
+      loadingText={loadingText}
+    >
+      {text('Text', 'Customize me with knobs!')}
+    </Button>
+  );
+};
+
+export const Icon = () => (
+  <IconButton
+    size={select('Size', themeIconButtonSizes, size)}
+    variant={select('Variant', themeButtonVariants, variant)}
+    colorScheme={select('Color', themeButtonColors, colorScheme)}
+    icon={<PhoneIcon />}
+    isRound={boolean('Is round?', IconButton.defaultProps.isRound)}
+    isDisabled={boolean('Is disabled?', false)}
+    isLoading={boolean('Is loading?', false)}
+  />
+);

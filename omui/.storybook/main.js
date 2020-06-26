@@ -6,7 +6,7 @@ module.exports = {
     '@storybook/addon-docs',
     '@storybook/addon-links/register'
   ],
-  stories: ['../src/stories/**/*.stories.(js|mdx)'],
+  stories: ['../src/**/*.stories.(js|mdx)'],
   webpackFinal: async (config) => {
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
