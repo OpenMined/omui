@@ -7,7 +7,7 @@ interface AvatarProps {
 
 export const Avatar = ({ badge, ...props }: AvatarProps) => (
   <ChakraAvatar {...props}>
-    {badge && <AvatarBadge bg={`${badge}.500`} size="1em" />}
+    {badge && <AvatarBadge bg={`${badge}.500`} />}
   </ChakraAvatar>
 );
 

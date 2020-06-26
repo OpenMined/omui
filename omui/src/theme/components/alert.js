@@ -70,6 +70,12 @@ const Alert = {
       paddingX: 4,
       paddingY: 3
     },
+    Title: {
+      marginRight: 2
+    },
+    Description: {
+      lineHeight: 'normal'
+    },
     Icon: {
       marginRight: 3,
       boxSize: 5

@@ -16,15 +16,10 @@ interface AlertProps {
 export const Alert = ({ title, closable, children, ...props }: AlertProps) => (
   <ChakraAlert {...props}>
     <AlertIcon />
-    {title && <AlertTitle mr={2}>{title}</AlertTitle>}
+    {title && <AlertTitle>{title}</AlertTitle>}
     <AlertDescription>{children}</AlertDescription>
     {closable && (
-      <CloseButton
-        position="absolute"
-        right="2"
-        top="2"
-        _focus={{ outline: 'none' }}
-      />
+      <CloseButton position="absolute" right="0.4rem" top="0.4rem" />
     )}
   </ChakraAlert>
 );

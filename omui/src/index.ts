@@ -1,6 +1,9 @@
 /*
   High-level todo's:
+  - Get all helpers to reference the new component themes
   - Finish all components
+  - Go through and re-evaluate all Typescript types
+  - Check all components for responsiveness
   - Consider adding any new components added by v1
   - Go through all Chakra component configs and remove the one's that we don't need
   - Create a form component, similar to SR wizard (Patrick)
@@ -9,10 +12,6 @@
   - Migrate components over to Framer
   - Create MDX documentation for each component in Storybook: https://medium.com/storybookjs/rich-docs-with-storybook-mdx-61bc145ae7bc
   - Cypress testing: https://itnext.io/cypress-storybook-keeping-test-scenario-data-and-component-rendering-in-one-place-c57b23cc1640
-
-  Current unknowns:
-  - Depending on the answer we get from this issue (https://github.com/chakra-ui/chakra-ui/issues/851)
-    - Change AccordionHeader, Button, and CloseButton (Alert)
 */
 
 export { Accordion, AccordionItem } from './components/Accordion';

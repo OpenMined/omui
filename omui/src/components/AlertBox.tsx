@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Alert,
   AlertIcon,
-  AlertTitle as ChakraAlertTitle,
+  AlertTitle,
   AlertDescription
 } from '@chakra-ui/core';
 
@@ -12,22 +12,26 @@ interface AlertBoxProps {
 }
 
 export const AlertBox = ({ title, children, ...props }: AlertBoxProps) => (
-  <Alert {...props}>
-    <AlertIcon boxSize="8" mr={0} />
+  <Alert
+    {...props}
+    flexDirection="column"
+    justifyContent="center"
+    textAlign="center"
+    py={10}
+  >
+    <AlertIcon boxSize="10" mr={0} />
     {title && (
-      <ChakraAlertTitle mt={3} mb={1} fontSize="lg">
+      <AlertTitle mt={3} mb={1} fontSize="lg">
         {title}
-      </ChakraAlertTitle>
+      </AlertTitle>
     )}
-    <AlertDescription maxWidth="sm">{children}</AlertDescription>
+    <AlertDescription maxWidth="sm" lineHeight="base">
+      {children}
+    </AlertDescription>
   </Alert>
 );
 
 AlertBox.defaultProps = {
   status: 'info',
-  variant: 'subtle',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  textAlign: 'center',
-  py: 12
+  variant: 'subtle'
 };

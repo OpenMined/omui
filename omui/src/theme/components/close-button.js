@@ -9,17 +9,13 @@ const CloseButton = {
     transition: 'all 0.2s',
     _disabled: {
       opacity: 0.4,
-      cursor: 'not-allowed',
-      boxShadow: 'none'
+      cursor: 'not-allowed'
     },
     _hover: {
       bg: mode(`blackAlpha.100`, `whiteAlpha.100`)(props)
     },
     _active: {
       bg: mode(`blackAlpha.200`, `whiteAlpha.200`)(props)
-    },
-    _focus: {
-      boxShadow: 'outline'
     }
   }),
   sizes: {

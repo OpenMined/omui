@@ -50,10 +50,12 @@ const Avatar = {
       transform: 'translate(25%, 25%)',
       borderRadius: 'full',
       border: '0.2em solid',
-      borderColor: mode('white', 'gray.800')(props)
+      borderColor: mode('white', 'gray.800')(props),
+      boxSize: '1em'
     },
     ExcessLabel: {
-      bg: mode('gray.200', 'whiteAlpha.400')(props)
+      bg: mode('gray.200', 'whiteAlpha.400')(props),
+      fontWeight: 'normal'
     }
   }),
   sizes: {
