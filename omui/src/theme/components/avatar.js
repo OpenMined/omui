@@ -1,8 +1,8 @@
-import sizes from '../foundations/sizes';
+import theme from '../foundations';
 import { randomColor, isDark, mode } from '@chakra-ui/theme-tools';
 
 function getSize(size) {
-  const themeSize = sizes[size];
+  const themeSize = theme.sizes[size];
   const styles = {
     width: size,
     height: size,

@@ -1333,6 +1333,13 @@
   dependencies:
     "@chakra-ui/utils" "^1.0.0-next.2"
 
+"@chakra-ui/icons@^1.0.0-next.2":
+  version "1.0.0-next.2"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/icons/-/icons-1.0.0-next.2.tgz#e6df0f12e99eb8e3feb129ef72d65ea02e10c795"
+  integrity sha512-iAEbaDCGxvEkkO3Of1kjJ1SLCciZKUBdSEW0K7c5jw6pNiwgVpkAdXXxBaSj6oydUjtvt5RK9D+t95DocQOnag==
+  dependencies:
+    "@chakra-ui/icon" "^1.0.0-next.2"
+
 "@chakra-ui/image@^1.0.0-next.2":
   version "1.0.0-next.2"
   resolved "https://registry.yarnpkg.com/@chakra-ui/image/-/image-1.0.0-next.2.tgz#cee3cbeadfca40d5da21cf859022ad87c371702e"

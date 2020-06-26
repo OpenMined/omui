@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link as ChakraLink, LinkProps } from '@chakra-ui/core';
-import { Icon } from './Icon';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 export const Link = ({ isExternal, children, ...props }: LinkProps) => {
   if (
@@ -13,7 +13,7 @@ export const Link = ({ isExternal, children, ...props }: LinkProps) => {
   return (
     <ChakraLink {...props} isExternal={isExternal}>
       {children}
-      {isExternal && <Icon name="external-link" ml="1" mt="-4px" />}
+      {isExternal && <ExternalLinkIcon ml="1" mt="-4px" />}
     </ChakraLink>
   );
 };

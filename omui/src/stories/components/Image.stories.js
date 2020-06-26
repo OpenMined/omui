@@ -2,8 +2,8 @@ import React from 'react';
 import { withKnobs, select, number, text } from '@storybook/addon-knobs';
 
 import { Image } from '../../';
-import { largeSizes } from '../../theme/sizes';
-import { radii } from '../../theme/radii';
+import { largeSizes } from '../../theme/foundations/sizes';
+import { radii } from '../../theme/foundations/radius';
 
 export default { title: 'Primitives/Image', decorators: [withKnobs] };
 
@@ -11,7 +11,7 @@ export const Default = () => {
   return (
     <Image
       src={text('Source', 'https://www.openmined.org/images/logo.png')}
-      size={select('Size', Object.keys(largeSizes), 'xs')}
+      boxSize={select('Size', Object.keys(largeSizes), 'xs')}
       rounded={select('Border radius', Object.keys(radii), 'none')}
       alt={text('Title', 'My Image')}
     />
@@ -23,7 +23,7 @@ export const WithFallback = () => {
     <Image
       src={text('Source', 'https://www.openmined.org/images/logo.xxx')}
       fallbackSrc={text('Fallback source', 'https://via.placeholder.com/400')}
-      size={select('Size', Object.keys(largeSizes), 'xs')}
+      boxSize={select('Size', Object.keys(largeSizes), 'xs')}
       rounded={select('Border radius', Object.keys(radii), 'none')}
       alt={text('Title', 'My Image')}
     />

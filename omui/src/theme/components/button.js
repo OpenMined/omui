@@ -76,7 +76,7 @@ function getLinkStyle(props) {
     lineHeight: 'normal',
     color: mode(`${c}.500`, `${c}.200`)(props),
     _hover: {
-      textDecoration: 'underline'
+      color: mode(`${c}.600`, `${c}.200`)(props)
     },
     _active: {
       color: mode(`${c}.700`, `${c}.500`)(props)

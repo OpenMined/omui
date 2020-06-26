@@ -1,5 +1,6 @@
 import React from 'react';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
+import { PhoneIcon } from '@chakra-ui/icons';
 
 import { Button, IconButton } from '../../';
 import {
@@ -38,7 +39,7 @@ export const Icon = () => (
     size={select('Size', themeIconButtonSizes, size)}
     variant={select('Variant', themeButtonVariants, variant)}
     colorScheme={select('Color', themeButtonColors, colorScheme)}
-    icon={text('Icon', 'phone')}
+    icon={<PhoneIcon />}
     isRound={boolean('Is round?', IconButton.defaultProps.isRound)}
     isDisabled={boolean('Is disabled?', false)}
     isLoading={boolean('Is loading?', false)}

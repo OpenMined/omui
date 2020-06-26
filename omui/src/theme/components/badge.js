@@ -42,7 +42,7 @@ const Badge = {
     textTransform: 'uppercase',
     fontSize: 'xs',
     borderRadius: 'sm',
-    fontWeight: 'bold'
+    fontWeight: 'medium'
   },
   variants: {
     solid: getSolidStyle,

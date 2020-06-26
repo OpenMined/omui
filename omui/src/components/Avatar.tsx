@@ -1,7 +1,7 @@
 import React from 'react';
-import { Avatar as ChakraAvatar, AvatarBadge, IAvatar } from '@chakra-ui/core';
+import { Avatar as ChakraAvatar, AvatarBadge } from '@chakra-ui/core';
 
-interface AvatarProps extends IAvatar {
+interface AvatarProps {
   badge?: string;
 }
 

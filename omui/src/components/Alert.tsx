@@ -4,11 +4,10 @@ import {
   AlertIcon,
   AlertTitle,
   AlertDescription,
-  CloseButton,
-  IAlert
+  CloseButton
 } from '@chakra-ui/core';
 
-interface AlertProps extends IAlert {
+interface AlertProps {
   title?: string;
   closable?: boolean;
   children: string | React.ReactNode;

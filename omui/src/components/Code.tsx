@@ -8,7 +8,7 @@ import { Global, css } from '@emotion/core';
 import Prism from 'prism-react-renderer/prism';
 
 import { Box } from './Box';
-import { fonts } from '../theme/typography';
+import { fonts } from '../theme/foundations/typography';
 
 (typeof global !== 'undefined' ? global : window)['Prism'] = Prism;
 

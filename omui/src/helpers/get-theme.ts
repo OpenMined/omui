@@ -1,11 +1,11 @@
-import { colors, thirdParty, base, alphas } from '../theme/colors';
+import { colors, thirdParty, base, alphas } from '../theme/foundations/colors';
 import {
   fontSizes,
   fontWeights,
   fonts,
   letterSpacings,
   lineHeights
-} from '../theme/typography';
+} from '../theme/foundations/typography';
 
 const getAllColorKeys = (c: object) =>
   Object.keys(c)

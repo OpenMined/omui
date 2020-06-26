@@ -2,19 +2,18 @@ import React from 'react';
 import {
   Accordion as ChakraAccordion,
   AccordionItem as ChakraAccordionItem,
-  AccordionHeader,
+  AccordionButton,
   AccordionPanel,
   AccordionIcon,
-  IAccordion,
-  IAccordionItem
+  AccordionProps
 } from '@chakra-ui/core';
-import { Text } from './Text';
+import { Box } from './Box';
 
-export const Accordion = ({ children, ...props }: IAccordion) => (
+export const Accordion = ({ children, ...props }: AccordionProps) => (
   <ChakraAccordion {...props}>{children}</ChakraAccordion>
 );
 
-interface AccordionItemProps extends IAccordionItem {
+interface AccordionItemProps {
   title: string;
   children: string | React.ReactNode;
 }
@@ -31,12 +30,12 @@ export const AccordionItem = ({
 
   return (
     <ChakraAccordionItem {...itemProps}>
-      <AccordionHeader _focus={{ outline: 'none' }}>
-        <Text flex="1" textAlign="left" fontWeight="semibold">
+      <AccordionButton _focus={{ outline: 'none' }}>
+        <Box flex="1" textAlign="left">
           {title}
-        </Text>
+        </Box>
         <AccordionIcon />
-      </AccordionHeader>
+      </AccordionButton>
       <AccordionPanel pb={4}>{children}</AccordionPanel>
     </ChakraAccordionItem>
   );

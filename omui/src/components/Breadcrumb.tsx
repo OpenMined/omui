@@ -2,14 +2,12 @@ import React from 'react';
 import {
   Breadcrumb as ChakraBreadcrumb,
   BreadcrumbItem,
-  LinkProps,
-  BoxProps as IBreadcrumb
+  LinkProps
 } from '@chakra-ui/core';
-import { Icon } from './Icon';
+import { ChevronRightIcon } from '@chakra-ui/icons';
 import { Link } from './Link';
-import { Text } from './Text';
 
-interface BreadcrumbProps extends IBreadcrumb {
+interface BreadcrumbProps {
   links: object[];
 }
 
@@ -18,7 +16,7 @@ export const Breadcrumb = ({ links, ...props }: BreadcrumbProps) => {
     <ChakraBreadcrumb
       fontWeight="medium"
       spacing="2"
-      separator={<Icon color="gray.400" name="chevron-right" mt="-2px" />}
+      separator={<ChevronRightIcon color="gray.400" mt="-2px" />}
       {...props}
     >
       {links.map(({ href, title, ...link }: LinkProps, index) => {
@@ -37,9 +35,14 @@ export const Breadcrumb = ({ links, ...props }: BreadcrumbProps) => {
               </Link>
             )}
             {isCurrentPage && (
-              <Text {...link} as="span" cursor="default">
+              <Link
+                {...link}
+                color="black"
+                _hover={{ color: 'black' }}
+                cursor="default"
+              >
                 {title}
-              </Text>
+              </Link>
             )}
           </BreadcrumbItem>
         );

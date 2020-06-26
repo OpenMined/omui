@@ -1,5 +1,5 @@
 import React from 'react';
-import { AspectRatioBox } from '@chakra-ui/core';
+import { AspectRatio } from '@chakra-ui/core';
 import { Box } from './Box';
 import { convertRatios } from '../helpers/ratios';
 
@@ -20,9 +20,9 @@ export const VideoEmbed = ({ ratio, title, src, ...props }: EmbedProps) => {
   if (ratio) props['ratio'] = convertRatios(ratio);
 
   return (
-    <AspectRatioBox {...props}>
+    <AspectRatio {...props}>
       <Box {...videoEmbedProps} />
-    </AspectRatioBox>
+    </AspectRatio>
   );
 };
 
@@ -40,9 +40,9 @@ export const MapEmbed = ({ ratio, title, src, ...props }: EmbedProps) => {
   if (ratio) props['ratio'] = convertRatios(ratio);
 
   return (
-    <AspectRatioBox {...props}>
+    <AspectRatio {...props}>
       <Box {...mapEmbedProps} />
-    </AspectRatioBox>
+    </AspectRatio>
   );
 };
 

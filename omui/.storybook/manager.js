@@ -2,8 +2,8 @@ import { addons } from '@storybook/addons';
 import { create } from '@storybook/theming';
 
 import logo from './logo.png';
-import { fonts } from '../src/theme/typography';
-import { colors, base, alphas } from '../src/theme/colors';
+import { fonts } from '../src/theme/foundations/typography';
+import { colors, base, alphas } from '../src/theme/foundations/colors';
 
 const storybookTheme = create({
   // Base

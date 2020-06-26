@@ -1,8 +1,9 @@
 import React from 'react';
 import { withKnobs, text, select, number } from '@storybook/addon-knobs';
+import { StarIcon } from '@chakra-ui/icons';
 
-import { Box, Flex, Badge, Text, Image, Icon } from '../../';
-import { sizes } from '../../theme/sizes';
+import { Box, Flex, Badge, Text, Image } from '../../';
+import { sizes } from '../../theme/foundations/sizes';
 import { themeAllPossibleColors } from '../../helpers/get-theme';
 
 export default { title: 'Primitives/Box', decorators: [withKnobs] };
@@ -43,12 +44,10 @@ export const ComplexExample = () => {
       <Image src={property.imageUrl} alt={property.imageAlt} />
       <Box p="6">
         <Flex alignItems="center">
-          <Badge pr="2" colorScheme="green">
-            New
-          </Badge>
+          <Badge colorScheme="green">New</Badge>
           <Text
             color="gray.500"
-            fontWeight="semibold"
+            fontWeight="medium"
             letterSpacing="wide"
             fontSize="xs"
             textTransform="uppercase"
@@ -58,13 +57,7 @@ export const ComplexExample = () => {
             {pluralize(property.baths, 'bath')}
           </Text>
         </Flex>
-        <Text
-          mt="2"
-          fontWeight="semibold"
-          as="h4"
-          lineHeight="tight"
-          isTruncated
-        >
+        <Text mt="2" fontWeight="medium" as="h4" lineHeight="tight" isTruncated>
           {property.title}
         </Text>
         <Flex alignItems="center">
@@ -77,9 +70,8 @@ export const ComplexExample = () => {
           {Array(5)
             .fill('')
             .map((_, i) => (
-              <Icon
+              <StarIcon
                 key={i}
-                name="star"
                 mr="1"
                 color={i < property.rating ? 'teal.500' : 'gray.300'}
               />
