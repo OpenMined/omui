@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider, CSSReset } from '@chakra-ui/core';
+import { ChakraProvider, CSSReset } from '@chakra-ui/core';
 import theme from '../theme';
 
 interface ThemeProps {
@@ -7,8 +7,8 @@ interface ThemeProps {
 }
 
 export const Theme = ({ children }: ThemeProps) => (
-  <ThemeProvider theme={theme}>
+  <ChakraProvider theme={theme}>
     <CSSReset />
     {children}
-  </ThemeProvider>
+  </ChakraProvider>
 );

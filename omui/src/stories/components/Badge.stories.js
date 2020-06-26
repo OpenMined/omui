@@ -6,12 +6,12 @@ import { themeBadgeVariants, themeBadgeColors } from '../../helpers/get-theme';
 
 export default { title: 'Components/Badge', decorators: [withKnobs] };
 
-const { variant, variantColor } = Badge.defaultProps;
+const { variant, colorScheme } = Badge.defaultProps;
 
 export const Default = () => (
   <Badge
     variant={select('Variant', themeBadgeVariants, variant)}
-    variantColor={select('Color', themeBadgeColors, variantColor)}
+    colorScheme={select('Color', themeBadgeColors, colorScheme)}
   >
     {text('Text', 'I am a badge')}
   </Badge>
@@ -26,7 +26,7 @@ export const WithAvatar = () => (
         <Badge
           ml="2"
           variant={select('Variant', themeBadgeVariants, variant)}
-          variantColor={select('Color', themeBadgeColors, 'green')}
+          colorScheme={select('Color', themeBadgeColors, 'green')}
         >
           New
         </Badge>

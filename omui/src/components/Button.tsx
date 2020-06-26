@@ -9,7 +9,7 @@ Button.defaultProps = {
   fontWeight: 'medium',
   size: 'md',
   variant: 'solid',
-  variantColor: 'blue',
+  colorScheme: 'blue',
   _focus: {
     outline: 'none'
   }
@@ -20,6 +20,6 @@ export const IconButton = ChakraIconButton;
 IconButton.defaultProps = {
   size: 'md',
   variant: 'solid',
-  variantColor: 'blue',
+  colorScheme: 'blue',
   isRound: false
 };

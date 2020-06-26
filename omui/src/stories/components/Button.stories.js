@@ -11,13 +11,7 @@ import {
 
 export default { title: 'Primitives/Button', decorators: [withKnobs] };
 
-const {
-  size,
-  variant,
-  variantColor,
-  leftIcon,
-  rightIcon
-} = Button.defaultProps;
+const { size, variant, colorScheme, leftIcon, rightIcon } = Button.defaultProps;
 
 export const Default = () => {
   const isLoading = boolean('Is loading?', false);
@@ -27,7 +21,7 @@ export const Default = () => {
     <Button
       size={select('Size', themeButtonSizes, size)}
       variant={select('Variant', themeButtonVariants, variant)}
-      variantColor={select('Color', themeButtonColors, variantColor)}
+      colorScheme={select('Color', themeButtonColors, colorScheme)}
       leftIcon={text('Left icon', leftIcon)}
       rightIcon={text('Right icon', rightIcon)}
       isDisabled={boolean('Is disabled?', false)}
@@ -43,7 +37,7 @@ export const Icon = () => (
   <IconButton
     size={select('Size', themeIconButtonSizes, size)}
     variant={select('Variant', themeButtonVariants, variant)}
-    variantColor={select('Color', themeButtonColors, variantColor)}
+    colorScheme={select('Color', themeButtonColors, colorScheme)}
     icon={text('Icon', 'phone')}
     isRound={boolean('Is round?', IconButton.defaultProps.isRound)}
     isDisabled={boolean('Is disabled?', false)}

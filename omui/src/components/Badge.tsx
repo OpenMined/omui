@@ -4,5 +4,5 @@ export const Badge = ChakraBadge;
 
 Badge.defaultProps = {
   variant: 'subtle',
-  variantColor: 'blue'
+  colorScheme: 'blue'
 };

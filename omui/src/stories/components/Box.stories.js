@@ -43,7 +43,7 @@ export const ComplexExample = () => {
       <Image src={property.imageUrl} alt={property.imageAlt} />
       <Box p="6">
         <Flex alignItems="center">
-          <Badge pr="2" variantColor="green">
+          <Badge pr="2" colorScheme="green">
             New
           </Badge>
           <Text

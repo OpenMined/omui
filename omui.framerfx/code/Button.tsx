@@ -1,8 +1,8 @@
-import React from 'react';
-import { Button as OMUIButton } from '../../omui';
-import { ButtonProps } from '../../omui/types';
-import { addPropertyControls, ControlType } from 'framer';
-import themeHOC from '../utils/theme-hoc';
+import React from "react";
+import { Button as OMUIButton } from "../../omui";
+import { ButtonProps } from "../../omui/types";
+import { addPropertyControls, ControlType } from "framer";
+import themeHOC from "../utils/theme-hoc";
 import {
   colors,
   borderRadius,
@@ -10,7 +10,7 @@ import {
   typography,
   icons,
   stateful,
-} from '../utils/prop-controls';
+} from "../utils/prop-controls";
 
 type Props = ButtonProps & {
   width: number;
@@ -31,43 +31,43 @@ export const ButtonLarge = themeHOC(ProppedButton);
 
 // TODO: Figure out defaultProps Typescript issue
 // TODO: Auto-calculate these height and widths based on padding and text size
-ButtonTiny.displayName = 'Button (1. Extra Small)';
+ButtonTiny.displayName = "Button (1. Extra Small)";
 ButtonTiny.defaultProps = {
   width: 56,
   height: 24,
-  size: 'xs',
+  size: "xs",
 };
-ButtonSmall.displayName = 'Button (2. Small)';
+ButtonSmall.displayName = "Button (2. Small)";
 ButtonSmall.defaultProps = {
   width: 69,
   height: 32,
-  size: 'sm',
+  size: "sm",
 };
-ButtonMedium.displayName = 'Button (3. Medium)';
+ButtonMedium.displayName = "Button (3. Medium)";
 ButtonMedium.defaultProps = {
   width: 83,
   height: 40,
-  size: 'md',
+  size: "md",
 };
-ButtonLarge.displayName = 'Button (4. Large)';
+ButtonLarge.displayName = "Button (4. Large)";
 ButtonLarge.defaultProps = {
   width: 105,
   height: 48,
-  size: 'lg',
+  size: "lg",
 };
 
 const controls: object = {
   text: {
     type: ControlType.String,
-    title: 'Text',
-    defaultValue: 'Button',
+    title: "Text",
+    defaultValue: "Button",
   },
-  variantColor: colors,
+  colorScheme: colors,
   variant: {
     type: ControlType.Enum,
-    title: 'Variant',
-    defaultValue: 'solid',
-    options: ['solid', 'outline', 'ghost', 'link'],
+    title: "Variant",
+    defaultValue: "solid",
+    options: ["solid", "outline", "ghost", "link"],
   },
   borderRadius,
   boxShadow,
@@ -76,7 +76,7 @@ const controls: object = {
   // letterSpacing: typography.letterSpacing,
   // textTransform: typography.textTransform,
   ...icons,
-  ...stateful(['loading', 'active', 'disabled']),
+  ...stateful(["loading", "active", "disabled"]),
   onClick: {
     type: ControlType.EventHandler,
   },
