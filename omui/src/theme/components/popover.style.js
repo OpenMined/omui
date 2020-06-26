@@ -10,11 +10,7 @@ const Popover = {
       boxShadow: 'sm',
       width: '100%',
       maxWidth: 'xs',
-      zIndex: '1',
-      _focus: {
-        outline: 0,
-        boxShadow: 'outline'
-      }
+      zIndex: '1'
     },
     Header: {
       paddingX: 3,

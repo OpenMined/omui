@@ -39,9 +39,6 @@ const baseStyle = (props) => {
         bg: mode('gray.100', 'whiteAlpha.100')(props),
         borderColor: mode('gray.100', 'transparent')(props)
       },
-      _focus: {
-        boxShadow: 'outline'
-      },
       _invalid: {
         borderColor: mode('red.500', 'red.300')(props)
       }

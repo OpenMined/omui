@@ -17,13 +17,3 @@ export const Link = ({ isExternal, children, ...props }: LinkProps) => {
     </ChakraLink>
   );
 };
-
-Link.defaultProps = {
-  color: 'blue.500',
-  _hover: {
-    color: 'blue.700',
-    textDecoration: 'none'
-  }
-};
-
-// TODO: Create various Storybook stories related to Chakra documentation

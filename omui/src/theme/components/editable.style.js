@@ -20,9 +20,6 @@ const Editable = {
       ...base,
       outline: 0,
       width: 'full',
-      _focus: {
-        boxShadow: 'outline'
-      },
       _placeholder: {
         opacity: 0.6
       }

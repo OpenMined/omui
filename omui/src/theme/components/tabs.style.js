@@ -120,11 +120,7 @@ const Tabs = {
   },
   baseStyle: {
     Tab: {
-      transition: 'all 0.2s',
-      _focus: {
-        zIndex: 1,
-        boxShadow: 'outline'
-      }
+      transition: 'all 0.2s'
     },
     TabList: {
       display: 'flex'

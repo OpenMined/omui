@@ -7,10 +7,7 @@ const Tag = {
     colorScheme: 'gray'
   },
   baseStyle: {
-    outline: 0,
-    _focus: {
-      boxShadow: 'outline'
-    }
+    outline: 0
   },
   sizes: {
     sm: {

@@ -4,12 +4,9 @@ export default {
     cursor: 'pointer',
     textDecoration: 'none',
     outline: 'none',
-    color: 'inherit',
+    color: 'blue.500',
     _hover: {
-      textDecoration: 'underline'
-    },
-    _focus: {
-      boxShadow: 'outline'
+      color: 'blue.700'
     },
     _disabled: {
       opacity: 0.4,
