@@ -1,4 +1,6 @@
-import Checkbox, { CheckboxSizes } from './checkbox.style';
+import Checkbox, {
+  CheckboxSizes
+} from '../../components/checkbox/checkbox.style';
 
 const baseStyle = Checkbox.baseStyle;
 

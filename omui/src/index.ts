@@ -22,40 +22,44 @@ export { Badge } from './components/badge/badge';
 export { Box } from './components/box/box';
 export { Breadcrumb } from './components/breadcrumb/breadcrumb';
 export { Button, IconButton } from './components/button/button';
-export { Checkbox, CheckboxGroup } from './components/Checkbox'; // TODO: This isn't final
+export {
+  Checkbox,
+  CheckboxGroup,
+  IndeterminateCheckboxGroup
+} from './components/checkbox/checkbox';
 export { Code, CodeEditor } from './components/code/code';
-export { Collapse } from './components/Collapse'; // TODO: This isn't final
+export { Collapse } from './components/Collapse'; // TODO: Need to finish
 export { Divider } from './components/divider/divider';
-export { Drawer } from './components/Drawer'; // TODO: This isn't final
-export { Editable } from './components/Editable'; // TODO: This isn't final
+export { Drawer } from './components/Drawer'; // TODO: Need to finish
+export { Editable } from './components/Editable'; // TODO: Need to finish
 export { VideoEmbed, MapEmbed } from './components/embed/embed';
 export { Flex } from './components/flex/flex';
-export { FormControl } from './components/FormControl'; // TODO: This isn't final
-export { Grid } from './components/Grid'; // TODO: This isn't final
+export { FormControl } from './components/FormControl'; // TODO: Need to finish
+export { Grid } from './components/Grid'; // TODO: Need to finish
 export { Heading } from './components/heading/heading';
-export { Icon } from './components/Icon'; // TODO: This isn't final
+export { Icon } from './components/Icon'; // TODO: Need to finish
 export { Image } from './components/image/image';
-export { Input } from './components/Input'; // TODO: This isn't final
+export { Input } from './components/Input'; // TODO: Need to finish
 export { Link } from './components/link/link';
-export { List } from './components/List'; // TODO: This isn't final
-export { Menu } from './components/Menu'; // TODO: This isn't final
-export { Modal } from './components/Modal'; // TODO: This isn't final
-export { NumberInput } from './components/NumberInput'; // TODO: This isn't final
-export { Popover } from './components/Popover'; // TODO: This isn't final
-export { Progress, CircularProgress } from './components/Progress'; // TODO: This isn't final
-export { Radio } from './components/Radio'; // TODO: This isn't final
-export { Select } from './components/Select'; // TODO: This isn't final
-export { SimpleGrid } from './components/SimpleGrid'; // TODO: This isn't final
-export { Skeleton } from './components/Skeleton'; // TODO: This isn't final
-export { Slider } from './components/Slider'; // TODO: This isn't final
-export { Spinner } from './components/Spinner'; // TODO: This isn't final
-export { Stack } from './components/Stack'; // TODO: This isn't final
-export { Stat } from './components/Stat'; // TODO: This isn't final
-export { Switch } from './components/Switch'; // TODO: This isn't final
-export { Tabs } from './components/Tabs'; // TODO: This isn't final
-export { Tag } from './components/Tag'; // TODO: This isn't final
+export { List } from './components/List'; // TODO: Need to finish
+export { Menu } from './components/Menu'; // TODO: Need to finish
+export { Modal } from './components/Modal'; // TODO: Need to finish
+export { NumberInput } from './components/NumberInput'; // TODO: Need to finish
+export { Popover } from './components/Popover'; // TODO: Need to finish
+export { Progress, CircularProgress } from './components/Progress'; // TODO: Need to finish
+export { Radio } from './components/Radio'; // TODO: Need to finish
+export { Select } from './components/Select'; // TODO: Need to finish
+export { SimpleGrid } from './components/SimpleGrid'; // TODO: Need to finish
+export { Skeleton } from './components/Skeleton'; // TODO: Need to finish
+export { Slider } from './components/Slider'; // TODO: Need to finish
+export { Spinner } from './components/Spinner'; // TODO: Need to finish
+export { Stack } from './components/Stack'; // TODO: Need to finish
+export { Stat } from './components/Stat'; // TODO: Need to finish
+export { Switch } from './components/Switch'; // TODO: Need to finish
+export { Tabs } from './components/Tabs'; // TODO: Need to finish
+export { Tag } from './components/Tag'; // TODO: Need to finish
 export { Text } from './components/text/text';
-export { Textarea } from './components/Textarea'; // TODO: This isn't final
-export { Theme } from './components/Theme';
-export { useToast } from './components/Toast'; // TODO: This isn't final
-export { Tooltip } from './components/Tooltip'; // TODO: This isn't final
+export { Textarea } from './components/Textarea'; // TODO: Need to finish
+export { Theme } from './components/theme/theme';
+export { useToast } from './components/Toast'; // TODO: Need to finish
+export { Tooltip } from './components/Tooltip'; // TODO: Need to finish

@@ -3,7 +3,7 @@ import Alert from '../components/alert/alert.style';
 import Avatar from '../components/avatar/avatar.style';
 import Badge from '../components/badge/badge.style';
 import Button from '../components/button/button.style';
-import Checkbox from './components/checkbox.style';
+import Checkbox from '../components/checkbox/checkbox.style';
 import CloseButton from './components/close-button.style';
 import Divider from '../components/divider/divider.style';
 import Modal from './components/modal.style';

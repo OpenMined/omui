@@ -48,6 +48,9 @@ export const themeButtonColors = [
 ];
 export const themeButtonVariants = ['solid', 'ghost', 'outline', 'link'];
 
+// Checkbox
+export const themeCheckboxColors = Object.keys(colors);
+
 // Code
 export const themeCodeLanguages = [
   'markup',
