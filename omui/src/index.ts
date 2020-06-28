@@ -26,7 +26,7 @@ export { Checkbox, CheckboxGroup } from './components/checkbox/checkbox';
 export { Code, CodeEditor } from './components/code/code';
 export { Collapse } from './components/collapse/collapse';
 export { Divider } from './components/divider/divider';
-export { Drawer } from './components/Drawer'; // TODO: Need to finish
+export { Drawer } from './components/drawer/drawer';
 export { Editable } from './components/editable/editable';
 export { VideoEmbed, MapEmbed } from './components/embed/embed';
 export { Flex } from './components/flex/flex';
@@ -59,3 +59,5 @@ export { Textarea } from './components/Textarea'; // TODO: Need to finish
 export { Theme } from './components/theme/theme';
 export { useToast } from './components/Toast'; // TODO: Need to finish
 export { Tooltip } from './components/Tooltip'; // TODO: Need to finish
+
+export { useDisclosure, useClipboard } from './components/chakra-utils';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import { withKnobs, boolean } from '@storybook/addon-knobs';
 
 import { Editable, Flex, Avatar, Box, Heading } from '../..';
 

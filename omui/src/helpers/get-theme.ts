@@ -113,6 +113,10 @@ export const themeCodePrettyLanguages = [
   'WebAssembly'
 ];
 
+// Drawer
+export const themeDrawerPlacements = ['top', 'right', 'bottom', 'left'];
+export const themeDrawerSizes = ['xs', 'sm', 'md', 'lg', 'xl', 'full'];
+
 // Heading
 export const themeHeadingFontSizes = ['2xl', 'xl', 'lg', 'md', 'sm', 'xs'];
 export const themeHeadingTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
