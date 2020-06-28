@@ -160,3 +160,33 @@ export const themeLineHeights = Object.keys(lineHeights);
 
 // Textarea
 export const themeTextareaResize = ['none', 'vertical', 'horizontal', 'both'];
+
+// Toast
+export const themeToastStatuses = ['success', 'danger', 'warning', 'info'];
+export const themeToastPositions = [
+  'top',
+  'top-left',
+  'top-right',
+  'bottom',
+  'bottom-left',
+  'bottom-right'
+];
+
+// Tooltip
+export const themeTooltipPlacements = [
+  'auto',
+  'auto-start',
+  'auto-end',
+  'top',
+  'top-start',
+  'top-end',
+  'bottom',
+  'bottom-start',
+  'bottom-end',
+  'right',
+  'right-start',
+  'right-end',
+  'left',
+  'left-start',
+  'left-end'
+];

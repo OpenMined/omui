@@ -19,7 +19,7 @@ import Spinner from './components/spinner.style';
 import Switch from './components/switch.style';
 import Tabs from './components/tabs.style';
 import Tag from './components/tag.style';
-import Tooltip from './components/tooltip.style';
+import Tooltip from '../components/tooltip/tooltip.style';
 import Kbd from './components/kbd.style';
 import PinInput from './components/pin-input.style';
 import Popover from './components/popover.style';

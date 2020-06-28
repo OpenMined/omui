@@ -59,7 +59,7 @@ export { Tag } from './components/Tag'; // TODO: Need to finish
 export { Text } from './components/text/text';
 export { Textarea } from './components/textarea/textarea';
 export { Theme } from './components/theme/theme';
-export { useToast } from './components/Toast'; // TODO: Need to finish
-export { Tooltip } from './components/Tooltip'; // TODO: Need to finish
+export { useToast } from './components/toast/toast';
+export { Tooltip } from './components/tooltip/tooltip';
 
 export { useDisclosure, useClipboard } from '@chakra-ui/core';
