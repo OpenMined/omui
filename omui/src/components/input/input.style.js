@@ -6,7 +6,7 @@ const getDefaults = (props) => ({
   errorBorderColor: props.errorBorderColor || mode('red.500', 'red.300')(props)
 });
 
-function getOutlineStyle(props) {
+const getOutlineStyle = (props) => {
   const { theme: t } = props;
   const { focusBorderColor: fc, errorBorderColor: ec } = getDefaults(props);
 
@@ -31,9 +31,9 @@ function getOutlineStyle(props) {
       boxShadow: `0 0 0 1px ${getColor(t, ec)}`
     }
   };
-}
+};
 
-function getFilledStyle(props) {
+const getFilledStyle = (props) => {
   const { theme: t } = props;
   const { focusBorderColor: fc, errorBorderColor: ec } = getDefaults(props);
 
@@ -57,9 +57,9 @@ function getFilledStyle(props) {
       borderColor: getColor(t, ec)
     }
   };
-}
+};
 
-function getFlushedStyle(props) {
+const getFlushedStyle = (props) => {
   const { theme: t } = props;
   const { focusBorderColor: fc, errorBorderColor: ec } = getDefaults(props);
 
@@ -77,7 +77,7 @@ function getFlushedStyle(props) {
       borderColor: getColor(t, ec)
     }
   };
-}
+};
 
 const unstyled = {
   bg: 'transparent',
@@ -109,11 +109,20 @@ const sizes = {
   }
 };
 
-const Input = {
-  defaultProps: {
-    size: 'md',
-    variant: 'outline'
-  },
+export const InputSizes = {
+  sm: 'sm',
+  md: 'md',
+  lg: 'lg'
+};
+
+export const InputVariants = {
+  outline: 'outline',
+  filled: 'filled',
+  flushed: 'flushed',
+  unstyled: 'unstyled'
+};
+
+export default {
   baseStyle: {
     width: '100%',
     outline: 0,
@@ -129,18 +138,3 @@ const Input = {
     unstyled
   }
 };
-
-export const InputSizes = {
-  sm: 'sm',
-  md: 'md',
-  lg: 'lg'
-};
-
-export const InputVariants = {
-  outline: 'outline',
-  filled: 'filled',
-  flushed: 'flushed',
-  unstyled: 'unstyled'
-};
-
-export default Input;

@@ -14,9 +14,9 @@ import {
 type DrawerProps = IDrawerProps & {
   disclosure: UseDisclosureProps;
   finalRef: RefObject<HTMLElement>;
-  closeButton: boolean;
-  header: string | React.ReactNode;
-  footer: string | React.ReactNode;
+  closeButton?: boolean;
+  header?: string | React.ReactNode;
+  footer?: string | React.ReactNode;
   children: string | React.ReactNode;
 };
 
@@ -48,9 +48,9 @@ export const Drawer = ({
       <DrawerOverlay>
         <DrawerContent>
           {closeButton && <DrawerCloseButton />}
-          <DrawerHeader>{header}</DrawerHeader>
+          {header && <DrawerHeader>{header}</DrawerHeader>}
           <DrawerBody>{children}</DrawerBody>
-          <DrawerFooter>{footer}</DrawerFooter>
+          {footer && <DrawerFooter>{footer}</DrawerFooter>}
         </DrawerContent>
       </DrawerOverlay>
     </ChakraDrawer>

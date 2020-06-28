@@ -6,6 +6,7 @@ import {
   letterSpacings,
   lineHeights
 } from '../theme/foundations/typography';
+import { InputVariants } from '../components/input/input.style';
 
 const getAllColorKeys = (c: object) =>
   Object.keys(c)
@@ -120,6 +121,12 @@ export const themeDrawerSizes = ['xs', 'sm', 'md', 'lg', 'xl', 'full'];
 // Heading
 export const themeHeadingFontSizes = ['2xl', 'xl', 'lg', 'md', 'sm', 'xs'];
 export const themeHeadingTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+
+// Input
+export const themeInputVariants = Object.keys(InputVariants);
+
+// Radio
+export const themeRadioColors = themeCheckboxColors;
 
 // Text
 export const themeFontFamilies = Object.keys(fonts);

@@ -1,10 +1,10 @@
-import Checkbox, {
-  CheckboxSizes
-} from '../../components/checkbox/checkbox.style';
+import Checkbox, { CheckboxSizes } from '../checkbox/checkbox.style';
 
 const baseStyle = Checkbox.baseStyle;
 
-const Radio = {
+export const RadioSizes = CheckboxSizes;
+
+export default {
   defaultProps: Checkbox.defaultProps,
   baseStyle: (props) => ({
     Control: {
@@ -35,7 +35,3 @@ const Radio = {
     }
   }
 };
-
-export const RadioSizes = CheckboxSizes;
-
-export default Radio;

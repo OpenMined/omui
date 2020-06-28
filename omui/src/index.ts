@@ -6,6 +6,8 @@
   - Check all components for responsiveness
   - Consider adding any new components added by v1
   - Go through all Chakra component configs and remove the one's that we don't need
+  - Change all the helpers to reference the component style files
+  - Consider supporting another color mode
   - Create a form component, similar to SR wizard (Patrick)
   - Double-check exporting (below)
   - Provide ample stories for each component
@@ -30,12 +32,12 @@ export { Drawer } from './components/drawer/drawer';
 export { Editable } from './components/editable/editable';
 export { VideoEmbed, MapEmbed } from './components/embed/embed';
 export { Flex } from './components/flex/flex';
-export { FormControl } from './components/FormControl'; // TODO: Need to finish
+export { FormControl } from './components/form-control/form-control';
 export { Grid } from './components/Grid'; // TODO: Need to finish
 export { Heading } from './components/heading/heading';
 export { Icon } from './components/Icon'; // TODO: Need to finish
 export { Image } from './components/image/image';
-export { Input } from './components/Input'; // TODO: Need to finish
+export { Input } from './components/input/input';
 export { Link } from './components/link/link';
 export { List } from './components/List'; // TODO: Need to finish
 export { Menu } from './components/Menu'; // TODO: Need to finish
@@ -43,7 +45,7 @@ export { Modal } from './components/Modal'; // TODO: Need to finish
 export { NumberInput } from './components/NumberInput'; // TODO: Need to finish
 export { Popover } from './components/Popover'; // TODO: Need to finish
 export { Progress, CircularProgress } from './components/Progress'; // TODO: Need to finish
-export { Radio } from './components/Radio'; // TODO: Need to finish
+export { Radio, RadioGroup } from './components/radio/radio';
 export { Select } from './components/Select'; // TODO: Need to finish
 export { SimpleGrid } from './components/SimpleGrid'; // TODO: Need to finish
 export { Skeleton } from './components/Skeleton'; // TODO: Need to finish

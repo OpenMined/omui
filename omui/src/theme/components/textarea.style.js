@@ -1,4 +1,7 @@
-import Input, { InputSizes, InputVariants } from './input.style';
+import Input, {
+  InputSizes,
+  InputVariants
+} from '../../components/input/input.style';
 
 const Textarea = {
   ...Input,

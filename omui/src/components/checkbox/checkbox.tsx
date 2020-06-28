@@ -6,7 +6,6 @@ import {
 } from '@chakra-ui/core';
 
 import { Stack } from '../Stack';
-import { Box } from '../box/box';
 
 export const Checkbox = ChakraCheckbox;
 
@@ -59,9 +58,11 @@ CheckboxGroup.defaultProps = {
   direction: 'vertical'
 };
 
-type IndeterminateCheckboxGroupProps = {
-  checkboxes: CheckboxGroupItemProps[];
-};
+CheckboxGroup.displayName = 'CheckboxGroup';
+
+// type IndeterminateCheckboxGroupProps = {
+//   checkboxes: CheckboxGroupItemProps[];
+// };
 
 // TODO: This component is not ready yet... we have some fairly complicated (recursive) state management logic to handle here
 // export const IndeterminateCheckboxGroup = ({

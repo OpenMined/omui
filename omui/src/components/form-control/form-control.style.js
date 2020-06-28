@@ -1,6 +1,6 @@
 import { mode } from '@chakra-ui/theme-tools';
 
-const Form = {
+export default {
   baseStyle: (props) => ({
     Label: {
       fontSize: 'md',
@@ -34,5 +34,3 @@ const Form = {
     }
   })
 };
-
-export default Form;
