@@ -29,7 +29,7 @@ export const Default = () => {
         columnGap={select('Column gap', sizes, sizes['4'])}
       >
         {arrayOfBoxes.map((_, index) => (
-          <Box width="100%" p={2} bg="blue.400">
+          <Box key={index} width="100%" p={2} bg="blue.400">
             Box {index + 1}
           </Box>
         ))}
@@ -68,7 +68,7 @@ export const SimpleGridExample = () => {
       minChildWidth={minChildWidth}
     >
       {arrayOfBoxes.map((_, index) => (
-        <Box width="100%" p={2} bg="blue.400">
+        <Box key={index} width="100%" p={2} bg="blue.400">
           Box {index + 1}
         </Box>
       ))}

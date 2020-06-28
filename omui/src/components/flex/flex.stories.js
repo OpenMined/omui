@@ -2,6 +2,11 @@ import React from 'react';
 import { withKnobs, number, boolean, select } from '@storybook/addon-knobs';
 
 import { Flex, Box } from '../..';
+import {
+  themeFlexDirection,
+  themeFlexAlignItems,
+  themeFlexJustifyContent
+} from '../../helpers/get-theme';
 
 export default { title: 'Primitives/Flex', decorators: [withKnobs] };
 
@@ -11,26 +16,11 @@ export const Default = () => {
     max: 20,
     step: 1
   });
-  const flexDirection = select(
-    'Direction',
-    ['row', 'row-reverse', 'column', 'column-reverse'],
-    'row'
-  );
-  const alignItems = select(
-    'Align items',
-    ['flex-start', 'flex-end', 'center', 'baseline', 'stretch'],
-    'center'
-  );
+  const flexDirection = select('Direction', themeFlexDirection, 'row');
+  const alignItems = select('Align items', themeFlexAlignItems, 'center');
   const justifyContent = select(
     'Justify content',
-    [
-      'flex-start',
-      'flex-end',
-      'center',
-      'space-between',
-      'space-around',
-      'space-evenly'
-    ],
+    themeFlexJustifyContent,
     'space-evenly'
   );
   const shouldWrap = boolean('Should wrap?', true);
@@ -48,7 +38,7 @@ export const Default = () => {
       justify={justifyContent}
     >
       {arrayOfBoxes.map((_, index) => (
-        <Box width={200} p={4} m={4} bg="blue.400">
+        <Box key={index} width={200} p={4} m={4} bg="blue.400">
           Box {index + 1}
         </Box>
       ))}
@@ -74,6 +64,7 @@ export const GridOfBoxes = () => {
         <Flex bg="blue.200" width="100%">
           {arrayOfBoxes.map((_, index) => (
             <Box
+              key={index}
               width={`${100 / arrayOfBoxes.length}%`}
               p={4}
               m={4}

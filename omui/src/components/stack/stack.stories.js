@@ -1,8 +1,13 @@
 import React from 'react';
-import { withKnobs, number, boolean, select } from '@storybook/addon-knobs';
+import { withKnobs, number, select } from '@storybook/addon-knobs';
 
 import { Stack, Box } from '../..';
 import { sizes } from '../../theme/foundations/sizes';
+import {
+  themeFlexDirection,
+  themeFlexAlignItems,
+  themeFlexJustifyContent
+} from '../../helpers/get-theme';
 
 export default { title: 'Components/Stack', decorators: [withKnobs] };
 
@@ -17,15 +22,17 @@ export const Default = () => {
 
   return (
     <Stack
-      direction={select(
-        'Direction',
-        ['row', 'column', 'row-reverse', 'column-reverse'],
-        'row'
+      direction={select('Direction', themeFlexDirection, 'row')}
+      align={select('Align items', themeFlexAlignItems, 'center')}
+      justify={select(
+        'Justify content',
+        themeFlexJustifyContent,
+        'space-evenly'
       )}
       spacing={select('Spacing', sizes, sizes['4'])}
     >
       {arrayOfBoxes.map((_, index) => (
-        <Box width={200} p={2} bg="blue.400">
+        <Box key={index} width={200} p={2} bg="blue.400">
           Box {index + 1}
         </Box>
       ))}

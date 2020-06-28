@@ -5,6 +5,7 @@
   - Go through and re-evaluate all Typescript types
   - Check all components for responsiveness
   - Consider adding any new components added by v1
+  - Consider getting rid of Stack and other redundant helper components
   - Go through all Chakra component configs and remove the one's that we don't need
   - Change all the helpers to reference the component style files
   - Consider supporting another color mode
@@ -56,7 +57,7 @@ export { Switch } from './components/Switch'; // TODO: Need to finish
 export { Tabs } from './components/Tabs'; // TODO: Need to finish
 export { Tag } from './components/Tag'; // TODO: Need to finish
 export { Text } from './components/text/text';
-export { Textarea } from './components/Textarea'; // TODO: Need to finish
+export { Textarea } from './components/textarea/textarea';
 export { Theme } from './components/theme/theme';
 export { useToast } from './components/Toast'; // TODO: Need to finish
 export { Tooltip } from './components/Tooltip'; // TODO: Need to finish

@@ -9,7 +9,7 @@ import Divider from '../components/divider/divider.style';
 import Modal from './components/modal.style';
 import Heading from '../components/heading/heading.style';
 import Input from '../components/input/input.style';
-import InputAddon from './components/input-addon.style';
+import InputAddon from '../components/input/input-addon.style';
 import Link from '../components/link/link.style';
 import Menu from './components/menu.style';
 import NumberInput from './components/number-input.style';
@@ -26,7 +26,7 @@ import Popover from './components/popover.style';
 import Form from '../components/form-control/form-control.style';
 import Editable from '../components/editable/editable.style';
 import Progress from './components/progress.style';
-import Textarea from './components/textarea.style';
+import Textarea from '../components/textarea/textarea.style';
 import Stat from './components/stat.style';
 import Skeleton from './components/skeleton.style';
 export default {

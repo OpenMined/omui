@@ -118,6 +118,29 @@ export const themeCodePrettyLanguages = [
 export const themeDrawerPlacements = ['top', 'right', 'bottom', 'left'];
 export const themeDrawerSizes = ['xs', 'sm', 'md', 'lg', 'xl', 'full'];
 
+// Flex
+export const themeFlexDirection = [
+  'row',
+  'row-reverse',
+  'column',
+  'column-reverse'
+];
+export const themeFlexAlignItems = [
+  'flex-start',
+  'flex-end',
+  'center',
+  'baseline',
+  'stretch'
+];
+export const themeFlexJustifyContent = [
+  'flex-start',
+  'flex-end',
+  'center',
+  'space-between',
+  'space-around',
+  'space-evenly'
+];
+
 // Heading
 export const themeHeadingFontSizes = ['2xl', 'xl', 'lg', 'md', 'sm', 'xs'];
 export const themeHeadingTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
@@ -134,3 +157,6 @@ export const themeFontSizes = Object.keys(fontSizes);
 export const themeFontWeights = Object.keys(fontWeights);
 export const themeLetterSpacings = Object.keys(letterSpacings);
 export const themeLineHeights = Object.keys(lineHeights);
+
+// Textarea
+export const themeTextareaResize = ['none', 'vertical', 'horizontal', 'both'];
