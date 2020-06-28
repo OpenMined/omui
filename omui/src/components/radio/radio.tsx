@@ -6,7 +6,7 @@ import {
 } from '@chakra-ui/core';
 
 import { Checkbox } from '../checkbox/checkbox';
-import { Stack } from '../Stack';
+import { Stack } from '../stack/stack';
 
 export const Radio = ChakraRadio;
 

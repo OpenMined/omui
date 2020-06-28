@@ -50,7 +50,7 @@ export { Select } from './components/Select'; // TODO: Need to finish
 export { Skeleton } from './components/Skeleton'; // TODO: Need to finish
 export { Slider } from './components/Slider'; // TODO: Need to finish
 export { Spinner } from './components/Spinner'; // TODO: Need to finish
-export { Stack } from './components/Stack'; // TODO: Need to finish
+export { Stack } from './components/stack/stack';
 export { Stat } from './components/Stat'; // TODO: Need to finish
 export { Switch } from './components/Switch'; // TODO: Need to finish
 export { Tabs } from './components/Tabs'; // TODO: Need to finish

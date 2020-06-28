@@ -5,7 +5,7 @@ import {
   CheckboxGroupProps as ICheckboxGroupProps
 } from '@chakra-ui/core';
 
-import { Stack } from '../Stack';
+import { Stack } from '../stack/stack';
 
 export const Checkbox = ChakraCheckbox;
 
