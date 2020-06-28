@@ -40,9 +40,9 @@ const getFilledStyle = (props) => {
   return {
     border: '2px solid',
     borderColor: 'transparent',
-    bg: mode('gray.100', 'whiteAlpha.50')(props),
+    bg: mode('gray.50', 'whiteAlpha.50')(props),
     _hover: {
-      bg: mode('gray.200', 'whiteAlpha.100')(props)
+      bg: mode('gray.100', 'whiteAlpha.100')(props)
     },
     _disabled: {
       opacity: 0.4,

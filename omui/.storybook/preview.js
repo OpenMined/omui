@@ -31,6 +31,7 @@ addParameters({
             'Overview',
             'Box',
             'Flex',
+            'Grid',
             'Text',
             'Heading',
             'Button',

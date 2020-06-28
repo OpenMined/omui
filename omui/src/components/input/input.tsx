@@ -21,6 +21,8 @@ export const Input = ({ left, right, ...props }: InputProps) => {
     const RightComponent =
       typeof right === 'string' ? InputRightAddon : InputRightElement;
 
+    // TODO: There's a visual bug with the left and right addons AND elements since upgrading
+
     return (
       <InputGroup>
         {left && <LeftComponent children={left} />}

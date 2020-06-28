@@ -33,7 +33,7 @@ export { Editable } from './components/editable/editable';
 export { VideoEmbed, MapEmbed } from './components/embed/embed';
 export { Flex } from './components/flex/flex';
 export { FormControl } from './components/form-control/form-control';
-export { Grid } from './components/Grid'; // TODO: Need to finish
+export { Grid, SimpleGrid } from './components/grid/grid';
 export { Heading } from './components/heading/heading';
 export { Icon } from './components/Icon'; // TODO: Need to finish
 export { Image } from './components/image/image';
@@ -47,7 +47,6 @@ export { Popover } from './components/Popover'; // TODO: Need to finish
 export { Progress, CircularProgress } from './components/Progress'; // TODO: Need to finish
 export { Radio, RadioGroup } from './components/radio/radio';
 export { Select } from './components/Select'; // TODO: Need to finish
-export { SimpleGrid } from './components/SimpleGrid'; // TODO: Need to finish
 export { Skeleton } from './components/Skeleton'; // TODO: Need to finish
 export { Slider } from './components/Slider'; // TODO: Need to finish
 export { Spinner } from './components/Spinner'; // TODO: Need to finish
@@ -62,4 +61,4 @@ export { Theme } from './components/theme/theme';
 export { useToast } from './components/Toast'; // TODO: Need to finish
 export { Tooltip } from './components/Tooltip'; // TODO: Need to finish
 
-export { useDisclosure, useClipboard } from './components/chakra-utils';
+export { useDisclosure, useClipboard } from '@chakra-ui/core';

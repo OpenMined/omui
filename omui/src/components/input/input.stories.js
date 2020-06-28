@@ -29,6 +29,7 @@ export const Default = () => {
     <Input
       placeholder={text('Placeholder', 'Start typing...')}
       variant={select('Variant', themeInputVariants, variant)}
+      type="text"
       left={leftSide}
       right={rightSide}
     />
