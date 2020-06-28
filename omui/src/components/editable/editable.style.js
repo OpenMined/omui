@@ -9,7 +9,7 @@ const base = {
   marginX: '-3px'
 };
 
-const Editable = {
+export default {
   baseStyle: {
     Preview: {
       ...base,
@@ -26,5 +26,3 @@ const Editable = {
     }
   }
 };
-
-export default Editable;

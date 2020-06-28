@@ -24,7 +24,7 @@ import Kbd from './components/kbd.style';
 import PinInput from './components/pin-input.style';
 import Popover from './components/popover.style';
 import Form from './components/form.style';
-import Editable from './components/editable.style';
+import Editable from '../components/editable/editable.style';
 import Progress from './components/progress.style';
 import Textarea from './components/textarea.style';
 import Stat from './components/stat.style';

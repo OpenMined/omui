@@ -27,7 +27,7 @@ export { Code, CodeEditor } from './components/code/code';
 export { Collapse } from './components/collapse/collapse';
 export { Divider } from './components/divider/divider';
 export { Drawer } from './components/Drawer'; // TODO: Need to finish
-export { Editable } from './components/Editable'; // TODO: Need to finish
+export { Editable } from './components/editable/editable';
 export { VideoEmbed, MapEmbed } from './components/embed/embed';
 export { Flex } from './components/flex/flex';
 export { FormControl } from './components/FormControl'; // TODO: Need to finish
