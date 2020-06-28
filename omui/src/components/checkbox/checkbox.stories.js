@@ -1,7 +1,7 @@
 import React from 'react';
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 
-import { Checkbox, CheckboxGroup, IndeterminateCheckboxGroup } from '../..';
+import { Checkbox, CheckboxGroup } from '../..';
 
 import { themeCheckboxColors } from '../../helpers/get-theme';
 
@@ -48,44 +48,44 @@ export const Group = () => {
   );
 };
 
-export const Indeterminate = () => {
-  const checkboxes = {
-    label: '1.0.0',
-    value: '1-0-0',
-    children: [
-      {
-        label: '1.1.0',
-        value: '1-1-0',
-        children: [
-          {
-            label: '1.1.1',
-            value: '1-1-1',
-            checked: true
-          }
-        ]
-      },
-      {
-        label: '1.2.0',
-        value: '1-2-0',
-        children: [
-          {
-            label: '1.2.1',
-            value: '1-2-1',
-            checked: true
-          },
-          {
-            label: '1.2.2',
-            value: '1-2-2'
-          },
-          {
-            label: '1.2.3',
-            value: '1-2-3',
-            checked: true
-          }
-        ]
-      }
-    ]
-  };
+// export const Indeterminate = () => {
+//   const checkboxes = {
+//     label: '1.0.0',
+//     value: '1-0-0',
+//     children: [
+//       {
+//         label: '1.1.0',
+//         value: '1-1-0',
+//         children: [
+//           {
+//             label: '1.1.1',
+//             value: '1-1-1',
+//             checked: true
+//           }
+//         ]
+//       },
+//       {
+//         label: '1.2.0',
+//         value: '1-2-0',
+//         children: [
+//           {
+//             label: '1.2.1',
+//             value: '1-2-1',
+//             checked: true
+//           },
+//           {
+//             label: '1.2.2',
+//             value: '1-2-2'
+//           },
+//           {
+//             label: '1.2.3',
+//             value: '1-2-3',
+//             checked: true
+//           }
+//         ]
+//       }
+//     ]
+//   };
 
-  return <IndeterminateCheckboxGroup checkboxes={checkboxes} />;
-};
+//   return <IndeterminateCheckboxGroup checkboxes={checkboxes} />;
+// };

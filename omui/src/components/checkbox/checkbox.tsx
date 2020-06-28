@@ -63,68 +63,61 @@ type IndeterminateCheckboxGroupProps = {
   checkboxes: CheckboxGroupItemProps[];
 };
 
-export const IndeterminateCheckboxGroup = ({
-  checkboxes,
-  ...props
-}: IndeterminateCheckboxGroupProps) => {
-  const composeStructure = (checkboxes: CheckboxGroupItemProps) => {
-    const { children, label, value, checked, ...checkboxProps } = checkboxes;
+// TODO: This component is not ready yet... we have some fairly complicated (recursive) state management logic to handle here
+// export const IndeterminateCheckboxGroup = ({
+//   checkboxes,
+//   ...props
+// }: IndeterminateCheckboxGroupProps) => {
+//   const determineChecks = (
+//     children: CheckboxGroupItemProps[] | undefined,
+//     checked: boolean | undefined
+//   ) => {
+//     const allChildrenChecked = children
+//       ? children.every((i) => i.checked)
+//       : false;
+//     const someChildrenChecked = children
+//       ? children.some((i) => i.checked)
+//       : false;
 
-    const allChildrenChecked = children
-      ? children.every((i) => i.checked)
-      : false;
-    const someChildrenChecked = children
-      ? children.some((i) => i.checked)
-      : false;
+//     const isChecked = checked || allChildrenChecked;
+//     const isIndeterminate = someChildrenChecked && !allChildrenChecked;
 
-    return (
-      <Box key={value} px={6}>
-        <Checkbox
-          {...checkboxProps}
-          isChecked={checked || allChildrenChecked}
-          isIndeterminate={someChildrenChecked && !allChildrenChecked}
-          value={value}
-        >
-          {label}
-        </Checkbox>
-        {children &&
-          children.map((child: CheckboxGroupItemProps) =>
-            composeStructure(child)
-          )}
-      </Box>
-    );
-  };
+//     return { isChecked, isIndeterminate };
+//   };
 
-  // @ts-ignore
-  return <Box {...props}>{composeStructure(checkboxes)}</Box>;
-};
+//   const composeStructure = (checkboxes: CheckboxGroupItemProps) => {
+//     const { children, label, checked, ...checkboxProps } = checkboxes;
+//     const { isChecked, isIndeterminate } = determineChecks(children, checked);
 
-// function IndeterminateExample() {
-//   const [checkedItems, setCheckedItems] = React.useState([false, false]);
+//     if (children) {
+//       return (
+//         <Stack spacing={2} direction="column" key={label}>
+//           <Checkbox
+//             {...checkboxProps}
+//             defaultIsChecked={isChecked}
+//             isIndeterminate={isIndeterminate}
+//           >
+//             {label}
+//           </Checkbox>
+//           <Stack spacing={2} direction="column" pl={4}>
+//             {children.map((child) => composeStructure(child))}
+//           </Stack>
+//         </Stack>
+//       );
+//     }
 
-//   const allChecked = checkedItems.every(Boolean);
-//   const isIndeterminate = checkedItems.some(Boolean) && !allChecked;
-
-//   return (
-//     <>
+//     return (
 //       <Checkbox
-//         isChecked={allChecked}
+//         {...checkboxProps}
+//         defaultIsChecked={isChecked}
 //         isIndeterminate={isIndeterminate}
-//         onChange={(e) => setCheckedItems([e.target.checked, e.target.checked])}
-//         children="Parent Checkbox"
-//       />
-//       <Stack pl={6} mt={1} spacing={1}>
-//         <Checkbox
-//           isChecked={checkedItems[0]}
-//           onChange={(e) => setCheckedItems([e.target.checked, checkedItems[1]])}
-//           children="Child Checkbox 1"
-//         />
-//         <Checkbox
-//           isChecked={checkedItems[1]}
-//           onChange={(e) => setCheckedItems([checkedItems[0], e.target.checked])}
-//           children="Child Checkbox 2"
-//         />
-//       </Stack>
-//     </>
-//   );
-// }
+//         key={label}
+//       >
+//         {label}
+//       </Checkbox>
+//     );
+//   };
+
+//   // @ts-ignore
+//   return <Box {...props}>{composeStructure(checkboxes)}</Box>;
+// };

@@ -22,13 +22,9 @@ export { Badge } from './components/badge/badge';
 export { Box } from './components/box/box';
 export { Breadcrumb } from './components/breadcrumb/breadcrumb';
 export { Button, IconButton } from './components/button/button';
-export {
-  Checkbox,
-  CheckboxGroup,
-  IndeterminateCheckboxGroup
-} from './components/checkbox/checkbox';
+export { Checkbox, CheckboxGroup } from './components/checkbox/checkbox';
 export { Code, CodeEditor } from './components/code/code';
-export { Collapse } from './components/Collapse'; // TODO: Need to finish
+export { Collapse } from './components/collapse/collapse';
 export { Divider } from './components/divider/divider';
 export { Drawer } from './components/Drawer'; // TODO: Need to finish
 export { Editable } from './components/Editable'; // TODO: Need to finish
