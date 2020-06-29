@@ -40,7 +40,7 @@ export { Icon } from './components/Icon'; // TODO: Need to finish
 export { Image } from './components/image/image';
 export { Input } from './components/input/input';
 export { Link } from './components/link/link';
-export { List } from './components/List'; // TODO: Need to finish
+export { List } from './components/list/list';
 export { Menu } from './components/Menu'; // TODO: Need to finish
 export { Modal } from './components/Modal'; // TODO: Need to finish
 export { NumberInput } from './components/NumberInput'; // TODO: Need to finish
