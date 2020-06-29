@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { withKnobs, text, number } from '@storybook/addon-knobs';
+import { withKnobs, text, number, boolean } from '@storybook/addon-knobs';
 
 import { Collapse, Button, Box } from '../..';
 
 export default { title: 'Components/Collapse', decorators: [withKnobs] };
+
+const { timeout, animateOpacity } = Collapse.defaultProps;
 
 export const Default = () => {
   const [show, setShow] = useState(false);
@@ -22,6 +24,12 @@ export const Default = () => {
           max: 1000,
           step: 10
         })}
+        timeout={number('Timeout', timeout, {
+          min: 500,
+          max: 10000,
+          step: 500
+        })}
+        animateOpacity={boolean('Animate opacity?', animateOpacity)}
       >
         <Box bg="gray.200" p={4}>
           {text('Content', defaultContent)}

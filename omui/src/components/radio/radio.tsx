@@ -5,12 +5,9 @@ import {
   RadioGroupProps as IRadioGroupProps
 } from '@chakra-ui/core';
 
-import { Checkbox } from '../checkbox/checkbox';
 import { Stack } from '../stack/stack';
 
 export const Radio = ChakraRadio;
-
-Radio.defaultProps = Checkbox.defaultProps;
 
 type RadioGroupItemProps = {
   value: string | number;

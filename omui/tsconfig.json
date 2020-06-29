@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2020",
+    "target": "es2019",
     "module": "esnext",
     "lib": ["dom", "esnext"],
     "declaration": true,
@@ -22,5 +22,5 @@
     "preserveSymlinks": true
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "build", "src/stories"]
+  "exclude": ["node_modules", "build"]
 }

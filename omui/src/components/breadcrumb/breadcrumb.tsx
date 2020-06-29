@@ -24,7 +24,7 @@ export const Breadcrumb = ({ links, ...props }: BreadcrumbProps) => {
         const isCurrentPage = index === links.length - 1;
 
         return (
-          <BreadcrumbItem isCurrentPage={isCurrentPage}>
+          <BreadcrumbItem isCurrentPage={isCurrentPage} key={title}>
             {!isCurrentPage && (
               <Link
                 {...link}

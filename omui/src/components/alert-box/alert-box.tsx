@@ -6,6 +6,8 @@ import {
   AlertDescription
 } from '@chakra-ui/core';
 
+import AlertStyle from '../alert/alert.style';
+
 interface AlertBoxProps {
   title?: string;
   children: string | React.ReactNode;
@@ -31,7 +33,8 @@ export const AlertBox = ({ title, children, ...props }: AlertBoxProps) => (
   </Alert>
 );
 
+// Additional defaultProps that we cannot set on the style
 AlertBox.defaultProps = {
-  status: 'info',
-  variant: 'subtle'
+  ...AlertStyle.defaultProps,
+  status: 'info'
 };

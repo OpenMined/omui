@@ -162,7 +162,7 @@ export const themeLineHeights = Object.keys(lineHeights);
 export const themeTextareaResize = ['none', 'vertical', 'horizontal', 'both'];
 
 // Toast
-export const themeToastStatuses = ['success', 'danger', 'warning', 'info'];
+export const themeToastStatuses = themeAlertStatuses;
 export const themeToastPositions = [
   'top',
   'top-left',

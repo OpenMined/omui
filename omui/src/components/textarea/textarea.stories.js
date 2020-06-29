@@ -1,7 +1,8 @@
 import React from 'react';
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 
-import { Textarea, Input } from '../..';
+import { Textarea } from '../..';
+import { default as InputStyle } from '../input/input.style';
 
 import {
   themeInputVariants,
@@ -10,7 +11,7 @@ import {
 
 export default { title: 'Components/Textarea', decorators: [withKnobs] };
 
-const { variant } = Input.defaultProps;
+const { variant } = InputStyle.defaultProps;
 
 export const Default = () => (
   <Textarea

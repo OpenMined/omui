@@ -3,7 +3,7 @@ import { withKnobs, select, number, text } from '@storybook/addon-knobs';
 
 import { Image } from '../..';
 import { largeSizes } from '../../theme/foundations/sizes';
-import { radii } from '../../theme/foundations/radius';
+import radii from '../../theme/foundations/radius';
 
 export default { title: 'Primitives/Image', decorators: [withKnobs] };
 

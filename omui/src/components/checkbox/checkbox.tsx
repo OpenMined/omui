@@ -9,10 +9,6 @@ import { Stack } from '../stack/stack';
 
 export const Checkbox = ChakraCheckbox;
 
-Checkbox.defaultProps = {
-  colorScheme: 'blue'
-};
-
 type CheckboxGroupItemProps = {
   value: string | number;
   label: string;

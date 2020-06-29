@@ -13,7 +13,7 @@ export const Link = ({ isExternal, children, ...props }: LinkProps) => {
   return (
     <ChakraLink {...props} isExternal={isExternal}>
       {children}
-      {isExternal && <ExternalLinkIcon ml="1" mt="-4px" />}
+      {isExternal && <ExternalLinkIcon ml={1} mt="-4px" />}
     </ChakraLink>
   );
 };

@@ -1,14 +1,15 @@
 import React from 'react';
-import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
+import { withKnobs, text, select } from '@storybook/addon-knobs';
 
 import { Input } from '../..';
+import { default as InputStyle } from './input.style';
 
 import { themeInputVariants } from '../../helpers/get-theme';
 import { PhoneIcon, CheckIcon } from '@chakra-ui/icons';
 
 export default { title: 'Components/Input', decorators: [withKnobs] };
 
-const { variant } = Input.defaultProps;
+const { variant } = InputStyle.defaultProps;
 
 export const Default = () => {
   const left = select('Left side', ['nothing', 'text', 'icon'], 'nothing');

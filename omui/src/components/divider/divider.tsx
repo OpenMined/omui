@@ -1,8 +1,9 @@
 import { Divider as ChakraDivider } from '@chakra-ui/core';
+import { default as DividerStyle } from './divider.style';
 
 export const Divider = ChakraDivider;
 
 Divider.defaultProps = {
-  borderColor: 'gray.400',
-  variant: 'horizontal'
+  ...DividerStyle.defaultProps,
+  borderColor: 'gray.400'
 };

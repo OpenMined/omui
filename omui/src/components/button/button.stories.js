@@ -3,6 +3,7 @@ import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import { PhoneIcon, CalendarIcon } from '@chakra-ui/icons';
 
 import { Button, IconButton } from '../..';
+import { default as ButtonStyle } from './button.style';
 import {
   themeIconButtonSizes,
   themeButtonSizes,
@@ -12,7 +13,7 @@ import {
 
 export default { title: 'Primitives/Button', decorators: [withKnobs] };
 
-const { size, variant, colorScheme } = Button.defaultProps;
+const { size, variant, colorScheme } = ButtonStyle.defaultProps;
 
 export const Default = () => {
   const isLoading = boolean('Is loading?', false);

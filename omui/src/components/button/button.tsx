@@ -1,21 +1,11 @@
-import {
-  Button as ChakraButton,
-  IconButton as ChakraIconButton
-} from '@chakra-ui/core';
+import { IconButton as ChakraIconButton } from '@chakra-ui/core';
+import { default as ButtonStyle } from './button.style';
 
-export const Button = ChakraButton;
-
-Button.defaultProps = {
-  size: 'md',
-  variant: 'solid',
-  colorScheme: 'blue'
-};
+export { Button } from '@chakra-ui/core';
 
 export const IconButton = ChakraIconButton;
 
 IconButton.defaultProps = {
-  size: 'md',
-  variant: 'solid',
-  colorScheme: 'blue',
+  ...ButtonStyle.defaultProps,
   isRound: false
 };

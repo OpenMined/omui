@@ -2,12 +2,12 @@ import React from 'react';
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 
 import { Checkbox, CheckboxGroup } from '../..';
-
+import { default as CheckboxStyle } from './checkbox.style';
 import { themeCheckboxColors } from '../../helpers/get-theme';
 
 export default { title: 'Components/Checkbox', decorators: [withKnobs] };
 
-const { colorScheme } = Checkbox.defaultProps;
+const { colorScheme } = CheckboxStyle.defaultProps;
 const { direction } = CheckboxGroup.defaultProps;
 
 export const Default = () => (

@@ -24,7 +24,6 @@ export const Default = () => {
     "We've created your account for you."
   );
 
-  // TODO: For some reason, danger doesn't work...
   const status = select('Status', themeToastStatuses, 'success');
 
   const duration = number('Duration', 5000, {

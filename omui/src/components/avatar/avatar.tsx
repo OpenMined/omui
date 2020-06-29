@@ -11,8 +11,4 @@ export const Avatar = ({ badge, ...props }: AvatarProps) => (
   </ChakraAvatar>
 );
 
-Avatar.defaultProps = {
-  size: 'md'
-};
-
 export { AvatarGroup } from '@chakra-ui/core';
