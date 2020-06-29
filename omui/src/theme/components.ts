@@ -14,6 +14,7 @@ import Link from '../components/link/link.style';
 import Menu from './components/menu.style';
 import NumberInput from './components/number-input.style';
 import Radio from '../components/radio/radio.style';
+import Select from './components/select.style';
 import Slider from './components/slider.style';
 import Spinner from './components/spinner.style';
 import Switch from './components/switch.style';
@@ -48,13 +49,13 @@ export default {
   InputAddon,
   Tooltip,
   CloseButton,
+  Select,
   Slider,
   NumberInput,
   Switch,
   Tag,
   Modal,
   Kbd,
-  Select: Input,
   Textarea,
   PinInput,
   Popover,
