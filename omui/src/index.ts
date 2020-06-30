@@ -6,6 +6,7 @@
   - Check all components for responsiveness
   - Consider adding any new components added by v1
   - Consider getting rid of Stack and other redundant helper components
+  - Figure out why accordions are so damn slow...
   - Go through all Chakra component configs and remove the one's that we don't need
   - Change all the helpers to reference the component style files
   - Consider supporting another color mode
@@ -38,7 +39,7 @@ export { Grid, SimpleGrid } from './components/grid';
 export { Heading } from './components/heading';
 export { Icon } from './components/icon'; // TODO: Need to finish
 export { Image } from './components/image';
-export { Input, NumberInput /* PinInput */ } from './components/input'; // TODO: Need to finish NumberInput and PinInput
+export { Input, NumberInput, PinInput } from './components/input';
 export { KeyboardKey } from './components/kbd';
 export { Link } from './components/link';
 export { List } from './components/list';
@@ -52,7 +53,7 @@ export { Skeleton } from './components/skeleton'; // TODO: Need to finish
 export { Slider } from './components/slider'; // TODO: Need to finish
 export { Spinner } from './components/spinner'; // TODO: Need to finish
 export { Stack } from './components/stack';
-export { Stat } from './components/stat'; // TODO: Need to finish
+export { Stats } from './components/stat'; // TODO: Need to finish
 export { Switch } from './components/switch'; // TODO: Need to finish
 export { Tabs } from './components/tabs'; // TODO: Need to finish
 export { Tag } from './components/tag'; // TODO: Need to finish

@@ -1,6 +1,6 @@
 import { IconButton as ChakraIconButton } from '@chakra-ui/core';
 
-import { ButtonStyle } from './';
+import { default as ButtonStyle } from './button.style';
 
 export { Button } from '@chakra-ui/core';
 

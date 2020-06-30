@@ -1,6 +1,6 @@
 import { Divider as ChakraDivider } from '@chakra-ui/core';
 
-import { DividerStyle } from './';
+import { default as DividerStyle } from './divider.style';
 
 export const Divider = ChakraDivider;
 

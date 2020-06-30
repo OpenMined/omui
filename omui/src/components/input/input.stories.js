@@ -1,8 +1,8 @@
 import React from 'react';
-import { withKnobs, text, select } from '@storybook/addon-knobs';
+import { withKnobs, text, select, number } from '@storybook/addon-knobs';
 import { PhoneIcon, CheckIcon } from '@chakra-ui/icons';
 
-import { Input, InputStyle } from './';
+import { Input, InputStyle, NumberInput, PinInput } from './';
 
 import { themeInputVariants } from '../../helpers/get-theme';
 
@@ -35,3 +35,17 @@ export const Default = () => {
     />
   );
 };
+
+export const Number = () => (
+  <NumberInput
+    defaultValue={15}
+    min={number('Minimum', 5, { min: 1, max: -100, step: 1 })}
+    max={number('Maximum', 30, { min: 1, max: 100, step: 1 })}
+    step={number('Step', 5, { min: 1, max: 10, step: 1 })}
+    precision={number('Precision', 2, { min: 0, max: 10, step: 1 })}
+  />
+);
+
+export const PinNumber = () => (
+  <PinInput length={number('Length', 4, { min: 1, max: 8, step: 1 })} />
+);

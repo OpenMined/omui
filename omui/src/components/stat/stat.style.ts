@@ -14,7 +14,7 @@ const Stat: ComponentTheme = {
     },
     Number: {
       verticalAlign: 'baseline',
-      fontWeight: 'semibold'
+      fontWeight: 'medium'
     }
   },
   /**
