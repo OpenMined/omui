@@ -1,7 +1,9 @@
 import React from 'react';
 import { withKnobs, select, text, boolean } from '@storybook/addon-knobs';
 
-import { Drawer, Button, Text, useDisclosure } from '../..';
+import { Drawer } from './';
+import { Button, Text, useDisclosure } from '../../';
+
 import {
   themeDrawerPlacements,
   themeDrawerSizes

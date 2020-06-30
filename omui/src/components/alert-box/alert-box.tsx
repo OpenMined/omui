@@ -6,7 +6,7 @@ import {
   AlertDescription
 } from '@chakra-ui/core';
 
-import AlertStyle from '../alert/alert.style';
+import { AlertStyle } from '../alert';
 
 interface AlertBoxProps {
   title?: string;

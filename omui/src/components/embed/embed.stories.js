@@ -1,7 +1,7 @@
 import React from 'react';
 import { withKnobs, select, number, text } from '@storybook/addon-knobs';
 
-import { VideoEmbed, MapEmbed } from '../..';
+import { VideoEmbed, MapEmbed } from './';
 
 export default { title: 'Components/Embed', decorators: [withKnobs] };
 

@@ -2,7 +2,9 @@ import React from 'react';
 import { withKnobs, text, select, number } from '@storybook/addon-knobs';
 import { StarIcon } from '@chakra-ui/icons';
 
-import { Box, Flex, Badge, Text, Image } from '../..';
+import { Box } from './';
+import { Flex, Badge, Text, Image } from '../../';
+
 import sizes from '../../theme/foundations/sizes';
 import { themeAllPossibleColors } from '../../helpers/get-theme';
 

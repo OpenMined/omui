@@ -1,7 +1,9 @@
 import React from 'react';
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 
-import { Tooltip, Flex, Box } from '../..';
+import { Tooltip } from './';
+import { Flex, Box } from '../../';
+
 import { themeTooltipPlacements } from '../../helpers/get-theme';
 
 export default { title: 'Components/Tooltip', decorators: [withKnobs] };

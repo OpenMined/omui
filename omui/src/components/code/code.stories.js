@@ -1,7 +1,8 @@
 import React from 'react';
 import { withKnobs, boolean, text, select } from '@storybook/addon-knobs';
 
-import { Code, CodeEditor, Text } from '../..';
+import { Code, CodeEditor } from './';
+import { Text } from '../../';
 
 import {
   themeCodeLanguages,

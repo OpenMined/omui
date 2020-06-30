@@ -17,50 +17,49 @@
   - Cypress testing: https://itnext.io/cypress-storybook-keeping-test-scenario-data-and-component-rendering-in-one-place-c57b23cc1640
 */
 
-export { Accordion, AccordionItem } from './components/accordion/accordion';
-export { Alert } from './components/alert/alert';
-export { AlertBox } from './components/alert-box/alert-box';
-export { Avatar, AvatarGroup } from './components/avatar/avatar';
-export { Badge } from './components/badge/badge';
-export { Box } from './components/box/box';
-export { Breadcrumb } from './components/breadcrumb/breadcrumb';
-export { Button, IconButton } from './components/button/button';
-export { Checkbox, CheckboxGroup } from './components/checkbox/checkbox';
-export { Code, CodeEditor } from './components/code/code';
-export { Collapse } from './components/collapse/collapse';
-export { Divider } from './components/divider/divider';
-export { Drawer } from './components/drawer/drawer';
-export { Editable } from './components/editable/editable';
-export { VideoEmbed, MapEmbed } from './components/embed/embed';
-export { Flex } from './components/flex/flex';
-export { FormControl } from './components/form-control/form-control';
-export { Grid, SimpleGrid } from './components/grid/grid';
-export { Heading } from './components/heading/heading';
-export { Icon } from './components/Icon'; // TODO: Need to finish
-export { Image } from './components/image/image';
-export { Input } from './components/input/input';
-export { KeyboardKey } from './components/kbd/kbd';
-export { Link } from './components/link/link';
-export { List } from './components/list/list';
-export { Menu } from './components/Menu'; // TODO: Need to finish
-export { Modal } from './components/Modal'; // TODO: Need to finish
-export { NumberInput } from './components/NumberInput'; // TODO: Need to finish
-export { Popover } from './components/Popover'; // TODO: Need to finish
-export { Progress, CircularProgress } from './components/Progress'; // TODO: Need to finish
-export { Radio, RadioGroup } from './components/radio/radio';
-export { Select } from './components/Select'; // TODO: Need to finish
-export { Skeleton } from './components/Skeleton'; // TODO: Need to finish
-export { Slider } from './components/Slider'; // TODO: Need to finish
-export { Spinner } from './components/Spinner'; // TODO: Need to finish
-export { Stack } from './components/stack/stack';
-export { Stat } from './components/Stat'; // TODO: Need to finish
-export { Switch } from './components/Switch'; // TODO: Need to finish
-export { Tabs } from './components/Tabs'; // TODO: Need to finish
-export { Tag } from './components/Tag'; // TODO: Need to finish
-export { Text } from './components/text/text';
-export { Textarea } from './components/textarea/textarea';
-export { Theme } from './components/theme/theme';
-export { useToast } from './components/toast/toast';
-export { Tooltip } from './components/tooltip/tooltip';
+export { Accordion, AccordionItem } from './components/accordion';
+export { Alert } from './components/alert';
+export { AlertBox } from './components/alert-box';
+export { Avatar, AvatarGroup } from './components/avatar';
+export { Badge } from './components/badge';
+export { Box } from './components/box';
+export { Breadcrumb } from './components/breadcrumb';
+export { Button, IconButton } from './components/button';
+export { Checkbox, CheckboxGroup } from './components/checkbox';
+export { Code, CodeEditor } from './components/code';
+export { Collapse } from './components/collapse';
+export { Divider } from './components/divider';
+export { Drawer } from './components/drawer';
+export { Editable } from './components/editable';
+export { VideoEmbed, MapEmbed } from './components/embed';
+export { Flex } from './components/flex';
+export { FormControl } from './components/form-control';
+export { Grid, SimpleGrid } from './components/grid';
+export { Heading } from './components/heading';
+export { Icon } from './components/icon'; // TODO: Need to finish
+export { Image } from './components/image';
+export { Input, NumberInput /* PinInput */ } from './components/input'; // TODO: Need to finish NumberInput and PinInput
+export { KeyboardKey } from './components/kbd';
+export { Link } from './components/link';
+export { List } from './components/list';
+export { Menu } from './components/menu'; // TODO: Need to finish
+export { Modal } from './components/modal'; // TODO: Need to finish
+export { Popover } from './components/popover'; // TODO: Need to finish
+export { Progress, CircularProgress } from './components/progress'; // TODO: Need to finish
+export { Radio, RadioGroup } from './components/radio';
+export { Select } from './components/select'; // TODO: Need to finish
+export { Skeleton } from './components/skeleton'; // TODO: Need to finish
+export { Slider } from './components/slider'; // TODO: Need to finish
+export { Spinner } from './components/spinner'; // TODO: Need to finish
+export { Stack } from './components/stack';
+export { Stat } from './components/stat'; // TODO: Need to finish
+export { Switch } from './components/switch'; // TODO: Need to finish
+export { Tabs } from './components/tabs'; // TODO: Need to finish
+export { Tag } from './components/tag'; // TODO: Need to finish
+export { Text } from './components/text';
+export { Textarea } from './components/textarea';
+export { Theme } from './components/theme';
+export { useToast } from './components/toast';
+export { Tooltip } from './components/tooltip';
 
 export { useDisclosure, useClipboard } from '@chakra-ui/core';

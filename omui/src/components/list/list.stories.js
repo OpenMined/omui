@@ -2,7 +2,8 @@ import React from 'react';
 import { withKnobs, select } from '@storybook/addon-knobs';
 import { CheckIcon } from '@chakra-ui/icons';
 
-import { List } from '../..';
+import { List } from './';
+
 import sizes from '../../theme/foundations/sizes';
 
 export default { title: 'Components/List', decorators: [withKnobs] };

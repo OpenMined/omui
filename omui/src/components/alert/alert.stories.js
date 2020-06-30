@@ -1,7 +1,7 @@
 import React from 'react';
 import { withKnobs, boolean, select, text } from '@storybook/addon-knobs';
 
-import { Alert } from '../../';
+import { Alert } from './';
 import {
   themeAlertStatuses,
   themeAlertVariants

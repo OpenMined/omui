@@ -1,11 +1,10 @@
 import React from 'react';
 import { withKnobs, text, select } from '@storybook/addon-knobs';
+import { PhoneIcon, CheckIcon } from '@chakra-ui/icons';
 
-import { Input } from '../..';
-import { default as InputStyle } from './input.style';
+import { Input, InputStyle } from './';
 
 import { themeInputVariants } from '../../helpers/get-theme';
-import { PhoneIcon, CheckIcon } from '@chakra-ui/icons';
 
 export default { title: 'Components/Input', decorators: [withKnobs] };
 

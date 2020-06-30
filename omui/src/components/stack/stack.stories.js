@@ -1,7 +1,9 @@
 import React from 'react';
 import { withKnobs, number, select } from '@storybook/addon-knobs';
 
-import { Stack, Box } from '../..';
+import { Stack } from './';
+import { Box } from '../../';
+
 import sizes from '../../theme/foundations/sizes';
 import {
   themeFlexDirection,

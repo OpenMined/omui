@@ -1,15 +1,11 @@
 import { ComponentTheme } from '@chakra-ui/theme-tools';
 
-import Input, {
-  InputVariants,
-  InputSizes,
-  InputProps
-} from '../../components/input/input.style';
+import { InputStyle, InputVariants, InputSizes, InputProps } from '../input';
 
 const Select: ComponentTheme<InputProps> = {
-  ...Input,
+  ...InputStyle,
   baseStyle: {
-    ...Input.baseStyle,
+    ...InputStyle.baseStyle,
     appearance: 'none',
     paddingRight: '2rem',
     paddingBottom: '1px',

@@ -6,7 +6,7 @@ import {
 } from '@chakra-ui/core';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 
-import { Link } from '../link/link';
+import { Link } from '../link';
 
 interface BreadcrumbProps {
   links: object[];

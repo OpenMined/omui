@@ -8,8 +8,8 @@ import {
   ListProps as IListProps
 } from '@chakra-ui/core';
 
-import { Flex } from '../flex/flex';
-import { Box } from '../box/box';
+import { Flex } from '../flex';
+import { Box } from '../box';
 
 type ListProps = IListProps & {
   type: 'ordered' | 'unordered' | React.ReactNode;

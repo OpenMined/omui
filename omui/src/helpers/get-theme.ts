@@ -6,7 +6,7 @@ import {
   letterSpacings,
   lineHeights
 } from '../theme/foundations/typography';
-import { InputVariants } from '../components/input/input.style';
+import { InputVariants } from '../components/input';
 
 const getAllColorKeys = (c: object) =>
   Object.keys(c)

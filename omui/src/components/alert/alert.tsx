@@ -6,9 +6,9 @@ import {
   AlertDescription
 } from '@chakra-ui/core';
 
-import { CloseButton } from '../close-button/close-button';
+import { AlertStyle } from './';
 
-import AlertStyle from './alert.style';
+import { CloseButton } from '../close-button';
 
 interface AlertProps {
   title?: string;

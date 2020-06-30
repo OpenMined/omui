@@ -7,7 +7,9 @@ import {
   boolean
 } from '@storybook/addon-knobs';
 
-import { Grid, SimpleGrid, Box, Text } from '../..';
+import { Grid, SimpleGrid } from '../..';
+import { Box, Text } from '../../';
+
 import sizes from '../../theme/foundations/sizes';
 
 export default { title: 'Primitives/Grid', decorators: [withKnobs] };

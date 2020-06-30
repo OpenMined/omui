@@ -1,14 +1,11 @@
 import { ComponentTheme } from '@chakra-ui/theme-tools';
 
-import Input, {
-  InputProps,
-  InputVariants
-} from '../../components/input/input.style';
+import { InputStyle, InputProps, InputVariants } from './';
 
 const PinInput: ComponentTheme<InputProps> = {
-  defaultProps: Input.defaultProps,
-  baseStyle: Input.baseStyle,
-  variants: Input.variants,
+  defaultProps: InputStyle.defaultProps,
+  baseStyle: InputStyle.baseStyle,
+  variants: InputStyle.variants,
   sizes: {
     lg: {
       fontSize: 'lg',

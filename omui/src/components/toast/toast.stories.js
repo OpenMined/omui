@@ -7,7 +7,9 @@ import {
   number
 } from '@storybook/addon-knobs';
 
-import { useToast, Button } from '../..';
+import { useToast } from './';
+import { Button } from '../../';
+
 import {
   themeToastStatuses,
   themeToastPositions

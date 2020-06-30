@@ -1,5 +1,6 @@
 import { mode, Props, StyleObject } from '@chakra-ui/theme-tools';
-import Input, { InputTheme } from './input.style';
+
+import { InputStyle, InputTheme } from './';
 
 function outline(props: Props): StyleObject {
   return {
@@ -31,7 +32,7 @@ const unstyled = {
   height: 'auto'
 };
 
-const sizes: InputTheme['sizes'] = Input.sizes;
+const sizes: InputTheme['sizes'] = InputStyle.sizes;
 
 const InputAddon: InputTheme = {
   sizes,

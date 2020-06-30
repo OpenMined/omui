@@ -1,7 +1,9 @@
 import React from 'react';
 import { withKnobs, number, boolean, select } from '@storybook/addon-knobs';
 
-import { Flex, Box } from '../..';
+import { Flex } from './';
+import { Box } from '../../';
+
 import {
   themeFlexDirection,
   themeFlexAlignItems,

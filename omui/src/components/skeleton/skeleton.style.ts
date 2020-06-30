@@ -21,7 +21,7 @@ export const frame = (start: string, end: string) => keyframes`
 
 type CustomProps = Props & SkeletonProps;
 
-export function getBaseStyle(props: CustomProps) {
+function getBaseStyle(props: CustomProps) {
   const {
     startColor = mode('gray.100', 'gray.800')(props),
     endColor = mode('gray.400', 'gray.600')(props),

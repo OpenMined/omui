@@ -8,11 +8,11 @@ const getSize = (value: string) => ({
   Content: { maxWidth: value }
 });
 
-export interface Props {
+export interface ModalProps {
   scrollBehavior?: 'inside' | 'outside';
 }
 
-const Modal: ComponentTheme<Props> = {
+const Modal: ComponentTheme<ModalProps> = {
   defaultProps: {
     size: 'md'
   },

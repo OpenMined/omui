@@ -1,8 +1,8 @@
 import React from 'react';
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 
-import { Checkbox, CheckboxGroup } from '../..';
-import { default as CheckboxStyle } from './checkbox.style';
+import { Checkbox, CheckboxGroup, CheckboxStyle } from './';
+
 import { themeCheckboxColors } from '../../helpers/get-theme';
 
 export default { title: 'Components/Checkbox', decorators: [withKnobs] };

@@ -1,7 +1,9 @@
 import React from 'react';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 
-import { Text, Box } from '../..';
+import { Text } from './';
+import { Box } from '../../';
+
 import {
   themeFontFamilies,
   themeFontSizes,

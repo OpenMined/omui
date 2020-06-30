@@ -1,7 +1,8 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 
-import { KeyboardKey, Text } from '../..';
+import { KeyboardKey } from './';
+import { Text } from '../../';
 
 export default { title: 'Components/Keyboard Key', decorators: [withKnobs] };
 

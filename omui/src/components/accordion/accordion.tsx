@@ -7,7 +7,8 @@ import {
   AccordionIcon,
   AccordionProps
 } from '@chakra-ui/core';
-import { Box } from '../box/box';
+
+import { Box } from '../box';
 
 export const Accordion = ({ children, ...props }: AccordionProps) => (
   <ChakraAccordion {...props}>{children}</ChakraAccordion>

@@ -1,7 +1,8 @@
 import React from 'react';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 
-import { Heading, Box } from '../..';
+import { Heading } from './';
+import { Box } from '../../';
 
 import {
   themeHeadingFontSizes,

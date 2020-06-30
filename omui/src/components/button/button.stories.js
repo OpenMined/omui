@@ -2,8 +2,8 @@ import React from 'react';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import { PhoneIcon, CalendarIcon } from '@chakra-ui/icons';
 
-import { Button, IconButton } from '../..';
-import { default as ButtonStyle } from './button.style';
+import { Button, IconButton, ButtonStyle } from './';
+
 import {
   themeIconButtonSizes,
   themeButtonSizes,

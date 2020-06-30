@@ -1,67 +1,69 @@
-import Accordion from '../components/accordion/accordion.style';
-import Alert from '../components/alert/alert.style';
-import Avatar from '../components/avatar/avatar.style';
-import Badge from '../components/badge/badge.style';
-import Button from '../components/button/button.style';
-import Checkbox from '../components/checkbox/checkbox.style';
-import CloseButton from '../components/close-button/close-button.style';
-import Divider from '../components/divider/divider.style';
-import Modal from './components/modal.style';
-import Heading from '../components/heading/heading.style';
-import Input from '../components/input/input.style';
-import InputAddon from '../components/input/input-addon.style';
-import Link from '../components/link/link.style';
-import Menu from './components/menu.style';
-import NumberInput from './components/number-input.style';
-import Radio from '../components/radio/radio.style';
-import Select from './components/select.style';
-import Slider from './components/slider.style';
-import Spinner from './components/spinner.style';
-import Switch from './components/switch.style';
-import Tabs from './components/tabs.style';
-import Tag from './components/tag.style';
-import Tooltip from '../components/tooltip/tooltip.style';
-import Kbd from '../components/kbd/kbd.style';
-import PinInput from './components/pin-input.style';
-import Popover from './components/popover.style';
-import Form from '../components/form-control/form-control.style';
-import Editable from '../components/editable/editable.style';
-import Progress from './components/progress.style';
-import Textarea from '../components/textarea/textarea.style';
-import Stat from './components/stat.style';
-import Skeleton from './components/skeleton.style';
+import { AccordionStyle as Accordion } from '../components/accordion';
+import { AlertStyle as Alert } from '../components/alert';
+import { AvatarStyle as Avatar } from '../components/avatar';
+import { BadgeStyle as Badge } from '../components/badge';
+import { ButtonStyle as Button } from '../components/button';
+import { CheckboxStyle as Checkbox } from '../components/checkbox';
+import { CloseButtonStyle as CloseButton } from '../components/close-button';
+import { DividerStyle as Divider } from '../components/divider';
+import { EditableStyle as Editable } from '../components/editable';
+import { FormControlStyle as Form } from '../components/form-control';
+import { HeadingStyle as Heading } from '../components/heading';
+import {
+  InputStyle as Input,
+  InputAddonStyle as InputAddon,
+  NumberInputStyle as NumberInput,
+  PinInputStyle as PinInput
+} from '../components/input';
+import { KeyboardKeyStyle as Kbd } from '../components/kbd';
+import { LinkStyle as Link } from '../components/link';
+import { MenuStyle as Menu } from '../components/menu';
+import { ModalStyle as Modal } from '../components/modal';
+import { PopoverStyle as Popover } from '../components/popover';
+import { ProgressStyle as Progress } from '../components/progress';
+import { RadioStyle as Radio } from '../components/radio';
+import { SelectStyle as Select } from '../components/select';
+import { SkeletonStyle as Skeleton } from '../components/skeleton';
+import { SliderStyle as Slider } from '../components/slider';
+import { SpinnerStyle as Spinner } from '../components/spinner';
+import { StatStyle as Stat } from '../components/stat';
+import { SwitchStyle as Switch } from '../components/switch';
+import { TabsStyle as Tabs } from '../components/tabs';
+import { TagStyle as Tag } from '../components/tag';
+import { TextareaStyle as Textarea } from '../components/textarea';
+import { TooltipStyle as Tooltip } from '../components/tooltip';
 
 export default {
   Accordion,
-  Button,
-  Heading,
   Alert,
-  Badge,
   Avatar,
-  Link,
-  Divider,
-  Spinner,
-  Menu,
-  Tabs,
+  Badge,
+  Button,
   Checkbox,
-  Radio,
+  CloseButton,
+  Divider,
+  Editable,
+  Form,
+  Heading,
   Input,
   InputAddon,
-  Tooltip,
-  CloseButton,
-  Select,
-  Slider,
-  NumberInput,
-  Switch,
-  Tag,
-  Modal,
   Kbd,
-  Textarea,
+  Link,
+  Menu,
+  Modal,
+  NumberInput,
   PinInput,
   Popover,
-  Form,
-  Editable,
   Progress,
+  Radio,
+  Select,
+  Skeleton,
+  Slider,
+  Spinner,
   Stat,
-  Skeleton
+  Switch,
+  Tabs,
+  Tag,
+  Textarea,
+  Tooltip
 };

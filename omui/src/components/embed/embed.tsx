@@ -1,7 +1,7 @@
 import React from 'react';
 import { AspectRatio } from '@chakra-ui/core';
 
-import { Box } from '../box/box';
+import { Box } from '../box';
 import { convertRatios } from '../../helpers/ratios';
 
 interface EmbedProps {

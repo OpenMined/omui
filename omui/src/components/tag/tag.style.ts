@@ -1,6 +1,6 @@
 import { ComponentTheme } from '@chakra-ui/theme-tools';
 
-import Badge, { BadgeVariants } from '../../components/badge/badge.style';
+import { BadgeStyle, BadgeVariants } from '../badge';
 
 const Tag: ComponentTheme = {
   defaultProps: {
@@ -37,7 +37,7 @@ const Tag: ComponentTheme = {
       paddingX: 3
     }
   },
-  variants: Badge.variants
+  variants: BadgeStyle.variants
 };
 
 export const TagSizes = {

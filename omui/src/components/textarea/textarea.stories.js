@@ -1,8 +1,8 @@
 import React from 'react';
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 
-import { Textarea } from '../..';
-import { default as InputStyle } from '../input/input.style';
+import { Textarea } from './';
+import { InputStyle } from '../input';
 
 import {
   themeInputVariants,

@@ -5,7 +5,7 @@ import {
   RadioGroupProps as IRadioGroupProps
 } from '@chakra-ui/core';
 
-import { Stack } from '../stack/stack';
+import { Stack } from '../stack';
 
 export const Radio = ChakraRadio;
 

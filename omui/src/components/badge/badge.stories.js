@@ -1,8 +1,8 @@
 import React from 'react';
 import { withKnobs, text, select } from '@storybook/addon-knobs';
 
-import { Badge, Flex, Avatar, Box, Text } from '../../';
-import { default as BadgeStyle } from './badge.style';
+import { Badge, BadgeStyle } from './';
+import { Flex, Avatar, Box, Text } from '../../';
 import { themeBadgeVariants, themeBadgeColors } from '../../helpers/get-theme';
 
 export default { title: 'Components/Badge', decorators: [withKnobs] };

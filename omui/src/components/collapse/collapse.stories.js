@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { withKnobs, text, number, boolean } from '@storybook/addon-knobs';
 
-import { Collapse, Button, Box } from '../..';
+import { Collapse } from './';
+import { Button, Box } from '../../';
 
 export default { title: 'Components/Collapse', decorators: [withKnobs] };
 

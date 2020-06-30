@@ -1,7 +1,8 @@
 import React from 'react';
 import { withKnobs, select } from '@storybook/addon-knobs';
 
-import { Divider, Flex, Box } from '../..';
+import { Divider } from './';
+import { Flex, Box } from '../../';
 
 import { themeAllPossibleColors } from '../../helpers/get-theme';
 

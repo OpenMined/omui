@@ -1,7 +1,7 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 
-import { Breadcrumb } from '../..';
+import { Breadcrumb } from './';
 
 export default { title: 'Components/Breadcrumb', decorators: [withKnobs] };
 

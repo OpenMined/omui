@@ -1,13 +1,9 @@
-import Input, {
-  InputSizes,
-  InputTheme,
-  InputVariants
-} from '../input/input.style';
+import { InputStyle, InputSizes, InputTheme, InputVariants } from '../input';
 
 const Textarea: InputTheme = {
-  ...Input,
+  ...InputStyle,
   baseStyle: {
-    ...Input.baseStyle,
+    ...InputStyle.baseStyle,
     paddingY: '8px',
     minHeight: '80px',
     lineHeight: 'short'

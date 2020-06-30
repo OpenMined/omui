@@ -1,7 +1,8 @@
 import React from 'react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 
-import { Editable, Flex, Avatar, Box, Heading } from '../..';
+import { Editable } from './';
+import { Flex, Avatar, Box, Heading } from '../../';
 
 export default { title: 'Components/Editable', decorators: [withKnobs] };
 

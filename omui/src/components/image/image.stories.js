@@ -1,7 +1,8 @@
 import React from 'react';
 import { withKnobs, select, number, text } from '@storybook/addon-knobs';
 
-import { Image } from '../..';
+import { Image } from './';
+
 import { largeSizes } from '../../theme/foundations/sizes';
 import radii from '../../theme/foundations/radius';
 

@@ -1,7 +1,8 @@
 import React from 'react';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 
-import { FormControl, Input } from '../..';
+import { FormControl } from './';
+import { Input } from '../../';
 
 export default { title: 'Components/Form Control', decorators: [withKnobs] };
 

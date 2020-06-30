@@ -1,7 +1,7 @@
 import React from 'react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
-import { Link } from '../..';
+import { Link } from './';
 
 export default { title: 'Primitives/Link', decorators: [withKnobs] };
 

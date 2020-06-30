@@ -3,11 +3,11 @@ import Highlight, { defaultProps, Language } from 'prism-react-renderer';
 import theme from 'prism-react-renderer/themes/vsDark';
 import Editor from 'react-simple-code-editor';
 import { Global, css } from '@emotion/core';
-
 // @ts-ignore
 import Prism from 'prism-react-renderer/prism';
 
-import { Box } from '../box/box';
+import { Box } from '../box';
+
 import { fonts } from '../../theme/foundations/typography';
 
 (typeof global !== 'undefined' ? global : window)['Prism'] = Prism;
