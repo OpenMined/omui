@@ -3,9 +3,10 @@ import {
   Alert as ChakraAlert,
   AlertIcon,
   AlertTitle,
-  AlertDescription,
-  CloseButton
+  AlertDescription
 } from '@chakra-ui/core';
+
+import { CloseButton } from '../close-button/close-button';
 
 import AlertStyle from './alert.style';
 

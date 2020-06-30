@@ -3,17 +3,22 @@ import { addDecorator, addParameters } from '@storybook/react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { Box, Theme } from '../src';
 
-addDecorator((storyFn) => (
+addDecorator((StoryFn: () => JSX.Element) => (
   <Theme>
-    <Box p={6}>{storyFn()}</Box>
+    <Box p={6}>
+      <StoryFn />
+    </Box>
   </Theme>
 ));
+
+type StoryProp = {
+  kind: string;
+};
 
 addParameters({
   options: {
     showRoots: true,
-    // @ts-ignore
-    storySort: (a, b) => {
+    storySort: (a: StoryProp[], b: StoryProp[]) => {
       const separator = '/';
       const config = [
         {
@@ -49,8 +54,7 @@ addParameters({
       const story1 = a[1].kind.split(separator);
       const story2 = b[1].kind.split(separator);
 
-      // @ts-ignore
-      function getOrderNumber(needle, haystack) {
+      function getOrderNumber(needle: string, haystack: string[]) {
         let order = 9999;
 
         if (Array.isArray(haystack)) {
