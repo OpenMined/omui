@@ -76,9 +76,6 @@ const Slider: ComponentTheme = {
       border: '1px solid',
       borderColor: 'transparent',
       transition: 'transform 0.2s',
-      _focus: {
-        boxShadow: 'outline'
-      },
       _disabled: {
         bg: 'gray.300'
       },

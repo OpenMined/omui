@@ -14,15 +14,27 @@ interface AlertProps {
   title?: string;
   closable?: boolean;
   children: string | React.ReactNode;
+  onClose?: () => void;
 }
 
-export const Alert = ({ title, closable, children, ...props }: AlertProps) => (
+export const Alert = ({
+  title,
+  closable,
+  children,
+  onClose,
+  ...props
+}: AlertProps) => (
   <ChakraAlert {...props}>
     <AlertIcon />
     {title && <AlertTitle>{title}</AlertTitle>}
     <AlertDescription>{children}</AlertDescription>
     {closable && (
-      <CloseButton position="absolute" right="0.4rem" top="0.4rem" />
+      <CloseButton
+        onClick={onClose}
+        position="absolute"
+        right="0.4rem"
+        top="0.4rem"
+      />
     )}
   </ChakraAlert>
 );

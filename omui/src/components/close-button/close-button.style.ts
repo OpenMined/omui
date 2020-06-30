@@ -17,9 +17,6 @@ const CloseButton: ComponentTheme = {
     },
     _active: {
       bg: mode(`blackAlpha.200`, `whiteAlpha.200`)(props)
-    },
-    _focus: {
-      boxShadow: 'outline'
     }
   }),
   sizes: {

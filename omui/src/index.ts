@@ -53,10 +53,10 @@ export { Skeleton } from './components/skeleton'; // TODO: Need to finish
 export { Slider } from './components/slider'; // TODO: Need to finish
 export { Spinner } from './components/spinner'; // TODO: Need to finish
 export { Stack } from './components/stack';
-export { Stats } from './components/stat'; // TODO: Need to finish
+export { Stats } from './components/stat';
 export { Switch } from './components/switch'; // TODO: Need to finish
 export { Tabs } from './components/tabs'; // TODO: Need to finish
-export { Tag } from './components/tag'; // TODO: Need to finish
+export { Tag } from './components/tag';
 export { Text } from './components/text';
 export { Textarea } from './components/textarea';
 export { Theme } from './components/theme';

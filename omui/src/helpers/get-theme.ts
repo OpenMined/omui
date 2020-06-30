@@ -7,6 +7,7 @@ import {
   lineHeights
 } from '../theme/foundations/typography';
 import { InputVariants } from '../components/input';
+import { TagSizes, TagVariants } from '../components/tag';
 
 const getAllColorKeys = (c: object) =>
   Object.keys(c)
@@ -150,6 +151,11 @@ export const themeInputVariants = Object.keys(InputVariants);
 
 // Radio
 export const themeRadioColors = themeCheckboxColors;
+
+// Tag
+export const themeTagSizes = Object.keys(TagSizes);
+export const themeTagVariants = Object.keys(TagVariants);
+export const themeTagColors = themeButtonColors;
 
 // Text
 export const themeFontFamilies = Object.keys(fonts);

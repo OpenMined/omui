@@ -123,8 +123,7 @@ const Tabs: ComponentTheme = {
     Tab: {
       transition: 'all 0.2s',
       _focus: {
-        zIndex: 1,
-        boxShadow: 'outline'
+        zIndex: 1
       }
     },
     TabList: {},

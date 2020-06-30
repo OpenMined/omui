@@ -12,8 +12,7 @@ const Popover: ComponentTheme = {
       maxWidth: 'xs',
       zIndex: '1',
       _focus: {
-        outline: 0,
-        boxShadow: 'outline'
+        outline: 0
       }
     },
     Header: {

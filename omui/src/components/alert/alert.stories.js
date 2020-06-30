@@ -17,6 +17,7 @@ export const Default = () => (
     status={select('Status', themeAlertStatuses, status)}
     variant={select('Variant', themeAlertVariants, variant)}
     closable={boolean('Closable?', closable)}
+    onClose={() => console.log('Closed')}
   >
     {text('Description', 'Someone cannot handle the heat...')}
   </Alert>
