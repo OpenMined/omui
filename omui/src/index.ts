@@ -1,19 +1,19 @@
 /*
-  High-level todo's:
-  - Get all helpers to reference the new component themes
+  Pre-Framer todo's:
   - Finish all components
-  - Go through and re-evaluate all Typescript types
-  - Check all components for responsiveness
   - Consider adding any new components added by v1
   - Consider getting rid of Stack and other redundant helper components
-  - Figure out why accordions are so damn slow...
-  - Go through all Chakra component configs and remove the one's that we don't need
-  - Change all the helpers to reference the component style files
+  - Figure out whether or not to use items as DOM children or as array config and apply mentality across all components
+  - Check all components for responsiveness
+  - Get all helpers to reference the new component themes or consider getting rid of helpers if possible
+  - Figure out why accordions are so damn slow
+  - Migrate components over to Framer
+
+  Post-Framer todo's:
+  - Go through and re-evaluate all Typescript types
   - Consider supporting another color mode
   - Create a form component, similar to SR wizard (Patrick)
-  - Double-check exporting (below)
   - Provide ample stories for each component
-  - Migrate components over to Framer
   - Create MDX documentation for each component in Storybook: https://medium.com/storybookjs/rich-docs-with-storybook-mdx-61bc145ae7bc
   - Cypress testing: https://itnext.io/cypress-storybook-keeping-test-scenario-data-and-component-rendering-in-one-place-c57b23cc1640
 */
@@ -54,7 +54,7 @@ export { Slider } from './components/slider'; // TODO: Need to finish
 export { Spinner } from './components/spinner'; // TODO: Need to finish
 export { Stack } from './components/stack';
 export { Stats } from './components/stat';
-export { Switch } from './components/switch'; // TODO: Need to finish
+export { Switch } from './components/switch';
 export { Tabs } from './components/tabs'; // TODO: Need to finish
 export { Tag } from './components/tag';
 export { Text } from './components/text';

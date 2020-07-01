@@ -8,6 +8,7 @@ import {
 } from '../theme/foundations/typography';
 import { InputVariants } from '../components/input';
 import { TagSizes, TagVariants } from '../components/tag';
+import { SwitchSizes } from '../components/switch';
 
 const getAllColorKeys = (c: object) =>
   Object.keys(c)
@@ -151,6 +152,10 @@ export const themeInputVariants = Object.keys(InputVariants);
 
 // Radio
 export const themeRadioColors = themeCheckboxColors;
+
+// Switch
+export const themeSwitchColors = themeButtonColors;
+export const themeSwitchSizes = Object.keys(SwitchSizes);
 
 // Tag
 export const themeTagSizes = Object.keys(TagSizes);

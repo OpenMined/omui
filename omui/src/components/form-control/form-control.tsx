@@ -26,6 +26,10 @@ export const FormControl = ({
     // @ts-ignore
     children.displayName || children.type.displayName
   );
+  const isSwitch = ['Switch'].includes(
+    // @ts-ignore
+    children.displayName || children.type.displayName
+  );
 
   return (
     <ChakraFormControl {...props} as={isGroupedChild ? 'fieldset' : 'div'}>

@@ -22,13 +22,11 @@ export const Tag = ({
   rightElement,
   onClose,
   ...props
-}: TagProps) => {
-  return (
-    <ChakraTag {...props}>
-      {leftElement && leftElement}
-      <TagLabel>{label}</TagLabel>
-      {rightElement && rightElement}
-      {closable && <CloseButton onClick={onClose} size="sm" ml={2} mr={-2} />}
-    </ChakraTag>
-  );
-};
+}: TagProps) => (
+  <ChakraTag {...props}>
+    {leftElement && leftElement}
+    <TagLabel>{label}</TagLabel>
+    {rightElement && rightElement}
+    {closable && <CloseButton onClick={onClose} size="sm" ml={2} mr={-2} />}
+  </ChakraTag>
+);
