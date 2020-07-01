@@ -9,6 +9,7 @@ import {
 import { InputVariants } from '../components/input';
 import { TagSizes, TagVariants } from '../components/tag';
 import { SwitchSizes } from '../components/switch';
+import { SpinnerSizes } from '../components/spinner';
 
 const getAllColorKeys = (c: object) =>
   Object.keys(c)
@@ -152,6 +153,10 @@ export const themeInputVariants = Object.keys(InputVariants);
 
 // Radio
 export const themeRadioColors = themeCheckboxColors;
+
+// Spinner
+export const themeSpinnerColors = themeAllPossibleColors;
+export const themeSpinnerSizes = Object.keys(SpinnerSizes);
 
 // Switch
 export const themeSwitchColors = themeButtonColors;

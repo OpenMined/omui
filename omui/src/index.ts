@@ -51,7 +51,7 @@ export { Radio, RadioGroup } from './components/radio';
 export { Select } from './components/select'; // TODO: Need to finish
 export { Skeleton } from './components/skeleton'; // TODO: Need to finish
 export { Slider } from './components/slider'; // TODO: Need to finish
-export { Spinner } from './components/spinner'; // TODO: Need to finish
+export { Spinner } from './components/spinner';
 export { Stack } from './components/stack';
 export { Stats } from './components/stat';
 export { Switch } from './components/switch';
