@@ -23,10 +23,6 @@ function line(props: Props) {
       },
       _active: {
         bg: mode('gray.200', 'whiteAlpha.300')(props)
-      },
-      _disabled: {
-        opacity: 0.4,
-        cursor: 'not-allowed'
       }
     }
   };
@@ -85,8 +81,8 @@ function softRounded(props: any): StyleObject {
   const { colorScheme: c, theme } = props;
   return {
     Tab: {
-      borderRadius: 'full',
-      fontWeight: 'semibold',
+      borderRadius: 'lg',
+      fontWeight: 'medium',
       color: 'gray.600',
       _selected: {
         color: getColor(theme, `${c}.700`),
@@ -101,8 +97,8 @@ function solidRounded(props: Props): StyleObject {
   const { colorScheme: c } = props;
   return {
     Tab: {
-      borderRadius: 'full',
-      fontWeight: 'semibold',
+      borderRadius: 'lg',
+      fontWeight: 'medium',
       color: mode('gray.600', 'inherit')(props),
       _selected: {
         color: mode(`#fff`, 'gray.800')(props),
@@ -124,6 +120,10 @@ const Tabs: ComponentTheme = {
       transition: 'all 0.2s',
       _focus: {
         zIndex: 1
+      },
+      _disabled: {
+        opacity: 0.4,
+        cursor: 'not-allowed'
       }
     },
     TabList: {},

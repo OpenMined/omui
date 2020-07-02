@@ -57,6 +57,7 @@
     "pretty-quick": "^2.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-icons": "^3.10.0",
     "source-map-explorer": "^2.4.2",
     "ts-loader": "^7.0.5",
     "typescript": "^3.9.5"

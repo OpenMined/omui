@@ -11,6 +11,8 @@ import { TagSizes, TagVariants } from '../components/tag';
 import { SwitchSizes } from '../components/switch';
 import { SpinnerSizes } from '../components/spinner';
 import { SliderSizes } from '../components/slider';
+import { TabVariants, TabSizes } from '../components/tabs';
+import { IconSize } from '../components/icon/icon.style';
 
 const getAllColorKeys = (c: object) =>
   Object.keys(c)
@@ -149,6 +151,9 @@ export const themeFlexJustifyContent = [
 export const themeHeadingFontSizes = ['2xl', 'xl', 'lg', 'md', 'sm', 'xs'];
 export const themeHeadingTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
 
+// Icon
+export const themeIconSizes = Object.keys(IconSize);
+
 // Input
 export const themeInputVariants = Object.keys(InputVariants);
 
@@ -166,6 +171,12 @@ export const themeSliderSizes = Object.keys(SliderSizes);
 // Switch
 export const themeSwitchColors = themeButtonColors;
 export const themeSwitchSizes = Object.keys(SwitchSizes);
+
+// Tabs
+export const themeTabsVariants = Object.keys(TabVariants);
+export const themeTabsSizes = Object.keys(TabSizes);
+export const themeTabsColors = themeButtonColors;
+export const themeTabsAlignment = ['start', 'center', 'end'];
 
 // Tag
 export const themeTagSizes = Object.keys(TagSizes);

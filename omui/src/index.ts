@@ -11,8 +11,9 @@
 
   Post-Framer todo's:
   - Go through and re-evaluate all Typescript types
+  - Look into various TODO's
+  - Create a form component, similar to SR wizard (Patrick), and consider regrouping form components in Storybook
   - Consider supporting another color mode
-  - Create a form component, similar to SR wizard (Patrick)
   - Provide ample stories for each component
   - Create MDX documentation for each component in Storybook: https://medium.com/storybookjs/rich-docs-with-storybook-mdx-61bc145ae7bc
   - Cypress testing: https://itnext.io/cypress-storybook-keeping-test-scenario-data-and-component-rendering-in-one-place-c57b23cc1640
@@ -37,7 +38,7 @@ export { Flex } from './components/flex';
 export { FormControl } from './components/form-control';
 export { Grid, SimpleGrid } from './components/grid';
 export { Heading } from './components/heading';
-export { Icon } from './components/icon'; // TODO: Need to finish
+export { Icon, createIcon } from './components/icon';
 export { Image } from './components/image';
 export { Input, NumberInput, PinInput } from './components/input';
 export { KeyboardKey } from './components/kbd';
@@ -55,7 +56,7 @@ export { Spinner } from './components/spinner';
 export { Stack } from './components/stack';
 export { Stats } from './components/stat';
 export { Switch } from './components/switch';
-export { Tabs } from './components/tabs'; // TODO: Need to finish
+export { Tabs } from './components/tabs';
 export { Tag } from './components/tag';
 export { Text } from './components/text';
 export { Textarea } from './components/textarea';

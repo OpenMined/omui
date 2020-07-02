@@ -5,20 +5,20 @@ const Icon: ComponentTheme = {
     size: 'md'
   },
   sizes: {
-    xl: { boxSize: '48px' },
-    lg: { boxSize: '40px' },
-    md: { boxSize: '32px' },
+    xs: { boxSize: '16px' },
     sm: { boxSize: '24px' },
-    xs: { boxSize: '16px' }
+    md: { boxSize: '32px' },
+    lg: { boxSize: '40px' },
+    xl: { boxSize: '48px' }
   }
 };
 
 export const IconSize = {
-  xl: 'xl',
-  lg: 'lg',
-  md: 'md',
+  xs: 'xs',
   sm: 'sm',
-  xs: 'xs'
+  md: 'md',
+  lg: 'lg',
+  xl: 'xl'
 };
 
 export default Icon;
