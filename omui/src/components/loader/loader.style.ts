@@ -1,7 +1,7 @@
 import { keyframes } from '@chakra-ui/system';
 import { ComponentTheme, mode, Props, getColor } from '@chakra-ui/theme-tools';
 
-export interface SkeletonProps {
+export interface LoaderProps {
   startColor?: string;
   endColor?: string;
   speed?: number;
@@ -19,7 +19,7 @@ export const frame = (start: string, end: string) => keyframes`
   }
 `;
 
-type CustomProps = Props & SkeletonProps;
+type CustomProps = Props & LoaderProps;
 
 function getBaseStyle(props: CustomProps) {
   const {
@@ -39,8 +39,8 @@ function getBaseStyle(props: CustomProps) {
   };
 }
 
-const Skeleton: ComponentTheme<SkeletonProps> = {
+const Loader: ComponentTheme<LoaderProps> = {
   baseStyle: getBaseStyle
 };
 
-export default Skeleton;
+export default Loader;

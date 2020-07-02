@@ -44,13 +44,13 @@ export { Input, NumberInput, PinInput } from './components/input';
 export { KeyboardKey } from './components/kbd';
 export { Link } from './components/link';
 export { List } from './components/list';
+export { LoaderBlock, LoaderText, LoaderCircle } from './components/loader';
 export { Menu } from './components/menu'; // TODO: Need to finish
 export { Modal } from './components/modal'; // TODO: Need to finish
 export { Popover } from './components/popover'; // TODO: Need to finish
 export { Progress, CircularProgress } from './components/progress'; // TODO: Need to finish
 export { Radio, RadioGroup } from './components/radio';
 export { Select } from './components/select'; // TODO: Need to finish
-export { Skeleton } from './components/skeleton'; // TODO: Need to finish
 export { Slider } from './components/slider';
 export { Spinner } from './components/spinner';
 export { Stack } from './components/stack';

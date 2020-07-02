@@ -18,13 +18,13 @@ import {
 } from '../components/input';
 import { KeyboardKeyStyle as Kbd } from '../components/kbd';
 import { LinkStyle as Link } from '../components/link';
+import { LoaderStyle as Skeleton } from '../components/loader';
 import { MenuStyle as Menu } from '../components/menu';
 import { ModalStyle as Modal } from '../components/modal';
 import { PopoverStyle as Popover } from '../components/popover';
 import { ProgressStyle as Progress } from '../components/progress';
 import { RadioStyle as Radio } from '../components/radio';
 import { SelectStyle as Select } from '../components/select';
-import { SkeletonStyle as Skeleton } from '../components/skeleton';
 import { SliderStyle as Slider } from '../components/slider';
 import { SpinnerStyle as Spinner } from '../components/spinner';
 import { StatStyle as Stat } from '../components/stat';
