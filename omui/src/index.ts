@@ -50,7 +50,7 @@ export { Modal } from './components/modal'; // TODO: Need to finish
 export { Popover } from './components/popover'; // TODO: Need to finish
 export { Progress, CircularProgress } from './components/progress'; // TODO: Need to finish
 export { Radio, RadioGroup } from './components/radio';
-export { Select } from './components/select'; // TODO: Need to finish
+export { Select } from './components/select';
 export { Slider } from './components/slider';
 export { Spinner } from './components/spinner';
 export { Stack } from './components/stack';

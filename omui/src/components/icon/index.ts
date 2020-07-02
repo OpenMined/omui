@@ -1,2 +1,2 @@
 export { Icon, createIcon } from './icon';
-export { default as IconStyle } from './icon.style';
+export { default as IconStyle, IconSize } from './icon.style';
