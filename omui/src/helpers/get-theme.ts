@@ -14,6 +14,7 @@ import { SliderSizes } from '../components/slider';
 import { TabVariants, TabSizes } from '../components/tabs';
 import { IconSize } from '../components/icon';
 import { SelectSizes, SelectVariants } from '../components/select';
+import { ProgressSizes } from '../components/progress';
 
 const getAllColorKeys = (c: object) =>
   Object.keys(c)
@@ -157,6 +158,10 @@ export const themeIconSizes = Object.keys(IconSize);
 
 // Input
 export const themeInputVariants = Object.keys(InputVariants);
+
+// Progress
+export const themeProgressSizes = Object.keys(ProgressSizes);
+export const themeProgressColors = themeButtonColors;
 
 // Radio
 export const themeRadioColors = themeCheckboxColors;

@@ -57,10 +57,10 @@ const Progress: ProgressTheme = {
 };
 
 export const ProgressSizes = {
-  lg: 'lg',
+  xs: 'xs',
   sm: 'sm',
   md: 'md',
-  xs: 'xs'
+  lg: 'lg'
 };
 
 export default Progress;
