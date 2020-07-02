@@ -104,9 +104,9 @@ const Slider: ComponentTheme = {
 };
 
 export const SliderSizes = {
-  lg: 'lg',
   sm: 'sm',
-  md: 'md'
+  md: 'md',
+  lg: 'lg'
 };
 
 export default Slider;
