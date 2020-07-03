@@ -4,9 +4,7 @@ export { PinInput } from './pin-input';
 export {
   default as InputStyle,
   InputSizes,
-  InputVariants,
-  InputProps,
-  InputTheme
+  InputVariants
 } from './input.style';
 export {
   default as InputAddonStyle,

@@ -16,17 +16,19 @@ const Popover: ComponentTheme = {
       }
     },
     Header: {
-      paddingX: 3,
-      paddingY: 2,
-      borderBottomWidth: '1px'
+      paddingX: 4,
+      paddingY: 3,
+      borderBottomWidth: '1px',
+      fontWeight: 'medium',
+      lineHeight: 'normal'
     },
     Body: {
-      paddingX: 3,
-      paddingY: 2
+      paddingX: 4,
+      paddingY: 3
     },
     Footer: {
-      paddingX: 3,
-      paddingY: 2,
+      paddingX: 4,
+      paddingY: 3,
       borderTopWidth: '1px'
     }
   })

@@ -1,6 +1,6 @@
 import { mode, Props, StyleObject } from '@chakra-ui/theme-tools';
 
-import { InputStyle, InputTheme } from './';
+import { default as InputStyle, InputTheme } from './input.style';
 
 function outline(props: Props): StyleObject {
   return {

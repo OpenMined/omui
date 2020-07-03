@@ -159,6 +159,25 @@ export const themeIconSizes = Object.keys(IconSize);
 // Input
 export const themeInputVariants = Object.keys(InputVariants);
 
+// Popper
+export const themePopperPlacements = [
+  'auto',
+  'auto-start',
+  'auto-end',
+  'top',
+  'top-start',
+  'top-end',
+  'bottom',
+  'bottom-start',
+  'bottom-end',
+  'right',
+  'right-start',
+  'right-end',
+  'left',
+  'left-start',
+  'left-end'
+];
+
 // Progress
 export const themeProgressSizes = Object.keys(ProgressSizes);
 export const themeProgressColors = themeButtonColors;
@@ -215,20 +234,4 @@ export const themeToastPositions = [
 ];
 
 // Tooltip
-export const themeTooltipPlacements = [
-  'auto',
-  'auto-start',
-  'auto-end',
-  'top',
-  'top-start',
-  'top-end',
-  'bottom',
-  'bottom-start',
-  'bottom-end',
-  'right',
-  'right-start',
-  'right-end',
-  'left',
-  'left-start',
-  'left-end'
-];
+export const themeTooltipPlacements = themePopperPlacements;

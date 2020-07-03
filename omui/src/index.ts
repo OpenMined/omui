@@ -47,7 +47,7 @@ export { List } from './components/list';
 export { LoaderBlock, LoaderText, LoaderCircle } from './components/loader';
 export { Menu } from './components/menu'; // TODO: Need to finish
 export { Modal } from './components/modal'; // TODO: Need to finish
-export { Popover } from './components/popover'; // TODO: Need to finish
+export { Popover } from './components/popover';
 export { LinearProgress, CircularProgress } from './components/progress';
 export { Radio, RadioGroup } from './components/radio';
 export { Select } from './components/select';

@@ -1,2 +1,2 @@
 export { Modal } from './modal';
-export { default as ModalStyle, ModalProps, ModalSizes } from './modal.style';
+export { default as ModalStyle, ModalSizes } from './modal.style';
