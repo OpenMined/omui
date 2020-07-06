@@ -1,3 +1,7 @@
+// TODO: Investigate large sizes... what is this for?
+// TODO: Consider switching out base sizes scale for iterative numbers... 1, 2, 3, ... without skipping
+// TODO: Once you've done this, recheck every component (or use snapshot testing!)
+
 export const baseSizes = {
   px: '1px',
   '0': '0',

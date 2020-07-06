@@ -1,22 +1,26 @@
 /*
   Pre-Framer todo's:
   - Finish all components
+  - Deploy Storybook and host somewhere
+  - Try to use @chakra-ui/theme for all components
+  - Get all helpers to reference the new component themes or consider getting rid of helpers if possible
   - Consider adding any new components added by v1
   - Consider getting rid of Stack and other redundant helper components
   - Figure out whether or not to use items as DOM children or as array config and apply mentality across all components
   - Check all components for responsiveness
-  - Get all helpers to reference the new component themes or consider getting rid of helpers if possible
-  - Figure out why accordions are so damn slow
   - Migrate components over to Framer
 
   Post-Framer todo's:
   - Go through and re-evaluate all Typescript types
+  - Go through and remove all various @ts-ignore issues
   - Look into various TODO's
   - Create a form component, similar to SR wizard (Patrick), and consider regrouping form components in Storybook
   - Consider supporting another color mode
   - Provide ample stories for each component
   - Create MDX documentation for each component in Storybook: https://medium.com/storybookjs/rich-docs-with-storybook-mdx-61bc145ae7bc
-  - Cypress testing: https://itnext.io/cypress-storybook-keeping-test-scenario-data-and-component-rendering-in-one-place-c57b23cc1640
+  - Cypress testing:
+    - https://itnext.io/cypress-storybook-keeping-test-scenario-data-and-component-rendering-in-one-place-c57b23cc1640
+    - https://github.com/storybookjs/storybook/tree/master/addons/storyshots/storyshots-core
 */
 
 export { Accordion, AccordionItem } from './components/accordion';
@@ -46,7 +50,7 @@ export { Link } from './components/link';
 export { List } from './components/list';
 export { LoaderBlock, LoaderText, LoaderCircle } from './components/loader';
 export { Menu } from './components/menu'; // TODO: Need to finish
-export { Modal } from './components/modal'; // TODO: Need to finish
+export { Modal } from './components/modal';
 export { Popover } from './components/popover';
 export { LinearProgress, CircularProgress } from './components/progress';
 export { Radio, RadioGroup } from './components/radio';

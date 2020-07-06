@@ -36,7 +36,7 @@ const Modal: ComponentTheme<ModalProps> = {
       paddingX: 6,
       paddingY: 4,
       fontSize: 'xl',
-      fontWeight: 'semibold'
+      fontWeight: 'medium'
     },
     Body: {
       paddingX: 6,

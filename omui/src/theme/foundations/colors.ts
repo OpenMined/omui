@@ -1,3 +1,5 @@
+// TODO: Investigate current color... what!?
+
 export interface ColorHues {
   50: string;
   100: string;

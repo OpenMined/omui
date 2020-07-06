@@ -15,6 +15,7 @@ import { TabVariants, TabSizes } from '../components/tabs';
 import { IconSize } from '../components/icon';
 import { SelectSizes, SelectVariants } from '../components/select';
 import { ProgressSizes } from '../components/progress';
+import { ModalSizes } from '../components/modal';
 
 const getAllColorKeys = (c: object) =>
   Object.keys(c)
@@ -158,6 +159,9 @@ export const themeIconSizes = Object.keys(IconSize);
 
 // Input
 export const themeInputVariants = Object.keys(InputVariants);
+
+// Modal
+export const themeModalSizes = Object.keys(ModalSizes);
 
 // Popper
 export const themePopperPlacements = [

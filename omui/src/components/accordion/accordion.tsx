@@ -10,6 +10,8 @@ import {
 
 import { Box } from '../box';
 
+// TODO: Why is accordion so slow now?
+
 export const Accordion = ({ children, ...props }: AccordionProps) => (
   <ChakraAccordion {...props}>{children}</ChakraAccordion>
 );
