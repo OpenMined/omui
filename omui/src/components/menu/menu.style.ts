@@ -49,7 +49,7 @@ const Menu: ComponentTheme = {
     MenuGroupTitle: {
       marginX: 4,
       marginY: 2,
-      fontWeight: 'semibold',
+      fontWeight: 'medium',
       fontSize: 'sm'
     }
   }),

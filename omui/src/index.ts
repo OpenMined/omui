@@ -1,6 +1,6 @@
 /*
   Pre-Framer todo's:
-  - Finish all components
+  - Implement colors and type settings from Kyoko
   - Deploy Storybook and host somewhere
   - Try to use @chakra-ui/theme for all components
   - Get all helpers to reference the new component themes or consider getting rid of helpers if possible
@@ -49,7 +49,7 @@ export { KeyboardKey } from './components/kbd';
 export { Link } from './components/link';
 export { List } from './components/list';
 export { LoaderBlock, LoaderText, LoaderCircle } from './components/loader';
-export { Menu } from './components/menu'; // TODO: Need to finish
+export { Menu } from './components/menu';
 export { Modal } from './components/modal';
 export { Popover } from './components/popover';
 export { LinearProgress, CircularProgress } from './components/progress';

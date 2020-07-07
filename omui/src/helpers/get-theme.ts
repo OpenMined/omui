@@ -160,11 +160,8 @@ export const themeIconSizes = Object.keys(IconSize);
 // Input
 export const themeInputVariants = Object.keys(InputVariants);
 
-// Modal
-export const themeModalSizes = Object.keys(ModalSizes);
-
-// Popper
-export const themePopperPlacements = [
+// Menu
+export const themeMenuPlacements = [
   'auto',
   'auto-start',
   'auto-end',
@@ -181,6 +178,12 @@ export const themePopperPlacements = [
   'left-start',
   'left-end'
 ];
+
+// Modal
+export const themeModalSizes = Object.keys(ModalSizes);
+
+// Popper
+export const themePopperPlacements = themeMenuPlacements;
 
 // Progress
 export const themeProgressSizes = Object.keys(ProgressSizes);
