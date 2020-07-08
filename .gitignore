@@ -1,21 +1,24 @@
 # General
-.DS_Store
-Icon\r
-
-# Framer
-.cache
-.config.json
 .backups
-.framer-lock
-.project.log
-yarn-error.log
-build
-dist
-node_modules
+.cache
+.DS_Store
 .npmrc
 .yarnrc
+build
+dist
+Icon\r
+node_modules
+report.*
+yarn-error.log
+
+# Framer
+.config.json
+.framer-lock
+.project.log
 *.framerxproj
 
-# Other
+# Parcel
 .parcel-cache
-report.*
+
+# Storybook
+build-storybook

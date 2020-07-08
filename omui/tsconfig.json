@@ -3,7 +3,7 @@
     "target": "es2019",
     "module": "esnext",
     "lib": ["dom", "esnext"],
-    "declaration": true,
+    "declaration": false,
     "sourceMap": true,
     "importHelpers": true,
     "moduleResolution": "node",

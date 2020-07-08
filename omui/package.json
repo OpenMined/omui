@@ -22,7 +22,7 @@
   "scripts": {
     "start": "yarn storybook:start",
     "storybook:start": "start-storybook -p 3000",
-    "storybook:deploy": "storybook-to-ghpages --out=.out",
+    "storybook:deploy": "storybook-to-ghpages --out=build-storybook",
     "build": "parcel build src/index.ts",
     "analyze": "yarn build && source-map-explorer build/index.esm.js"
   },
