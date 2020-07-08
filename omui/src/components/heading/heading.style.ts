@@ -22,7 +22,7 @@ const Heading: ComponentTheme = {
       fontSize: ['3xl', null, '4xl'],
       lineHeight: 'short'
     },
-    lg: { fontSize: ['xl', null, '2xl'] },
+    lg: { fontSize: '2xl' },
     md: { fontSize: 'xl' },
     sm: { fontSize: 'md' },
     xs: { fontSize: 'sm' }
