@@ -4,7 +4,7 @@
   "author": "Patrick Cason <patrick@openmined.org>",
   "license": "Apache-2.0",
   "version": "0.1.0",
-  "homepage": "https://github.com/openmined/omui",
+  "homepage": "https://omui.openmined.org",
   "bugs": "https://github.com/openmined/omui/issues",
   "repository": {
     "type": "git",
@@ -20,7 +20,9 @@
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "scripts": {
-    "storybook": "start-storybook -p 3000",
+    "start": "yarn storybook:start",
+    "storybook:start": "start-storybook -p 3000",
+    "storybook:deploy": "storybook-to-ghpages --out=.out",
     "build": "parcel build src/index.ts",
     "analyze": "yarn build && source-map-explorer build/index.esm.js"
   },
@@ -48,6 +50,7 @@
     "@storybook/addon-storysource": "^5.3.19",
     "@storybook/addon-viewport": "^5.3.19",
     "@storybook/react": "^5.3.19",
+    "@storybook/storybook-deployer": "^2.8.6",
     "@storybook/theming": "^5.3.19",
     "@types/react": "16.9.41",
     "@types/react-dom": "^16.9.8",
