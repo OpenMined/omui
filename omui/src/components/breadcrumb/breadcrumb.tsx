@@ -38,8 +38,8 @@ export const Breadcrumb = ({ links, ...props }: BreadcrumbProps) => {
             {isCurrentPage && (
               <Link
                 {...link}
-                color="black"
-                _hover={{ color: 'black' }}
+                color="gray.900"
+                _hover={{ color: 'inherit' }}
                 cursor="default"
               >
                 {title}

@@ -10,6 +10,8 @@ import { Box } from '../box';
 
 import { fonts } from '../../theme/foundations/typography';
 
+theme.plain['fontFamily'] = fonts.mono;
+
 (typeof global !== 'undefined' ? global : window)['Prism'] = Prism;
 
 require('prismjs/components/prism-markup');
@@ -88,7 +90,7 @@ export const Code = ({
                     as="span"
                     display="table-cell"
                     textAlign="right"
-                    fontWeight="semibold"
+                    fontWeight="bold"
                     pr={4}
                     userSelect="none"
                     opacity={0.5}

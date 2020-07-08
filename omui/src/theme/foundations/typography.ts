@@ -1,7 +1,7 @@
 export const fonts = {
   heading: `"Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
-  body: `"Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
-  mono: `"PT Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`
+  body: `"Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+  mono: `"Fira Code", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`
 };
 
 export const fontSizes = {
@@ -18,33 +18,33 @@ export const fontSizes = {
 };
 
 export const fontWeights = {
-  hairline: 100,
-  thin: 200,
+  // hairline: 100,
+  // thin: 200,
   light: 300,
   normal: 400,
   medium: 500,
-  semibold: 600,
-  bold: 700,
-  extrabold: 800,
-  black: 900
+  // semibold: 600,
+  bold: 700
+  // extrabold: 800,
+  // black: 900
 };
 
 export const letterSpacings = {
-  tighter: '-0.05em',
-  tight: '-0.025em',
+  // tighter: '-0.05em',
+  tight: '-0.04em', // Original: -0.025em
   normal: '0',
-  wide: '0.025em',
-  wider: '0.05em',
-  widest: '0.1em'
+  wide: '0.08em', // Original: 0.025em
+  wider: '0.16em', // Original: 0.05em
+  widest: '0.24em' // Original: 0.1em
 };
 
 export const lineHeights = {
   normal: 'normal',
   none: '1',
   shorter: '1.25',
-  short: '1.375',
+  short: '1.3', // Original: 1.375
   base: '1.5',
-  tall: '1.625',
+  tall: '1.6', // Original: 1.625
   taller: '2'
 };
 

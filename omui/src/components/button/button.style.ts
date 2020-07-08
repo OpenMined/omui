@@ -40,7 +40,7 @@ function outline(props: Props) {
 
   return {
     border: '1px solid',
-    borderColor: c === 'gray' ? borderColor : 'currentColor',
+    borderColor: c === 'gray' ? borderColor : 'current',
     ...ghost(props)
   };
 }

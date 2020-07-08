@@ -6,12 +6,22 @@ const Heading: ComponentTheme = {
   },
   baseStyle: {
     fontFamily: 'heading',
-    lineHeight: 'shorter',
-    fontWeight: 'bold'
+    lineHeight: 'base',
+    fontWeight: 'medium'
   },
   sizes: {
-    '2xl': { fontSize: ['4xl', null, '5xl'] },
-    xl: { fontSize: ['3xl', null, '4xl'] },
+    hero: {
+      fontSize: ['5xl', null, '6xl'],
+      lineHeight: 'none'
+    },
+    '2xl': {
+      fontSize: ['4xl', null, '5xl'],
+      lineHeight: 'shorter'
+    },
+    xl: {
+      fontSize: ['3xl', null, '4xl'],
+      lineHeight: 'short'
+    },
     lg: { fontSize: ['xl', null, '2xl'] },
     md: { fontSize: 'xl' },
     sm: { fontSize: 'md' },
@@ -20,6 +30,7 @@ const Heading: ComponentTheme = {
 };
 
 export const HeadingSizes = {
+  hero: 'hero',
   '2xl': '2xl',
   xl: 'xl',
   lg: 'lg',

@@ -1,7 +1,70 @@
 import { Meta } from '@storybook/addon-docs/blocks';
+import { isAccessible } from '@chakra-ui/theme-tools';
+
+import { paragraphText } from './variables';
+import { Theme, SimpleGrid, Flex, Box, Text, Heading, Paragraph } from '../';
+import theme from '../theme';
+import { colors } from '../theme/foundations/colors';
 
 <Meta title="Introduction/Brand Guide" />
 
 # Brand Guide
 
 - [ ] TODO: We need to fill in this page...
+
+## Colors
+
+<Theme>
+  {Object.keys(colors).map((color) => (
+    <Flex justifyContent="space-between" alignItems="center" mt={3} key={color}>
+      <Text width="80px" fontWeight="bold">
+        {color[0].toUpperCase() + color.slice(1)}
+      </Text>
+      {Object.keys(colors[color]).map((num) => (
+        <Flex
+          key={`${color}-${num}`}
+          width="80px"
+          height="80px"
+          bg={`${color}.${num}`}
+          borderRadius="lg"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Text
+            color={
+              isAccessible('gray.900', `${color}.${num}`)(theme)
+                ? 'gray.900'
+                : 'white'
+            }
+          >
+            {num}
+          </Text>
+        </Flex>
+      ))}
+    </Flex>
+  ))}
+</Theme>
+
+## Typography
+
+### Headings
+
+<Theme>
+  <Heading size="hero">Hero Headline</Heading>
+  <Heading size="2xl">Headline 1</Heading>
+  <Heading size="xl">Headline 2</Heading>
+  <Heading size="lg">Headline 3</Heading>
+  <Heading size="md">Headline 4</Heading>
+  <Heading size="sm">Headline 5</Heading>
+  <Heading size="xs">Headline 6</Heading>
+</Theme>
+
+### Paragraphs
+
+<Theme>
+  <SimpleGrid columns={3} spacingX={6}>
+    <Paragraph size="lg">Large: {paragraphText}</Paragraph>
+    <Paragraph size="md">Medium: {paragraphText}</Paragraph>
+    <Paragraph size="sm">Small: {paragraphText}</Paragraph>
+  </SimpleGrid>
+</Theme>

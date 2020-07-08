@@ -1,7 +1,5 @@
 /*
   Pre-Framer todo's:
-  - Implement colors and type settings from Kyoko
-  - Deploy Storybook and host somewhere
   - Try to use @chakra-ui/theme for all components
   - Get all helpers to reference the new component themes or consider getting rid of helpers if possible
   - Consider adding any new components added by v1
@@ -16,6 +14,7 @@
   - Look into various TODO's
   - Create a form component, similar to SR wizard (Patrick), and consider regrouping form components in Storybook
   - Consider supporting another color mode
+  - Upgrade to Storybook 6: https://github.com/storybookjs/storybook/issues/9311
   - Provide ample stories for each component
   - Create MDX documentation for each component in Storybook: https://medium.com/storybookjs/rich-docs-with-storybook-mdx-61bc145ae7bc
   - Cypress testing:
@@ -62,7 +61,7 @@ export { Stats } from './components/stat';
 export { Switch } from './components/switch';
 export { Tabs } from './components/tabs';
 export { Tag } from './components/tag';
-export { Text } from './components/text';
+export { Text, Paragraph } from './components/text';
 export { Textarea } from './components/textarea';
 export { Theme } from './components/theme';
 export { useToast } from './components/toast';

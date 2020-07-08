@@ -4,7 +4,7 @@ import { create } from '@storybook/theming';
 // @ts-ignore
 import logo from './logo.png';
 import { fonts } from '../src/theme/foundations/typography';
-import { colors, base, alphas } from '../src/theme/foundations/colors';
+import { colors, alphas } from '../src/theme/foundations/colors';
 
 const storybookTheme = create({
   // Base
@@ -19,7 +19,7 @@ const storybookTheme = create({
   fontCode: fonts.mono,
 
   // Text colors
-  textColor: base.black,
+  textColor: colors.gray['900'],
   textInverseColor: alphas.blackAlpha['800'],
 
   // Brand

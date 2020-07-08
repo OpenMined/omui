@@ -19,7 +19,7 @@ function line(props: Props) {
       marginBottom: '-2px',
       _selected: {
         color: mode(`${c}.600`, `${c}.300`)(props),
-        borderColor: 'currentColor'
+        borderColor: 'current'
       },
       _active: {
         bg: mode('gray.200', 'whiteAlpha.300')(props)
@@ -65,7 +65,7 @@ function enclosedColored(props: Props) {
         bg: mode(`#fff`, 'gray.800')(props),
         color: mode(`${c}.600`, `${c}.300`)(props),
         borderColor: 'inherit',
-        borderTopColor: 'currentColor',
+        borderTopColor: 'current',
         borderBottomColor: 'transparent'
       }
     },
