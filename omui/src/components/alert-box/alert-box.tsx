@@ -3,15 +3,15 @@ import {
   Alert,
   AlertIcon,
   AlertTitle,
-  AlertDescription
+  AlertDescription,
+  AlertProps as IAlertProps
 } from '@chakra-ui/core';
 
 import { AlertStyle } from '../alert';
 
-interface AlertBoxProps {
+type AlertBoxProps = IAlertProps & {
   title?: string;
-  children: string | React.ReactNode;
-}
+};
 
 export const AlertBox = ({ title, children, ...props }: AlertBoxProps) => (
   <Alert
