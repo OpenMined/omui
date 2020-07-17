@@ -3,19 +3,19 @@ import {
   Alert as ChakraAlert,
   AlertIcon,
   AlertTitle,
-  AlertDescription
+  AlertDescription,
+  AlertProps as IAlertProps
 } from '@chakra-ui/core';
 
 import { default as AlertStyle } from './alert.style';
 
 import { CloseButton } from '../close-button';
 
-interface AlertProps {
+type AlertProps = IAlertProps & {
   title?: string;
   closable?: boolean;
-  children: string | React.ReactNode;
   onClose?: () => void;
-}
+};
 
 export const Alert = ({
   title,
