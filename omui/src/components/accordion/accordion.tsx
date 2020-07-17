@@ -5,7 +5,8 @@ import {
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
-  AccordionProps
+  AccordionProps,
+  AccordionItemProps as IAccordionItemProps
 } from '@chakra-ui/core';
 
 import { Box } from '../box';
@@ -16,10 +17,9 @@ export const Accordion = ({ children, ...props }: AccordionProps) => (
   <ChakraAccordion {...props}>{children}</ChakraAccordion>
 );
 
-interface AccordionItemProps {
+type AccordionItemProps = IAccordionItemProps & {
   title: string;
-  children: string | React.ReactNode;
-}
+};
 
 export const AccordionItem = ({
   title,
