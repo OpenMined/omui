@@ -1,7 +1,7 @@
 <!-- TODO: Add a logo here -->
 
-![Tests](https://img.shields.io/github/workflow/status/OpenMined/omui/Tests)
-![Coverage](https://img.shields.io/codecov/c/github/OpenMined/omui)
+<!--![Tests](https://img.shields.io/github/workflow/status/OpenMined/omui/Tests) -->
+<!-- ![Coverage](https://img.shields.io/codecov/c/github/OpenMined/omui) -->
 ![License](https://img.shields.io/github/license/OpenMined/omui)
 ![Version](https://img.shields.io/npm/v/@openmined/omui)
 ![OpenCollective](https://img.shields.io/opencollective/all/openmined)
