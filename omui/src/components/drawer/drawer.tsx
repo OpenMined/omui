@@ -8,16 +8,21 @@ import {
   DrawerContent,
   DrawerCloseButton,
   DrawerProps as IDrawerProps,
-  UseDisclosureProps
+  UseDisclosureProps as IUseDisclosureProps
 } from '@chakra-ui/core';
+
+type UseDisclosureProps = IUseDisclosureProps & {
+  isOpen: boolean;
+  onClose(): void;
+};
 
 type DrawerProps = IDrawerProps & {
   disclosure: UseDisclosureProps;
   finalRef: RefObject<HTMLElement>;
   closeButton?: boolean;
-  header?: string | React.ReactNode;
-  footer?: string | React.ReactNode;
-  children: string | React.ReactNode;
+  header?: React.ReactNode;
+  footer?: React.ReactNode;
+  children: React.ReactNode;
 };
 
 export const Drawer = ({
@@ -31,19 +36,12 @@ export const Drawer = ({
 }: DrawerProps) => {
   const { isOpen, onOpen, onClose } = disclosure;
 
-  // TODO: Chakra doesn't have a configuration file for Drawer yet... this would be helpful for styling!
-
-  // TODO: We have a Typescript error which we are ts-ignoring below
-  // Reference issue: https://github.com/microsoft/TypeScript/issues/38535
-
   return (
     <ChakraDrawer
-      // @ts-ignore
+      {...props}
       isOpen={isOpen}
-      // @ts-ignore
       onClose={onClose}
       finalFocusRef={finalRef}
-      {...props}
     >
       <DrawerOverlay>
         <DrawerContent>
