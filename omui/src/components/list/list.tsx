@@ -5,8 +5,7 @@ import {
   UnorderedList,
   ListItem,
   ListIcon,
-  ListProps as IListProps,
-  ListItemProps as IListItemProps
+  ListProps as IListProps
 } from '@chakra-ui/core';
 
 import { Flex } from '../flex';
