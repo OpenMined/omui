@@ -2,14 +2,15 @@ import React from 'react';
 // TODO: Change this import and remove it from package.json when it becomes part of core
 import {
   PinInput as ChakraPinInput,
-  PinInputField
+  PinInputField,
+  PinInputProps as IPinInputProps
 } from '@chakra-ui/pin-input';
 
 import { default as PinInputStyle } from './pin-input.style';
 
 import { Stack } from '../stack';
 
-type PinInputProps = {
+type PinInputProps = IPinInputProps & {
   length: number;
   spacing: number;
 };
