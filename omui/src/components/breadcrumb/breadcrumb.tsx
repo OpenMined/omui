@@ -2,15 +2,16 @@ import React from 'react';
 import {
   Breadcrumb as ChakraBreadcrumb,
   BreadcrumbItem,
-  LinkProps
+  LinkProps,
+  BreadcrumbProps as IBreadcrumbProps
 } from '@chakra-ui/core';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 
 import { Link } from '../link';
 
-interface BreadcrumbProps {
-  links: object[];
-}
+type BreadcrumbProps = IBreadcrumbProps & {
+  links: LinkProps[];
+};
 
 export const Breadcrumb = ({ links, ...props }: BreadcrumbProps) => {
   return (
