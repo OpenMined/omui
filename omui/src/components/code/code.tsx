@@ -126,7 +126,7 @@ export const CodeEditor = ({
 }: CodeEditorProps) => {
   const [code, setCode] = useState(children);
 
-  useEffect(() => onChange && onChange(code), [code]);
+  useEffect(() => onChange && onChange(code), [code, onChange]);
 
   const styles = {
     root: {
