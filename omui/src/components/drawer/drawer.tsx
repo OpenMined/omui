@@ -11,6 +11,7 @@ import {
   UseDisclosureProps as IUseDisclosureProps
 } from '@chakra-ui/core';
 
+// TODO: the default UseDisclosureProps interface defines these required props as optional, they should be required by default
 type UseDisclosureProps = IUseDisclosureProps & {
   isOpen: boolean;
   onClose(): void;
