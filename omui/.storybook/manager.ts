@@ -1,7 +1,6 @@
 import { addons } from '@storybook/addons';
 import { create } from '@storybook/theming';
 
-// @ts-ignore
 import logo from './logo.png';
 import { fonts } from '../src/theme/foundations/typography';
 import { colors, alphas } from '../src/theme/foundations/colors';
