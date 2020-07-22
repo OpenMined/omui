@@ -1,9 +1,15 @@
 import React from 'react';
-import { Avatar as ChakraAvatar, AvatarBadge } from '@chakra-ui/core';
+import {
+  Avatar as ChakraAvatar,
+  AvatarBadge,
+  AvatarProps as IAvatarProps
+} from '@chakra-ui/core';
 
-interface AvatarProps {
-  badge?: string;
-}
+import { colors } from '../../theme/foundations/colors';
+
+type AvatarProps = IAvatarProps & {
+  badge?: keyof typeof colors;
+};
 
 export const Avatar = ({ badge, ...props }: AvatarProps) => (
   <ChakraAvatar {...props}>
