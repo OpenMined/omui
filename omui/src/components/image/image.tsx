@@ -1,5 +1,9 @@
 import React from 'react';
-import { Image as ChakraImage, AspectRatio } from '@chakra-ui/core';
+import {
+  Image as ChakraImage,
+  AspectRatio,
+  ImageProps as IChakraImageProps
+} from '@chakra-ui/core';
 
 import { convertRatios } from '../../helpers/ratios';
 
@@ -14,9 +18,9 @@ const whVars = [
   'maxHeight'
 ];
 
-interface ImageProps {
+type ImageProps = IChakraImageProps & {
   ratio?: number | string;
-}
+};
 
 export const Image = ({ ratio, ...props }: ImageProps) => {
   if (ratio) {
