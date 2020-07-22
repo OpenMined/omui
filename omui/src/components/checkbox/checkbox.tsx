@@ -26,15 +26,9 @@ export const CheckboxGroup = ({
   checkboxes,
   ...props
 }: CheckboxGroupProps) => {
-  const defaultValue = checkboxes
-    .map((i) => {
-      if (i.checked) return i.value;
-      return null;
-    })
-    .filter((i) => i !== null);
+  const defaultValue = checkboxes.filter((i) => i.checked).map((i) => i.value);
 
   return (
-    // @ts-ignore
     <ChakraCheckboxGroup {...props} defaultValue={defaultValue}>
       <Stack
         spacing={direction === 'horizontal' ? 6 : 2}
