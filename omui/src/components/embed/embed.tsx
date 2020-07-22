@@ -1,14 +1,14 @@
 import React from 'react';
-import { AspectRatio } from '@chakra-ui/core';
+import { AspectRatio, AspectRatioProps } from '@chakra-ui/core';
 
 import { Box } from '../box';
 import { convertRatios } from '../../helpers/ratios';
 
-interface EmbedProps {
+type EmbedProps = AspectRatioProps & {
   ratio?: number | string;
   title: string;
   src: string;
-}
+};
 
 export const VideoEmbed = ({ ratio, title, src, ...props }: EmbedProps) => {
   const videoEmbedProps: object = {
