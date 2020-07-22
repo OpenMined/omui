@@ -10,6 +10,9 @@
 
   Post-Framer todo's:
   - Go through and re-evaluate all Typescript types
+    - Convert all interfaces to types
+    - Make sure that we're inheriting from the original component if necesssary
+    - Evaluate all React.ReactNode types to make sure this is the right way to do something
   - Go through and remove all various @ts-ignore issues
   - Look into various TODO's
   - Create a form component, similar to SR wizard (Patrick), and consider regrouping form components in Storybook
