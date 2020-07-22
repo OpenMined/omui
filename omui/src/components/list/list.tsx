@@ -38,4 +38,6 @@ export const List = ({ type, items, ...props }: ListProps) => {
       </UnorderedList>
     );
   }
+  
+  return false;
 };
