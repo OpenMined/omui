@@ -41,7 +41,7 @@ export const letterSpacings = {
 export const lineHeights = {
   normal: 'normal',
   none: '1',
-  shorter: '1.25',
+  shorter: '1.1', // Original: 1.25
   short: '1.3', // Original: 1.375
   base: '1.5',
   tall: '1.6', // Original: 1.625
