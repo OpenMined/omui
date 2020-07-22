@@ -31,11 +31,11 @@ The OMUI design system should accomplish the following goals:
 
 ## How to Read this Document
 
-If this is your first time diving into OMUI, we highly suggest that you start read all the documents on the left-hand side from the top to the bottom, in order. We've organized our documentation to where it reads in a logical order. However, there are a few details worth noticing:
+If this is your first time diving into OMUI, we highly suggest that you start reading all the documents on the left-hand side from the top to the bottom, in order. We've organized our documentation to where it reads in a logical order. However, there are a few details worth noticing:
 
 - **The "Introduction" section** is primarily used to give an overview of everything you'll see in the OMUI system.
-- **The "Primitives" section** is intended to be technical documentation for the most base-level ("primitive") components of the system. These components are often the building blocks for much more complex components. In the world of [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), there are our "Atoms".
-- **The "Components" section** is intended to be technical documentation for all complex components in the system. These are the ones you will use most often when devleoping a user interface. In the world of [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), there are our "Molecules" and "Organisms".
+- **The "Primitives" section** is intended to be technical documentation for the most base-level ("primitive") components of the system. These components are often the building blocks for much more complex components. In the world of [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), they are our "Atoms".
+- **The "Components" section** is intended to be technical documentation for all complex components in the system. These are the ones you will use most often when devleoping a user interface. In the world of [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), they are our "Molecules" and "Organisms".
 
 ## Methodology
 
@@ -47,9 +47,9 @@ Our community is primarily comprised of data scientists and other machine learni
 
 1. Quick and easy to create and iterate
 2. Visually appealing
-3. Representative to the OpenMined brand
+3. Representative of the OpenMined brand
 
-Data scientists, because of the high-specialized nature of the job, generally don't spend a ton of time developing UI systems. Unlike in most UI systems, **OMUI is built in a way to where there are intentionally very few options for customizability**. This is a feature and deliberate design choice because it allows those who need to iterate quickly to have "intelligent UX defaults" chosen for them. Of course, when the handoff of a rapid prototype is given from a data scientist to a UI designer or front-end developer, there is ample ability to extend and customize components as needed - but the default system is deliberately opinioned. We want our system to be usable primarily by those who need to move fast and iterate quickly, without getting bogged down by complex front-end architectures.
+To help data scientists quickly bring their application ideas to life, OMUI was built to be easily used out of the box. Intelligent UX defaults allow data scientists to iterate quickly without having to be UI experts. When a rapid prototype is ready to be made into an application OMUI gives incredible flexibility to front-end developers to then extend and customize the base components as needed.
 
 ### For UI Designers
 
@@ -61,7 +61,7 @@ Framer is one of a slew of new design prototyping tools developed in the last fe
 
 Any React developer who has used Styled System in a project, will likely end up finding themselves to be a disciple pretty quickly. Having the ability to set a base-level of default "style props", but with the ability to override them per-component, provides flexibility that is unparalleled by other component design approaches.
 
-But building an entire component system yourself is a rather unwieldy task. Rather than develop and entire UI system ourselves, we instead opted to piggy-back off one of the most well-known (and well-developed) UI component projects for Styled System: Chakra. All of our components either export Chakra components directly, build on them to make them easier to use by non-developers, or are composed based on Chakra primitive components. The good news is that any front-end developer who knows Chakra, knows OMUI automatically.
+Rather than develop and entire UI system ourselves, we instead opted to piggy-back off one of the most well-known (and well-developed) UI component projects for Styled System: Chakra. All of our components either export Chakra components directly, build on them to make them easier to use by non-developers, or are composed based on Chakra primitive components. The good news is that any front-end developer who knows Chakra, knows OMUI automatically.
 
 ## Support
 

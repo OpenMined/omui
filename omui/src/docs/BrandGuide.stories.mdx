@@ -1,10 +1,9 @@
 import { Meta } from '@storybook/addon-docs/blocks';
 import { isAccessible } from '@chakra-ui/theme-tools';
 
-import { paragraphText } from './variables';
+import { paragraphText } from './_variables';
+import { ColorPalette } from './_helpers';
 import { Theme, SimpleGrid, Flex, Box, Text, Heading, Paragraph } from '../';
-import theme from '../theme';
-import { colors } from '../theme/foundations/colors';
 
 <Meta title="Introduction/Brand Guide" />
 
@@ -15,34 +14,7 @@ import { colors } from '../theme/foundations/colors';
 ## Colors
 
 <Theme>
-  {Object.keys(colors).map((color) => (
-    <Flex justifyContent="space-between" alignItems="center" mt={3} key={color}>
-      <Text width="80px" fontWeight="bold">
-        {color[0].toUpperCase() + color.slice(1)}
-      </Text>
-      {Object.keys(colors[color]).map((num) => (
-        <Flex
-          key={`${color}-${num}`}
-          width="80px"
-          height="80px"
-          bg={`${color}.${num}`}
-          borderRadius="lg"
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Text
-            color={
-              isAccessible('gray.900', `${color}.${num}`)(theme)
-                ? 'gray.900'
-                : 'white'
-            }
-          >
-            {num}
-          </Text>
-        </Flex>
-      ))}
-    </Flex>
-  ))}
+  <ColorPalette />
 </Theme>
 
 ## Typography
