@@ -24,11 +24,14 @@
     "storybook:start": "start-storybook -p 3000",
     "storybook:deploy": "storybook-to-ghpages --out=build-storybook",
     "build": "parcel build src/index.ts",
-    "analyze": "yarn build && source-map-explorer build/index.esm.js"
+    "analyze": "yarn build && source-map-explorer build/index.esm.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "pretty-quick --staged"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "yarn run lint && yarn run format"
     }
   },
   "dependencies": {
@@ -64,7 +67,16 @@
     "react-icons": "^3.10.0",
     "source-map-explorer": "^2.4.2",
     "ts-loader": "^7.0.5",
-    "typescript": "^3.9.5"
+    "typescript": "^3.9.5",
+    "@typescript-eslint/eslint-plugin": "^3.4.0",
+    "@typescript-eslint/parser": "^3.4.0",
+    "babel-eslint": "10.1.0",
+    "eslint": "7.3.1",
+    "eslint-plugin-jest-dom": "^3.0.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.5",
+    "eslint-plugin-testing-library": "^3.3.1"
   },
   "peerDependencies": {
     "react": "^16.13.1",
