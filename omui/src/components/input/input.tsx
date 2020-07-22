@@ -10,8 +10,8 @@ import {
 } from '@chakra-ui/core';
 
 type InputProps = IInputProps & {
-  left: null | undefined | string | React.ReactNode;
-  right: null | undefined | string | React.ReactNode;
+  left: React.ReactNode;
+  right: React.ReactNode;
 };
 
 export const Input = ({ left, right, variant, ...props }: InputProps) => {
