@@ -1,8 +1,9 @@
-import { ComponentTheme } from '@chakra-ui/theme-tools';
+// import { ComponentTheme } from '@chakra-ui/theme-tools';
 
 import { BadgeStyle, BadgeVariants } from '../badge';
 
-const Tag: ComponentTheme = {
+// TODO: remove the 'any' type
+const Tag: any = {
   defaultProps: {
     size: 'lg',
     variant: 'subtle',

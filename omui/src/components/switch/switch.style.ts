@@ -1,6 +1,7 @@
-import { ComponentTheme, mode } from '@chakra-ui/theme-tools';
+import { mode } from '@chakra-ui/theme-tools';
 
-const sizes: ComponentTheme['sizes'] = {
+// TODO: remove the 'any' type
+const sizes: any = {
   sm: {
     Track: {
       width: '1.375rem',
@@ -42,12 +43,13 @@ const sizes: ComponentTheme['sizes'] = {
   }
 };
 
-const Switch: ComponentTheme = {
+// TODO: remove the 'any' type
+const Switch: any = {
   defaultProps: {
     size: 'md',
     colorScheme: 'blue'
   },
-  baseStyle: (props) => ({
+  baseStyle: (props: any) => ({
     Track: {
       borderRadius: 'full',
       padding: '2px',

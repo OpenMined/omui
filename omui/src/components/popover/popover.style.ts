@@ -1,7 +1,8 @@
-import { ComponentTheme, mode } from '@chakra-ui/theme-tools';
+import { mode } from '@chakra-ui/theme-tools';
 
-const Popover: ComponentTheme = {
-  baseStyle: (props) => ({
+// TODO: remove the 'any' type
+const Popover: any = {
+  baseStyle: (props: any) => ({
     Content: {
       bg: mode('white', 'gray.700')(props),
       border: '1px solid',

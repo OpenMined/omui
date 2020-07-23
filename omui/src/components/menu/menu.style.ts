@@ -1,4 +1,8 @@
-import { Props, mode, ComponentTheme, copy } from '@chakra-ui/theme-tools';
+import {
+  Props,
+  mode
+  // ComponentTheme, copy
+} from '@chakra-ui/theme-tools';
 import { SystemProps } from '@chakra-ui/system';
 
 import { ButtonStyle } from '../button';
@@ -40,9 +44,11 @@ const menuItemStyle = (props: Props): SystemProps => ({
   }
 });
 
-const Menu: ComponentTheme = {
+// TODO: remove the 'any' type
+const Menu: any = {
   defaultProps: ButtonStyle.defaultProps,
-  baseStyle: (props) => ({
+  // TODO: remove the 'any' type
+  baseStyle: (props: any) => ({
     MenuButton: ButtonStyle.baseStyle as SystemProps,
     MenuList: menuListStyle(props),
     MenuItem: menuItemStyle(props),
@@ -72,14 +78,14 @@ const Menu: ComponentTheme = {
      *   }
      * }
      */
-    ...copy(ButtonStyle.variants, 'MenuButton')
+    // ...copy(ButtonStyle.variants, 'MenuButton')
   },
   sizes: {
     /**
      * We're using `copy` function to copy all button sizes
      * under the key `MenuButton`.
      */
-    ...copy(ButtonStyle.sizes, 'MenuButton')
+    // ...copy(ButtonStyle.sizes, 'MenuButton')
   }
 };
 

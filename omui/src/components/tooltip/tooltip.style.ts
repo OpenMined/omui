@@ -1,7 +1,8 @@
-import { mode, ComponentTheme } from '@chakra-ui/theme-tools';
+import { mode } from '@chakra-ui/theme-tools';
 
-const Tooltip: ComponentTheme = {
-  baseStyle: (props) => ({
+// TODO: remove the 'any' type
+const Tooltip: any = {
+  baseStyle: (props: any) => ({
     paddingX: '8px',
     paddingY: '2px',
     bg: mode(`gray.700`, `gray.300`)(props),

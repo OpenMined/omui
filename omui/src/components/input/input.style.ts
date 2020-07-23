@@ -1,9 +1,9 @@
 import {
-  ComponentTheme,
+  // ComponentTheme,
   mode,
   Props,
-  getColor,
-  StyleObject
+  getColor
+  // StyleObject
 } from '@chakra-ui/theme-tools';
 
 export interface InputProps {
@@ -21,7 +21,8 @@ function getDefaults(props: VariantProps) {
   };
 }
 
-function outline(props: VariantProps): StyleObject {
+// TODO: remove the 'object' type
+function outline(props: VariantProps): object {
   const { theme } = props;
   const { focusBorderColor: fc, errorBorderColor: ec } = getDefaults(props);
 
@@ -52,7 +53,8 @@ function outline(props: VariantProps): StyleObject {
   };
 }
 
-function filled(props: VariantProps): StyleObject {
+// TODO: remove the 'object' type
+function filled(props: VariantProps): object {
   const { theme } = props;
   const { focusBorderColor: fc, errorBorderColor: ec } = getDefaults(props);
 
@@ -82,7 +84,8 @@ function filled(props: VariantProps): StyleObject {
   };
 }
 
-function flushed(props: VariantProps): StyleObject {
+// TODO: remove the 'object' type
+function flushed(props: VariantProps): object {
   const { theme } = props;
   const { focusBorderColor: fc, errorBorderColor: ec } = getDefaults(props);
 
@@ -136,7 +139,8 @@ const sizes: InputTheme['sizes'] = {
   }
 };
 
-export type InputTheme = ComponentTheme<InputProps>;
+// TODO: remove the 'any' type
+export type InputTheme = any;
 
 const Input: InputTheme = {
   defaultProps: {

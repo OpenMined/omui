@@ -1,7 +1,9 @@
-import { ComponentTheme, mode } from '@chakra-ui/theme-tools';
+import { mode } from '@chakra-ui/theme-tools';
 
-const Kbd: ComponentTheme = {
-  baseStyle: (props) => ({
+// TODO: remove the 'any' type
+const Kbd: any = {
+  // TODO: remove the 'any' type
+  baseStyle: (props: any) => ({
     bg: mode('gray.100', 'whiteAlpha')(props),
     borderRadius: 'md',
     borderWidth: '1px',

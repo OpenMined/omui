@@ -1,5 +1,5 @@
 import { keyframes } from '@chakra-ui/system';
-import { ComponentTheme, mode, Props, getColor } from '@chakra-ui/theme-tools';
+import { mode, Props, getColor } from '@chakra-ui/theme-tools';
 
 export interface LoaderProps {
   startColor?: string;
@@ -39,7 +39,8 @@ function getBaseStyle(props: CustomProps) {
   };
 }
 
-const Loader: ComponentTheme<LoaderProps> = {
+// TODO: remove the 'any' type
+const Loader: any = {
   baseStyle: getBaseStyle
 };
 

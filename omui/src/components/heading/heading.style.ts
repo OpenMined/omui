@@ -1,6 +1,7 @@
-import { ComponentTheme } from '@chakra-ui/theme-tools';
+// import { ComponentTheme } from '@chakra-ui/theme-tools';
 
-const Heading: ComponentTheme = {
+// TODO: remove the 'any' type
+const Heading: any = {
   defaultProps: {
     size: 'xl'
   },

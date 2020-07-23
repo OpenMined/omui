@@ -1,4 +1,4 @@
-import { ComponentTheme } from '@chakra-ui/theme-tools';
+// import { ComponentTheme } from '@chakra-ui/theme-tools';
 
 import {
   default as InputStyle,
@@ -7,7 +7,8 @@ import {
   InputProps
 } from '../input/input.style';
 
-const Select: ComponentTheme<InputProps> = {
+// TODO: remove the 'any' type
+const Select: any = {
   ...InputStyle,
   baseStyle: {
     ...InputStyle.baseStyle,

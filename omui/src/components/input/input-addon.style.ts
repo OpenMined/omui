@@ -1,8 +1,9 @@
-import { mode, Props, StyleObject } from '@chakra-ui/theme-tools';
+import { mode, Props } from '@chakra-ui/theme-tools';
 
 import { default as InputStyle, InputTheme } from './input.style';
 
-function outline(props: Props): StyleObject {
+// TODO: remove the 'object' type
+function outline(props: Props): object {
   return {
     border: '1px solid',
     borderColor: mode('inherit', 'whiteAlpha.50')(props),
@@ -10,7 +11,8 @@ function outline(props: Props): StyleObject {
   };
 }
 
-function filled(props: Props): StyleObject {
+// TODO: remove the 'object' type
+function filled(props: Props): object {
   return {
     border: '2px solid',
     borderColor: 'transparent',
@@ -18,7 +20,8 @@ function filled(props: Props): StyleObject {
   };
 }
 
-const flushed: StyleObject = {
+// TODO: remove the 'object' type
+const flushed: object = {
   borderBottom: '2px solid',
   borderColor: 'inherit',
   borderRadius: 0,

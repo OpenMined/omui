@@ -21,6 +21,7 @@ export const ColorPalette = () => {
           </Text>
           {Object.keys(colors[color]).map((num) => {
             const colorCode = `${color}.${num}`;
+            // eslint-disable-next-line
             const [hasCopied, onCopy] = useClipboard(
               getColor(theme, colorCode)
             );

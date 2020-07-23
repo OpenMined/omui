@@ -1,4 +1,4 @@
-import { ComponentTheme, mode } from '@chakra-ui/theme-tools';
+import { mode } from '@chakra-ui/theme-tools';
 
 function getSizeStyle(size: 'sm' | 'md' | 'lg') {
   return {
@@ -16,11 +16,13 @@ function getSizeStyle(size: 'sm' | 'md' | 'lg') {
   };
 }
 
-const NumberInput: ComponentTheme = {
+// TODO: remove the 'any' type
+const NumberInput: any = {
   defaultProps: {
     size: 'md'
   },
-  baseStyle: (props) => ({
+  // TODO: remove the 'any' type
+  baseStyle: (props: any) => ({
     StepperGroup: {
       width: '24px',
       margin: '1px',

@@ -1,4 +1,4 @@
-import { ComponentTheme, mode } from '@chakra-ui/theme-tools';
+import { mode } from '@chakra-ui/theme-tools';
 
 /**
  * Since the `maxWidth` prop references theme.sizes internally,
@@ -12,11 +12,13 @@ export interface ModalProps {
   scrollBehavior?: 'inside' | 'outside';
 }
 
-const Modal: ComponentTheme<ModalProps> = {
+// TODO: remove the 'any' type
+const Modal: any = {
   defaultProps: {
     size: 'md'
   },
-  baseStyle: (props) => ({
+  // TODO: remove the 'any' type
+  baseStyle: (props: any) => ({
     Overlay: {
       bg: 'rgba(0,0,0,0.4)'
     },

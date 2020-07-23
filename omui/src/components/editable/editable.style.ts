@@ -1,4 +1,4 @@
-import { ComponentTheme } from '@chakra-ui/theme-tools';
+// import { ComponentTheme } from '@chakra-ui/theme-tools';
 import { SystemProps } from '@chakra-ui/system';
 
 const base: SystemProps = {
@@ -12,7 +12,8 @@ const base: SystemProps = {
   marginX: '-3px'
 };
 
-const Editable: ComponentTheme = {
+// TODO: remove the 'any' type
+const Editable: any = {
   baseStyle: {
     Preview: {
       ...base,

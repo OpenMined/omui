@@ -105,6 +105,7 @@ export const Menu = ({
           <MenuItem
             {...item}
             as={Submenu}
+            // @ts-ignore
             items={items}
             key={`submenu-${label}`}
           >

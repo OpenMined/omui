@@ -24,6 +24,7 @@ export const Alert = ({
   onClose,
   ...props
 }: AlertProps) => (
+  // @ts-ignore
   <ChakraAlert {...props}>
     <AlertIcon />
     {title && <AlertTitle>{title}</AlertTitle>}

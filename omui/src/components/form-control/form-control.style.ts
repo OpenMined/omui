@@ -1,7 +1,9 @@
-import { ComponentTheme, mode } from '@chakra-ui/theme-tools';
+import { mode } from '@chakra-ui/theme-tools';
 
-const Form: ComponentTheme = {
-  baseStyle: (props) => ({
+// TODO: remove the 'any' type
+const Form: any = {
+  // TODO: remove the 'any' type
+  baseStyle: (props: any) => ({
     Label: {
       fontSize: 'md',
       marginRight: 3,

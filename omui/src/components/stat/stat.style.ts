@@ -1,6 +1,7 @@
-import { ComponentTheme } from '@chakra-ui/theme-tools';
+// import { ComponentTheme } from '@chakra-ui/theme-tools';
 
-const Stat: ComponentTheme = {
+// TODO: remove the 'any' type
+const Stat: any = {
   defaultProps: {
     size: 'md'
   },

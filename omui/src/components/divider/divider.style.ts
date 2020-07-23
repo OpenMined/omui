@@ -1,6 +1,7 @@
-import { ComponentTheme } from '@chakra-ui/theme-tools';
+// import { ComponentTheme } from '@chakra-ui/theme-tools';
 
-const Divider: ComponentTheme = {
+// TODO: remove the 'any' type
+const Divider: any = {
   defaultProps: {
     variant: 'horizontal'
   },

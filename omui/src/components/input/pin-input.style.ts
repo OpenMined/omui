@@ -1,4 +1,4 @@
-import { ComponentTheme } from '@chakra-ui/theme-tools';
+// import { ComponentTheme } from '@chakra-ui/theme-tools';
 
 import {
   default as InputStyle,
@@ -6,7 +6,8 @@ import {
   InputVariants
 } from './input.style';
 
-const PinInput: ComponentTheme<InputProps> = {
+// TODO: remove the 'any' type
+const PinInput: any = {
   defaultProps: InputStyle.defaultProps,
   baseStyle: InputStyle.baseStyle,
   variants: InputStyle.variants,

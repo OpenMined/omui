@@ -1,6 +1,7 @@
-import { ComponentTheme } from '@chakra-ui/theme-tools';
+// import { ComponentTheme } from '@chakra-ui/theme-tools';
 
-const Link: ComponentTheme = {
+// TODO: remove the 'any' type
+const Link: any = {
   baseStyle: {
     transition: `all 0.15s ease-out`,
     cursor: 'pointer',

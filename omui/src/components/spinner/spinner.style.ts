@@ -1,6 +1,7 @@
-import { ComponentTheme } from '@chakra-ui/theme-tools';
+// import { ComponentTheme } from '@chakra-ui/theme-tools';
 
-const Spinner: ComponentTheme = {
+// TODO: remove the 'any' type
+const Spinner: any = {
   defaultProps: {
     size: 'md'
   },

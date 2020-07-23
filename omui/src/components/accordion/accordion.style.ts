@@ -1,6 +1,7 @@
-import { ComponentTheme } from '@chakra-ui/theme-tools';
+// import { ComponentTheme } from '@chakra-ui/theme-tools';
 
-const Accordion: ComponentTheme = {
+// TODO: remove the 'any' type
+const Accordion: any = {
   baseStyle: {
     Item: {
       borderTopWidth: '1px',

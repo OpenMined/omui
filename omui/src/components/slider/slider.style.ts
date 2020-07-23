@@ -1,12 +1,14 @@
-import { ComponentTheme, mode, orient } from '@chakra-ui/theme-tools';
+import { mode, orient } from '@chakra-ui/theme-tools';
 
-const Slider: ComponentTheme = {
+// TODO: remove the 'any' type
+const Slider: any = {
   defaultProps: {
     size: 'md',
     colorScheme: 'blue'
   },
+  // TODO: remove all the 'any' types
   sizes: {
-    lg: (props) => ({
+    lg: (props: any) => ({
       Thumb: {
         width: '16px',
         height: '16px'
@@ -21,7 +23,7 @@ const Slider: ComponentTheme = {
         }
       })
     }),
-    md: (props) => ({
+    md: (props: any) => ({
       Thumb: {
         width: '14px',
         height: '14px'
@@ -32,7 +34,7 @@ const Slider: ComponentTheme = {
         vertical: { width: '4px' }
       })
     }),
-    sm: (props) => ({
+    sm: (props: any) => ({
       Thumb: {
         width: '10px',
         height: '10px'
@@ -44,7 +46,7 @@ const Slider: ComponentTheme = {
       })
     })
   },
-  baseStyle: (props) => ({
+  baseStyle: (props: any) => ({
     Root: {
       _disabled: {
         opacity: 0.6,

@@ -1,11 +1,13 @@
-import { ComponentTheme } from '@chakra-ui/theme-tools';
+// import { ComponentTheme } from '@chakra-ui/theme-tools';
 import { CheckboxStyle, CheckboxSizes } from '../checkbox';
 
 const baseStyle = CheckboxStyle.baseStyle as any;
 
-const Radio: ComponentTheme = {
+// TODO: remove the 'any' type
+const Radio: any = {
   defaultProps: CheckboxStyle.defaultProps,
-  baseStyle: (props) => ({
+  // TODO: remove the 'any' type
+  baseStyle: (props: any) => ({
     Control: {
       ...baseStyle(props).Control,
       borderRadius: 'full',

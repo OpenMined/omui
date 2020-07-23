@@ -1,8 +1,10 @@
-import { ComponentTheme, mode, getColor } from '@chakra-ui/theme-tools';
+import { mode, getColor } from '@chakra-ui/theme-tools';
 
-type ProgressTheme = ComponentTheme<{ isIndeterminate?: boolean }>;
+// TODO: remove the 'any' type
+type ProgressTheme = any;
 
-const getProgressBg: ProgressTheme['baseStyle'] = (props) => {
+// TODO: remove the 'any' type
+const getProgressBg: ProgressTheme['baseStyle'] = (props: any) => {
   const { colorScheme: c, theme: t, isIndeterminate } = props;
 
   const bg = mode(`${c}.500`, `${c}.200`)(props);
@@ -39,7 +41,8 @@ const Progress: ProgressTheme = {
     size: 'md',
     colorScheme: 'blue'
   },
-  baseStyle: (props) => ({
+  // TODO: remove the 'any' type
+  baseStyle: (props: any) => ({
     Label: {
       lineHeight: '1',
       fontSize: '0.25em'

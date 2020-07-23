@@ -1,4 +1,4 @@
-import { ComponentTheme, mode, Props } from '@chakra-ui/theme-tools';
+import { mode, Props } from '@chakra-ui/theme-tools';
 
 function checkedStyle(props: Props) {
   const { colorScheme: c } = props;
@@ -63,7 +63,8 @@ const sizes = {
   }
 };
 
-const Checkbox: ComponentTheme = {
+// TODO: remove the 'any' type
+const Checkbox: any = {
   defaultProps: {
     size: 'md',
     colorScheme: 'blue'

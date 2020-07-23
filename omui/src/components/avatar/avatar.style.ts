@@ -1,7 +1,7 @@
 import {
   randomColor,
   isDark,
-  ComponentTheme,
+  // ComponentTheme,
   mode,
   Props
 } from '@chakra-ui/theme-tools';
@@ -46,11 +46,13 @@ function getRootStyle(props: Props & { name?: string }) {
 
 type AvatarProps = { name?: string };
 
-const Avatar: ComponentTheme<AvatarProps> = {
+// TODO: remove the 'any' type
+const Avatar: any = {
   defaultProps: {
     size: 'md'
   },
-  baseStyle: (props) => ({
+  // TODO: remove the 'any' type
+  baseStyle: (props: any) => ({
     Root: {
       verticalAlign: 'top',
       ...getRootStyle(props)

@@ -1,6 +1,6 @@
 import {
   Props,
-  ComponentTheme,
+  // ComponentTheme,
   mode,
   getColor,
   ink
@@ -64,7 +64,8 @@ function solid(props: Props) {
   };
 }
 
-const Alert: ComponentTheme = {
+// TODO: remove the 'any' type
+const Alert: any = {
   defaultProps: {
     variant: 'subtle'
   },

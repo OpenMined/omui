@@ -1,8 +1,8 @@
 import {
   Props,
   mode,
-  ComponentTheme,
-  StyleObject,
+  // ComponentTheme,
+  // object,
   getColor
 } from '@chakra-ui/theme-tools';
 
@@ -77,7 +77,9 @@ function enclosedColored(props: Props) {
   };
 }
 
-function softRounded(props: any): StyleObject {
+// TODO: remove all the 'object' types
+
+function softRounded(props: any): object {
   const { colorScheme: c, theme } = props;
   return {
     Tab: {
@@ -93,7 +95,7 @@ function softRounded(props: any): StyleObject {
   };
 }
 
-function solidRounded(props: Props): StyleObject {
+function solidRounded(props: Props): object {
   const { colorScheme: c } = props;
   return {
     Tab: {
@@ -109,7 +111,8 @@ function solidRounded(props: Props): StyleObject {
   };
 }
 
-const Tabs: ComponentTheme = {
+// TODO: remove the 'any' type
+const Tabs: any = {
   defaultProps: {
     size: 'md',
     variant: 'line',

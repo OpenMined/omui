@@ -1,6 +1,7 @@
-import { ComponentTheme } from '@chakra-ui/theme-tools';
+// import { ComponentTheme } from '@chakra-ui/theme-tools';
 
-const Icon: ComponentTheme = {
+// TODO: remove the 'any' type
+const Icon: any = {
   defaultProps: {
     size: 'md'
   },

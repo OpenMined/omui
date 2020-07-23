@@ -1,7 +1,7 @@
 import {
   Props,
   mode,
-  ComponentTheme,
+  // ComponentTheme,
   transparentize
 } from '@chakra-ui/theme-tools';
 
@@ -124,7 +124,8 @@ const unstyled = {
   padding: 0
 };
 
-const Button: ComponentTheme = {
+// TODO: remove the 'any' type
+const Button: any = {
   defaultProps: {
     variant: 'solid',
     size: 'md',

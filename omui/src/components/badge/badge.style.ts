@@ -1,5 +1,5 @@
 import {
-  ComponentTheme,
+  // ComponentTheme,
   mode,
   Props,
   getColor,
@@ -41,7 +41,8 @@ function outline(props: Props) {
   };
 }
 
-const Badge: ComponentTheme = {
+// TODO: remove the 'any' type
+const Badge: any = {
   defaultProps: {
     variant: 'subtle',
     colorScheme: 'blue'

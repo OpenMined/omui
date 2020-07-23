@@ -1,10 +1,12 @@
-import { ComponentTheme, mode } from '@chakra-ui/theme-tools';
+import { mode } from '@chakra-ui/theme-tools';
 
-const CloseButton: ComponentTheme = {
+// TODO: remove the 'any' type
+const CloseButton: any = {
   defaultProps: {
     size: 'md'
   },
-  baseStyle: (props) => ({
+  // TODO: remove the 'any' type
+  baseStyle: (props: any) => ({
     borderRadius: 'md',
     transition: 'all 0.2s',
     _disabled: {
