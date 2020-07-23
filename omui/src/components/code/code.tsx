@@ -62,6 +62,7 @@ export const Code = ({
     <Box {...props} display={inline ? 'inline' : 'block'}>
       <Highlight
         {...defaultProps}
+        // @ts-ignore
         theme={theme}
         code={children}
         language={language}
@@ -135,6 +136,7 @@ export const CodeEditor = ({
   };
 
   const highlight = (code: string) => (
+    // @ts-ignore
     <Highlight {...defaultProps} theme={theme} code={code} language={language}>
       {({ tokens, getLineProps, getTokenProps }) => (
         <>
