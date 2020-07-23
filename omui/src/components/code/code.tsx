@@ -43,12 +43,12 @@ require('prismjs/components/prism-swift');
 require('prismjs/components/prism-typescript');
 require('prismjs/components/prism-wasm');
 
-interface CodeProps {
+type CodeProps = {
   children: string;
   language: Language;
   lineNumbers: boolean;
   inline: boolean;
-}
+};
 
 export const Code = ({
   children,
@@ -112,11 +112,11 @@ export const Code = ({
   );
 };
 
-interface CodeEditorProps {
+type CodeEditorProps = {
   children: string;
   onChange: (code: string) => void;
   language: Language;
-}
+};
 
 export const CodeEditor = ({
   children,

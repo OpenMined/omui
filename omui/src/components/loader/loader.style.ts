@@ -1,12 +1,12 @@
 import { keyframes } from '@chakra-ui/system';
 import { mode, Props, getColor } from '@chakra-ui/theme-tools';
 
-export interface LoaderProps {
+export type LoaderProps = {
   startColor?: string;
   endColor?: string;
   speed?: number;
   duration?: number;
-}
+};
 
 export const frame = (start: string, end: string) => keyframes`
   from {

@@ -8,9 +8,9 @@ const getSize = (value: string) => ({
   Content: { maxWidth: value }
 });
 
-export interface ModalProps {
+export type ModalProps = {
   scrollBehavior?: 'inside' | 'outside';
-}
+};
 
 // TODO: remove the 'any' type
 const Modal: any = {

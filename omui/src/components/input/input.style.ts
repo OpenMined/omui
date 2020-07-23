@@ -6,10 +6,10 @@ import {
   // StyleObject
 } from '@chakra-ui/theme-tools';
 
-export interface InputProps {
+export type InputProps = {
   focusBorderColor?: string;
   errorBorderColor?: string;
-}
+};
 
 type VariantProps = Props & Required<InputProps>;
 
