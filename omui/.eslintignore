@@ -3,4 +3,5 @@ node_modules
 coverage
 .next
 build
+build-storybook
 
