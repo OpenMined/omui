@@ -8,7 +8,9 @@ import {
   ModalFooter,
   ModalCloseButton,
   ModalProps as IModalProps,
-  SlideFade
+  SlideFade,
+  ColorProps,
+  ModalContentProps
 } from '@chakra-ui/core';
 
 import { default as ModalStyle } from './modal.style';
@@ -30,10 +32,8 @@ export const Modal = ({
   <SlideFade in={props.isOpen}>
     {(styles) => (
       <ChakraModal {...props}>
-        {/* @ts-ignore */}
-        <ModalOverlay opacity={styles.opacity}>
-          {/* @ts-ignore */}
-          <ModalContent {...styles}>
+        <ModalOverlay opacity={styles.opacity as ColorProps['opacity']}>
+          <ModalContent {...(styles as ModalContentProps)}>
             <ModalHeader>{header}</ModalHeader>
             {showClose && <ModalCloseButton mt="0.4rem" />}
             <ModalBody>{children}</ModalBody>

@@ -56,7 +56,6 @@ export const Menu = ({
     );
   };
 
-  // @ts-ignore
   const renderMenu = (menuItems: MenuProps[]) => {
     return menuItems.map(({ type, label, visual, items, ...item }, index) => {
       let itemElem;

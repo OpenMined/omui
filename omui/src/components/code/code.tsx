@@ -3,7 +3,6 @@ import Highlight, { defaultProps, Language } from 'prism-react-renderer';
 import theme from 'prism-react-renderer/themes/vsDark';
 import Editor from 'react-simple-code-editor';
 import { Global, css } from '@emotion/core';
-// @ts-ignore
 import Prism from 'prism-react-renderer/prism';
 
 import { Box } from '../box';
@@ -63,7 +62,6 @@ export const Code = ({
     <Box {...props} display={inline ? 'inline' : 'block'}>
       <Highlight
         {...defaultProps}
-        // @ts-ignore
         theme={theme}
         code={children}
         language={language}
@@ -137,7 +135,6 @@ export const CodeEditor = ({
   };
 
   const highlight = (code: string) => (
-    // @ts-ignore
     <Highlight {...defaultProps} theme={theme} code={code} language={language}>
       {({ tokens, getLineProps, getTokenProps }) => (
         <>
@@ -179,8 +176,7 @@ export const CodeEditor = ({
           value={code}
           onValueChange={setCode}
           highlight={highlight}
-          // @ts-ignore
-          style={styles.root}
+          style={styles.root as React.CSSProperties}
         />
       </Box>
     </Box>
