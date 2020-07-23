@@ -1,2 +1,2 @@
 export { Avatar, AvatarGroup } from './avatar';
-export { default as AvatarStyle, AvatarSizes } from './avatar.style';
+export { default as AvatarStyle } from './avatar.style';
