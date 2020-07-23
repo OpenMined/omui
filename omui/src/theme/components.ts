@@ -1,6 +1,5 @@
 import theme from '@chakra-ui/theme';
 const {
-  Accordion,
   Alert,
   Avatar,
   Badge,
@@ -30,7 +29,7 @@ const {
   Textarea,
   Tooltip
 } = theme.components;
-// import { AccordionStyle as Accordion } from '../components/accordion';
+import { AccordionStyle as Accordion } from '../components/accordion';
 // import { AlertStyle as Alert } from '../components/alert';
 // import { AvatarStyle as Avatar } from '../components/avatar';
 // import { BadgeStyle as Badge } from '../components/badge';

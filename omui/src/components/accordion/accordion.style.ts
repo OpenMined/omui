@@ -1,33 +1,34 @@
-// import { ComponentTheme } from '@chakra-ui/theme-tools';
+import { BaseStyle } from '@chakra-ui/theme-tools';
 
-// TODO: remove the 'any' type
-const Accordion: any = {
-  baseStyle: {
-    Item: {
-      borderTopWidth: '1px',
-      borderColor: 'inherit',
-      _last: {
-        borderBottomWidth: '1px'
-      }
-    },
-    Button: {
-      fontSize: '1rem',
-      _hover: {
-        bg: 'blackAlpha.50'
-      },
-      _disabled: {
-        opacity: 0.4,
-        cursor: 'not-allowed'
-      },
-      paddingX: 4,
-      paddingY: 2
-    },
-    Panel: {
-      paddingTop: 2,
-      paddingX: 4,
-      paddingBottom: 5
+const register = {
+  parts: ['container', 'item', 'button', 'panel']
+} as const;
+
+const baseStyle: BaseStyle<typeof register> = {
+  item: {
+    borderTopWidth: '1px',
+    borderColor: 'inherit',
+    _last: {
+      borderBottomWidth: '1px'
     }
+  },
+  button: {
+    fontSize: '1rem',
+    _hover: { bg: 'blackAlpha.50' },
+    _disabled: { opacity: 0.4, cursor: 'not-allowed' },
+    paddingX: 4,
+    paddingY: 2
+  },
+  panel: {
+    paddingTop: 2,
+    paddingX: 4,
+    paddingBottom: 5
   }
+};
+
+const Accordion = {
+  register,
+  baseStyle
 };
 
 export default Accordion;
