@@ -70,11 +70,11 @@ const defaultProps: DefaultProps<typeof register> = {
   size: 'md'
 };
 
-const avatar = {
+const Avatar = {
   register,
   defaultProps,
   baseStyle,
   sizes
 };
 
-export default avatar;
+export default Avatar;
