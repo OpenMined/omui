@@ -1,9 +1,9 @@
 // import { ComponentTheme } from '@chakra-ui/theme-tools';
 
 import {
-  default as InputStyle,
-  InputProps,
-  InputVariants
+  default as InputStyle
+  // InputProps,
+  // InputVariants
 } from './input.style';
 
 // TODO: remove the 'any' type
@@ -39,6 +39,6 @@ export const PinInputSizes = {
   sm: 'sm'
 };
 
-export const PinInputVariants = InputVariants;
+export const PinInputVariants = InputStyle.variants;
 
 export default PinInput;

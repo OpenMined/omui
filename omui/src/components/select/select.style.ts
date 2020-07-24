@@ -1,11 +1,6 @@
 // import { ComponentTheme } from '@chakra-ui/theme-tools';
 
-import {
-  default as InputStyle,
-  InputVariants,
-  InputSizes,
-  InputProps
-} from '../input/input.style';
+import { default as InputStyle } from '../input/input.style';
 
 // TODO: remove the 'any' type
 const Select: any = {
@@ -19,7 +14,7 @@ const Select: any = {
   }
 };
 
-export const SelectSizes = InputSizes;
-export const SelectVariants = InputVariants;
+export const SelectSizes = InputStyle.sizes;
+export const SelectVariants = InputStyle.variants;
 
 export default Select;

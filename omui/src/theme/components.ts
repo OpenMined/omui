@@ -1,6 +1,5 @@
 import theme from '@chakra-ui/theme';
 const {
-  Input,
   NumberInput,
   PinInput,
   Link,
@@ -32,8 +31,7 @@ import { FormControlStyle as Form } from '../components/form-control';
 import { HeadingStyle as Heading } from '../components/heading';
 import { IconStyle as Icon } from '../components/icon';
 import {
-  // InputStyle as Input,
-  InputAddonStyle as InputAddon
+  InputStyle as Input
   // NumberInputStyle as NumberInput,
   // PinInputStyle as PinInput
 } from '../components/input';
@@ -69,7 +67,6 @@ export default {
   Heading,
   Icon,
   Input,
-  InputAddon,
   Kbd,
   Link,
   Menu,
