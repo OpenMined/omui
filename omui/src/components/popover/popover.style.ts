@@ -1,9 +1,11 @@
-import { mode } from '@chakra-ui/theme-tools';
+import theme from '@chakra-ui/theme';
+import { BaseStyle, mode } from '@chakra-ui/theme-tools';
 
-// TODO: remove the 'any' type
-const Popover: any = {
-  baseStyle: (props: any) => ({
-    Content: {
+const { Popover } = theme.components;
+
+const baseStyle: BaseStyle<typeof Popover.register> = (props) => {
+  return {
+    content: {
       bg: mode('white', 'gray.700')(props),
       border: '1px solid',
       borderColor: 'inherit',
@@ -16,23 +18,25 @@ const Popover: any = {
         outline: 0
       }
     },
-    Header: {
+    header: {
       paddingX: 4,
       paddingY: 3,
       borderBottomWidth: '1px',
       fontWeight: 'medium',
       lineHeight: 'normal'
     },
-    Body: {
+    body: {
       paddingX: 4,
       paddingY: 3
     },
-    Footer: {
+    footer: {
       paddingX: 4,
       paddingY: 3,
       borderTopWidth: '1px'
     }
-  })
+  };
 };
+
+Popover.baseStyle = baseStyle;
 
 export default Popover;

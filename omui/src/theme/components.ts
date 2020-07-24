@@ -1,6 +1,5 @@
 import theme from '@chakra-ui/theme';
 const {
-  Popover,
   Progress,
   Select,
   Slider,
@@ -32,7 +31,7 @@ import { LinkStyle as Link } from '../components/link';
 import { LoaderStyle as Skeleton } from '../components/loader';
 import { MenuStyle as Menu } from '../components/menu';
 import { ModalStyle as Modal } from '../components/modal';
-// import { PopoverStyle as Popover } from '../components/popover';
+import { PopoverStyle as Popover } from '../components/popover';
 // import { ProgressStyle as Progress } from '../components/progress';
 import { RadioStyle as Radio } from '../components/radio';
 // import { SelectStyle as Select } from '../components/select';
