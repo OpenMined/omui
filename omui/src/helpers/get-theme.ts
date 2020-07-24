@@ -9,10 +9,10 @@ import {
 import { InputStyle } from '../components/input';
 import { TagStyle } from '../components/tag';
 import { SwitchSizes } from '../components/switch';
-import { SpinnerSizes } from '../components/spinner';
-import { SliderSizes } from '../components/slider';
+import { SpinnerStyle } from '../components/spinner';
+import { SliderStyle } from '../components/slider';
 import { TabVariants, TabSizes } from '../components/tabs';
-import { SelectSizes, SelectVariants } from '../components/select';
+import { SelectStyle } from '../components/select';
 import { ProgressStyle } from '../components/progress';
 import { ModalStyle } from '../components/modal';
 
@@ -189,16 +189,16 @@ export const themeProgressColors = themeButtonColors;
 export const themeRadioColors = themeCheckboxColors;
 
 // Select
-export const themeSelectSizes = Object.keys(SelectSizes);
-export const themeSelectVariants = Object.keys(SelectVariants);
+export const themeSelectSizes = Object.keys(SelectStyle.sizes);
+export const themeSelectVariants = Object.keys(SelectStyle.variants);
 
 // Slider
 export const themeSliderColors = Object.keys(colors);
-export const themeSliderSizes = Object.keys(SliderSizes);
+export const themeSliderSizes = Object.keys(SliderStyle.sizes);
 
 // Spinner
 export const themeSpinnerColors = themeAllPossibleColors;
-export const themeSpinnerSizes = Object.keys(SpinnerSizes);
+export const themeSpinnerSizes = Object.keys(SpinnerStyle.sizes);
 
 // Switch
 export const themeSwitchColors = themeButtonColors;

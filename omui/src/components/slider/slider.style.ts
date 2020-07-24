@@ -1,53 +1,12 @@
-import { mode, orient } from '@chakra-ui/theme-tools';
+import theme from '@chakra-ui/theme';
 
-// TODO: remove the 'any' type
-const Slider: any = {
-  defaultProps: {
-    size: 'md',
-    colorScheme: 'blue'
-  },
-  // TODO: remove all the 'any' types
-  sizes: {
-    lg: (props: any) => ({
-      Thumb: {
-        width: '16px',
-        height: '16px'
-      },
-      Track: orient({
-        orientation: props.orientation,
-        horizontal: {
-          height: '4px'
-        },
-        vertical: {
-          width: '4px'
-        }
-      })
-    }),
-    md: (props: any) => ({
-      Thumb: {
-        width: '14px',
-        height: '14px'
-      },
-      Track: orient({
-        orientation: props.orientation,
-        horizontal: { height: '4px' },
-        vertical: { width: '4px' }
-      })
-    }),
-    sm: (props: any) => ({
-      Thumb: {
-        width: '10px',
-        height: '10px'
-      },
-      Track: orient({
-        orientation: props.orientation,
-        horizontal: { height: '2px' },
-        vertical: { width: '2px' }
-      })
-    })
-  },
-  baseStyle: (props: any) => ({
-    Root: {
+const { Slider } = theme.components;
+
+import { BaseStyle, mode, orient } from '@chakra-ui/theme-tools';
+
+const baseStyle: BaseStyle<typeof Slider.register> = (props) => {
+  return {
+    container: {
       _disabled: {
         opacity: 0.6,
         cursor: 'default',
@@ -55,22 +14,18 @@ const Slider: any = {
       },
       ...orient({
         orientation: props.orientation,
-        vertical: {
-          height: '100%'
-        },
-        horizontal: {
-          width: '100%'
-        }
+        vertical: { height: '100%' },
+        horizontal: { width: '100%' }
       })
     },
-    Track: {
+    track: {
       borderRadius: 'sm',
       bg: mode('gray.200', 'whiteAlpha.200')(props),
       _disabled: {
         bg: mode('gray.300', 'whiteAlpha.300')(props)
       }
     },
-    Thumb: {
+    thumb: {
       zIndex: 1,
       borderRadius: 'full',
       bg: 'white',
@@ -78,6 +33,9 @@ const Slider: any = {
       border: '1px solid',
       borderColor: 'transparent',
       transition: 'transform 0.2s',
+      _focus: {
+        boxShadow: 'outline'
+      },
       _disabled: {
         bg: 'gray.300'
       },
@@ -99,16 +57,12 @@ const Slider: any = {
         }
       })
     },
-    FilledTrack: {
+    filledTrack: {
       bg: mode(`${props.colorScheme}.500`, `${props.colorScheme}.200`)(props)
     }
-  })
+  };
 };
 
-export const SliderSizes = {
-  sm: 'sm',
-  md: 'md',
-  lg: 'lg'
-};
+Slider.baseStyle = baseStyle;
 
 export default Slider;
