@@ -1,11 +1,9 @@
-import { BaseStyle, DefaultProps, mode, Sizes } from '@chakra-ui/theme-tools';
+import theme from '@chakra-ui/theme';
+import { BaseStyle, mode } from '@chakra-ui/theme-tools';
 
-const register = {
-  parts: ['icon', 'container'],
-  sizes: ['sm', 'md', 'lg']
-} as const;
+const { CloseButton } = theme.components;
 
-const baseStyle: BaseStyle<typeof register> = (props) => {
+const baseStyle: BaseStyle<typeof CloseButton.register> = (props) => {
   return {
     icon: {},
     container: {
@@ -26,30 +24,6 @@ const baseStyle: BaseStyle<typeof register> = (props) => {
   };
 };
 
-const sizes: Sizes<typeof register> = {
-  lg: {
-    container: { width: '40px', height: '40px' },
-    icon: { fontSize: '16px' }
-  },
-  md: {
-    container: { width: '32px', height: '32px' },
-    icon: { fontSize: '12px' }
-  },
-  sm: {
-    container: { width: '24px', height: '24px' },
-    icon: { fontSize: '10px' }
-  }
-};
+CloseButton.baseStyle = baseStyle;
 
-const defaultProps: DefaultProps<typeof register> = {
-  size: 'md'
-};
-
-const closeButton = {
-  register,
-  defaultProps,
-  baseStyle,
-  sizes
-};
-
-export default closeButton;
+export default CloseButton;
