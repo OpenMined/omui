@@ -1,5 +1,5 @@
 // import { ComponentTheme } from '@chakra-ui/theme-tools';
-import { CheckboxStyle, CheckboxSizes } from '../checkbox';
+import { CheckboxStyle } from '../checkbox';
 
 const baseStyle = CheckboxStyle.baseStyle as any;
 
@@ -37,6 +37,6 @@ const Radio: any = {
   }
 };
 
-export const RadioSizes = CheckboxSizes;
+export const RadioSizes = CheckboxStyle.sizes;
 
 export default Radio;
