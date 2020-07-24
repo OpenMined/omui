@@ -7,7 +7,7 @@ import {
   lineHeights
 } from '../theme/foundations/typography';
 import { InputVariants } from '../components/input';
-import { TagSizes, TagVariants } from '../components/tag';
+import { TagStyle } from '../components/tag';
 import { SwitchSizes } from '../components/switch';
 import { SpinnerSizes } from '../components/spinner';
 import { SliderSizes } from '../components/slider';
@@ -215,8 +215,8 @@ export const themeTabsColors = themeButtonColors;
 export const themeTabsAlignment = ['start', 'center', 'end'];
 
 // Tag
-export const themeTagSizes = Object.keys(TagSizes);
-export const themeTagVariants = Object.keys(TagVariants);
+export const themeTagSizes = Object.keys(TagStyle.sizes);
+export const themeTagVariants = Object.keys(TagStyle.variants);
 export const themeTagColors = themeButtonColors;
 
 // Text
