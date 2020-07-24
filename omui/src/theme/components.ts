@@ -1,6 +1,5 @@
 import theme from '@chakra-ui/theme';
 const {
-  Link,
   Skeleton,
   Menu,
   Modal,
@@ -32,7 +31,7 @@ import {
   PinInputStyle as PinInput
 } from '../components/input';
 import { KeyboardKeyStyle as Kbd } from '../components/kbd';
-// import { LinkStyle as Link } from '../components/link';
+import { LinkStyle as Link } from '../components/link';
 // import { LoaderStyle as Skeleton } from '../components/loader';
 // import { MenuStyle as Menu } from '../components/menu';
 // import { ModalStyle as Modal } from '../components/modal';
