@@ -6,7 +6,7 @@ import {
   letterSpacings,
   lineHeights
 } from '../theme/foundations/typography';
-import { InputVariants } from '../components/input';
+import { InputStyle } from '../components/input';
 import { TagStyle } from '../components/tag';
 import { SwitchSizes } from '../components/switch';
 import { SpinnerSizes } from '../components/spinner';
@@ -158,7 +158,7 @@ export const themeHeadingTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
 export const themeIconSizes = Object.keys(IconSize);
 
 // Input
-export const themeInputVariants = Object.keys(InputVariants);
+export const themeInputVariants = Object.keys(InputStyle.variants);
 
 // Menu
 export const themeMenuPlacements = [

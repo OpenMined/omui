@@ -1,11 +1,6 @@
-import {
-  default as InputStyle,
-  InputSizes,
-  InputTheme,
-  InputVariants
-} from '../input/input.style';
+import { default as InputStyle } from '../input/input.style';
 
-const Textarea: InputTheme = {
+const Textarea = {
   ...InputStyle,
   baseStyle: {
     ...InputStyle.baseStyle,
@@ -15,7 +10,7 @@ const Textarea: InputTheme = {
   }
 };
 
-export const TextareaVariants = InputVariants;
-export const TextareaSizes = InputSizes;
+export const TextareaVariants = InputStyle.variants;
+export const TextareaSizes = InputStyle.sizes;
 
 export default Textarea;
