@@ -1,6 +1,5 @@
 import theme from '@chakra-ui/theme';
 const {
-  Button,
   Checkbox,
   CloseButton,
   Editable,
@@ -31,7 +30,7 @@ import { AccordionStyle as Accordion } from '../components/accordion';
 import { AlertStyle as Alert } from '../components/alert';
 import { AvatarStyle as Avatar } from '../components/avatar';
 import { BadgeStyle as Badge } from '../components/badge';
-// import { ButtonStyle as Button } from '../components/button';
+import { ButtonStyle as Button } from '../components/button';
 // import { CheckboxStyle as Checkbox } from '../components/checkbox';
 // import { CloseButtonStyle as CloseButton } from '../components/close-button';
 import { DividerStyle as Divider } from '../components/divider';
