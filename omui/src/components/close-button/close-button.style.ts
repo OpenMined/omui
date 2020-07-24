@@ -1,49 +1,55 @@
-import { mode } from '@chakra-ui/theme-tools';
+import { BaseStyle, DefaultProps, mode, Sizes } from '@chakra-ui/theme-tools';
 
-// TODO: remove the 'any' type
-const CloseButton: any = {
-  defaultProps: {
-    size: 'md'
+const register = {
+  parts: ['icon', 'container'],
+  sizes: ['sm', 'md', 'lg']
+} as const;
+
+const baseStyle: BaseStyle<typeof register> = (props) => {
+  return {
+    icon: {},
+    container: {
+      borderRadius: 'md',
+      transition: 'all 0.2s',
+      _disabled: {
+        opacity: 0.4,
+        cursor: 'not-allowed',
+        boxShadow: 'none'
+      },
+      _hover: {
+        bg: mode(`blackAlpha.100`, `whiteAlpha.100`)(props)
+      },
+      _active: {
+        bg: mode(`blackAlpha.200`, `whiteAlpha.200`)(props)
+      }
+    }
+  };
+};
+
+const sizes: Sizes<typeof register> = {
+  lg: {
+    container: { width: '40px', height: '40px' },
+    icon: { fontSize: '16px' }
   },
-  // TODO: remove the 'any' type
-  baseStyle: (props: any) => ({
-    borderRadius: 'md',
-    transition: 'all 0.2s',
-    _disabled: {
-      opacity: 0.4,
-      cursor: 'not-allowed',
-      boxShadow: 'none'
-    },
-    _hover: {
-      bg: mode(`blackAlpha.100`, `whiteAlpha.100`)(props)
-    },
-    _active: {
-      bg: mode(`blackAlpha.200`, `whiteAlpha.200`)(props)
-    }
-  }),
-  sizes: {
-    lg: {
-      width: '40px',
-      height: '40px',
-      fontSize: '16px'
-    },
-    md: {
-      width: '32px',
-      height: '32px',
-      fontSize: '12px'
-    },
-    sm: {
-      width: '24px',
-      height: '24px',
-      fontSize: '10px'
-    }
+  md: {
+    container: { width: '32px', height: '32px' },
+    icon: { fontSize: '12px' }
+  },
+  sm: {
+    container: { width: '24px', height: '24px' },
+    icon: { fontSize: '10px' }
   }
 };
 
-export const CloseButtonSizes = {
-  lg: 'lg',
-  sm: 'sm',
-  md: 'md'
+const defaultProps: DefaultProps<typeof register> = {
+  size: 'md'
 };
 
-export default CloseButton;
+const closeButton = {
+  register,
+  defaultProps,
+  baseStyle,
+  sizes
+};
+
+export default closeButton;
