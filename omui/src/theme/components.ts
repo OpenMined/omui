@@ -21,7 +21,6 @@ const {
   Stat,
   Switch,
   Tabs,
-  Tag,
   Textarea,
   Tooltip
 } = theme.components;
@@ -58,7 +57,7 @@ import { KeyboardKeyStyle as Kbd } from '../components/kbd';
 // import { StatStyle as Stat } from '../components/stat';
 // import { SwitchStyle as Switch } from '../components/switch';
 // import { TabsStyle as Tabs } from '../components/tabs';
-// import { TagStyle as Tag } from '../components/tag';
+import { TagStyle as Tag } from '../components/tag';
 // import { TextareaStyle as Textarea } from '../components/textarea';
 // import { TooltipStyle as Tooltip } from '../components/tooltip';
 
