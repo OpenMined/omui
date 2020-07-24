@@ -1,36 +1,26 @@
-import { mode } from '@chakra-ui/theme-tools';
+import {
+  BaseStyle,
+  mode,
+  runIfFn,
+  Sizes,
+  Variants,
+  VariantType
+} from '@chakra-ui/theme-tools';
+import { InputStyle } from '../input';
 
-function getSizeStyle(size: 'sm' | 'md' | 'lg') {
+const register = {
+  parts: ['field', 'stepper', 'stepperGroup'],
+  sizes: InputStyle.register.sizes,
+  variants: InputStyle.register.variants
+} as const;
+
+const baseStyle: BaseStyle<typeof register> = (props) => {
   return {
-    Stepper: {
-      fontSize: size === 'lg' ? '14px' : '10px',
-      _first: {
-        borderTopRightRadius: size === 'lg' ? 3 : 1
-      },
-      _last: {
-        borderBottomRightRadius: size === 'lg' ? 3 : 1,
-        marginTop: '-1px',
-        borderTopWidth: 1
-      }
-    }
-  };
-}
-
-// TODO: remove the 'any' type
-const NumberInput: any = {
-  defaultProps: {
-    size: 'md'
-  },
-  // TODO: remove the 'any' type
-  baseStyle: (props: any) => ({
-    StepperGroup: {
-      width: '24px',
-      margin: '1px',
-      position: 'absolute',
-      right: '0px',
-      height: 'calc(100% - 2px)'
+    field: InputStyle.baseStyle.field,
+    stepperGroup: {
+      width: '24px'
     },
-    Stepper: {
+    stepper: {
       borderLeft: '1px solid',
       borderColor: mode('inherit', 'whiteAlpha.300')(props),
       color: mode('inherit', 'whiteAlpha.800')(props),
@@ -42,18 +32,62 @@ const NumberInput: any = {
         cursor: 'not-allowed'
       }
     }
-  }),
-  sizes: {
-    sm: getSizeStyle('sm'),
-    md: getSizeStyle('md'),
-    lg: getSizeStyle('lg')
-  }
+  };
 };
 
-export const NumberInputSizes = {
-  sm: 'sm',
-  md: 'md',
-  lg: 'lg'
+const sizes: Sizes<typeof register> = {
+  sm: getSizeStyle('sm'),
+  md: getSizeStyle('md'),
+  lg: getSizeStyle('lg')
+};
+
+function getSizeStyle(size: 'sm' | 'md' | 'lg') {
+  const inputPartsStyle = InputStyle.sizes[size];
+  const inputStyle =
+    typeof inputPartsStyle !== 'function' ? inputPartsStyle?.field : {};
+
+  const radius = {
+    lg: 'md',
+    md: 'md',
+    sm: 'sm'
+  };
+
+  return {
+    field: inputStyle,
+    stepper: {
+      fontSize: size === 'lg' ? '14px' : '10px',
+      _first: {
+        borderTopRightRadius: radius[size]
+      },
+      _last: {
+        borderBottomRightRadius: radius[size],
+        marginTop: '-1px',
+        borderTopWidth: 1
+      }
+    }
+  };
+}
+
+const variants: Variants<typeof register> = {
+  outline: (props) => ({ field: getVariantStyle('outline', props) }),
+  filled: (props) => ({ field: getVariantStyle('filled', props) }),
+  flushed: (props) => ({ field: getVariantStyle('flushed', props) }),
+  unstyled: (props) => ({ field: getVariantStyle('unstyled', props) })
+};
+
+function getVariantStyle(variant: VariantType<typeof register>, props: any) {
+  const partsStyle = runIfFn(InputStyle.variants[variant], props);
+  return partsStyle?.field ?? {};
+}
+
+const defaultProps = InputStyle.defaultProps;
+
+const NumberInput = {
+  register,
+  defaultProps,
+  baseStyle,
+  sizes,
+  variants
 };
 
 export default NumberInput;
