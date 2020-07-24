@@ -14,8 +14,6 @@ import {
 import { Flex } from '../flex';
 import { Box } from '../box';
 
-import { default as MenuStyle } from './menu.style';
-
 type MenuProps = {
   type?: 'list' | 'submenu' | 'radio' | 'checkbox' | 'separator';
   label?: string;
@@ -160,6 +158,5 @@ export const Menu = ({
 };
 
 Menu.defaultProps = {
-  ...MenuStyle.defaultProps,
   closeOnSelect: true
 };

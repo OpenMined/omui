@@ -1,6 +1,5 @@
 import theme from '@chakra-ui/theme';
 const {
-  Menu,
   Modal,
   Popover,
   Progress,
@@ -32,7 +31,7 @@ import {
 import { KeyboardKeyStyle as Kbd } from '../components/kbd';
 import { LinkStyle as Link } from '../components/link';
 import { LoaderStyle as Skeleton } from '../components/loader';
-// import { MenuStyle as Menu } from '../components/menu';
+import { MenuStyle as Menu } from '../components/menu';
 // import { ModalStyle as Modal } from '../components/modal';
 // import { PopoverStyle as Popover } from '../components/popover';
 // import { ProgressStyle as Progress } from '../components/progress';
