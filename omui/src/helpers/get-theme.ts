@@ -12,7 +12,6 @@ import { SwitchSizes } from '../components/switch';
 import { SpinnerSizes } from '../components/spinner';
 import { SliderSizes } from '../components/slider';
 import { TabVariants, TabSizes } from '../components/tabs';
-import { IconSize } from '../components/icon';
 import { SelectSizes, SelectVariants } from '../components/select';
 import { ProgressSizes } from '../components/progress';
 import { ModalSizes } from '../components/modal';
@@ -153,9 +152,6 @@ export const themeFlexJustifyContent = [
 // Heading
 export const themeHeadingFontSizes = ['2xl', 'xl', 'lg', 'md', 'sm', 'xs'];
 export const themeHeadingTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
-
-// Icon
-export const themeIconSizes = Object.keys(IconSize);
 
 // Input
 export const themeInputVariants = Object.keys(InputStyle.variants);

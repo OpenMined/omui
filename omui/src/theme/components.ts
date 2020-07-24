@@ -27,7 +27,6 @@ import { DividerStyle as Divider } from '../components/divider';
 import { EditableStyle as Editable } from '../components/editable';
 import { FormControlStyle as Form } from '../components/form-control';
 import { HeadingStyle as Heading } from '../components/heading';
-import { IconStyle as Icon } from '../components/icon';
 import {
   InputStyle as Input,
   NumberInputStyle as NumberInput,
@@ -63,7 +62,6 @@ export default {
   Editable,
   Form,
   Heading,
-  Icon,
   Input,
   Kbd,
   Link,
