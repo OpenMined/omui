@@ -1,18 +1,20 @@
-// import { ComponentTheme } from '@chakra-ui/theme-tools';
+import { BaseStyle, runIfFn, Sizes } from '@chakra-ui/theme-tools';
 import { CheckboxStyle } from '../checkbox';
 
-const baseStyle = CheckboxStyle.baseStyle as any;
+const register = {
+  parts: ['control', 'label'],
+  sizes: CheckboxStyle.register.sizes
+} as const;
 
-// TODO: remove the 'any' type
-const Radio: any = {
-  defaultProps: CheckboxStyle.defaultProps,
-  // TODO: remove the 'any' type
-  baseStyle: (props: any) => ({
-    Control: {
-      ...baseStyle(props).Control,
+const baseStyle: BaseStyle<typeof register> = (props) => {
+  const { label, control } = runIfFn(CheckboxStyle.baseStyle, props);
+  return {
+    label,
+    control: {
+      ...control,
       borderRadius: 'full',
       _checked: {
-        ...baseStyle(props).Control['_checked'],
+        ...control?.['_checked'],
         _before: {
           content: `""`,
           display: 'inline-block',
@@ -23,20 +25,24 @@ const Radio: any = {
           bg: 'current'
         }
       }
-    },
-    Label: baseStyle(props).Label
-  }),
-  sizes: {
-    ...CheckboxStyle.sizes,
-    sm: {
-      Control: {
-        width: 3,
-        height: 3
-      }
     }
+  };
+};
+
+const sizes: Sizes<typeof register> = {
+  ...CheckboxStyle.sizes,
+  sm: {
+    control: { width: 3, height: 3 }
   }
 };
 
-export const RadioSizes = CheckboxStyle.sizes;
+const defaultProps = CheckboxStyle.defaultProps;
 
-export default Radio;
+const radio = {
+  register,
+  defaultProps,
+  baseStyle,
+  sizes
+};
+
+export default radio;

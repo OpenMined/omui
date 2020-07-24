@@ -13,7 +13,6 @@ const {
   Modal,
   Popover,
   Progress,
-  Radio,
   Select,
   Slider,
   Spinner,
@@ -49,7 +48,7 @@ import { KeyboardKeyStyle as Kbd } from '../components/kbd';
 // import { ModalStyle as Modal } from '../components/modal';
 // import { PopoverStyle as Popover } from '../components/popover';
 // import { ProgressStyle as Progress } from '../components/progress';
-// import { RadioStyle as Radio } from '../components/radio';
+import { RadioStyle as Radio } from '../components/radio';
 // import { SelectStyle as Select } from '../components/select';
 // import { SliderStyle as Slider } from '../components/slider';
 // import { SpinnerStyle as Spinner } from '../components/spinner';
