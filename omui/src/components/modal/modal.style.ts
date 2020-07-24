@@ -1,81 +1,54 @@
-import { mode } from '@chakra-ui/theme-tools';
+import theme from '@chakra-ui/theme';
+import { BaseStyle, mode } from '@chakra-ui/theme-tools';
 
-/**
- * Since the `maxWidth` prop references theme.sizes internally,
- * we can leverage that to size our modals.
- */
-const getSize = (value: string) => ({
-  Content: { maxWidth: value }
-});
+const { Modal } = theme.components;
 
-export type ModalProps = {
-  scrollBehavior?: 'inside' | 'outside';
-};
+const baseStyle: BaseStyle<typeof Modal.register> = (props) => {
+  const { isCentered, scrollBehavior } = props;
 
-// TODO: remove the 'any' type
-const Modal: any = {
-  defaultProps: {
-    size: 'md'
-  },
-  // TODO: remove the 'any' type
-  baseStyle: (props: any) => ({
-    Overlay: {
-      bg: 'rgba(0,0,0,0.4)'
+  return {
+    overlay: {
+      bg: 'rgba(0,0,0,0.4)',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: isCentered ? 'center' : 'flex-start',
+      overflow: scrollBehavior === 'inside' ? 'hidden' : 'auto'
     },
-    Content: {
+
+    content: {
       borderRadius: 'md',
       bg: mode('white', 'gray.700')(props),
       color: 'inherit',
       marginY: '3.75rem',
       maxHeight:
-        props.scrollBehavior === 'inside' ? 'calc(100vh - 7.5rem)' : undefined,
+        scrollBehavior === 'inside' ? 'calc(100vh - 7.5rem)' : undefined,
       boxShadow: mode(
         '0 7px 14px 0 rgba(0,0,0, 0.1), 0 3px 6px 0 rgba(0, 0, 0, .07)',
         'dark-lg'
       )(props)
     },
-    Header: {
+
+    header: {
       paddingX: 6,
       paddingY: 4,
       fontSize: 'xl',
       fontWeight: 'medium'
     },
-    Body: {
+
+    body: {
       paddingX: 6,
-      paddingY: 2
+      paddingY: 2,
+      flex: 1,
+      overflow: scrollBehavior === 'inside' ? 'auto' : undefined
     },
-    Footer: {
+
+    footer: {
       paddingX: 6,
       paddingY: 4
     }
-  }),
-  sizes: {
-    xs: getSize('xs'),
-    sm: getSize('sm'),
-    md: getSize('md'),
-    lg: getSize('lg'),
-    xl: getSize('xl'),
-    '2xl': getSize('2xl'),
-    '3xl': getSize('3xl'),
-    '4xl': getSize('4xl'),
-    '5xl': getSize('5xl'),
-    '6xl': getSize('6xl'),
-    full: getSize('full')
-  }
+  };
 };
 
-export const ModalSizes = {
-  xs: 'xs',
-  sm: 'sm',
-  md: 'md',
-  lg: 'lg',
-  xl: 'xl',
-  '2xl': '2xl',
-  '3xl': '3xl',
-  '4xl': '4xl',
-  '5xl': '5xl',
-  '6xl': '6xl',
-  full: 'full'
-};
+Modal.baseStyle = baseStyle;
 
 export default Modal;

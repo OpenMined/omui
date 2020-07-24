@@ -14,7 +14,7 @@ import { SliderSizes } from '../components/slider';
 import { TabVariants, TabSizes } from '../components/tabs';
 import { SelectSizes, SelectVariants } from '../components/select';
 import { ProgressSizes } from '../components/progress';
-import { ModalSizes } from '../components/modal';
+import { ModalStyle } from '../components/modal';
 
 const getAllColorKeys = (c: object) =>
   Object.keys(c)
@@ -176,7 +176,7 @@ export const themeMenuPlacements = [
 ];
 
 // Modal
-export const themeModalSizes = Object.keys(ModalSizes);
+export const themeModalSizes = Object.keys(ModalStyle.sizes);
 
 // Popper
 export const themePopperPlacements = themeMenuPlacements;
