@@ -1,11 +1,9 @@
-import { BaseStyle, DefaultProps, mode, Sizes } from '@chakra-ui/theme-tools';
+import theme from '@chakra-ui/theme';
+import { BaseStyle, mode } from '@chakra-ui/theme-tools';
 
-const register = {
-  parts: ['control', 'label', 'description', 'icon'],
-  sizes: ['sm', 'md', 'lg']
-} as const;
+const { Checkbox } = theme.components;
 
-const baseStyle: BaseStyle<typeof register> = (props) => {
+const baseStyle: BaseStyle<typeof Checkbox.register> = (props) => {
   const { colorScheme: c } = props;
   return {
     control: {
@@ -50,31 +48,6 @@ const baseStyle: BaseStyle<typeof register> = (props) => {
   };
 };
 
-const sizes: Sizes<typeof register> = {
-  sm: {
-    control: { height: 3, width: 3 },
-    label: { fontSize: 'sm' }
-  },
-  md: {
-    control: { width: 4, height: 4 },
-    label: { fontSize: 'md' }
-  },
-  lg: {
-    control: { width: 5, height: 5 },
-    label: { fontSize: 'lg' }
-  }
-};
+Checkbox.baseStyle = baseStyle;
 
-const defaultProps: DefaultProps<typeof register> = {
-  size: 'md',
-  colorScheme: 'blue'
-};
-
-const checkbox = {
-  register,
-  defaultProps,
-  baseStyle,
-  sizes
-};
-
-export default checkbox;
+export default Checkbox;
