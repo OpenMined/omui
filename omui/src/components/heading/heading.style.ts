@@ -1,43 +1,45 @@
-// import { ComponentTheme } from '@chakra-ui/theme-tools';
+import { BaseStyle, DefaultProps, Sizes } from '@chakra-ui/theme-tools';
 
-// TODO: remove the 'any' type
-const Heading: any = {
-  defaultProps: {
-    size: 'xl'
-  },
-  baseStyle: {
+const register = {
+  parts: ['heading'],
+  sizes: ['hero', '2xl', 'xl', 'lg', 'md', 'sm', 'xs']
+} as const;
+
+const baseStyle: BaseStyle<typeof register> = {
+  heading: {
     fontFamily: 'heading',
     lineHeight: 'base',
     fontWeight: 'medium'
-  },
-  sizes: {
-    hero: {
-      fontSize: ['5xl', null, '6xl'],
-      lineHeight: 'none'
-    },
-    '2xl': {
-      fontSize: ['4xl', null, '5xl'],
-      lineHeight: 'shorter'
-    },
-    xl: {
-      fontSize: ['3xl', null, '4xl'],
-      lineHeight: 'short'
-    },
-    lg: { fontSize: '2xl' },
-    md: { fontSize: 'xl' },
-    sm: { fontSize: 'md' },
-    xs: { fontSize: 'sm' }
   }
 };
 
-export const HeadingSizes = {
-  hero: 'hero',
-  '2xl': '2xl',
-  xl: 'xl',
-  lg: 'lg',
-  md: 'md',
-  sm: 'sm',
-  xs: 'xs'
+const sizes: Sizes<typeof register> = {
+  hero: {
+    heading: { fontSize: ['5xl', null, '6xl'], lineHeight: 'none' }
+  },
+  '2xl': {
+    heading: { fontSize: ['4xl', null, '5xl'], lineHeight: 'shorter' }
+  },
+  xl: {
+    heading: { fontSize: ['3xl', null, '4xl'], lineHeight: 'short' }
+  },
+  lg: {
+    heading: { fontSize: ['xl', null, '2xl'] }
+  },
+  md: { heading: { fontSize: 'xl' } },
+  sm: { heading: { fontSize: 'md' } },
+  xs: { heading: { fontSize: 'sm' } }
 };
 
-export default Heading;
+const defaultProps: DefaultProps<typeof register> = {
+  size: 'xl'
+};
+
+const heading = {
+  register,
+  defaultProps,
+  baseStyle,
+  sizes
+};
+
+export default heading;

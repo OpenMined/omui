@@ -1,6 +1,5 @@
 import theme from '@chakra-ui/theme';
 const {
-  Heading,
   Input,
   NumberInput,
   PinInput,
@@ -30,7 +29,7 @@ import { CloseButtonStyle as CloseButton } from '../components/close-button';
 import { DividerStyle as Divider } from '../components/divider';
 import { EditableStyle as Editable } from '../components/editable';
 import { FormControlStyle as Form } from '../components/form-control';
-// import { HeadingStyle as Heading } from '../components/heading';
+import { HeadingStyle as Heading } from '../components/heading';
 import { IconStyle as Icon } from '../components/icon';
 import {
   // InputStyle as Input,
