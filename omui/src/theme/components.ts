@@ -1,6 +1,3 @@
-import theme from '@chakra-ui/theme';
-const { Spinner, Stat, Switch, Tabs, Textarea, Tooltip } = theme.components;
-
 import { AccordionStyle as Accordion } from '../components/accordion';
 import { AlertStyle as Alert } from '../components/alert';
 import { AvatarStyle as Avatar } from '../components/avatar';
@@ -26,13 +23,13 @@ import { ProgressStyle as Progress } from '../components/progress';
 import { RadioStyle as Radio } from '../components/radio';
 import { SelectStyle as Select } from '../components/select';
 import { SliderStyle as Slider } from '../components/slider';
-// import { SpinnerStyle as Spinner } from '../components/spinner';
-// import { StatStyle as Stat } from '../components/stat';
-// import { SwitchStyle as Switch } from '../components/switch';
-// import { TabsStyle as Tabs } from '../components/tabs';
+import { SpinnerStyle as Spinner } from '../components/spinner';
+import { StatStyle as Stat } from '../components/stat';
+import { SwitchStyle as Switch } from '../components/switch';
+import { TabsStyle as Tabs } from '../components/tabs';
 import { TagStyle as Tag } from '../components/tag';
-// import { TextareaStyle as Textarea } from '../components/textarea';
-// import { TooltipStyle as Tooltip } from '../components/tooltip';
+import { TextareaStyle as Textarea } from '../components/textarea';
+import { TooltipStyle as Tooltip } from '../components/tooltip';
 
 export default {
   Accordion,

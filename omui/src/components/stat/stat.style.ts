@@ -1,44 +1,10 @@
-// import { ComponentTheme } from '@chakra-ui/theme-tools';
+import theme from '@chakra-ui/theme';
 
-// TODO: remove the 'any' type
-const Stat: any = {
-  defaultProps: {
-    size: 'md'
-  },
-  baseStyle: {
-    Label: {
-      fontWeight: 'medium'
-    },
-    HelpText: {
-      opacity: 0.8,
-      marginBottom: 2
-    },
-    Number: {
-      verticalAlign: 'baseline',
-      fontWeight: 'medium'
-    }
-  },
-  /**
-   * Only one size specified but you can add more,
-   * and style each part.
-   */
-  sizes: {
-    md: {
-      Label: {
-        fontSize: 'sm'
-      },
-      HelpText: {
-        fontSize: 'sm'
-      },
-      Number: {
-        fontSize: '2xl'
-      }
-    }
-  }
-};
+const { Stat } = theme.components;
 
-export const StatSizes = {
-  md: 'md'
+Stat.baseStyle.number = {
+  ...Stat.baseStyle.number,
+  fontWeight: 'medium'
 };
 
 export default Stat;

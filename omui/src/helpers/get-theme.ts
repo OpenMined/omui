@@ -8,10 +8,10 @@ import {
 } from '../theme/foundations/typography';
 import { InputStyle } from '../components/input';
 import { TagStyle } from '../components/tag';
-import { SwitchSizes } from '../components/switch';
+import { SwitchStyle } from '../components/switch';
 import { SpinnerStyle } from '../components/spinner';
 import { SliderStyle } from '../components/slider';
-import { TabVariants, TabSizes } from '../components/tabs';
+import { TabsStyle } from '../components/tabs';
 import { SelectStyle } from '../components/select';
 import { ProgressStyle } from '../components/progress';
 import { ModalStyle } from '../components/modal';
@@ -202,11 +202,11 @@ export const themeSpinnerSizes = Object.keys(SpinnerStyle.sizes);
 
 // Switch
 export const themeSwitchColors = themeButtonColors;
-export const themeSwitchSizes = Object.keys(SwitchSizes);
+export const themeSwitchSizes = Object.keys(SwitchStyle.sizes);
 
 // Tabs
-export const themeTabsVariants = Object.keys(TabVariants);
-export const themeTabsSizes = Object.keys(TabSizes);
+export const themeTabsVariants = Object.keys(TabsStyle.variants);
+export const themeTabsSizes = Object.keys(TabsStyle.sizes);
 export const themeTabsColors = themeButtonColors;
 export const themeTabsAlignment = ['start', 'center', 'end'];
 

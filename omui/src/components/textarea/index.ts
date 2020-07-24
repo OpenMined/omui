@@ -1,6 +1,2 @@
 export { Textarea } from './textarea';
-export {
-  default as TextareaStyle,
-  TextareaVariants,
-  TextareaSizes
-} from './textarea.style';
+export { default as TextareaStyle } from './textarea.style';

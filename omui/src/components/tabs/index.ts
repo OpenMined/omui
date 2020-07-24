@@ -1,2 +1,2 @@
 export { Tabs } from './tabs';
-export { default as TabsStyle, TabSizes, TabVariants } from './tabs.style';
+export { default as TabsStyle } from './tabs.style';

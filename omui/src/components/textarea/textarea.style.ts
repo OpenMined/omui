@@ -1,16 +1,5 @@
-import { default as InputStyle } from '../input/input.style';
+import theme from '@chakra-ui/theme';
 
-const Textarea = {
-  ...InputStyle,
-  baseStyle: {
-    ...InputStyle.baseStyle,
-    paddingY: '8px',
-    minHeight: '80px',
-    lineHeight: 'short'
-  }
-};
-
-export const TextareaVariants = InputStyle.variants;
-export const TextareaSizes = InputStyle.sizes;
+const { Textarea } = theme.components;
 
 export default Textarea;
