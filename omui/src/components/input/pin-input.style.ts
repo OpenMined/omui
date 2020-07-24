@@ -1,30 +1,35 @@
-// import { ComponentTheme } from '@chakra-ui/theme-tools';
+import { Sizes } from '@chakra-ui/theme-tools';
+import { InputStyle } from '../input';
 
-import {
-  default as InputStyle
-  // InputProps,
-  // InputVariants
-} from './input.style';
+const register = {
+  parts: ['field'],
+  sizes: InputStyle.register.sizes,
+  variants: InputStyle.register.variants
+} as const;
 
-// TODO: remove the 'any' type
-const PinInput: any = {
-  defaultProps: InputStyle.defaultProps,
-  baseStyle: InputStyle.baseStyle,
-  variants: InputStyle.variants,
-  sizes: {
-    lg: {
+const baseStyle = InputStyle.baseStyle;
+
+const variants = InputStyle.variants;
+
+const sizes: Sizes<typeof register> = {
+  lg: {
+    field: {
       fontSize: 'lg',
       width: 12,
       height: 12,
       borderRadius: 'md'
-    },
-    md: {
+    }
+  },
+  md: {
+    field: {
       fontSize: 'md',
       width: 10,
       height: 10,
       borderRadius: 'md'
-    },
-    sm: {
+    }
+  },
+  sm: {
+    field: {
       fontSize: 'sm',
       width: 8,
       height: 8,
@@ -33,12 +38,14 @@ const PinInput: any = {
   }
 };
 
-export const PinInputSizes = {
-  lg: 'lg',
-  md: 'md',
-  sm: 'sm'
+const defaultProps = InputStyle.defaultProps;
+
+const pinInput = {
+  register,
+  defaultProps,
+  baseStyle,
+  variants,
+  sizes
 };
 
-export const PinInputVariants = InputStyle.variants;
-
-export default PinInput;
+export default pinInput;

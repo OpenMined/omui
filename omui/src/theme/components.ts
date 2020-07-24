@@ -1,6 +1,5 @@
 import theme from '@chakra-ui/theme';
 const {
-  PinInput,
   Link,
   Skeleton,
   Menu,
@@ -31,8 +30,8 @@ import { HeadingStyle as Heading } from '../components/heading';
 import { IconStyle as Icon } from '../components/icon';
 import {
   InputStyle as Input,
-  NumberInputStyle as NumberInput
-  // PinInputStyle as PinInput
+  NumberInputStyle as NumberInput,
+  PinInputStyle as PinInput
 } from '../components/input';
 import { KeyboardKeyStyle as Kbd } from '../components/kbd';
 // import { LinkStyle as Link } from '../components/link';
