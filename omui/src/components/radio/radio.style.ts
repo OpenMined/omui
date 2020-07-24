@@ -1,12 +1,11 @@
-import { BaseStyle, runIfFn, Sizes } from '@chakra-ui/theme-tools';
+import theme from '@chakra-ui/theme';
+
+import { BaseStyle, runIfFn } from '@chakra-ui/theme-tools';
 import { CheckboxStyle } from '../checkbox';
 
-const register = {
-  parts: ['control', 'label'],
-  sizes: CheckboxStyle.register.sizes
-} as const;
+const { Radio } = theme.components;
 
-const baseStyle: BaseStyle<typeof register> = (props) => {
+const baseStyle: BaseStyle<typeof Radio.register> = (props) => {
   const { label, control } = runIfFn(CheckboxStyle.baseStyle, props);
   return {
     label,
@@ -29,20 +28,6 @@ const baseStyle: BaseStyle<typeof register> = (props) => {
   };
 };
 
-const sizes: Sizes<typeof register> = {
-  ...CheckboxStyle.sizes,
-  sm: {
-    control: { width: 3, height: 3 }
-  }
-};
+Radio.baseStyle = baseStyle;
 
-const defaultProps = CheckboxStyle.defaultProps;
-
-const radio = {
-  register,
-  defaultProps,
-  baseStyle,
-  sizes
-};
-
-export default radio;
+export default Radio;

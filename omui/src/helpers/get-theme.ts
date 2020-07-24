@@ -13,7 +13,7 @@ import { SpinnerSizes } from '../components/spinner';
 import { SliderSizes } from '../components/slider';
 import { TabVariants, TabSizes } from '../components/tabs';
 import { SelectSizes, SelectVariants } from '../components/select';
-import { ProgressSizes } from '../components/progress';
+import { ProgressStyle } from '../components/progress';
 import { ModalStyle } from '../components/modal';
 
 const getAllColorKeys = (c: object) =>
@@ -182,7 +182,7 @@ export const themeModalSizes = Object.keys(ModalStyle.sizes);
 export const themePopperPlacements = themeMenuPlacements;
 
 // Progress
-export const themeProgressSizes = Object.keys(ProgressSizes);
+export const themeProgressSizes = Object.keys(ProgressStyle.sizes);
 export const themeProgressColors = themeButtonColors;
 
 // Radio
