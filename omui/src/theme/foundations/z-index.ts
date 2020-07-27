@@ -1,9 +1,5 @@
-const zIndices = {
-  hide: -1,
-  auto: 'auto',
-  base: 0
-};
+import theme from '@chakra-ui/theme';
 
-export type ZIndices = typeof zIndices;
+const zIndices = theme.zIndices;
 
 export default zIndices;
