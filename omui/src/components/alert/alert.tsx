@@ -27,7 +27,7 @@ export const Alert = ({
   // @ts-ignore
   <ChakraAlert {...props}>
     <AlertIcon />
-    {title && <AlertTitle>{title}</AlertTitle>}
+    {title && <AlertTitle mr={2}>{title}</AlertTitle>}
     <AlertDescription>{children}</AlertDescription>
     {closable && (
       <CloseButton
