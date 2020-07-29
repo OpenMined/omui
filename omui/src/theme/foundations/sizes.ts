@@ -1,6 +1,7 @@
 // TODO: Investigate large sizes... what is this for?
 // TODO: Consider switching out base sizes scale for iterative numbers... 1, 2, 3, ... without skipping
 // TODO: Once you've done this, recheck every component (or use snapshot testing!)
+// TODO: Replace this file with importing the theme
 
 export const baseSizes = {
   px: '1px',
@@ -39,7 +40,8 @@ export const largeSizes = {
   '3xl': '48rem',
   '4xl': '56rem',
   '5xl': '64rem',
-  '6xl': '72rem'
+  '6xl': '72rem',
+  '7xl': '80rem'
 };
 
 export const container = {

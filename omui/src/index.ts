@@ -1,6 +1,6 @@
 /*
   Pre-Framer todo's:
-  - Try to use @chakra-ui/theme for all components
+  - Snapshot testing using Jest: https://www.digitalocean.com/community/tutorials/how-to-write-snapshot-tests-for-react-components-with-jest
   - Get all helpers to reference the new component themes or consider getting rid of helpers if possible
   - Consider adding any new components added by v1
   - Consider getting rid of Stack and other redundant helper components
@@ -9,10 +9,6 @@
   - Migrate components over to Framer
 
   Post-Framer todo's:
-  - Go through and re-evaluate all Typescript types
-    - Convert all interfaces to types
-    - Make sure that we're inheriting from the original component if necesssary
-    - Evaluate all React.ReactNode types to make sure this is the right way to do something
   - Go through and remove all various @ts-ignore issues
   - Look into various TODO's
   - Create a form component, similar to SR wizard (Patrick), and consider regrouping form components in Storybook
