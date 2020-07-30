@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with external ref 1`] = `
+<a
+  className="chakra-link css-0"
+  href="https://openmined.org"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  OpenMined
+  <svg
+    className="chakra-icon css-1hxuad4"
+    focusable={false}
+    viewBox="0 0 24 24"
+  >
+    <g
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeWidth="2"
+    >
+      <path
+        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+      />
+      <path
+        d="M15 3h6v6"
+      />
+      <path
+        d="M10 14L21 3"
+      />
+    </g>
+  </svg>
+</a>
+`;
+
+exports[`renders correctly with internal ref 1`] = `
+<a
+  className="chakra-link css-0"
+  href="#cards"
+>
+  Cards
+</a>
+`;
