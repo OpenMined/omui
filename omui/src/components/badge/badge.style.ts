@@ -2,8 +2,8 @@ import theme from '@chakra-ui/theme';
 
 const { Badge } = theme.components;
 
-Badge.baseStyle.container = {
-  ...Badge.baseStyle.container,
+Badge.baseStyle! = {
+  ...Badge.baseStyle!,
   fontWeight: 'medium'
 };
 

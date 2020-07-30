@@ -154,7 +154,7 @@ export const themeHeadingFontSizes = ['2xl', 'xl', 'lg', 'md', 'sm', 'xs'];
 export const themeHeadingTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
 
 // Input
-export const themeInputVariants = Object.keys(InputStyle.variants);
+export const themeInputVariants = Object.keys(InputStyle.variants!);
 
 // Menu
 export const themeMenuPlacements = [
@@ -176,43 +176,43 @@ export const themeMenuPlacements = [
 ];
 
 // Modal
-export const themeModalSizes = Object.keys(ModalStyle.sizes);
+export const themeModalSizes = Object.keys(ModalStyle.sizes!);
 
 // Popper
 export const themePopperPlacements = themeMenuPlacements;
 
 // Progress
-export const themeProgressSizes = Object.keys(ProgressStyle.sizes);
+export const themeProgressSizes = Object.keys(ProgressStyle.sizes!);
 export const themeProgressColors = themeButtonColors;
 
 // Radio
 export const themeRadioColors = themeCheckboxColors;
 
 // Select
-export const themeSelectSizes = Object.keys(SelectStyle.sizes);
-export const themeSelectVariants = Object.keys(SelectStyle.variants);
+export const themeSelectSizes = Object.keys(SelectStyle.sizes!);
+export const themeSelectVariants = Object.keys(SelectStyle.variants!);
 
 // Slider
 export const themeSliderColors = Object.keys(colors);
-export const themeSliderSizes = Object.keys(SliderStyle.sizes);
+export const themeSliderSizes = Object.keys(SliderStyle.sizes!);
 
 // Spinner
 export const themeSpinnerColors = themeAllPossibleColors;
-export const themeSpinnerSizes = Object.keys(SpinnerStyle.sizes);
+export const themeSpinnerSizes = Object.keys(SpinnerStyle.sizes!);
 
 // Switch
 export const themeSwitchColors = themeButtonColors;
-export const themeSwitchSizes = Object.keys(SwitchStyle.sizes);
+export const themeSwitchSizes = Object.keys(SwitchStyle.sizes!);
 
 // Tabs
-export const themeTabsVariants = Object.keys(TabsStyle.variants);
-export const themeTabsSizes = Object.keys(TabsStyle.sizes);
+export const themeTabsVariants = Object.keys(TabsStyle.variants!);
+export const themeTabsSizes = Object.keys(TabsStyle.sizes!);
 export const themeTabsColors = themeButtonColors;
 export const themeTabsAlignment = ['start', 'center', 'end'];
 
 // Tag
-export const themeTagSizes = Object.keys(TagStyle.sizes);
-export const themeTagVariants = Object.keys(TagStyle.variants);
+export const themeTagSizes = Object.keys(TagStyle.sizes!);
+export const themeTagVariants = Object.keys(TagStyle.variants!);
 export const themeTagColors = themeButtonColors;
 
 // Text

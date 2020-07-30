@@ -1,29 +1,28 @@
 import theme from '@chakra-ui/theme';
-import { BaseStyle, mode } from '@chakra-ui/theme-tools';
+import { mode } from '@chakra-ui/theme-tools';
 
 const { CloseButton } = theme.components;
 
-const baseStyle: BaseStyle<typeof CloseButton.register> = (props) => {
+const baseStyle = function (props: any) {
+  const hoverBg = mode(`blackAlpha.100`, `whiteAlpha.100`)(props);
+  const activeBg = mode(`blackAlpha.200`, `whiteAlpha.200`)(props);
+
   return {
-    icon: {},
-    container: {
-      borderRadius: 'md',
-      transition: 'all 0.2s',
-      _disabled: {
-        opacity: 0.4,
-        cursor: 'not-allowed',
-        boxShadow: 'none'
-      },
-      _hover: {
-        bg: mode(`blackAlpha.100`, `whiteAlpha.100`)(props)
-      },
-      _active: {
-        bg: mode(`blackAlpha.200`, `whiteAlpha.200`)(props)
-      }
+    borderRadius: 'md',
+    transition: 'all 0.2s',
+    _disabled: {
+      opacity: 0.4,
+      cursor: 'not-allowed',
+      boxShadow: 'none'
+    },
+    _hover: { bg: hoverBg },
+    _active: { bg: activeBg },
+    _focus: {
+      boxShadow: 'none'
     }
   };
 };
-
+// @ts-ignore
 CloseButton.baseStyle = baseStyle;
 
 export default CloseButton;

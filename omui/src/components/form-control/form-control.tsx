@@ -38,10 +38,7 @@ export const FormControl = ({
   return (
     <ChakraFormControl {...props} as={isGroupedChild ? 'fieldset' : 'div'}>
       {label && (
-        <FormLabel as={isGroupedChild ? 'legend' : 'label'}>
-          {label}
-          {props.isRequired && <RequiredIndicator />}
-        </FormLabel>
+        <FormLabel as={isGroupedChild ? 'legend' : 'label'}>{label}</FormLabel>
       )}
       {children}
       {error && <FormErrorMessage>{error}</FormErrorMessage>}

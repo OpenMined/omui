@@ -2,10 +2,10 @@ import theme from '@chakra-ui/theme';
 
 const { Button } = theme.components;
 
-Button.baseStyle.container = {
-  ...Button.baseStyle.container,
+Button.baseStyle! = {
+  ...Button.baseStyle!,
   fontWeight: 'medium',
-  _focus: {}
+  _focus: { boxShadow: 'none' }
 };
 
 Button.defaultProps = {

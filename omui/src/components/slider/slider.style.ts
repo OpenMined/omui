@@ -1,10 +1,31 @@
 import theme from '@chakra-ui/theme';
+import { mode, orient } from '@chakra-ui/theme-tools';
 
 const { Slider } = theme.components;
 
-import { BaseStyle, mode, orient } from '@chakra-ui/theme-tools';
+function thumbOrientation(props: Record<string, any>) {
+  return orient({
+    orientation: props.orientation,
+    vertical: {
+      left: '50%',
+      transform: `translateX(-50%)`,
+      _active: {
+        transform: `translateX(-50%) scale(1.15)`
+      }
+    },
+    horizontal: {
+      top: '50%',
+      transform: `translateY(-50%)`,
+      _active: {
+        transform: `translateY(-50%) scale(1.15)`
+      }
+    }
+  });
+}
 
-const baseStyle: BaseStyle<typeof Slider.register> = (props) => {
+const baseStyle = function (props: any) {
+  const { orientation, colorScheme: c } = props;
+
   return {
     container: {
       _disabled: {
@@ -13,9 +34,9 @@ const baseStyle: BaseStyle<typeof Slider.register> = (props) => {
         pointerEvents: 'none'
       },
       ...orient({
-        orientation: props.orientation,
-        vertical: { height: '100%' },
-        horizontal: { width: '100%' }
+        orientation,
+        vertical: { h: '100%' },
+        horizontal: { w: '100%' }
       })
     },
     track: {
@@ -29,36 +50,16 @@ const baseStyle: BaseStyle<typeof Slider.register> = (props) => {
       zIndex: 1,
       borderRadius: 'full',
       bg: 'white',
-      boxShadow: 'sm',
+      boxShadow: 'base',
       border: '1px solid',
       borderColor: 'transparent',
       transition: 'transform 0.2s',
-      _focus: {
-        boxShadow: 'outline'
-      },
-      _disabled: {
-        bg: 'gray.300'
-      },
-      ...orient({
-        orientation: props.orientation,
-        vertical: {
-          left: '50%',
-          transform: `translateX(-50%)`,
-          _active: {
-            transform: `translateX(-50%) scale(1.15)`
-          }
-        },
-        horizontal: {
-          top: '50%',
-          transform: `translateY(-50%)`,
-          _active: {
-            transform: `translateY(-50%) scale(1.15)`
-          }
-        }
-      })
+      _focus: { boxShadow: 'none' },
+      _disabled: { bg: 'gray.300' },
+      ...thumbOrientation(props)
     },
     filledTrack: {
-      bg: mode(`${props.colorScheme}.500`, `${props.colorScheme}.200`)(props)
+      bg: mode(`${c}.500`, `${c}.200`)(props)
     }
   };
 };

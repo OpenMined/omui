@@ -1,9 +1,9 @@
 import theme from '@chakra-ui/theme';
-import { BaseStyle, mode } from '@chakra-ui/theme-tools';
+import { mode } from '@chakra-ui/theme-tools';
 
 const { Popover } = theme.components;
 
-const baseStyle: BaseStyle<typeof Popover.register> = (props) => {
+const baseStyle = function (props: any) {
   return {
     content: {
       bg: mode('white', 'gray.700')(props),
@@ -11,27 +11,26 @@ const baseStyle: BaseStyle<typeof Popover.register> = (props) => {
       borderColor: 'inherit',
       borderRadius: 'md',
       boxShadow: 'sm',
-      width: '100%',
-      maxWidth: 'xs',
+      w: '100%',
+      maxW: 'xs',
       zIndex: '1',
       _focus: {
-        outline: 0
+        outline: 0,
+        boxShadow: 'none'
       }
     },
     header: {
-      paddingX: 4,
-      paddingY: 3,
-      borderBottomWidth: '1px',
-      fontWeight: 'medium',
-      lineHeight: 'normal'
+      px: 3,
+      py: 2,
+      borderBottomWidth: '1px'
     },
     body: {
-      paddingX: 4,
-      paddingY: 3
+      px: 3,
+      py: 2
     },
     footer: {
-      paddingX: 4,
-      paddingY: 3,
+      px: 3,
+      py: 2,
       borderTopWidth: '1px'
     }
   };

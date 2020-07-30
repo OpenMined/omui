@@ -1,28 +1,26 @@
 import theme from '@chakra-ui/theme';
-import { BaseStyle, mode } from '@chakra-ui/theme-tools';
+import { mode } from '@chakra-ui/theme-tools';
 
 const { Menu } = theme.components;
 
-const baseStyle: BaseStyle<typeof Menu.register> = (props) => {
+const baseStyle = function (props: any) {
   return {
-    menuList: {
+    list: {
       bg: mode(`#fff`, `gray.700`)(props),
       boxShadow: mode(`sm`, `dark-lg`)(props),
       color: 'inherit',
-      outline: 0,
-      minWidth: '3xs',
-      paddingY: '2',
-      zIndex: '1',
+      minW: '3xs',
+      py: '2',
+      zIndex: 1,
       borderRadius: 'md',
+      outline: 0,
       border: '1px solid',
-      borderColor: 'inherit'
+      borderColor: 'inherit',
+      borderWidth: 'initial'
     },
 
-    menuItem: {
-      width: '100%',
-      outline: 0,
-      textDecoration: 'none',
-      paddingY: '0.4rem',
+    item: {
+      py: '0.4rem',
       paddingX: '0.8rem',
       transition: 'background 50ms ease-in 0s',
       _focus: {
@@ -37,16 +35,17 @@ const baseStyle: BaseStyle<typeof Menu.register> = (props) => {
       _disabled: {
         opacity: 0.4,
         cursor: 'not-allowed'
-      }
+      },
+      width: '100%',
+      outline: 0,
+      textDecoration: 'none'
     },
-
     groupTitle: {
       marginX: 4,
       marginY: 2,
       fontWeight: 'medium',
       fontSize: 'sm'
     },
-
     command: {
       opacity: 0.6
     }
