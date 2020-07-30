@@ -5,14 +5,12 @@ import { BadgeStyle as Badge } from '../components/badge';
 import { ButtonStyle as Button } from '../components/button';
 import { CheckboxStyle as Checkbox } from '../components/checkbox';
 import { CloseButtonStyle as CloseButton } from '../components/close-button';
-import { DividerStyle as Divider } from '../components/divider';
+import { DrawerStyle as Drawer } from '../components/drawer';
 import { EditableStyle as Editable } from '../components/editable';
 import { FormControlStyle as Form } from '../components/form-control';
 import { HeadingStyle as Heading } from '../components/heading';
-import { IconStyle as Icon } from '../components/icon';
 import {
   InputStyle as Input,
-  InputAddonStyle as InputAddon,
   NumberInputStyle as NumberInput,
   PinInputStyle as PinInput
 } from '../components/input';
@@ -42,13 +40,11 @@ export default {
   Button,
   Checkbox,
   CloseButton,
-  Divider,
+  Drawer,
   Editable,
   Form,
   Heading,
-  Icon,
   Input,
-  InputAddon,
   Kbd,
   Link,
   Menu,

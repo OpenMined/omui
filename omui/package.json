@@ -35,16 +35,17 @@
     }
   },
   "dependencies": {
-    "@chakra-ui/core": "1.0.0-next.3",
-    "@chakra-ui/pin-input": "1.0.0-next.3",
-    "@chakra-ui/system": "1.0.0-next.3",
-    "@chakra-ui/theme-tools": "1.0.0-next.3",
+    "@chakra-ui/core": "1.0.0-rc.0",
+    "@chakra-ui/pin-input": "1.0.0-rc.0",
+    "@chakra-ui/system": "1.0.0-rc.0",
+    "@chakra-ui/theme-tools": "1.0.0-rc.0",
+    "@chakra-ui/theme": "1.0.0-rc.0",
     "prism-react-renderer": "^1.1.1",
     "react-simple-code-editor": "^0.11.0"
   },
   "devDependencies": {
     "@babel/core": "7.10.4",
-    "@chakra-ui/icons": "1.0.0-next.3",
+    "@chakra-ui/icons": "1.0.0-rc.0",
     "@parcel/transformer-typescript-tsc": "^2.0.0-beta.1",
     "@storybook/addon-docs": "^5.3.19",
     "@storybook/addon-info": "^5.3.19",

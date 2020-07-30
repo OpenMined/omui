@@ -1,5 +1,2 @@
 export { CloseButton } from './close-button';
-export {
-  default as CloseButtonStyle,
-  CloseButtonSizes
-} from './close-button.style';
+export { default as CloseButtonStyle } from './close-button.style';

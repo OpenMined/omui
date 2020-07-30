@@ -3,7 +3,6 @@ import Highlight, { defaultProps, Language } from 'prism-react-renderer';
 import theme from 'prism-react-renderer/themes/vsDark';
 import Editor from 'react-simple-code-editor';
 import { Global, css } from '@emotion/core';
-// @ts-ignore
 import Prism from 'prism-react-renderer/prism';
 
 import { Box } from '../box';
@@ -43,12 +42,12 @@ require('prismjs/components/prism-swift');
 require('prismjs/components/prism-typescript');
 require('prismjs/components/prism-wasm');
 
-interface CodeProps {
+type CodeProps = {
   children: string;
   language: Language;
   lineNumbers: boolean;
   inline: boolean;
-}
+};
 
 export const Code = ({
   children,
@@ -112,11 +111,11 @@ export const Code = ({
   );
 };
 
-interface CodeEditorProps {
+type CodeEditorProps = {
   children: string;
   onChange: (code: string) => void;
   language: Language;
-}
+};
 
 export const CodeEditor = ({
   children,
@@ -179,8 +178,7 @@ export const CodeEditor = ({
           value={code}
           onValueChange={setCode}
           highlight={highlight}
-          // @ts-ignore
-          style={styles.root}
+          style={styles.root as React.CSSProperties}
         />
       </Box>
     </Box>

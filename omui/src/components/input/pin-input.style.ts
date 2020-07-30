@@ -1,43 +1,5 @@
-import { ComponentTheme } from '@chakra-ui/theme-tools';
+import theme from '@chakra-ui/theme';
 
-import {
-  default as InputStyle,
-  InputProps,
-  InputVariants
-} from './input.style';
-
-const PinInput: ComponentTheme<InputProps> = {
-  defaultProps: InputStyle.defaultProps,
-  baseStyle: InputStyle.baseStyle,
-  variants: InputStyle.variants,
-  sizes: {
-    lg: {
-      fontSize: 'lg',
-      width: 12,
-      height: 12,
-      borderRadius: 'md'
-    },
-    md: {
-      fontSize: 'md',
-      width: 10,
-      height: 10,
-      borderRadius: 'md'
-    },
-    sm: {
-      fontSize: 'sm',
-      width: 8,
-      height: 8,
-      borderRadius: 'sm'
-    }
-  }
-};
-
-export const PinInputSizes = {
-  lg: 'lg',
-  md: 'md',
-  sm: 'sm'
-};
-
-export const PinInputVariants = InputVariants;
+const { PinInput } = theme.components;
 
 export default PinInput;

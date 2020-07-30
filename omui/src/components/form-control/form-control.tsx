@@ -22,22 +22,23 @@ export const FormControl = ({
   error,
   ...props
 }: FormControlProps) => {
-  const isGroupedChild = ['CheckboxGroup', 'RadioGroup'].includes(
-    // @ts-ignore
-    children.displayName || children.type.displayName
-  );
-  const isSwitch = ['Switch'].includes(
-    // @ts-ignore
-    children.displayName || children.type.displayName
-  );
+  const isGroupedChild =
+    children &&
+    ['CheckboxGroup', 'RadioGroup'].includes(
+      // @ts-ignore
+      children.displayName || children.type.displayName
+    );
+  const isSwitch =
+    children &&
+    ['Switch'].includes(
+      // @ts-ignore
+      children.displayName || children.type.displayName
+    );
 
   return (
     <ChakraFormControl {...props} as={isGroupedChild ? 'fieldset' : 'div'}>
       {label && (
-        <FormLabel as={isGroupedChild ? 'legend' : 'label'}>
-          {label}
-          {props.isRequired && <RequiredIndicator />}
-        </FormLabel>
+        <FormLabel as={isGroupedChild ? 'legend' : 'label'}>{label}</FormLabel>
       )}
       {children}
       {error && <FormErrorMessage>{error}</FormErrorMessage>}

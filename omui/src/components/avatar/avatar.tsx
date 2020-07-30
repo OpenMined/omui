@@ -13,7 +13,7 @@ type AvatarProps = IAvatarProps & {
 
 export const Avatar = ({ badge, ...props }: AvatarProps) => (
   <ChakraAvatar {...props}>
-    {badge && <AvatarBadge bg={`${badge}.500`} />}
+    {badge && <AvatarBadge boxSize="1em" bg={`${badge}.500`} />}
   </ChakraAvatar>
 );
 

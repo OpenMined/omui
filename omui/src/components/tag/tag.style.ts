@@ -1,48 +1,13 @@
-import { ComponentTheme } from '@chakra-ui/theme-tools';
+import theme from '@chakra-ui/theme';
 
-import { BadgeStyle, BadgeVariants } from '../badge';
+const { Tag } = theme.components;
 
-const Tag: ComponentTheme = {
-  defaultProps: {
-    size: 'lg',
-    variant: 'subtle',
-    colorScheme: 'gray'
-  },
-  baseStyle: {
-    outline: 0
-  },
-  sizes: {
-    sm: {
-      minHeight: '1.25rem',
-      minWidth: '1.25rem',
-      fontSize: 'xs',
-      paddingX: 1,
-      borderRadius: 'sm'
-    },
-    md: {
-      minHeight: '1.5rem',
-      minWidth: '1.5rem',
-      fontSize: 'sm',
-      borderRadius: 'md',
-      paddingX: 2
-    },
-    lg: {
-      minHeight: 8,
-      minWidth: 8,
-      fontSize: 'md',
-      borderRadius: 'md',
-      paddingX: 3
-    }
-  },
-  variants: BadgeStyle.variants
+Tag.baseStyle!.closeButton = {
+  ...Tag.baseStyle!.closeButton,
+  _focus: { 
+    bg: 'rgba(0, 0, 0, 0.14)',
+    boxShadow: 'none' 
+  }
 };
-
-export const TagSizes = {
-  sm: 'sm',
-  md: 'md',
-  lg: 'lg'
-};
-
-export const TagVariants = BadgeVariants;
 
 export default Tag;

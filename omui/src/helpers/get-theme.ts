@@ -6,16 +6,15 @@ import {
   letterSpacings,
   lineHeights
 } from '../theme/foundations/typography';
-import { InputVariants } from '../components/input';
-import { TagSizes, TagVariants } from '../components/tag';
-import { SwitchSizes } from '../components/switch';
-import { SpinnerSizes } from '../components/spinner';
-import { SliderSizes } from '../components/slider';
-import { TabVariants, TabSizes } from '../components/tabs';
-import { IconSize } from '../components/icon';
-import { SelectSizes, SelectVariants } from '../components/select';
-import { ProgressSizes } from '../components/progress';
-import { ModalSizes } from '../components/modal';
+import { InputStyle } from '../components/input';
+import { TagStyle } from '../components/tag';
+import { SwitchStyle } from '../components/switch';
+import { SpinnerStyle } from '../components/spinner';
+import { SliderStyle } from '../components/slider';
+import { TabsStyle } from '../components/tabs';
+import { SelectStyle } from '../components/select';
+import { ProgressStyle } from '../components/progress';
+import { ModalStyle } from '../components/modal';
 
 const getAllColorKeys = (c: object) =>
   Object.keys(c)
@@ -154,11 +153,8 @@ export const themeFlexJustifyContent = [
 export const themeHeadingFontSizes = ['2xl', 'xl', 'lg', 'md', 'sm', 'xs'];
 export const themeHeadingTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
 
-// Icon
-export const themeIconSizes = Object.keys(IconSize);
-
 // Input
-export const themeInputVariants = Object.keys(InputVariants);
+export const themeInputVariants = Object.keys(InputStyle.variants!);
 
 // Menu
 export const themeMenuPlacements = [
@@ -180,43 +176,43 @@ export const themeMenuPlacements = [
 ];
 
 // Modal
-export const themeModalSizes = Object.keys(ModalSizes);
+export const themeModalSizes = Object.keys(ModalStyle.sizes!);
 
 // Popper
 export const themePopperPlacements = themeMenuPlacements;
 
 // Progress
-export const themeProgressSizes = Object.keys(ProgressSizes);
+export const themeProgressSizes = Object.keys(ProgressStyle.sizes!);
 export const themeProgressColors = themeButtonColors;
 
 // Radio
 export const themeRadioColors = themeCheckboxColors;
 
 // Select
-export const themeSelectSizes = Object.keys(SelectSizes);
-export const themeSelectVariants = Object.keys(SelectVariants);
+export const themeSelectSizes = Object.keys(SelectStyle.sizes!);
+export const themeSelectVariants = Object.keys(SelectStyle.variants!);
 
 // Slider
 export const themeSliderColors = Object.keys(colors);
-export const themeSliderSizes = Object.keys(SliderSizes);
+export const themeSliderSizes = Object.keys(SliderStyle.sizes!);
 
 // Spinner
 export const themeSpinnerColors = themeAllPossibleColors;
-export const themeSpinnerSizes = Object.keys(SpinnerSizes);
+export const themeSpinnerSizes = Object.keys(SpinnerStyle.sizes!);
 
 // Switch
 export const themeSwitchColors = themeButtonColors;
-export const themeSwitchSizes = Object.keys(SwitchSizes);
+export const themeSwitchSizes = Object.keys(SwitchStyle.sizes!);
 
 // Tabs
-export const themeTabsVariants = Object.keys(TabVariants);
-export const themeTabsSizes = Object.keys(TabSizes);
+export const themeTabsVariants = Object.keys(TabsStyle.variants!);
+export const themeTabsSizes = Object.keys(TabsStyle.sizes!);
 export const themeTabsColors = themeButtonColors;
 export const themeTabsAlignment = ['start', 'center', 'end'];
 
 // Tag
-export const themeTagSizes = Object.keys(TagSizes);
-export const themeTagVariants = Object.keys(TagVariants);
+export const themeTagSizes = Object.keys(TagStyle.sizes!);
+export const themeTagVariants = Object.keys(TagStyle.variants!);
 export const themeTagColors = themeButtonColors;
 
 // Text

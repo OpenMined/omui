@@ -109,6 +109,5 @@ CheckboxGroup.displayName = 'CheckboxGroup';
 //     );
 //   };
 
-//   // @ts-ignore
 //   return <Box {...props}>{composeStructure(checkboxes)}</Box>;
 // };

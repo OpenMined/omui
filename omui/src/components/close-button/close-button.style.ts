@@ -1,10 +1,13 @@
-import { ComponentTheme, mode } from '@chakra-ui/theme-tools';
+import theme from '@chakra-ui/theme';
+import { mode } from '@chakra-ui/theme-tools';
 
-const CloseButton: ComponentTheme = {
-  defaultProps: {
-    size: 'md'
-  },
-  baseStyle: (props) => ({
+const { CloseButton } = theme.components;
+
+const baseStyle = function (props: any) {
+  const hoverBg = mode(`blackAlpha.100`, `whiteAlpha.100`)(props);
+  const activeBg = mode(`blackAlpha.200`, `whiteAlpha.200`)(props);
+
+  return {
     borderRadius: 'md',
     transition: 'all 0.2s',
     _disabled: {
@@ -12,36 +15,14 @@ const CloseButton: ComponentTheme = {
       cursor: 'not-allowed',
       boxShadow: 'none'
     },
-    _hover: {
-      bg: mode(`blackAlpha.100`, `whiteAlpha.100`)(props)
-    },
-    _active: {
-      bg: mode(`blackAlpha.200`, `whiteAlpha.200`)(props)
+    _hover: { bg: hoverBg },
+    _active: { bg: activeBg },
+    _focus: {
+      boxShadow: 'none'
     }
-  }),
-  sizes: {
-    lg: {
-      width: '40px',
-      height: '40px',
-      fontSize: '16px'
-    },
-    md: {
-      width: '32px',
-      height: '32px',
-      fontSize: '12px'
-    },
-    sm: {
-      width: '24px',
-      height: '24px',
-      fontSize: '10px'
-    }
-  }
+  };
 };
-
-export const CloseButtonSizes = {
-  lg: 'lg',
-  sm: 'sm',
-  md: 'md'
-};
+// @ts-ignore
+CloseButton.baseStyle = baseStyle;
 
 export default CloseButton;

@@ -11,8 +11,6 @@ import {
   PopoverProps as IPopoverProps
 } from '@chakra-ui/core';
 
-import { default as PopoverStyle } from './popover.style';
-
 type PopoverProps = IPopoverProps & {
   children: React.ReactNode;
   content: string | React.ReactNode;
@@ -44,7 +42,6 @@ export const Popover = ({
 );
 
 Popover.defaultProps = {
-  ...PopoverStyle.defaultProps,
   showClose: true,
   showArrow: true
 };

@@ -26,15 +26,9 @@ export const RadioGroup = ({
   radios,
   ...props
 }: RadioGroupProps) => {
-  const defaultValue = radios
-    .map((i) => {
-      if (i.checked) return i.value;
-      return null;
-    })
-    .filter((i) => i !== null)[0];
+  const defaultValue = radios.filter((i) => i.checked).map((i) => i.value)[0];
 
   return (
-    // @ts-ignore
     <ChakraRadioGroup {...props} defaultValue={defaultValue}>
       <Stack
         spacing={direction === 'horizontal' ? 6 : 2}

@@ -1,37 +1,41 @@
-import { ComponentTheme, mode } from '@chakra-ui/theme-tools';
+import theme from '@chakra-ui/theme';
+import { mode } from '@chakra-ui/theme-tools';
 
-const Popover: ComponentTheme = {
-  baseStyle: (props) => ({
-    Content: {
+const { Popover } = theme.components;
+
+const baseStyle = function (props: any) {
+  return {
+    content: {
       bg: mode('white', 'gray.700')(props),
       border: '1px solid',
       borderColor: 'inherit',
       borderRadius: 'md',
       boxShadow: 'sm',
-      width: '100%',
-      maxWidth: 'xs',
+      w: '100%',
+      maxW: 'xs',
       zIndex: '1',
       _focus: {
-        outline: 0
+        outline: 0,
+        boxShadow: 'none'
       }
     },
-    Header: {
-      paddingX: 4,
-      paddingY: 3,
-      borderBottomWidth: '1px',
-      fontWeight: 'medium',
-      lineHeight: 'normal'
+    header: {
+      px: 3,
+      py: 2,
+      borderBottomWidth: '1px'
     },
-    Body: {
-      paddingX: 4,
-      paddingY: 3
+    body: {
+      px: 3,
+      py: 2
     },
-    Footer: {
-      paddingX: 4,
-      paddingY: 3,
+    footer: {
+      px: 3,
+      py: 2,
       borderTopWidth: '1px'
     }
-  })
+  };
 };
+
+Popover.baseStyle = baseStyle;
 
 export default Popover;

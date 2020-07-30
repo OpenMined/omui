@@ -14,8 +14,6 @@ import {
 import { Flex } from '../flex';
 import { Box } from '../box';
 
-import { default as MenuStyle } from './menu.style';
-
 type MenuProps = {
   type?: 'list' | 'submenu' | 'radio' | 'checkbox' | 'separator';
   label?: string;
@@ -56,7 +54,6 @@ export const Menu = ({
     );
   };
 
-  // @ts-ignore
   const renderMenu = (menuItems: MenuProps[]) => {
     return menuItems.map(({ type, label, visual, items, ...item }, index) => {
       let itemElem;
@@ -105,6 +102,7 @@ export const Menu = ({
           <MenuItem
             {...item}
             as={Submenu}
+            // @ts-ignore
             items={items}
             key={`submenu-${label}`}
           >
@@ -160,6 +158,5 @@ export const Menu = ({
 };
 
 Menu.defaultProps = {
-  ...MenuStyle.defaultProps,
   closeOnSelect: true
 };
