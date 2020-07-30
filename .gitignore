@@ -7,14 +7,13 @@
 build
 dist
 Icon\r
+*.log
 node_modules
 report.*
-yarn-error.log
 
 # Framer
 .config.json
 .framer-lock
-.project.log
 *.framerxproj
 
 # Parcel

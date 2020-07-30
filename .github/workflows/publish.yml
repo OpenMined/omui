@@ -1,8 +1,9 @@
----
+name: Build and publish
+
 on:
   push:
     branches: master
-name: Build and publish
+
 jobs:
   publish:
     runs-on: ubuntu-latest

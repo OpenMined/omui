@@ -1,6 +1,7 @@
 /*
   Pre-Framer todo's:
-  - Snapshot testing using Jest: https://www.digitalocean.com/community/tutorials/how-to-write-snapshot-tests-for-react-components-with-jest
+  - Visual regression resting with Chromatic
+  - Consider using smart knobs: https://github.com/storybookjs/addon-smart-knobs
   - Get all helpers to reference the new component themes or consider getting rid of helpers if possible
   - Consider adding any new components added by v1
   - Consider getting rid of Stack and other redundant helper components
@@ -47,7 +48,7 @@ export { KeyboardKey } from './components/kbd';
 export { Link } from './components/link';
 export { List } from './components/list';
 export { LoaderBlock, LoaderText, LoaderCircle } from './components/loader';
-export { Menu } from './components/menu';
+// export { Menu } from './components/menu';
 export { Modal } from './components/modal';
 export { Popover } from './components/popover';
 export { LinearProgress, CircularProgress } from './components/progress';
