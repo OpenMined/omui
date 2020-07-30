@@ -3,18 +3,23 @@ name: Run Chromatic
 on:
   push:
     branches: master
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - run: |
-          cd ./omui
-
-          yarn && yarn build
+          cd ./omui && yarn install
       - uses: chromaui/action@v1
         with:
-          buildScriptName: storybook:build
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          buildScriptName: storybook:build
+          storybookBuildDir: build-storybook
+          exitZeroOnChanges: true
+          exitOnceUploaded: true
