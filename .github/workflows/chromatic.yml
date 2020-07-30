@@ -14,11 +14,11 @@ jobs:
         with:
           fetch-depth: 0
       - run: |
-          cd ./omui && yarn install && yarn storybook:build
+          cd ./omui && yarn install
       - uses: chromaui/action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          storybookBuildDir: omui/build-storybook
+          buildScriptName: storybook:build
           exitZeroOnChanges: true
           exitOnceUploaded: true
