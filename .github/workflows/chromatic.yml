@@ -19,6 +19,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          storybookBuildDir: build-storybook
+          storybookBuildDir: omui/build-storybook
           exitZeroOnChanges: true
           exitOnceUploaded: true
