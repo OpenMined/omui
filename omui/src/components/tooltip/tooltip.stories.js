@@ -22,10 +22,8 @@ export const Default = () => (
   </Flex>
 );
 
-Default.story = {
-  parameters: {
-    knobs: {
-      escapeHTML: false
-    }
+Default.parameters = {
+  knobs: {
+    escapeHTML: false
   }
 };

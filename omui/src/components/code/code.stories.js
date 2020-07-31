@@ -40,11 +40,9 @@ export const Default = () => (
   </Code>
 );
 
-Default.story = {
-  parameters: {
-    knobs: {
-      escapeHTML: false
-    }
+Default.parameters = {
+  knobs: {
+    escapeHTML: false
   }
 };
 

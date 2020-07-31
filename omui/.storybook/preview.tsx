@@ -1,6 +1,8 @@
 import React from 'react';
 import { addDecorator, addParameters } from '@storybook/react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+
+import storybookTheme from './theme';
 import { Box, Theme } from '../src';
 
 addDecorator((StoryFn: () => JSX.Element) => (
@@ -103,3 +105,9 @@ addParameters({
     }
   }
 });
+
+export const parameters = {
+  docs: {
+    theme: storybookTheme
+  }
+};

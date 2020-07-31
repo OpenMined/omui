@@ -21,10 +21,8 @@ export const Default = () => (
   </FormControl>
 );
 
-Default.story = {
-  parameters: {
-    knobs: {
-      escapeHTML: false
-    }
+Default.parameters = {
+  knobs: {
+    escapeHTML: false
   }
 };
