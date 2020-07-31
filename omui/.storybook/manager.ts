@@ -1,9 +1,9 @@
 import { addons } from '@storybook/addons';
 
-import storybookTheme from './theme';
+import theme from './theme';
 
 addons.setConfig({
-  theme: storybookTheme,
+  theme,
   panelPosition: 'right',
   selectedPanel: 'storybookjs/knobs/panel'
 });
