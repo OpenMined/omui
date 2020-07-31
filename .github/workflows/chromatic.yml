@@ -1,6 +1,6 @@
 name: Run Chromatic
 
-on: [pull_request]
+on: [push]
 
 jobs:
   deploy:
