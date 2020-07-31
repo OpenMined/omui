@@ -14,8 +14,7 @@
   - Look into various TODO's
   - Create a form component, similar to SR wizard (Patrick), and consider regrouping form components in Storybook
   - Consider supporting another color mode
-  - Upgrade to Storybook 6: https://github.com/storybookjs/storybook/issues/9311
-  - Provide ample stories for each component
+  - Provide ample stories for each component (story, docs, and props): https://github.com/storybookjs/storybook/blob/next/addons/docs/README.md
   - Create MDX documentation for each component in Storybook: https://medium.com/storybookjs/rich-docs-with-storybook-mdx-61bc145ae7bc
   - Cypress testing:
     - https://itnext.io/cypress-storybook-keeping-test-scenario-data-and-component-rendering-in-one-place-c57b23cc1640

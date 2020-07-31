@@ -1,23 +1,29 @@
 import React from 'react';
 import { addDecorator, addParameters } from '@storybook/react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+
+import theme from './theme';
 import { Box, Theme } from '../src';
 
-addDecorator((StoryFn: () => JSX.Element) => (
+const wrapTheme = (StoryFn: () => JSX.Element) => (
   <Theme>
     <Box p={6}>
       <StoryFn />
     </Box>
   </Theme>
-));
+);
+
+export const decorators = [wrapTheme];
 
 type StoryProp = {
   kind: string;
 };
 
-addParameters({
+export const parameters = {
+  docs: {
+    theme
+  },
   options: {
-    showRoots: true,
     storySort: (a: StoryProp[], b: StoryProp[]) => {
       const separator = '/';
       const config = [
@@ -102,4 +108,4 @@ addParameters({
       }
     }
   }
-});
+};
