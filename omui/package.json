@@ -24,7 +24,7 @@
     "storybook:start": "start-storybook -p 3000",
     "storybook:build": "build-storybook -c .storybook -o build-storybook",
     "storybook:deploy": "storybook-to-ghpages --out=build-storybook",
-    "chromatic": "chromatic --project-token=o20nr5wgm5s -b storybook:build",
+    "chromatic": "chromatic --project-token=o20nr5wgm5s -b storybook:build --exit-zero-on-changes",
     "build": "parcel build src/index.ts",
     "analyze": "yarn build && source-map-explorer build/index.esm.js",
     "lint": "eslint .",
