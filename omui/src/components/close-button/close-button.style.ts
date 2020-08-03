@@ -22,7 +22,7 @@ const baseStyle = function (props: any) {
     }
   };
 };
-// @ts-ignore
+
 CloseButton.baseStyle = baseStyle;
 
 export default CloseButton;
