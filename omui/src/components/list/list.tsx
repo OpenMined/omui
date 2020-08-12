@@ -27,9 +27,8 @@ export const List = ({ type, items, ...props }: ListProps) => {
       </OrderedList>
     );
   } else if (type === 'unordered') {
-    // TODO: Once this PR is merged (https://github.com/chakra-ui/chakra-ui/pull/1032), the styleType prop below will not be needed
     return (
-      <UnorderedList {...props} styleType="bullet">
+      <UnorderedList {...props}>
         {items.map(({ label, ...item }: ItemProps) => (
           <ListItem {...item} key={label}>
             {label}
@@ -38,6 +37,6 @@ export const List = ({ type, items, ...props }: ListProps) => {
       </UnorderedList>
     );
   }
-  
+
   return false;
 };
