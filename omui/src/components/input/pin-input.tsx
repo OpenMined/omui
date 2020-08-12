@@ -1,10 +1,10 @@
 import React from 'react';
-// TODO: Change this import and remove it from package.json when it becomes part of core
+
 import {
   PinInput as ChakraPinInput,
   PinInputField,
   PinInputProps as IPinInputProps
-} from '@chakra-ui/pin-input';
+} from '@chakra-ui/core';
 
 import { default as PinInputStyle } from './pin-input.style';
 

@@ -14,7 +14,6 @@ type AlertBoxProps = IAlertProps & {
 };
 
 export const AlertBox = ({ title, children, ...props }: AlertBoxProps) => (
-  // @ts-ignore
   <Alert
     {...props}
     flexDirection="column"
