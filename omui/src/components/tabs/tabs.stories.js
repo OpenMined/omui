@@ -2,17 +2,19 @@ import React from 'react';
 import { withKnobs, select, boolean } from '@storybook/addon-knobs';
 
 import { Tabs } from '.';
+import { Tabs as TabsStyle } from '../../theme';
 import { Heading, Text, Image } from '../../';
-import {
-  themeTabsVariants,
-  themeTabsSizes,
-  themeTabsColors,
-  themeTabsAlignment
-} from '../../helpers/get-theme';
+
+import { colors, thirdParty } from '../../theme/foundations/colors';
 
 export default { title: 'Components/Tabs', decorators: [withKnobs] };
 
 const { variant, size, colorScheme, align, isFitted } = Tabs.defaultProps;
+
+const themeTabsVariants = Object.keys(TabsStyle.variants);
+const themeTabsSizes = Object.keys(TabsStyle.sizes);
+const themeTabsAlignment = ['start', 'center', 'end'];
+const themeTabsColors = [...Object.keys(colors), ...Object.keys(thirdParty)];
 
 export const Default = () => {
   const tabs = [
@@ -32,7 +34,7 @@ export const Default = () => {
       isDisabled: true,
       content: (
         <>
-          <Heading size="lg">Can't see me</Heading>
+          <Heading size="lg">Can' t see me</Heading>
           <Text mt={2}>Woah, we're disabled!</Text>
         </>
       )

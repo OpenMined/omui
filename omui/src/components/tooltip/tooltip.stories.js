@@ -4,9 +4,25 @@ import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 import { Tooltip } from './';
 import { Flex, Box } from '../../';
 
-import { themeTooltipPlacements } from '../../helpers/get-theme';
-
 export default { title: 'Components/Tooltip', decorators: [withKnobs] };
+
+const themeTooltipPlacements = [
+  'auto',
+  'auto-start',
+  'auto-end',
+  'top',
+  'top-start',
+  'top-end',
+  'bottom',
+  'bottom-start',
+  'bottom-end',
+  'right',
+  'right-start',
+  'right-end',
+  'left',
+  'left-start',
+  'left-end'
+];
 
 export const Default = () => (
   <Flex justifyContent="center" alignItems="center" width="100%" height={600}>

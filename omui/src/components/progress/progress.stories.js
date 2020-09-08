@@ -7,12 +7,11 @@ import {
   select
 } from '@storybook/addon-knobs';
 
-import { LinearProgress, CircularProgress, ProgressStyle } from '.';
-import {
-  themeProgressSizes,
-  themeProgressColors,
-  themeAllPossibleColors
-} from '../../helpers/get-theme';
+import { LinearProgress, CircularProgress } from '.';
+import { Progress as ProgressStyle } from '../../theme';
+
+import { colors, thirdParty } from '../../theme/foundations/colors';
+import { themeAllPossibleColors } from '../../theme/helpers';
 
 export default { title: 'Components/Progress', decorators: [withKnobs] };
 
@@ -24,6 +23,13 @@ const {
   trackColor,
   hasLabel
 } = CircularProgress.defaultProps;
+
+const themeProgressColors = [
+  ...Object.keys(colors),
+  ...Object.keys(thirdParty)
+];
+
+const themeProgressSizes = Object.keys(ProgressStyle.sizes);
 
 export const Linear = () => (
   <LinearProgress

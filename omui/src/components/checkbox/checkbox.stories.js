@@ -1,7 +1,9 @@
 import React from 'react';
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 
-import { Checkbox, CheckboxGroup, CheckboxStyle } from './';
+import { Checkbox, CheckboxGroup } from './';
+import { Checkbox as CheckboxStyle } from '../../theme';
+import { colors } from '../../theme/foundations/colors';
 
 import { themeCheckboxColors } from '../../helpers/get-theme';
 

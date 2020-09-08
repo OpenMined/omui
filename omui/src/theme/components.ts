@@ -1,19 +1,10 @@
 import { AccordionStyle as Accordion } from '../components/accordion';
-import { AlertStyle as Alert } from '../components/alert';
-import { AvatarStyle as Avatar } from '../components/avatar';
 import { BadgeStyle as Badge } from '../components/badge';
 import { ButtonStyle as Button } from '../components/button';
 import { CheckboxStyle as Checkbox } from '../components/checkbox';
 import { CloseButtonStyle as CloseButton } from '../components/close-button';
-import { DrawerStyle as Drawer } from '../components/drawer';
 import { EditableStyle as Editable } from '../components/editable';
-import { FormControlStyle as Form } from '../components/form-control';
 import { HeadingStyle as Heading } from '../components/heading';
-import {
-  InputStyle as Input,
-  NumberInputStyle as NumberInput,
-  PinInputStyle as PinInput
-} from '../components/input';
 import { KeyboardKeyStyle as Kbd } from '../components/kbd';
 import { LinkStyle as Link } from '../components/link';
 import { LoaderStyle as Skeleton } from '../components/loader';
@@ -29,28 +20,19 @@ import { StatStyle as Stat } from '../components/stat';
 import { SwitchStyle as Switch } from '../components/switch';
 import { TabsStyle as Tabs } from '../components/tabs';
 import { TagStyle as Tag } from '../components/tag';
-import { TextareaStyle as Textarea } from '../components/textarea';
-import { TooltipStyle as Tooltip } from '../components/tooltip';
 
 export default {
   Accordion,
-  Alert,
-  Avatar,
   Badge,
   Button,
   Checkbox,
   CloseButton,
-  Drawer,
   Editable,
-  Form,
   Heading,
-  Input,
   Kbd,
   Link,
   // Menu,
   Modal,
-  NumberInput,
-  PinInput,
   Popover,
   Progress,
   Radio,
@@ -61,7 +43,5 @@ export default {
   Stat,
   Switch,
   Tabs,
-  Tag,
-  Textarea,
-  Tooltip
+  Tag
 };

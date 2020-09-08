@@ -1,15 +1,10 @@
-import theme from '@chakra-ui/theme';
-
-const { Badge } = theme.components;
-
-Badge.baseStyle! = {
-  ...Badge.baseStyle!,
-  fontWeight: 'medium'
-};
-
-Badge.defaultProps = {
-  ...Badge.defaultProps,
-  colorScheme: 'blue'
+const Badge = {
+  baseStyle: {
+    fontWeight: 'medium'
+  },
+  defaultProps: {
+    colorScheme: 'blue'
+  }
 };
 
 export default Badge;

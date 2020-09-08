@@ -7,7 +7,7 @@ import {
   AlertProps as IAlertProps
 } from '@chakra-ui/core';
 
-import { AlertStyle } from '../alert';
+import { Alert as AlertStyle } from '../../theme';
 
 type AlertBoxProps = IAlertProps & {
   title?: string;

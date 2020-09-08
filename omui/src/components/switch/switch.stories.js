@@ -1,12 +1,16 @@
 import React from 'react';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 
-import { Switch, SwitchStyle } from './';
-import { themeSwitchColors, themeSwitchSizes } from '../../helpers/get-theme';
+import { Switch } from './';
+import { Switch as SwitchStyle } from '../../theme';
+
+import { colors, thirdParty } from '../../theme/foundations/colors';
 
 export default { title: 'Components/Switch', decorators: [withKnobs] };
 
-const { colorScheme, size } = SwitchStyle.defaultProps;
+const { colorScheme, size } = Switch.defaultProps;
+const themeSwitchSizes = Object.keys(SwitchStyle.sizes);
+const themeSwitchColors = [...Object.keys(colors), ...Object.keys(thirdParty)];
 
 export const Default = () => {
   return (

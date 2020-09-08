@@ -3,15 +3,13 @@ import { withKnobs, select, text, boolean } from '@storybook/addon-knobs';
 
 import { Drawer } from './';
 import { Button, Text, useDisclosure } from '../../';
-
-import {
-  themeDrawerPlacements,
-  themeDrawerSizes
-} from '../../helpers/get-theme';
+import { Drawer as DrawerStyle } from '../../theme';
 
 export default { title: 'Components/Drawer', decorators: [withKnobs] };
 
 const { placement, size } = Drawer.defaultProps;
+const themeDrawerPlacements = ['top', 'right', 'bottom', 'left'];
+const themeDrawerSizes = DrawerStyle.sizes;
 
 export const Default = () => {
   const disclosure = useDisclosure();

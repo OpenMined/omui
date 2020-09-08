@@ -10,12 +10,17 @@ import {
 import { useToast } from './';
 import { Button } from '../../';
 
-import {
-  themeToastStatuses,
-  themeToastPositions
-} from '../../helpers/get-theme';
-
 export default { title: 'Components/Toast', decorators: [withKnobs] };
+
+const themeToastStatuses = [];
+const themeToastPositions = [
+  'top',
+  'top-left',
+  'top-right',
+  'bottom',
+  'bottom-left',
+  'bottom-right'
+];
 
 export const Default = () => {
   const toast = useToast();

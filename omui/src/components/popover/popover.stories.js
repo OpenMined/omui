@@ -10,11 +10,27 @@ import {
 import { Popover } from './';
 import { Button, Heading, Text, Flex } from '../../';
 
-import { themePopperPlacements } from '../../helpers/get-theme';
-
 export default { title: 'Components/Popover', decorators: [withKnobs] };
 
 const { showClose, showArrow } = Popover.defaultProps;
+
+const themePopperPlacements = [
+  'auto',
+  'auto-start',
+  'auto-end',
+  'top',
+  'top-start',
+  'top-end',
+  'bottom',
+  'bottom-start',
+  'bottom-end',
+  'right',
+  'right-start',
+  'right-end',
+  'left',
+  'left-start',
+  'left-end'
+];
 
 export const Default = () => {
   const Content = (props) => (

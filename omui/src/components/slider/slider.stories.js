@@ -3,12 +3,18 @@ import { withKnobs, number, select, boolean } from '@storybook/addon-knobs';
 import { CheckIcon } from '@chakra-ui/icons';
 
 import { Slider } from './';
+import { Slider as SliderStyle } from '../../theme';
 import { Text } from '../../';
+import { colors } from '../../theme/foundations/colors';
+
 import { themeSliderSizes, themeSliderColors } from '../../helpers/get-theme';
 
 export default { title: 'Components/Slider', decorators: [withKnobs] };
 
 const { size, colorScheme, showMinMax } = Slider.defaultProps;
+
+const themeSliderColors = Object.keys(colors);
+const themeSliderSizes = Object.keys(SliderStyle.sizes);
 
 export const Default = () => {
   const [value, setValue] = useState(30);

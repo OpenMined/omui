@@ -2,14 +2,16 @@ import React from 'react';
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 
 import { Radio, RadioGroup } from './';
-import { CheckboxStyle } from '../checkbox';
 
+import { colors } from '../../theme/foundations/colors';
 import { themeRadioColors } from '../../helpers/get-theme';
 
 export default { title: 'Components/Radio', decorators: [withKnobs] };
 
-const { colorScheme } = CheckboxStyle.defaultProps;
+const { colorScheme } = Radio.defaultProps;
 const { direction } = RadioGroup.defaultProps;
+
+const themeRadioColors = Object.keys(colors);
 
 export const Default = () => (
   <Radio

@@ -2,13 +2,15 @@ import React from 'react';
 import { withKnobs, text, select, number } from '@storybook/addon-knobs';
 import { PhoneIcon, CheckIcon } from '@chakra-ui/icons';
 
-import { Input, InputStyle, NumberInput, PinInput } from './';
+import { Input, NumberInput, PinInput } from './';
+import { Input as InputStyle } from '../../theme';
 
 import { themeInputVariants } from '../../helpers/get-theme';
 
 export default { title: 'Components/Input', decorators: [withKnobs] };
 
 const { variant } = InputStyle.defaultProps;
+const themeInputVariants = Object.keys(InputStyle.variants);
 
 export const Default = () => {
   const left = select('Left side', ['nothing', 'text', 'icon'], 'nothing');

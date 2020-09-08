@@ -5,11 +5,26 @@ import { Stack } from './';
 import { Box } from '../../';
 
 import sizes from '../../theme/foundations/sizes';
-import {
-  themeFlexDirection,
-  themeFlexAlignItems,
-  themeFlexJustifyContent
-} from '../../helpers/get-theme';
+
+// Constants
+const themeFlexDirection = ['row', 'row-reverse', 'column', 'column-reverse'];
+
+const themeFlexAlignItems = [
+  'flex-start',
+  'flex-end',
+  'center',
+  'baseline',
+  'stretch'
+];
+
+const themeFlexJustifyContent = [
+  'flex-start',
+  'flex-end',
+  'center',
+  'space-between',
+  'space-around',
+  'space-evenly'
+];
 
 export default { title: 'Components/Stack', decorators: [withKnobs] };
 

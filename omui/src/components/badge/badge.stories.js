@@ -1,13 +1,17 @@
 import React from 'react';
 import { withKnobs, text, select } from '@storybook/addon-knobs';
 
-import { Badge, BadgeStyle } from './';
+import { Badge } from './';
+import { Badge as BadgeStyle } from '../../theme';
+import { colors } from '../../theme/foundations/colors';
+
 import { Flex, Avatar, Box, Text } from '../../';
-import { themeBadgeVariants, themeBadgeColors } from '../../helpers/get-theme';
 
 export default { title: 'Components/Badge', decorators: [withKnobs] };
 
 const { variant, colorScheme } = BadgeStyle.defaultProps;
+const themeBadgeColors = Object.keys(colors);
+const themeBadgeVariants = Object.keys(BadgeStyle.variants);
 
 export const Default = () => (
   <Badge

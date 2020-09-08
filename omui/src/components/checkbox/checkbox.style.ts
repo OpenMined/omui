@@ -1,7 +1,4 @@
-import theme from '@chakra-ui/theme';
 import { mode } from '@chakra-ui/theme-tools';
-
-const { Checkbox } = theme.components;
 
 const baseStyle = function (props: any) {
   const { colorScheme: c } = props;
@@ -62,6 +59,8 @@ const baseStyle = function (props: any) {
   };
 };
 
-Checkbox.baseStyle = baseStyle;
+const Checkbox = {
+  baseStyle: baseStyle
+};
 
 export default Checkbox;

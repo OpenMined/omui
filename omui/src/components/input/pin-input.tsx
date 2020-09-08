@@ -6,7 +6,7 @@ import {
   PinInputProps as IPinInputProps
 } from '@chakra-ui/core';
 
-import { default as PinInputStyle } from './pin-input.style';
+import { PinInput as PinInputStyle } from '../../theme';
 
 import { Stack } from '../stack';
 

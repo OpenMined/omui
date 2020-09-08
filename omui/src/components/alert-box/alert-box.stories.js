@@ -2,10 +2,10 @@ import React from 'react';
 import { withKnobs, select, text } from '@storybook/addon-knobs';
 
 import { AlertBox } from './';
-import {
-  themeAlertStatuses,
-  themeAlertVariants
-} from '../../helpers/get-theme';
+import { Alert as AlertStyles } from '../../theme';
+
+const themeAlertStatuses = ['error', 'warning', 'success', 'info'];
+const themeAlertVariants = Object.keys(AlertStyles.variants);
 
 export default { title: 'Components/Alert Box', decorators: [withKnobs] };
 

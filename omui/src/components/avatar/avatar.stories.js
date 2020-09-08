@@ -1,13 +1,16 @@
 import React from 'react';
 import { withKnobs, select, text, number } from '@storybook/addon-knobs';
 
-import { Avatar, AvatarGroup, AvatarStyle } from './';
+import { Avatar, AvatarGroup } from './';
+import { Avatar as AvatarStyle } from '../../theme';
+import { colors } from '../../theme/foundations/colors';
 
-import { themeAvatarSizes, themeBadgeColors } from '../../helpers/get-theme';
+const themeAvatarSizes = Object.keys(AvatarStyle.sizes);
+const themeBadgeColors = Object.keys(colors);
 
 export default { title: 'Components/Avatar', decorators: [withKnobs] };
 
-const { size } = AvatarStyle.defaultProps;
+const { size } = 'sm';
 
 export const Default = () => (
   <Avatar

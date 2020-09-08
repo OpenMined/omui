@@ -2,18 +2,21 @@ import React from 'react';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import { PhoneIcon, CalendarIcon } from '@chakra-ui/icons';
 
-import { Button, IconButton, ButtonStyle } from './';
-
-import {
-  themeIconButtonSizes,
-  themeButtonSizes,
-  themeButtonColors,
-  themeButtonVariants
-} from '../../helpers/get-theme';
+import { Button, IconButton } from './';
+import { Button as ButtonStyle } from '../../theme';
+import { colors, thirdParty } from '../../theme/foundations/colors';
 
 export default { title: 'Primitives/Button', decorators: [withKnobs] };
 
 const { size, variant, colorScheme } = ButtonStyle.defaultProps;
+
+// Icon Button
+const themeIconButtonSizes = ['sm', 'md', 'lg'];
+
+// Button
+const themeButtonSizes = Object.keys(ButtonStyle.sizes);
+const themeButtonVariants = Object.keys(ButtonStyle.variants);
+const themeButtonColors = [...Object.keys(colors), ...Object.keys(thirdParty)];
 
 export const Default = () => {
   const isLoading = boolean('Is loading?', false);

@@ -5,9 +5,25 @@
 // import { Flex, Image } from '../../';
 // import { MoonIcon } from '@chakra-ui/icons';
 
-// import { themeMenuPlacements } from '../../helpers/get-theme';
-
 // export default { title: 'Components/Menu', decorators: [withKnobs] };
+
+// const themeMenuPlacements = [
+//     'auto',
+//     'auto-start',
+//     'auto-end',
+//     'top',
+//     'top-start',
+//     'top-end',
+//     'bottom',
+//     'bottom-start',
+//     'bottom-end',
+//     'right',
+//     'right-start',
+//     'right-end',
+//     'left',
+//     'left-start',
+//     'left-end'
+// ];
 
 // export const Default = () => {
 //   const menu = [
