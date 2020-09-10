@@ -4,7 +4,7 @@ import { withKnobs, select } from '@storybook/addon-knobs';
 import { Divider } from './';
 import { Flex, Box } from '../../';
 
-import { themeAllPossibleColors } from '../../helpers/get-theme';
+import { themeAllPossibleColors } from '../../theme/helpers';
 
 export default { title: 'Components/Divider', decorators: [withKnobs] };
 

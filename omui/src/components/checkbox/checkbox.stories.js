@@ -5,12 +5,11 @@ import { Checkbox, CheckboxGroup } from './';
 import { Checkbox as CheckboxStyle } from '../../theme';
 import { colors } from '../../theme/foundations/colors';
 
-import { themeCheckboxColors } from '../../helpers/get-theme';
-
 export default { title: 'Components/Checkbox', decorators: [withKnobs] };
 
 const { colorScheme } = CheckboxStyle.defaultProps;
 const { direction } = CheckboxGroup.defaultProps;
+const themeCheckboxColors = Object.keys(colors);
 
 export const Default = () => (
   <Checkbox

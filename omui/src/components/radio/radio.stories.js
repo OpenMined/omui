@@ -4,7 +4,7 @@ import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 import { Radio, RadioGroup } from './';
 
 import { colors } from '../../theme/foundations/colors';
-import { themeRadioColors } from '../../helpers/get-theme';
+import { themeAllPossibleColors } from '../../theme/helpers';
 
 export default { title: 'Components/Radio', decorators: [withKnobs] };
 

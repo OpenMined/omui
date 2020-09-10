@@ -5,7 +5,7 @@ import { PhoneIcon, CheckIcon } from '@chakra-ui/icons';
 import { Input, NumberInput, PinInput } from './';
 import { Input as InputStyle } from '../../theme';
 
-import { themeInputVariants } from '../../helpers/get-theme';
+import { themeAllPossibleColors } from '../../theme/helpers';
 
 export default { title: 'Components/Input', decorators: [withKnobs] };
 

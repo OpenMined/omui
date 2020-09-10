@@ -7,8 +7,6 @@ import { Slider as SliderStyle } from '../../theme';
 import { Text } from '../../';
 import { colors } from '../../theme/foundations/colors';
 
-import { themeSliderSizes, themeSliderColors } from '../../helpers/get-theme';
-
 export default { title: 'Components/Slider', decorators: [withKnobs] };
 
 const { size, colorScheme, showMinMax } = Slider.defaultProps;
