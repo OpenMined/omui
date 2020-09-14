@@ -1,18 +1,13 @@
-name: Run Chromatic
-
+name: "Run Chromatic"
 on: pull_request
 
 jobs:
-  deploy:
+  test:
     runs-on: ubuntu-latest
-    env:
-      working-directory: omui
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: Publish Storybook
-        run: |
-          yarn install
-          yarn run chromatic --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }} -b storybook:build --exit-zero-on-changes --exit-once-uploaded --skip 'dependabot/**'
-        working-directory: ${{ env.working-directory }}
+    - uses: actions/checkout@v1
+    - run: |
+        yarn && yarn build
+    - uses: chromaui/action@v1
+      with: 
+        projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
