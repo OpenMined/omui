@@ -6,8 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - run: |
+    - name: Install deps and build
+      working-directory: omui
+      run: |
         yarn && yarn build
     - uses: chromaui/action@v1
-      with: 
+      with:
+        storybookBuildDir: omui
         projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
