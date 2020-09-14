@@ -12,5 +12,5 @@ jobs:
         yarn && yarn build
     - uses: chromaui/action@v1
       with:
-        storybookBuildDir: omui
+        storybookBuildDir: "./omui"
         projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
