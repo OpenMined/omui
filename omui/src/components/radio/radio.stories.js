@@ -3,22 +3,19 @@ import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 
 import { Radio, RadioGroup } from './';
 
-import { colors } from '../../theme/foundations/colors';
-import { themeAllPossibleColors } from '../../theme/helpers';
+import { themeBaseColors } from '../../theme/helpers';
 
 export default { title: 'Components/Radio', decorators: [withKnobs] };
 
 const { colorScheme } = Radio.defaultProps;
 const { direction } = RadioGroup.defaultProps;
 
-const themeRadioColors = Object.keys(colors);
-
 export const Default = () => (
   <Radio
     defaultIsChecked
     isInvalid={boolean('Is invalid?', false)}
     isDisabled={boolean('Is disabled?', false)}
-    colorScheme={select('Color', themeRadioColors, colorScheme)}
+    colorScheme={select('Color', themeBaseColors, colorScheme)}
     value={text('Value', 'the-value')}
   >
     {text('Label', 'My radio label')}

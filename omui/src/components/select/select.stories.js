@@ -6,7 +6,7 @@ import { Select as SelectStyle } from '../../theme';
 
 export default { title: 'Components/Select', decorators: [withKnobs] };
 
-const { size, variant } = Select.defaultProps;
+const { size, variant } = SelectStyle.defaultProps;
 
 const themeSelectSizes = Object.keys(SelectStyle.sizes);
 const themeSelectVariants = Object.keys(SelectStyle.variants);

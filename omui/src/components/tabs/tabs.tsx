@@ -7,8 +7,6 @@ import {
   TabPanel
 } from '@chakra-ui/core';
 
-import { default as TabStyle } from './tabs.style';
-
 type Tab = {
   label: string;
   content: string | React.ReactNode;
@@ -47,10 +45,4 @@ export const Tabs = ({ tabs, ...props }: TabProps) => {
       </TabPanels>
     </ChakraTabs>
   );
-};
-
-Tabs.defaultProps = {
-  ...TabStyle.defaultProps,
-  align: 'start',
-  isFitted: false
 };

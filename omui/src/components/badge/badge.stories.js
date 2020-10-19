@@ -3,20 +3,19 @@ import { withKnobs, text, select } from '@storybook/addon-knobs';
 
 import { Badge } from './';
 import { Badge as BadgeStyle } from '../../theme';
-import { colors } from '../../theme/foundations/colors';
+import { themeBaseColors } from '../../theme/helpers';
 
 import { Flex, Avatar, Box, Text } from '../../';
 
 export default { title: 'Components/Badge', decorators: [withKnobs] };
 
 const { variant, colorScheme } = BadgeStyle.defaultProps;
-const themeBadgeColors = Object.keys(colors);
-const themeBadgeVariants = Object.keys(BadgeStyle.variants);
+const themeBadgeVariants = ['solid', 'light', 'outline'];
 
 export const Default = () => (
   <Badge
     variant={select('Variant', themeBadgeVariants, variant)}
-    colorScheme={select('Color', themeBadgeColors, colorScheme)}
+    colorScheme={select('Color', themeBaseColors, colorScheme)}
   >
     {text('Text', 'I am a badge')}
   </Badge>
@@ -31,7 +30,7 @@ export const WithAvatar = () => (
         <Badge
           ml="2"
           variant={select('Variant', themeBadgeVariants, variant)}
-          colorScheme={select('Color', themeBadgeColors, 'green')}
+          colorScheme={select('Color', themeBaseColors, 'green')}
         >
           New
         </Badge>

@@ -1,9 +1,11 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
+import { select, withKnobs } from '@storybook/addon-knobs';
 
 import { Breadcrumb } from './';
 
 export default { title: 'Components/Breadcrumb', decorators: [withKnobs] };
+
+const BreadcrumbFontSizes = ['sm', 'md', 'lg'];
 
 export const Default = () => {
   const links = [
@@ -20,5 +22,10 @@ export const Default = () => {
       title: 'The current state of the blog'
     }
   ];
-  return <Breadcrumb links={links} />;
+  return (
+    <Breadcrumb
+      fontSize={select('Font size', BreadcrumbFontSizes)}
+      links={links}
+    />
+  );
 };

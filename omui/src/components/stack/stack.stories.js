@@ -6,25 +6,11 @@ import { Box } from '../../';
 
 import sizes from '../../theme/foundations/sizes';
 
-// Constants
-const themeFlexDirection = ['row', 'row-reverse', 'column', 'column-reverse'];
-
-const themeFlexAlignItems = [
-  'flex-start',
-  'flex-end',
-  'center',
-  'baseline',
-  'stretch'
-];
-
-const themeFlexJustifyContent = [
-  'flex-start',
-  'flex-end',
-  'center',
-  'space-between',
-  'space-around',
-  'space-evenly'
-];
+import {
+  themeFlexDirections,
+  themeFlexJustifyContent,
+  themeFlexAlignItems
+} from '../../theme/helpers';
 
 export default { title: 'Components/Stack', decorators: [withKnobs] };
 
@@ -39,7 +25,7 @@ export const Default = () => {
 
   return (
     <Stack
-      direction={select('Direction', themeFlexDirection, 'row')}
+      direction={select('Direction', themeFlexDirections, 'row')}
       align={select('Align items', themeFlexAlignItems, 'center')}
       justify={select(
         'Justify content',

@@ -1,10 +1,13 @@
 import { AccordionStyle as Accordion } from '../components/accordion';
+import { AlertStyle as Alert } from '../components/alert-box';
 import { BadgeStyle as Badge } from '../components/badge';
 import { ButtonStyle as Button } from '../components/button';
 import { CheckboxStyle as Checkbox } from '../components/checkbox';
 import { CloseButtonStyle as CloseButton } from '../components/close-button';
+import { DrawerStyle as Drawer } from '../components/drawer';
 import { EditableStyle as Editable } from '../components/editable';
 import { HeadingStyle as Heading } from '../components/heading';
+import { InputStyle as Input } from '../components/input';
 import { KeyboardKeyStyle as Kbd } from '../components/kbd';
 import { LinkStyle as Link } from '../components/link';
 import { LoaderStyle as Skeleton } from '../components/loader';
@@ -23,12 +26,15 @@ import { TagStyle as Tag } from '../components/tag';
 
 export default {
   Accordion,
+  Alert,
   Badge,
   Button,
   Checkbox,
   CloseButton,
+  Drawer,
   Editable,
   Heading,
+  Input,
   Kbd,
   Link,
   // Menu,

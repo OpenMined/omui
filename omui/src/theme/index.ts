@@ -1,10 +1,9 @@
+import chakraTheme from '@chakra-ui/theme';
+import { merge } from '@chakra-ui/utils';
+
 import components from './components';
 import foundations from './foundations';
 import styles from './styles';
-
-import { merge } from '@chakra-ui/utils';
-
-import chakraTheme from '@chakra-ui/theme';
 
 const overrides = {
   components,

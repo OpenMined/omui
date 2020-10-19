@@ -9,10 +9,12 @@ import {
 
 import { useToast } from './';
 import { Button } from '../../';
+import { Button as ToastStyles } from '../../theme';
 
 export default { title: 'Components/Toast', decorators: [withKnobs] };
 
 const themeToastStatuses = [];
+const themeToastVariants = Object.keys(ToastStyles.variants);
 const themeToastPositions = [
   'top',
   'top-left',
@@ -40,6 +42,7 @@ export const Default = () => {
   });
   const position = select('Position', themeToastPositions, 'bottom');
   const isClosable = boolean('Is closable?', true);
+  const variant = select('Style', themeToastVariants, 'solid');
 
   return (
     <Button
@@ -50,7 +53,8 @@ export const Default = () => {
           status,
           duration,
           position,
-          isClosable
+          isClosable,
+          variant
         })
       }
     >

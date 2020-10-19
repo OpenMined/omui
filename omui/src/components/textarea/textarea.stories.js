@@ -6,7 +6,7 @@ import { Textarea as TextareaStyle } from '../../theme';
 
 export default { title: 'Components/Textarea', decorators: [withKnobs] };
 
-const { variant } = Textarea.defaultProps;
+const { variant } = TextareaStyle.defaultProps;
 const themeTextareaResize = ['none', 'vertical', 'horizontal', 'both'];
 const themeTextareaVariants = Object.keys(TextareaStyle.variants);
 
@@ -15,7 +15,7 @@ export const Default = () => (
     placeholder={text('Placeholder', 'Start typing...')}
     isDisabled={boolean('Is disabled?', false)}
     isInvalid={boolean('Is invalid?', false)}
-    variant={select('Variant', themeInputVariants, variant)}
+    variant={select('Variant', themeTextareaVariants, variant)}
     resize={select('Resize', themeTextareaResize, 'vertical')}
   />
 );

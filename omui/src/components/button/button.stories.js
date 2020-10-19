@@ -4,7 +4,7 @@ import { PhoneIcon, CalendarIcon } from '@chakra-ui/icons';
 
 import { Button, IconButton } from './';
 import { Button as ButtonStyle } from '../../theme';
-import { colors, thirdParty } from '../../theme/foundations/colors';
+import { themeColors } from '../../theme/helpers';
 
 export default { title: 'Primitives/Button', decorators: [withKnobs] };
 
@@ -16,7 +16,6 @@ const themeIconButtonSizes = ['sm', 'md', 'lg'];
 // Button
 const themeButtonSizes = Object.keys(ButtonStyle.sizes);
 const themeButtonVariants = Object.keys(ButtonStyle.variants);
-const themeButtonColors = [...Object.keys(colors), ...Object.keys(thirdParty)];
 
 export const Default = () => {
   const isLoading = boolean('Is loading?', false);
@@ -28,7 +27,7 @@ export const Default = () => {
     <Button
       size={select('Size', themeButtonSizes, size)}
       variant={select('Variant', themeButtonVariants, variant)}
-      colorScheme={select('Color', themeButtonColors, colorScheme)}
+      colorScheme={select('Color', themeColors, colorScheme)}
       leftIcon={leftIcon ? <PhoneIcon /> : null}
       rightIcon={rightIcon ? <CalendarIcon /> : null}
       isDisabled={boolean('Is disabled?', false)}
@@ -44,7 +43,7 @@ export const Icon = () => (
   <IconButton
     size={select('Size', themeIconButtonSizes, size)}
     variant={select('Variant', themeButtonVariants, variant)}
-    colorScheme={select('Color', themeButtonColors, colorScheme)}
+    colorScheme={select('Color', themeColors, colorScheme)}
     icon={<PhoneIcon />}
     isRound={boolean('Is round?', IconButton.defaultProps.isRound)}
     isDisabled={boolean('Is disabled?', false)}

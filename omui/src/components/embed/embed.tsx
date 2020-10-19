@@ -8,14 +8,24 @@ type EmbedProps = AspectRatioProps & {
   ratio?: number | string;
   title: string;
   src: string;
+  coverImage: string;
 };
 
-export const VideoEmbed = ({ ratio, title, src, ...props }: EmbedProps) => {
+export const VideoEmbed = ({
+  ratio,
+  title,
+  coverImage,
+  src,
+  ...props
+}: EmbedProps) => {
   const videoEmbedProps: object = {
     as: 'iframe',
     title,
     src,
-    allowFullScreen: true
+    allowFullScreen: true,
+    style: {
+      background: `url(${coverImage})`
+    }
   };
 
   if (ratio) props['ratio'] = convertRatios(ratio);

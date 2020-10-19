@@ -5,16 +5,14 @@ import { Tabs } from '.';
 import { Tabs as TabsStyle } from '../../theme';
 import { Heading, Text, Image } from '../../';
 
-import { colors, thirdParty } from '../../theme/foundations/colors';
+import { themeColors, themeBaseAlignments } from '../../theme/helpers';
 
 export default { title: 'Components/Tabs', decorators: [withKnobs] };
 
-const { variant, size, colorScheme, align, isFitted } = Tabs.defaultProps;
+const { variant, size, colorScheme, align, isFitted } = TabsStyle.defaultProps;
 
 const themeTabsVariants = Object.keys(TabsStyle.variants);
 const themeTabsSizes = Object.keys(TabsStyle.sizes);
-const themeTabsAlignment = ['start', 'center', 'end'];
-const themeTabsColors = [...Object.keys(colors), ...Object.keys(thirdParty)];
 
 export const Default = () => {
   const tabs = [
@@ -64,8 +62,8 @@ export const Default = () => {
       tabs={tabs}
       variant={select('Variant', themeTabsVariants, variant)}
       size={select('Size', themeTabsSizes, size)}
-      colorScheme={select('Color', themeTabsColors, colorScheme)}
-      align={select('Alignment', themeTabsAlignment, align)}
+      colorScheme={select('Color', themeColors, colorScheme)}
+      align={select('Alignment', themeBaseAlignments, align)}
       isFitted={boolean('Is fitted?', isFitted)}
     />
   );

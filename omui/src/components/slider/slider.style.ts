@@ -1,7 +1,6 @@
-import theme from '@chakra-ui/theme';
 import { mode, orient } from '@chakra-ui/theme-tools';
 
-const { Slider } = theme.components;
+type Dict = Record<string, any>;
 
 function thumbOrientation(props: Record<string, any>) {
   return orient({
@@ -64,6 +63,74 @@ const baseStyle = function (props: any) {
   };
 };
 
-Slider.baseStyle = baseStyle;
+// Sizes
+
+function sizeXl(props: Dict) {
+  return {
+    thumb: { w: '18px', h: '18px' },
+    track: orient({
+      orientation: props.orientation,
+      horizontal: { h: '16px' },
+      vertical: { w: '16px' }
+    })
+  };
+}
+
+function sizeLg(props: Dict) {
+  return {
+    thumb: { w: '14px', h: '14px' },
+    track: orient({
+      orientation: props.orientation,
+      horizontal: { h: '12px' },
+      vertical: { w: '12px' }
+    })
+  };
+}
+
+function sizeMd(props: Dict) {
+  return {
+    thumb: { w: '12px', h: '12px' },
+    track: orient({
+      orientation: props.orientation,
+      horizontal: { h: '8px' },
+      vertical: { w: '8px' }
+    })
+  };
+}
+
+function sizeSm(props: Dict) {
+  return {
+    thumb: { w: '10px', h: '10px' },
+    track: orient({
+      orientation: props.orientation,
+      horizontal: { h: '6px' },
+      vertical: { w: '6px' }
+    })
+  };
+}
+
+function sizeXs(props: Dict) {
+  return {
+    thumb: { w: '8px', h: '8px' },
+    track: orient({
+      orientation: props.orientation,
+      horizontal: { h: '4px' },
+      vertical: { w: '4px' }
+    })
+  };
+}
+
+const sizes = {
+  xl: sizeXl,
+  lg: sizeLg,
+  md: sizeMd,
+  sm: sizeSm,
+  xs: sizeXs
+};
+
+const Slider = {
+  sizes,
+  baseStyle
+};
 
 export default Slider;

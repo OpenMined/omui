@@ -6,7 +6,7 @@ import { Tag } from './';
 import { Tag as TagStyle } from '../../theme';
 import { Avatar } from '../../';
 
-import { colors, thirdParty } from '../../theme/foundations/colors';
+import { themeColors } from '../../theme/helpers';
 
 export default { title: 'Components/Tag', decorators: [withKnobs] };
 
@@ -14,7 +14,6 @@ const { size, variant, colorScheme } = TagStyle.defaultProps;
 
 const themeTagSizes = Object.keys(TagStyle.sizes);
 const themeTagVariants = Object.keys(TagStyle.variants);
-const themeTagColors = [...Object.keys(colors), ...Object.keys(thirdParty)];
 
 export const Default = () => {
   const leftElement = boolean('Has left element', false);
@@ -25,7 +24,7 @@ export const Default = () => {
       label={text('Text', 'Sample text')}
       size={select('Size', themeTagSizes, size)}
       variant={select('Variant', themeTagVariants, variant)}
-      colorScheme={select('Color', themeTagColors, colorScheme)}
+      colorScheme={select('Color', themeColors, colorScheme)}
       leftElement={
         leftElement ? (
           <Avatar

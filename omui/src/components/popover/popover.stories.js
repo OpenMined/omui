@@ -9,28 +9,11 @@ import {
 
 import { Popover } from './';
 import { Button, Heading, Text, Flex } from '../../';
+import { themeAllPlacements } from '../../theme/helpers';
 
 export default { title: 'Components/Popover', decorators: [withKnobs] };
 
 const { showClose, showArrow } = Popover.defaultProps;
-
-const themePopperPlacements = [
-  'auto',
-  'auto-start',
-  'auto-end',
-  'top',
-  'top-start',
-  'top-end',
-  'bottom',
-  'bottom-start',
-  'bottom-end',
-  'right',
-  'right-start',
-  'right-end',
-  'left',
-  'left-start',
-  'left-end'
-];
 
 export const Default = () => {
   const Content = (props) => (
@@ -46,7 +29,7 @@ export const Default = () => {
         content={<Content />}
         header={text('Header', 'Confirmation!')}
         footer={text('Footer', 'Awesomesauce.')}
-        placement={select('Placement', themePopperPlacements, 'bottom')}
+        placement={select('Placement', themeAllPlacements, 'bottom')}
         showClose={boolean('Show close button?', showClose)}
         showArrow={boolean('Show arrow?', showArrow)}
       >

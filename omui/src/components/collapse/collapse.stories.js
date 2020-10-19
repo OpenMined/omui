@@ -32,7 +32,10 @@ export const Default = () => {
         })}
         animateOpacity={boolean('Animate opacity?', animateOpacity)}
       >
-        <Box bg="gray.200" p={4}>
+        <Box
+          bg={boolean('Background', true) ? 'gray.200' : 'transparent'}
+          p={4}
+        >
           {text('Content', defaultContent)}
         </Box>
       </Collapse>

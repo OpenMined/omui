@@ -5,21 +5,15 @@ import { Text } from './';
 import { Box } from '../../';
 
 import {
-  fontSizes,
-  fontWeights,
-  fonts,
-  letterSpacings,
-  lineHeights
-} from '../../theme/foundations/typography';
+  themeAllPossibleColors,
+  themeFontFamilies,
+  themeFontSizes,
+  themeFontWeights,
+  themeLetterSpacings,
+  themeLineHeights
+} from '../../theme/helpers';
 
 export default { title: 'Primitives/Text', decorators: [withKnobs] };
-
-// Constants
-const themeFontFamilies = Object.keys(fonts);
-const themeFontSizes = Object.keys(fontSizes);
-const themeFontWeights = Object.keys(fontWeights);
-const themeLetterSpacings = Object.keys(letterSpacings);
-const themeLineHeights = Object.keys(lineHeights);
 
 export const Default = () => (
   <Box width={400} p={4} bg="gray.100">

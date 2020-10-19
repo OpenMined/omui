@@ -34,12 +34,24 @@ export const WithFallback = () => {
 export const WithRatio = () => {
   const standardRatio = select(
     'Aspect ratio',
-    ['square', 'display', 'widescreen', 'custom'],
+    [
+      'square',
+      'display',
+      'widescreen',
+      'custom',
+      '2:3',
+      '3:2',
+      '3:4',
+      '4:5',
+      '5:4',
+      '9:16'
+    ],
     'widescreen'
   );
+
   const customRatio =
     standardRatio === 'custom'
-      ? number('Custom (width / height)', 4 / 3)
+      ? number('Custom (width)', 4) / number('Custom (height)', 3)
       : null;
 
   return (
