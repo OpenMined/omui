@@ -1,19 +1,19 @@
 import React from 'react';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
+import { CheckIcon } from '@chakra-ui/icons';
 
-import { Tag, TagStyle } from './';
+import { Tag } from './';
+import { Tag as TagStyle } from '../../theme';
 import { Avatar } from '../../';
 
-import {
-  themeTagSizes,
-  themeTagVariants,
-  themeTagColors
-} from '../../helpers/get-theme';
-import { CheckIcon } from '@chakra-ui/icons';
+import { themeColors } from '../../theme/helpers';
 
 export default { title: 'Components/Tag', decorators: [withKnobs] };
 
 const { size, variant, colorScheme } = TagStyle.defaultProps;
+
+const themeTagSizes = Object.keys(TagStyle.sizes);
+const themeTagVariants = Object.keys(TagStyle.variants);
 
 export const Default = () => {
   const leftElement = boolean('Has left element', false);
@@ -24,7 +24,7 @@ export const Default = () => {
       label={text('Text', 'Sample text')}
       size={select('Size', themeTagSizes, size)}
       variant={select('Variant', themeTagVariants, variant)}
-      colorScheme={select('Color', themeTagColors, colorScheme)}
+      colorScheme={select('Color', themeColors, colorScheme)}
       leftElement={
         leftElement ? (
           <Avatar

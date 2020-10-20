@@ -19,10 +19,13 @@ const items = [
   }
 ];
 
+const ListFontSizes = ['sm', 'md', 'lg'];
+
 export const Default = () => {
   return (
     <List
       items={items}
+      fontSize={select('Font Size', ListFontSizes)}
       spacing={select('Spacing', sizes, sizes['2'])}
       type={select('Type', ['ordered', 'unordered'], 'ordered')}
     />

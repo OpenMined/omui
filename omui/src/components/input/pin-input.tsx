@@ -6,8 +6,6 @@ import {
   PinInputProps as IPinInputProps
 } from '@chakra-ui/core';
 
-import { default as PinInputStyle } from './pin-input.style';
-
 import { Stack } from '../stack';
 
 type PinInputProps = IPinInputProps & {
@@ -27,9 +25,4 @@ export const PinInput = ({ length, spacing, ...props }: PinInputProps) => {
       </Stack>
     </ChakraPinInput>
   );
-};
-
-PinInput.defaultProps = {
-  ...PinInputStyle.defaultProps,
-  spacing: 2
 };

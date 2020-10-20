@@ -9,8 +9,7 @@ import {
 
 import { Popover } from './';
 import { Button, Heading, Text, Flex } from '../../';
-
-import { themePopperPlacements } from '../../helpers/get-theme';
+import { themeAllPlacements } from '../../theme/helpers';
 
 export default { title: 'Components/Popover', decorators: [withKnobs] };
 
@@ -30,7 +29,7 @@ export const Default = () => {
         content={<Content />}
         header={text('Header', 'Confirmation!')}
         footer={text('Footer', 'Awesomesauce.')}
-        placement={select('Placement', themePopperPlacements, 'bottom')}
+        placement={select('Placement', themeAllPlacements, 'bottom')}
         showClose={boolean('Show close button?', showClose)}
         showArrow={boolean('Show arrow?', showArrow)}
       >

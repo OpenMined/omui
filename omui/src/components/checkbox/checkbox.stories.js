@@ -1,9 +1,9 @@
 import React from 'react';
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 
-import { Checkbox, CheckboxGroup, CheckboxStyle } from './';
-
-import { themeCheckboxColors } from '../../helpers/get-theme';
+import { Checkbox, CheckboxGroup } from './';
+import { Checkbox as CheckboxStyle } from '../../theme';
+import { themeBaseColors } from '../../theme/helpers';
 
 export default { title: 'Components/Checkbox', decorators: [withKnobs] };
 
@@ -15,7 +15,7 @@ export const Default = () => (
     defaultIsChecked
     isInvalid={boolean('Is invalid?', false)}
     isDisabled={boolean('Is disabled?', false)}
-    colorScheme={select('Color', themeCheckboxColors, colorScheme)}
+    colorScheme={select('Color', themeBaseColors, colorScheme)}
     value={text('Value', 'the-value')}
   >
     {text('Label', 'My checkbox label')}

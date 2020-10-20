@@ -4,7 +4,7 @@ import { FaBeer } from 'react-icons/fa';
 
 import { Icon } from './';
 
-import { themeAllPossibleColors } from '../../helpers/get-theme';
+import { themeAllPossibleColors } from '../../theme/helpers';
 
 export default { title: 'Components/Icon', decorators: [withKnobs] };
 

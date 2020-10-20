@@ -5,13 +5,13 @@ import { Text } from './';
 import { Box } from '../../';
 
 import {
+  themeAllPossibleColors,
   themeFontFamilies,
   themeFontSizes,
   themeFontWeights,
   themeLetterSpacings,
-  themeLineHeights,
-  themeAllPossibleColors
-} from '../../helpers/get-theme';
+  themeLineHeights
+} from '../../theme/helpers';
 
 export default { title: 'Primitives/Text', decorators: [withKnobs] };
 

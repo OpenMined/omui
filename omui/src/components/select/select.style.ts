@@ -1,5 +1,3 @@
-import theme from '@chakra-ui/theme';
-
-const { Select } = theme.components;
+const Select = {};
 
 export default Select;

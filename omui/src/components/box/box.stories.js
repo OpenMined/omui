@@ -6,7 +6,7 @@ import { Box } from './';
 import { Flex, Badge, Text, Image } from '../../';
 
 import sizes from '../../theme/foundations/sizes';
-import { themeAllPossibleColors } from '../../helpers/get-theme';
+import { themeAllPossibleColors } from '../../theme/helpers';
 
 export default { title: 'Primitives/Box', decorators: [withKnobs] };
 

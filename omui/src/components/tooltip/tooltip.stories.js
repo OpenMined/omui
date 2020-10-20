@@ -3,8 +3,11 @@ import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 
 import { Tooltip } from './';
 import { Flex, Box } from '../../';
-
-import { themeTooltipPlacements } from '../../helpers/get-theme';
+import {
+  themeAllPlacements,
+  themeAllPossibleColors,
+  themeBaseColors
+} from '../../theme/helpers';
 
 export default { title: 'Components/Tooltip', decorators: [withKnobs] };
 
@@ -13,7 +16,9 @@ export const Default = () => (
     <Tooltip
       label={text('Label', "I'm just a simple tooltip")}
       hasArrow={boolean('Has arrow?', true)}
-      placement={select('Placement', themeTooltipPlacements, 'right')}
+      placement={select('Placement', themeAllPlacements, 'right')}
+      bg={select('Background Color', themeAllPossibleColors, 'blue.500')}
+      color={select('Color', themeAllPossibleColors, 'white')}
     >
       <Box p={8} width={200} bg="gray.200" textAlign="center">
         Hover me!

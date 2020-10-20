@@ -1,44 +1,53 @@
 import React from 'react';
-import { Text } from '@chakra-ui/core';
+import _ from 'lodash';
 
+import { withKnobs, number } from '@storybook/addon-knobs';
 import { Accordion, AccordionItem } from './';
+import { withOrdinal } from '../../docs/_helpers';
 
-export default { title: 'Components/Accordion' };
+export default { title: 'Components/Accordion', decorators: [withKnobs] };
 
-export const Default = () => (
-  <Accordion>
-    <AccordionItem title="First section">
-      There once was a man named Sue
-    </AccordionItem>
-    <AccordionItem title="Second section">
-      <Text>
-        Who knew just what{' '}
-        <Text as="span" fontWeight="bold">
-          not
-        </Text>{' '}
-        to do
-      </Text>
-    </AccordionItem>
-  </Accordion>
-);
+export const Default = () => {
+  let numberOfItems = number('# of Items', 2, { min: 1 });
 
-export const Multiple = () => (
-  <Accordion allowMultiple>
-    <AccordionItem title="First section">
-      We can both be opened...
-    </AccordionItem>
-    <AccordionItem title="Second section">Simultaneously!</AccordionItem>
-  </Accordion>
-);
+  return (
+    <Accordion>
+      {_.times(numberOfItems, (index) => (
+        <AccordionItem title={withOrdinal(index + 1) + ' section'}>
+          {index + 1 + ' Little duck(s) went out one day...'}
+        </AccordionItem>
+      ))}
+    </Accordion>
+  );
+};
 
-export const Toggle = () => (
-  <Accordion allowToggle>
-    <AccordionItem title="First section">I can be collapsed</AccordionItem>
-    <AccordionItem title="Second section">
-      So can I... but only one of us can be open.
-    </AccordionItem>
-  </Accordion>
-);
+export const Multiple = () => {
+  let numberOfItems = number('# of Items', 2);
+
+  return (
+    <Accordion allowMultiple>
+      {_.times(numberOfItems, (index) => (
+        <AccordionItem title={withOrdinal(index + 1) + ' section'}>
+          Open as many as you can
+        </AccordionItem>
+      ))}
+    </Accordion>
+  );
+};
+
+export const Toggle = () => {
+  let numberOfItems = number('# of Items', 2);
+
+  return (
+    <Accordion allowToggle>
+      {_.times(numberOfItems, (index) => (
+        <AccordionItem title={withOrdinal(index + 1) + ' section'}>
+          Only one of us can be open
+        </AccordionItem>
+      ))}
+    </Accordion>
+  );
+};
 
 export const WithDisabledItem = () => (
   <Accordion>

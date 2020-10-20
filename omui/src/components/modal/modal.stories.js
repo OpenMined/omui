@@ -2,13 +2,13 @@ import React from 'react';
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 
 import { Modal } from './';
+import { Modal as ModalStyle } from '../../theme';
 import { Button, Heading, Text, useDisclosure } from '../../';
-
-import { themeModalSizes } from '../../helpers/get-theme';
 
 export default { title: 'Components/Modal', decorators: [withKnobs] };
 
 const { showClose, isCentered, size } = Modal.defaultProps;
+const themeModalSizes = Object.keys(ModalStyle.sizes);
 
 export const Default = () => {
   const disclosure = useDisclosure();

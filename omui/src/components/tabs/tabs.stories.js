@@ -2,17 +2,17 @@ import React from 'react';
 import { withKnobs, select, boolean } from '@storybook/addon-knobs';
 
 import { Tabs } from '.';
+import { Tabs as TabsStyle } from '../../theme';
 import { Heading, Text, Image } from '../../';
-import {
-  themeTabsVariants,
-  themeTabsSizes,
-  themeTabsColors,
-  themeTabsAlignment
-} from '../../helpers/get-theme';
+
+import { themeColors, themeBaseAlignments } from '../../theme/helpers';
 
 export default { title: 'Components/Tabs', decorators: [withKnobs] };
 
-const { variant, size, colorScheme, align, isFitted } = Tabs.defaultProps;
+const { variant, size, colorScheme, align, isFitted } = TabsStyle.defaultProps;
+
+const themeTabsVariants = Object.keys(TabsStyle.variants);
+const themeTabsSizes = Object.keys(TabsStyle.sizes);
 
 export const Default = () => {
   const tabs = [
@@ -32,7 +32,7 @@ export const Default = () => {
       isDisabled: true,
       content: (
         <>
-          <Heading size="lg">Can't see me</Heading>
+          <Heading size="lg">Can' t see me</Heading>
           <Text mt={2}>Woah, we're disabled!</Text>
         </>
       )
@@ -62,8 +62,8 @@ export const Default = () => {
       tabs={tabs}
       variant={select('Variant', themeTabsVariants, variant)}
       size={select('Size', themeTabsSizes, size)}
-      colorScheme={select('Color', themeTabsColors, colorScheme)}
-      align={select('Alignment', themeTabsAlignment, align)}
+      colorScheme={select('Color', themeColors, colorScheme)}
+      align={select('Alignment', themeBaseAlignments, align)}
       isFitted={boolean('Is fitted?', isFitted)}
     />
   );

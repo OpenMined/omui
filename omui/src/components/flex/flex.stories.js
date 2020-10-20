@@ -3,12 +3,11 @@ import { withKnobs, number, boolean, select } from '@storybook/addon-knobs';
 
 import { Flex } from './';
 import { Box } from '../../';
-
 import {
-  themeFlexDirection,
   themeFlexAlignItems,
+  themeFlexDirections,
   themeFlexJustifyContent
-} from '../../helpers/get-theme';
+} from '../../theme/helpers';
 
 export default { title: 'Primitives/Flex', decorators: [withKnobs] };
 

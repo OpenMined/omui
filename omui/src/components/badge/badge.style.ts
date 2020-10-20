@@ -1,15 +1,24 @@
-import theme from '@chakra-ui/theme';
+import { mode, transparentize } from '@chakra-ui/theme-tools';
 
-const { Badge } = theme.components;
+function variantLight(props: Record<string, any>) {
+  const { colorScheme: c, theme } = props;
+  const darkBg = transparentize(`${c}.200`, 0.16)(theme);
+  return {
+    bg: mode(`${c}.100`, darkBg)(props),
+    color: mode(`${c}.800`, `${c}.200`)(props)
+  };
+}
 
-Badge.baseStyle! = {
-  ...Badge.baseStyle!,
-  fontWeight: 'medium'
-};
-
-Badge.defaultProps = {
-  ...Badge.defaultProps,
-  colorScheme: 'blue'
+const Badge = {
+  baseStyle: {
+    fontWeight: 'medium'
+  },
+  defaultProps: {
+    colorScheme: 'blue'
+  },
+  variants: {
+    light: variantLight
+  }
 };
 
 export default Badge;

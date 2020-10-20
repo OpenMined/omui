@@ -1,13 +1,15 @@
 import React from 'react';
 import { withKnobs, select, text, boolean } from '@storybook/addon-knobs';
 
-import { Select, SelectStyle } from './';
-
-import { themeSelectSizes, themeSelectVariants } from '../../helpers/get-theme';
+import { Select } from './';
+import { Select as SelectStyle } from '../../theme';
 
 export default { title: 'Components/Select', decorators: [withKnobs] };
 
 const { size, variant } = SelectStyle.defaultProps;
+
+const themeSelectSizes = Object.keys(SelectStyle.sizes);
+const themeSelectVariants = Object.keys(SelectStyle.variants);
 
 export const Default = () => {
   const options = [

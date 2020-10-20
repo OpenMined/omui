@@ -2,18 +2,20 @@ import React from 'react';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import { PhoneIcon, CalendarIcon } from '@chakra-ui/icons';
 
-import { Button, IconButton, ButtonStyle } from './';
-
-import {
-  themeIconButtonSizes,
-  themeButtonSizes,
-  themeButtonColors,
-  themeButtonVariants
-} from '../../helpers/get-theme';
+import { Button, IconButton } from './';
+import { Button as ButtonStyle } from '../../theme';
+import { themeColors } from '../../theme/helpers';
 
 export default { title: 'Primitives/Button', decorators: [withKnobs] };
 
 const { size, variant, colorScheme } = ButtonStyle.defaultProps;
+
+// Icon Button
+const themeIconButtonSizes = ['sm', 'md', 'lg'];
+
+// Button
+const themeButtonSizes = Object.keys(ButtonStyle.sizes);
+const themeButtonVariants = Object.keys(ButtonStyle.variants);
 
 export const Default = () => {
   const isLoading = boolean('Is loading?', false);
@@ -25,7 +27,7 @@ export const Default = () => {
     <Button
       size={select('Size', themeButtonSizes, size)}
       variant={select('Variant', themeButtonVariants, variant)}
-      colorScheme={select('Color', themeButtonColors, colorScheme)}
+      colorScheme={select('Color', themeColors, colorScheme)}
       leftIcon={leftIcon ? <PhoneIcon /> : null}
       rightIcon={rightIcon ? <CalendarIcon /> : null}
       isDisabled={boolean('Is disabled?', false)}
@@ -41,7 +43,7 @@ export const Icon = () => (
   <IconButton
     size={select('Size', themeIconButtonSizes, size)}
     variant={select('Variant', themeButtonVariants, variant)}
-    colorScheme={select('Color', themeButtonColors, colorScheme)}
+    colorScheme={select('Color', themeColors, colorScheme)}
     icon={<PhoneIcon />}
     isRound={boolean('Is round?', IconButton.defaultProps.isRound)}
     isDisabled={boolean('Is disabled?', false)}

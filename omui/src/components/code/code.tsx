@@ -47,6 +47,7 @@ type CodeProps = {
   language: Language;
   lineNumbers: boolean;
   inline: boolean;
+  colorMode: 'light' | 'dark';
 };
 
 export const Code = ({
@@ -54,6 +55,7 @@ export const Code = ({
   language,
   lineNumbers = true,
   inline = false,
+  colorMode,
   ...props
 }: CodeProps) => {
   if (inline) lineNumbers = false;

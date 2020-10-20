@@ -7,7 +7,8 @@ import {
   AlertProps as IAlertProps
 } from '@chakra-ui/core';
 
-import { AlertStyle } from '../alert';
+import { fonts } from '../../theme/foundations/typography';
+import { Alert as AlertStyle } from '../../theme';
 
 type AlertBoxProps = IAlertProps & {
   title?: string;
@@ -23,7 +24,7 @@ export const AlertBox = ({ title, children, ...props }: AlertBoxProps) => (
   >
     <AlertIcon boxSize="10" mr={0} />
     {title && (
-      <AlertTitle mt={3} mb={1} fontSize="lg">
+      <AlertTitle fontFamily={fonts.heading} mt={3} mb={1} fontSize="lg">
         {title}
       </AlertTitle>
     )}
@@ -35,6 +36,6 @@ export const AlertBox = ({ title, children, ...props }: AlertBoxProps) => (
 
 // Additional defaultProps that we cannot set on the style
 AlertBox.defaultProps = {
-  ...AlertStyle.defaultProps,
+  ...AlertStyle?.defaultProps,
   status: 'info'
 };

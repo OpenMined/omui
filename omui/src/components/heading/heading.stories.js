@@ -3,11 +3,7 @@ import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 
 import { Heading } from './';
 import { Box } from '../../';
-
-import {
-  themeHeadingFontSizes,
-  themeHeadingTags
-} from '../../helpers/get-theme';
+import { themeHeadingFontSizes, themeHeadingTags } from '../../theme/helpers';
 
 export default { title: 'Primitives/Heading', decorators: [withKnobs] };
 

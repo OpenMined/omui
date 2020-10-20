@@ -3,11 +3,10 @@ import { withKnobs, boolean, text, select } from '@storybook/addon-knobs';
 
 import { Code, CodeEditor } from './';
 import { Text } from '../../';
-
 import {
   themeCodeLanguages,
   themeCodePrettyLanguages
-} from '../../helpers/get-theme';
+} from '../../theme/helpers';
 
 const themeLanguages = {};
 

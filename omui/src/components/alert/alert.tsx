@@ -7,7 +7,7 @@ import {
   AlertProps as IAlertProps
 } from '@chakra-ui/core';
 
-import { default as AlertStyle } from './alert.style';
+import { Alert as AlertStyle } from '../../theme';
 
 import { CloseButton } from '../close-button';
 

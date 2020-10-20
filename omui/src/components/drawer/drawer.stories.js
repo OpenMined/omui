@@ -3,15 +3,13 @@ import { withKnobs, select, text, boolean } from '@storybook/addon-knobs';
 
 import { Drawer } from './';
 import { Button, Text, useDisclosure } from '../../';
-
-import {
-  themeDrawerPlacements,
-  themeDrawerSizes
-} from '../../helpers/get-theme';
+import { Drawer as DrawerStyle } from '../../theme';
+import { themePlacements } from '../../theme/helpers';
 
 export default { title: 'Components/Drawer', decorators: [withKnobs] };
 
 const { placement, size } = Drawer.defaultProps;
+const themeDrawerSizes = DrawerStyle.sizes;
 
 export const Default = () => {
   const disclosure = useDisclosure();
@@ -35,7 +33,7 @@ export const Default = () => {
         disclosure={disclosure}
         finalRef={btnRef}
         closeButton={boolean('Show close button?', true)}
-        placement={select('Placement', themeDrawerPlacements, placement)}
+        placement={select('Placement', themePlacements, placement)}
         size={select('Size', themeDrawerSizes, size)}
         header={text('Header', 'I am just a drawer')}
         footer={footer}
