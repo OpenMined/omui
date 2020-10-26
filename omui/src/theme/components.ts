@@ -1,6 +1,7 @@
 import { AccordionStyle as Accordion } from '../components/accordion';
 import { AlertStyle as Alert } from '../components/alert-box';
 import { BadgeStyle as Badge } from '../components/badge';
+import { BreadcrumbStyle as Breadcrumb } from '../components/breadcrumb';
 import { ButtonStyle as Button } from '../components/button';
 import { CheckboxStyle as Checkbox } from '../components/checkbox';
 import { CloseButtonStyle as CloseButton } from '../components/close-button';
@@ -28,6 +29,7 @@ export default {
   Accordion,
   Alert,
   Badge,
+  Breadcrumb,
   Button,
   Checkbox,
   CloseButton,
