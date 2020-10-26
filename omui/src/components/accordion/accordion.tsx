@@ -10,34 +10,38 @@ import {
 } from '@chakra-ui/core';
 
 import { fonts } from '../../theme/foundations/typography';
+import { themeFontSizes } from '../../theme/helpers';
 import { Box } from '../box';
 
 type AccordionTitleWeight = 'normal' | 'medium' | 'bold';
 type AccordionTitleSize = 'md' | 'lg' | 'xl' | '2xl' | '4xl';
 type AccordionFontStyles = keyof typeof fonts;
+type AccordionTextSize = typeof themeFontSizes;
 
-type AccordionProps = IAccordionProps & {
+type AccordionSharedProps = {
   titleWeight?: AccordionTitleWeight;
   titleSize?: AccordionTitleSize;
   titleStyle?: AccordionFontStyles;
+  textSize?: AccordionTextSize;
 };
 
-type AccordionItemProps = IAccordionItemProps & {
-  title: string;
-  titleWeight?: AccordionTitleWeight;
-  titleSize?: AccordionTitleSize;
-  titleStyle?: AccordionFontStyles;
-};
+type AccordionProps = IAccordionProps & AccordionSharedProps;
+
+type AccordionItemProps = IAccordionItemProps &
+  AccordionSharedProps & {
+    title: string;
+  };
 
 export const Accordion = ({
   children,
   titleWeight,
   titleSize,
   titleStyle,
+  textSize,
   ...props
 }: AccordionProps) => {
   const childrenWithProps = React.Children.map(children, (child) => {
-    const props = { titleWeight, titleSize, titleStyle };
+    const props = { titleWeight, titleSize, titleStyle, textSize };
     if (React.isValidElement(child)) {
       return React.cloneElement(child, props);
     }
@@ -53,6 +57,7 @@ export const AccordionItem = ({
   titleWeight,
   titleSize,
   titleStyle,
+  textSize,
   ...props
 }: AccordionItemProps) => {
   const itemProps: object = {
@@ -74,7 +79,7 @@ export const AccordionItem = ({
         </Box>
         <AccordionIcon />
       </AccordionButton>
-      <AccordionPanel>{children}</AccordionPanel>
+      <AccordionPanel fontSize={textSize || 'md'}>{children}</AccordionPanel>
     </ChakraAccordionItem>
   );
 };
