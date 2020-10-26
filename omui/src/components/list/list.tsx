@@ -15,28 +15,34 @@ type ListProps = IListProps & {
   items: ItemProps[];
 };
 
-export const List = ({ type, items, ...props }: ListProps) => {
+const List = ({ type, items, children, ...props }: ListProps) => {
   if (type === 'ordered') {
     return (
       <OrderedList {...props}>
-        {items.map(({ label, ...item }: ItemProps) => (
-          <ListItem {...item} key={label}>
-            {label}
-          </ListItem>
-        ))}
+        {items
+          ? items.map(({ label, ...item }: ItemProps) => (
+              <ListItem {...item} key={label}>
+                {label}
+              </ListItem>
+            ))
+          : children}
       </OrderedList>
     );
   } else if (type === 'unordered') {
     return (
       <UnorderedList {...props}>
-        {items.map(({ label, ...item }: ItemProps) => (
-          <ListItem {...item} key={label}>
-            {label}
-          </ListItem>
-        ))}
+        {items
+          ? items.map(({ label, ...item }: ItemProps) => (
+              <ListItem {...item} key={label}>
+                {label}
+              </ListItem>
+            ))
+          : children}
       </UnorderedList>
     );
   }
 
   return false;
 };
+
+export { List, ListItem };
