@@ -6,20 +6,11 @@ import {
 } from '@chakra-ui/core';
 
 import { convertRatios } from '../../helpers/ratios';
-
-const whVars = [
-  'minW',
-  'minWidth',
-  'maxW',
-  'maxWidth',
-  'minH',
-  'minHeight',
-  'maxH',
-  'maxHeight'
-];
+import { themeBaseColors } from '../../theme/helpers';
 
 type ImageProps = IChakraImageProps & {
   ratio?: number | string;
+  fallbackColor?: typeof themeBaseColors;
 };
 
 export const Image = ({ ratio, ...props }: ImageProps) => {
