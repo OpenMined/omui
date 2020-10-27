@@ -25,7 +25,10 @@ type AccordionSharedProps = {
   textSize?: AccordionTextSize;
 };
 
-type AccordionProps = IAccordionProps & AccordionSharedProps;
+type AccordionProps = IAccordionProps &
+  AccordionSharedProps & {
+    items: AccordionItemProps[];
+  };
 
 type AccordionItemProps = IAccordionItemProps &
   AccordionSharedProps & {
@@ -38,6 +41,7 @@ export const Accordion = ({
   titleSize,
   titleStyle,
   textSize,
+  items,
   ...props
 }: AccordionProps) => {
   const childrenWithProps = React.Children.map(children, (child) => {
@@ -48,7 +52,24 @@ export const Accordion = ({
     return child;
   });
 
-  return <ChakraAccordion {...props}>{childrenWithProps}</ChakraAccordion>;
+  return (
+    <ChakraAccordion {...props}>
+      {items
+        ? items.map((item) => (
+            <AccordionItem
+              key={item.title}
+              title={item.title}
+              titleWeight={titleWeight}
+              titleSize={titleSize}
+              titleStyle={titleStyle}
+              textSize={textSize}
+            >
+              {item.children}
+            </AccordionItem>
+          ))
+        : childrenWithProps}
+    </ChakraAccordion>
+  );
 };
 
 export const AccordionItem = ({

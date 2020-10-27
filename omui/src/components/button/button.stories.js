@@ -4,7 +4,7 @@ import { PhoneIcon, CalendarIcon } from '@chakra-ui/icons';
 
 import { Button, IconButton } from './';
 import { Button as ButtonStyle } from '../../theme';
-import { themeColors } from '../../theme/helpers';
+import { themeBaseColors } from '../../theme/helpers';
 
 export default { title: 'Primitives/Button', decorators: [withKnobs] };
 
@@ -27,7 +27,7 @@ export const Default = () => {
     <Button
       size={select('Size', themeButtonSizes, size)}
       variant={select('Variant', themeButtonVariants, variant)}
-      colorScheme={select('Color', themeColors, colorScheme)}
+      colorScheme={select('Color', themeBaseColors, colorScheme)}
       leftIcon={leftIcon ? <PhoneIcon /> : null}
       rightIcon={rightIcon ? <CalendarIcon /> : null}
       isDisabled={boolean('Is disabled?', false)}
@@ -43,7 +43,7 @@ export const Icon = () => (
   <IconButton
     size={select('Size', themeIconButtonSizes, size)}
     variant={select('Variant', themeButtonVariants, variant)}
-    colorScheme={select('Color', themeColors, colorScheme)}
+    colorScheme={select('Color', themeBaseColors, colorScheme)}
     icon={<PhoneIcon />}
     isRound={boolean('Is round?', IconButton.defaultProps.isRound)}
     isDisabled={boolean('Is disabled?', false)}

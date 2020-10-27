@@ -7,17 +7,6 @@ import {
 
 import { convertRatios } from '../../helpers/ratios';
 
-const whVars = [
-  'minW',
-  'minWidth',
-  'maxW',
-  'maxWidth',
-  'minH',
-  'minHeight',
-  'maxH',
-  'maxHeight'
-];
-
 type ImageProps = IChakraImageProps & {
   ratio?: number | string;
 };

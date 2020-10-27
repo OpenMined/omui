@@ -18,9 +18,10 @@ type BreadcrumbProps = IBreadcrumbProps & {
   links: LinkProps[];
 };
 
-export const Breadcrumb = ({
+const Breadcrumb = ({
   links,
   colorScheme,
+  children,
   ...props
 }: BreadcrumbProps) => {
   return (
@@ -30,34 +31,37 @@ export const Breadcrumb = ({
       separator={<ChevronRightIcon color={`${colorScheme}.400`} mt="-2px" />}
       {...props}
     >
-      {links.map(({ href, title, ...link }: LinkProps, index) => {
-        const isCurrentPage = index === links.length - 1;
-
-        return (
-          <BreadcrumbItem isCurrentPage={isCurrentPage} key={title}>
-            {!isCurrentPage && (
-              <Link
-                {...link}
-                href={href}
-                color={`${colorScheme}.500`}
-                _hover={{ color: `{colorScheme}.700` }}
-              >
-                {title}
-              </Link>
-            )}
-            {isCurrentPage && (
-              <Link
-                {...link}
-                color={`${colorScheme}.800`}
-                _hover={{ color: 'inherit' }}
-                cursor="default"
-              >
-                {title}
-              </Link>
-            )}
-          </BreadcrumbItem>
-        );
-      })}
+      {links
+        ? links.map(({ href, title, ...link }: LinkProps, index) => {
+            const isCurrentPage = index === links.length - 1;
+            return (
+              <BreadcrumbItem isCurrentPage={isCurrentPage} key={title}>
+                {!isCurrentPage && (
+                  <Link
+                    {...link}
+                    href={href}
+                    color={`${colorScheme}.500`}
+                    _hover={{ color: `${colorScheme}.700` }}
+                  >
+                    {title}
+                  </Link>
+                )}
+                {isCurrentPage && (
+                  <Link
+                    {...link}
+                    color={`${colorScheme}.900`}
+                    _hover={{ color: 'inherit' }}
+                    cursor="default"
+                  >
+                    {title}
+                  </Link>
+                )}
+              </BreadcrumbItem>
+            );
+          })
+        : children}
     </ChakraBreadcrumb>
   );
 };
+
+export { Breadcrumb, BreadcrumbItem };

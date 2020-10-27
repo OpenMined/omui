@@ -4,7 +4,8 @@ import {
   TabList,
   TabPanels,
   Tab,
-  TabPanel
+  TabPanel,
+  TabsProps as ITabsProps
 } from '@chakra-ui/core';
 
 type Tab = {
@@ -13,36 +14,46 @@ type Tab = {
   selected?: boolean;
 };
 
-type TabProps = {
+type TabsProps = ITabsProps & {
   tabs: Tab[];
 };
 
-export const Tabs = ({ tabs, ...props }: TabProps) => {
+const Tabs = ({ tabs, children, ...props }: TabsProps) => {
   let defaultIndex;
 
-  for (let i = 0; i < tabs.length; i++) {
-    if (tabs[i].selected) {
-      defaultIndex = i;
-      break;
+  if (tabs) {
+    for (let i = 0; i < tabs.length; i++) {
+      if (tabs[i].selected) {
+        defaultIndex = i;
+        break;
+      }
     }
   }
 
   return (
     <ChakraTabs {...props} defaultIndex={defaultIndex}>
-      <TabList>
-        {tabs.map(({ label, ...tab }) => (
-          <Tab key={label} {...tab}>
-            {label}
-          </Tab>
-        ))}
-      </TabList>
-      <TabPanels>
-        {tabs.map(({ label, content, ...tab }) => (
-          <TabPanel key={label} {...tab}>
-            {content}
-          </TabPanel>
-        ))}
-      </TabPanels>
+      {tabs ? (
+        <>
+          <TabList>
+            {tabs.map(({ label, ...tab }) => (
+              <Tab key={label} {...tab}>
+                {label}
+              </Tab>
+            ))}
+          </TabList>
+          <TabPanels>
+            {tabs.map(({ label, content, ...tab }) => (
+              <TabPanel key={label} {...tab}>
+                {content}
+              </TabPanel>
+            ))}
+          </TabPanels>
+        </>
+      ) : (
+        children
+      )}
     </ChakraTabs>
   );
 };
+
+export { Tabs, Tab, TabList, TabPanel, TabPanels };
