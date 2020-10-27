@@ -29,6 +29,15 @@ export const fontWeights = {
   // black: 900
 };
 
+export const textTransformations = {
+  none: 'none',
+  capitalize: 'capitalize',
+  uppercase: 'uppercase',
+  lowercase: 'lowercase',
+  initial: 'initial',
+  inherit: 'inherit'
+};
+
 export const letterSpacings = {
   // tighter: '-0.05em',
   tight: '-0.04em', // Original: -0.025em
@@ -53,7 +62,8 @@ const typography = {
   fontSizes,
   fontWeights,
   letterSpacings,
-  lineHeights
+  lineHeights,
+  textTransformations
 };
 
 export type Typography = typeof typography;

@@ -5,7 +5,8 @@ import {
   fontWeights,
   fonts,
   letterSpacings,
-  lineHeights
+  lineHeights,
+  textTransformations
 } from './foundations/typography';
 
 const getAllColorKeys = (c: object) =>
@@ -151,7 +152,16 @@ export const themeCodePrettyLanguages = [
   'WebAssembly'
 ];
 
-export const themeHeadingFontSizes = ['2xl', 'xl', 'lg', 'md', 'sm', 'xs'];
+export const themeHeadingFontSizes = [
+  '4xl',
+  '3xl',
+  '2xl',
+  'xl',
+  'lg',
+  'md',
+  'sm',
+  'xs'
+];
 export const themeHeadingTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
 
 export const themeFontFamilies = Object.keys(fonts);
@@ -159,3 +169,18 @@ export const themeFontSizes = Object.keys(fontSizes);
 export const themeFontWeights = Object.keys(fontWeights);
 export const themeLetterSpacings = Object.keys(letterSpacings);
 export const themeLineHeights = Object.keys(lineHeights);
+export const themeTextTransformations = Object.keys(textTransformations);
+
+export const themeDefaultColorMap = {
+  blue: '500',
+  magenta: '400',
+  red: '400',
+  orange: '700',
+  yellow: '800',
+  green: '700',
+  teal: '600',
+  cyan: '800',
+  indigo: '400',
+  violet: '400',
+  gray: '800'
+};
