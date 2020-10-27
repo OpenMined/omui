@@ -16,6 +16,7 @@ type LinkProps = ILinkProps & {
 
 type BreadcrumbProps = IBreadcrumbProps & {
   links: LinkProps[];
+  children: React.ReactNode;
 };
 
 const Breadcrumb = ({
@@ -26,8 +27,8 @@ const Breadcrumb = ({
 }: BreadcrumbProps) => {
   return (
     <ChakraBreadcrumb
-      fontWeight="medium"
       spacing="2"
+      style={{ fontWeight: 500 }}
       separator={<ChevronRightIcon color={`${colorScheme}.400`} mt="-2px" />}
       {...props}
     >

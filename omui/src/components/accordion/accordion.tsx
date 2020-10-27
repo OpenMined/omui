@@ -3,9 +3,10 @@ import {
   Accordion as ChakraAccordion,
   AccordionItem as ChakraAccordionItem,
   AccordionButton,
-  AccordionPanel,
   AccordionIcon,
+  AccordionPanel as ChakraAccordionPanel,
   AccordionProps as IAccordionProps,
+  AccordionPanelProps as IAccordionPanelProps,
   AccordionItemProps as IAccordionItemProps
 } from '@chakra-ui/core';
 
@@ -29,6 +30,13 @@ type AccordionProps = IAccordionProps &
   AccordionSharedProps & {
     items: AccordionItemProps[];
   };
+
+type AccordionPanelProps =
+  | IAccordionPanelProps
+  | {
+      fontSize?: AccordionTextSize;
+      children: React.ReactNode;
+    };
 
 type AccordionItemProps = IAccordionItemProps &
   AccordionSharedProps & {
@@ -71,6 +79,10 @@ export const Accordion = ({
     </ChakraAccordion>
   );
 };
+
+export const AccordionPanel = ({ children, ...props }: AccordionPanelProps) => (
+  <ChakraAccordionPanel {...props}>{children}</ChakraAccordionPanel>
+);
 
 export const AccordionItem = ({
   title,
