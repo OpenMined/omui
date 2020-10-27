@@ -5,18 +5,32 @@ import {
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
-  AccordionProps,
+  AccordionProps as IAccordionProps,
   AccordionItemProps as IAccordionItemProps
 } from '@chakra-ui/core';
 
 import { Box } from '../box';
 
-export const Accordion = ({ children, ...props }: AccordionProps) => (
-  <ChakraAccordion {...props}>{children}</ChakraAccordion>
-);
-
 type AccordionItemProps = IAccordionItemProps & {
   title: string;
+};
+
+type AccordionProps = IAccordionProps & {
+  items: AccordionItemProps[];
+};
+
+export const Accordion = ({ children, items, ...props }: AccordionProps) => {
+  return (
+    <ChakraAccordion {...props}>
+      {items
+        ? items.map((item) => (
+            <AccordionItem key={item.title} title={item.title}>
+              {item.children}
+            </AccordionItem>
+          ))
+        : children}
+    </ChakraAccordion>
+  );
 };
 
 export const AccordionItem = ({
