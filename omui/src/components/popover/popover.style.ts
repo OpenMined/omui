@@ -1,12 +1,23 @@
-import theme from '@chakra-ui/theme';
-import { mode } from '@chakra-ui/theme-tools';
+function baseStyle(props: any) {
+  const { colorScheme: c } = props;
 
-const { Popover } = theme.components;
+  let backgroundColor;
 
-const baseStyle = function (props: any) {
+  switch (c) {
+    case 'white':
+      backgroundColor = 'white';
+      break;
+    case 'gray':
+      backgroundColor = 'gray.200';
+      break;
+    default:
+      backgroundColor = `${c}.50`;
+      break;
+  }
+
   return {
     content: {
-      bg: mode('white', 'gray.700')(props),
+      bg: backgroundColor,
       border: '1px solid',
       borderColor: 'inherit',
       borderRadius: 'md',
@@ -34,8 +45,10 @@ const baseStyle = function (props: any) {
       borderTopWidth: '1px'
     }
   };
-};
+}
 
-Popover.baseStyle = baseStyle;
+const Popover = {
+  baseStyle
+};
 
 export default Popover;

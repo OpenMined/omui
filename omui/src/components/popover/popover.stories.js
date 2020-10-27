@@ -9,7 +9,7 @@ import {
 
 import { Popover } from './';
 import { Button, Heading, Text, Flex } from '../../';
-import { themeAllPlacements } from '../../theme/helpers';
+import { themeAllPlacements, themeBaseColors } from '../../theme/helpers';
 
 export default { title: 'Components/Popover', decorators: [withKnobs] };
 
@@ -26,6 +26,7 @@ export const Default = () => {
   return (
     <Flex justifyContent="center" alignItems="center" width="100%" height={600}>
       <Popover
+        colorScheme={select('Color', [...themeBaseColors, 'white'], 'white')}
         content={<Content />}
         header={text('Header', 'Confirmation!')}
         footer={text('Footer', 'Awesomesauce.')}

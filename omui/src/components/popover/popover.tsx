@@ -34,9 +34,9 @@ export const Popover = ({
     <PopoverContent>
       {showArrow && <PopoverArrow />}
       {showClose && <PopoverCloseButton mt="0.4rem" />}
-      <PopoverHeader>{header}</PopoverHeader>
+      {header && <PopoverHeader>{header}</PopoverHeader>}
       <PopoverBody>{content}</PopoverBody>
-      {footer && <PopoverFooter>{footer}</PopoverFooter>}
+      {footer && <PopoverFooter color="gray.600">{footer}</PopoverFooter>}
     </PopoverContent>
   </ChakraPopover>
 );

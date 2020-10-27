@@ -2,6 +2,7 @@ import React from 'react';
 import { select, withKnobs } from '@storybook/addon-knobs';
 
 import { Breadcrumb } from './';
+import { themeBaseColors } from '../../theme/helpers';
 
 export default { title: 'Components/Breadcrumb', decorators: [withKnobs] };
 
@@ -24,6 +25,7 @@ export const Default = () => {
   ];
   return (
     <Breadcrumb
+      colorScheme={select('Color', themeBaseColors, 'gray')}
       fontSize={select('Font size', BreadcrumbFontSizes)}
       links={links}
     />
