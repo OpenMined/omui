@@ -31,9 +31,11 @@ export const Alert = ({
     {closable && (
       <CloseButton
         onClick={onClose}
-        position="absolute"
-        right="0.4rem"
-        top="0.4rem"
+        style={{
+          position: 'absolute',
+          right: '0.4rem',
+          top: '0.4rem'
+        }}
       />
     )}
   </ChakraAlert>

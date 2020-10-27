@@ -16,28 +16,33 @@ type LinkProps = ILinkProps & {
 
 type BreadcrumbProps = IBreadcrumbProps & {
   links: LinkProps[];
+  children: React.ReactNode;
 };
 
-const Breadcrumb = ({ links, children, ...props }: BreadcrumbProps) => {
+const Breadcrumb = ({
+  links,
+  colorScheme,
+  children,
+  ...props
+}: BreadcrumbProps) => {
   return (
     <ChakraBreadcrumb
-      fontWeight="medium"
       spacing="2"
-      separator={<ChevronRightIcon color="gray.400" mt="-2px" />}
+      style={{ fontWeight: 500 }}
+      separator={<ChevronRightIcon color={`${colorScheme}.400`} mt="-2px" />}
       {...props}
     >
       {links
         ? links.map(({ href, title, ...link }: LinkProps, index) => {
             const isCurrentPage = index === links.length - 1;
-
             return (
               <BreadcrumbItem isCurrentPage={isCurrentPage} key={title}>
                 {!isCurrentPage && (
                   <Link
                     {...link}
                     href={href}
-                    color="gray.500"
-                    _hover={{ color: 'gray.700' }}
+                    color={`${colorScheme}.500`}
+                    _hover={{ color: `${colorScheme}.700` }}
                   >
                     {title}
                   </Link>
@@ -45,7 +50,7 @@ const Breadcrumb = ({ links, children, ...props }: BreadcrumbProps) => {
                 {isCurrentPage && (
                   <Link
                     {...link}
-                    color="gray.900"
+                    color={`${colorScheme}.900`}
                     _hover={{ color: 'inherit' }}
                     cursor="default"
                   >
