@@ -3,6 +3,7 @@ import {
   OrderedList,
   UnorderedList,
   ListItem,
+  ListIcon,
   ListProps as IListProps
 } from '@chakra-ui/core';
 
@@ -45,4 +46,4 @@ const List = ({ type, items, children, ...props }: ListProps) => {
   return false;
 };
 
-export { List, ListItem };
+export { List, ListItem, ListIcon };
