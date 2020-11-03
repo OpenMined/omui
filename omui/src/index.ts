@@ -164,7 +164,7 @@ export {
 } from './components/stat';
 
 export { Switch } from './components/switch';
-export { Tabs, Tab, TabList, TabPanel, TabPanels } from './components/tabs';
+export { Tabs, TabList, TabPanel, TabPanels } from './components/tabs';
 
 export {
   Tag,
