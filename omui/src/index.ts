@@ -24,7 +24,13 @@
     - https://github.com/storybookjs/storybook/tree/master/addons/storyshots/storyshots-core
 */
 
-export { Accordion, AccordionItem } from './components/accordion';
+export {
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon
+} from './components/accordion';
 
 export {
   Alert,

@@ -43,7 +43,7 @@ type AccordionItemProps = IAccordionItemProps &
     title: string;
   };
 
-export const Accordion = ({
+const Accordion = ({
   children,
   titleWeight,
   titleSize,
@@ -80,11 +80,11 @@ export const Accordion = ({
   );
 };
 
-export const AccordionPanel = ({ children, ...props }: AccordionPanelProps) => (
+const AccordionPanel = ({ children, ...props }: AccordionPanelProps) => (
   <ChakraAccordionPanel {...props}>{children}</ChakraAccordionPanel>
 );
 
-export const AccordionItem = ({
+const AccordionItem = ({
   title,
   children,
   titleWeight,
@@ -115,4 +115,12 @@ export const AccordionItem = ({
       <AccordionPanel fontSize={textSize || 'md'}>{children}</AccordionPanel>
     </ChakraAccordionItem>
   );
+};
+
+export {
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon
 };
