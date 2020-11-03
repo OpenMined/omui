@@ -53,7 +53,13 @@ export { AspectRatio } from './components/aspect-ratio';
 export { Avatar, AvatarBadge, AvatarGroup } from './components/avatar';
 export { Badge } from './components/badge';
 export { Box } from './components/box';
-export { Breadcrumb, BreadcrumbItem } from './components/breadcrumb';
+
+export {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbSeparator
+} from './components/breadcrumb';
+
 export { Button, IconButton, ButtonGroup } from './components/button';
 export { Center, Square, Circle } from './components/center';
 export { Checkbox, CheckboxGroup } from './components/checkbox';
