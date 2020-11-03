@@ -1,5 +1,4 @@
-import chakraTheme from '@chakra-ui/theme';
-import { merge } from '@chakra-ui/utils';
+import { extendTheme } from '@chakra-ui/core';
 
 import components from './components';
 import foundations from './foundations';
@@ -11,7 +10,7 @@ const overrides = {
   styles
 };
 
-const theme = merge(chakraTheme, overrides);
+const theme = extendTheme(overrides);
 
 export type Theme = typeof theme;
 
