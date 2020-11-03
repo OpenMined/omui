@@ -44,7 +44,7 @@ export { Editable } from './components/editable';
 export { VideoEmbed, MapEmbed } from './components/embed';
 export { Flex, Spacer } from './components/flex';
 export { FormControl } from './components/form-control';
-export { Grid, SimpleGrid } from './components/grid';
+export { Grid, GridItem, SimpleGrid } from './components/grid';
 export { Heading } from './components/heading';
 export { Icon, createIcon } from './components/icon';
 export { Image } from './components/image';

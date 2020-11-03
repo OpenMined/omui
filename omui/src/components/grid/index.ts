@@ -1,1 +1,1 @@
-export { Grid, SimpleGrid } from './grid';
+export { Grid, GridItem, SimpleGrid } from './grid';
