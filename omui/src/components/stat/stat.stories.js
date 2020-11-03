@@ -1,12 +1,12 @@
 import React from 'react';
 import { withKnobs, text, select } from '@storybook/addon-knobs';
 
-import { Stats } from './';
+import { Stat } from './';
 
-export default { title: 'Components/Stats', decorators: [withKnobs] };
+export default { title: 'Components/Stat', decorators: [withKnobs] };
 
 export const Default = () => (
-  <Stats
+  <Stat
     stats={[
       {
         label: text('Label 1', 'Revenue'),

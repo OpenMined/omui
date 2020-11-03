@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   StatGroup,
-  Stat,
+  Stat as ChakraStat,
   StatLabel,
   StatNumber,
   StatHelpText,
@@ -23,7 +23,7 @@ type StatGroupProps = {
 const Stat = ({ stats, ...props }: StatGroupProps) => (
   <StatGroup {...props}>
     {stats.map(({ label, value, arrow, help, ...stat }: StatProps) => (
-      <Stat key={label} {...stat}>
+      <ChakraStat key={label} {...stat}>
         <StatLabel>{label}</StatLabel>
         <StatNumber>{value}</StatNumber>
         {help && (
@@ -32,7 +32,7 @@ const Stat = ({ stats, ...props }: StatGroupProps) => (
             {help}
           </StatHelpText>
         )}
-      </Stat>
+      </ChakraStat>
     ))}
   </StatGroup>
 );
