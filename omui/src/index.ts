@@ -83,7 +83,18 @@ export { KeyboardKey } from './components/kbd';
 export { Link } from './components/link';
 export { List, ListItem, ListIcon } from './components/list';
 export { LoaderBlock, LoaderText, LoaderCircle } from './components/loader';
-// export { Menu } from './components/menu';
+export {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuIcon,
+  MenuCommand,
+  MenuDivider
+} from './components/menu';
 export { Modal } from './components/modal';
 export { Popover } from './components/popover';
 export {
