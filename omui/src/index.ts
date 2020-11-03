@@ -60,7 +60,7 @@ export { Radio, RadioGroup } from './components/radio';
 export { Select } from './components/select';
 export { Slider } from './components/slider';
 export { Spinner } from './components/spinner';
-export { Stack } from './components/stack';
+export { Stack, HStack, VStack, StackDivider } from './components/stack';
 export { Stats } from './components/stat';
 export { Switch } from './components/switch';
 export { Tabs, Tab, TabList, TabPanel, TabPanels } from './components/tabs';
