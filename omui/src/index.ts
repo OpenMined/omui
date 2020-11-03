@@ -86,7 +86,13 @@ export {
 } from './components/stat';
 export { Switch } from './components/switch';
 export { Tabs, Tab, TabList, TabPanel, TabPanels } from './components/tabs';
-export { Tag } from './components/tag';
+export {
+  Tag,
+  TagLabel,
+  TagLeftIcon,
+  TagRightIcon,
+  TagCloseButton
+} from './components/tag';
 export { Text, Paragraph } from './components/text';
 export { Textarea } from './components/textarea';
 export { Theme } from './components/theme';
