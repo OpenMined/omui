@@ -20,7 +20,7 @@ type StatGroupProps = {
   stats: StatProps[];
 };
 
-export const Stats = ({ stats, ...props }: StatGroupProps) => (
+const Stat = ({ stats, ...props }: StatGroupProps) => (
   <StatGroup {...props}>
     {stats.map(({ label, value, arrow, help, ...stat }: StatProps) => (
       <Stat key={label} {...stat}>
@@ -36,3 +36,5 @@ export const Stats = ({ stats, ...props }: StatGroupProps) => (
     ))}
   </StatGroup>
 );
+
+export { Stat, StatLabel, StatNumber, StatHelpText, StatArrow, StatGroup };

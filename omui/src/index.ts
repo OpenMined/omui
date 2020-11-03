@@ -76,7 +76,14 @@ export {
 } from './components/slider';
 export { Spinner } from './components/spinner';
 export { Stack, HStack, VStack, StackDivider } from './components/stack';
-export { Stats } from './components/stat';
+export {
+  Stat,
+  StatLabel,
+  StatNumber,
+  StatHelpText,
+  StatArrow,
+  StatGroup
+} from './components/stat';
 export { Switch } from './components/switch';
 export { Tabs, Tab, TabList, TabPanel, TabPanels } from './components/tabs';
 export { Tag } from './components/tag';
