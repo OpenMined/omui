@@ -37,6 +37,7 @@ export { Center, Square, Circle } from './components/center';
 export { Checkbox, CheckboxGroup } from './components/checkbox';
 export { Code, CodeEditor } from './components/code';
 export { Collapse } from './components/collapse';
+export { Container } from './components/container';
 export { Divider } from './components/divider';
 export { Drawer } from './components/drawer';
 export { Editable } from './components/editable';
