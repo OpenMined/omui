@@ -28,7 +28,7 @@ export { Accordion, AccordionItem } from './components/accordion';
 export { Alert } from './components/alert';
 export { AlertBox } from './components/alert-box';
 export { AspectRatio } from './components/aspect-ratio';
-export { Avatar, AvatarGroup } from './components/avatar';
+export { Avatar, AvatarBadge, AvatarGroup } from './components/avatar';
 export { Badge } from './components/badge';
 export { Box } from './components/box';
 export { Breadcrumb, BreadcrumbItem } from './components/breadcrumb';
