@@ -8,7 +8,7 @@ import {
   NumberInputProps
 } from '@chakra-ui/core';
 
-export const NumberInput = (props: NumberInputProps) => {
+const NumberInput = (props: NumberInputProps) => {
   return (
     <ChakraNumberInput {...props}>
       <NumberInputField />
@@ -18,4 +18,12 @@ export const NumberInput = (props: NumberInputProps) => {
       </NumberInputStepper>
     </ChakraNumberInput>
   );
+};
+
+export {
+  NumberInput,
+  NumberInputField,
+  NumberInputStepper,
+  NumberIncrementStepper,
+  NumberDecrementStepper
 };

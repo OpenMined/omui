@@ -48,7 +48,16 @@ export { Grid, GridItem, SimpleGrid } from './components/grid';
 export { Heading } from './components/heading';
 export { Icon, createIcon } from './components/icon';
 export { Image } from './components/image';
-export { Input, NumberInput, PinInput } from './components/input';
+export {
+  Input,
+  NumberInput,
+  NumberDecrementStepper,
+  NumberIncrementStepper,
+  NumberInputField,
+  NumberInputStepper,
+  PinInput,
+  PinInputField
+} from './components/input';
 export { KeyboardKey } from './components/kbd';
 export { Link } from './components/link';
 export { List, ListItem } from './components/list';

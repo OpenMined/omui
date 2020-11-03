@@ -13,7 +13,7 @@ type PinInputProps = IPinInputProps & {
   spacing: number;
 };
 
-export const PinInput = ({ length, spacing, ...props }: PinInputProps) => {
+const PinInput = ({ length, spacing, ...props }: PinInputProps) => {
   const fields = [...Array(length).keys()];
 
   return (
@@ -26,3 +26,5 @@ export const PinInput = ({ length, spacing, ...props }: PinInputProps) => {
     </ChakraPinInput>
   );
 };
+
+export { PinInput, PinInputField };
