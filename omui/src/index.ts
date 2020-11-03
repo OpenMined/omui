@@ -25,7 +25,12 @@
 */
 
 export { Accordion, AccordionItem } from './components/accordion';
-export { Alert } from './components/alert';
+export {
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription
+} from './components/alert';
 export { AlertBox } from './components/alert-box';
 export { AspectRatio } from './components/aspect-ratio';
 export { Avatar, AvatarBadge, AvatarGroup } from './components/avatar';
