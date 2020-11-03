@@ -15,10 +15,7 @@ type CircularProgressProps = ICircularProgressProps & {
   hasLabel?: boolean;
 };
 
-export const CircularProgress = ({
-  hasLabel,
-  ...props
-}: CircularProgressProps) => (
+const CircularProgress = ({ hasLabel, ...props }: CircularProgressProps) => (
   <ChakraCircularProgress {...props}>
     {hasLabel && <CircularProgressLabel>{props.value}%</CircularProgressLabel>}
   </ChakraCircularProgress>
@@ -32,3 +29,5 @@ CircularProgress.defaultProps = {
   trackColor: 'gray.100',
   hasLabel: true
 };
+
+export { CircularProgress, CircularProgressLabel };

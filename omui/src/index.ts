@@ -70,7 +70,11 @@ export { LoaderBlock, LoaderText, LoaderCircle } from './components/loader';
 // export { Menu } from './components/menu';
 export { Modal } from './components/modal';
 export { Popover } from './components/popover';
-export { LinearProgress, CircularProgress } from './components/progress';
+export {
+  LinearProgress,
+  CircularProgress,
+  CircularProgressLabel
+} from './components/progress';
 export { Radio, RadioGroup } from './components/radio';
 export { Select } from './components/select';
 export {
