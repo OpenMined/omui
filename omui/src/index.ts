@@ -59,7 +59,12 @@ export { Popover } from './components/popover';
 export { LinearProgress, CircularProgress } from './components/progress';
 export { Radio, RadioGroup } from './components/radio';
 export { Select } from './components/select';
-export { Slider } from './components/slider';
+export {
+  Slider,
+  SliderFilledTrack,
+  SliderThumb,
+  SliderTrack
+} from './components/slider';
 export { Spinner } from './components/spinner';
 export { Stack, HStack, VStack, StackDivider } from './components/stack';
 export { Stats } from './components/stat';
