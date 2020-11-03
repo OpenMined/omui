@@ -52,7 +52,15 @@ export { Code, CodeEditor } from './components/code';
 export { Collapse } from './components/collapse';
 export { Container } from './components/container';
 export { Divider } from './components/divider';
-export { Drawer } from './components/drawer';
+export {
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton
+} from './components/drawer';
 export { Editable } from './components/editable';
 export { VideoEmbed, MapEmbed } from './components/embed';
 export { Flex, Spacer } from './components/flex';

@@ -26,7 +26,7 @@ type DrawerProps = IDrawerProps & {
   children: React.ReactNode;
 };
 
-export const Drawer = ({
+const Drawer = ({
   disclosure,
   finalRef,
   closeButton = true,
@@ -59,4 +59,14 @@ export const Drawer = ({
 Drawer.defaultProps = {
   placement: 'right',
   size: 'md'
+};
+
+export {
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton
 };
