@@ -11,7 +11,7 @@ import { Wrap, WrapItem } from './';
 
 import { Center } from '../../';
 
-export default { title: 'Components/Wrap', decorators: [withKnobs] };
+export default { title: 'Primitives/Wrap', decorators: [withKnobs] };
 
 export const Default = () => {
   const spacing = number('Spacing (px)', 30, { min: 1 });
