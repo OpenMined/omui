@@ -1,5 +1,5 @@
 {
-  "name": "omui",
+  "name": "@openmined/omui",
   "description": "The OpenMined UI component system for usage in all our web applications",
   "author": "Patrick Cason <patrick@openmined.org>",
   "license": "Apache-2.0",
