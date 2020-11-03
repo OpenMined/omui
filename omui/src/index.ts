@@ -31,6 +31,14 @@ export {
   AlertTitle,
   AlertDescription
 } from './components/alert';
+export {
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay
+} from './components/alert-dialog';
 export { AlertBox } from './components/alert-box';
 export { AspectRatio } from './components/aspect-ratio';
 export { Avatar, AvatarBadge, AvatarGroup } from './components/avatar';
