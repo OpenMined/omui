@@ -17,7 +17,7 @@ export const Default = () => {
     max: 20,
     step: 1
   });
-  const flexDirection = select('Direction', themeFlexDirection, 'row');
+  const flexDirection = select('Direction', themeFlexDirections, 'row');
   const alignItems = select('Align items', themeFlexAlignItems, 'center');
   const justifyContent = select(
     'Justify content',
