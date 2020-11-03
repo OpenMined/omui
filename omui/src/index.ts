@@ -183,4 +183,13 @@ export { Fade, ScaleFade, Slide, SlideFade } from './components/transitions';
 export { Wrap, WrapItem } from './components/wrap';
 
 export { VisuallyHidden, VisuallyHiddenInput } from '@chakra-ui/core';
-export { useDisclosure, useClipboard } from '@chakra-ui/core';
+
+export {
+  useDisclosure,
+  useClipboard,
+  useBreakpointValue,
+  useControllableState,
+  useMediaQuery,
+  useTheme,
+  useToken
+} from '@chakra-ui/core';
