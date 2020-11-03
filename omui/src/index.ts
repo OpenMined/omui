@@ -25,12 +25,14 @@
 */
 
 export { Accordion, AccordionItem } from './components/accordion';
+
 export {
   Alert,
   AlertIcon,
   AlertTitle,
   AlertDescription
 } from './components/alert';
+
 export {
   AlertDialog,
   AlertDialogBody,
@@ -39,6 +41,7 @@ export {
   AlertDialogContent,
   AlertDialogOverlay
 } from './components/alert-dialog';
+
 export { AlertBox } from './components/alert-box';
 export { AspectRatio } from './components/aspect-ratio';
 export { Avatar, AvatarBadge, AvatarGroup } from './components/avatar';
@@ -69,6 +72,7 @@ export { Grid, GridItem, SimpleGrid } from './components/grid';
 export { Heading } from './components/heading';
 export { Icon, createIcon } from './components/icon';
 export { Image } from './components/image';
+
 export {
   Input,
   NumberInput,
@@ -79,10 +83,12 @@ export {
   PinInput,
   PinInputField
 } from './components/input';
+
 export { KeyboardKey } from './components/kbd';
 export { Link } from './components/link';
 export { List, ListItem, ListIcon } from './components/list';
 export { LoaderBlock, LoaderText, LoaderCircle } from './components/loader';
+
 export {
   Menu,
   MenuButton,
@@ -95,6 +101,7 @@ export {
   MenuCommand,
   MenuDivider
 } from './components/menu';
+
 export {
   Modal,
   ModalOverlay,
@@ -104,22 +111,37 @@ export {
   ModalBody,
   ModalCloseButton
 } from './components/modal';
-export { Popover } from './components/popover';
+
+export {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverHeader,
+  PopoverBody,
+  PopoverFooter,
+  PopoverArrow,
+  PopoverCloseButton
+} from './components/popover';
+
 export {
   LinearProgress,
   CircularProgress,
   CircularProgressLabel
 } from './components/progress';
+
 export { Radio, RadioGroup } from './components/radio';
 export { Select } from './components/select';
+
 export {
   Slider,
   SliderFilledTrack,
   SliderThumb,
   SliderTrack
 } from './components/slider';
+
 export { Spinner } from './components/spinner';
 export { Stack, HStack, VStack, StackDivider } from './components/stack';
+
 export {
   Stat,
   StatLabel,
@@ -128,8 +150,10 @@ export {
   StatArrow,
   StatGroup
 } from './components/stat';
+
 export { Switch } from './components/switch';
 export { Tabs, Tab, TabList, TabPanel, TabPanels } from './components/tabs';
+
 export {
   Tag,
   TagLabel,
@@ -137,6 +161,7 @@ export {
   TagRightIcon,
   TagCloseButton
 } from './components/tag';
+
 export { Text, Paragraph } from './components/text';
 export { Textarea } from './components/textarea';
 export { Theme } from './components/theme';

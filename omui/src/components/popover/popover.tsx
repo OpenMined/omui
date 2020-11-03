@@ -20,7 +20,7 @@ type PopoverProps = IPopoverProps & {
   showArrow?: boolean;
 };
 
-export const Popover = ({
+const Popover = ({
   children,
   content,
   header,
@@ -44,4 +44,15 @@ export const Popover = ({
 Popover.defaultProps = {
   showClose: true,
   showArrow: true
+};
+
+export {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverHeader,
+  PopoverBody,
+  PopoverFooter,
+  PopoverArrow,
+  PopoverCloseButton
 };
