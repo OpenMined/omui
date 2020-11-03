@@ -95,7 +95,15 @@ export {
   MenuCommand,
   MenuDivider
 } from './components/menu';
-export { Modal } from './components/modal';
+export {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton
+} from './components/modal';
 export { Popover } from './components/popover';
 export {
   LinearProgress,
