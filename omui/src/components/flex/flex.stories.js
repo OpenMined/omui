@@ -17,7 +17,7 @@ export const Default = () => {
     max: 20,
     step: 1
   });
-  const flexDirection = select('Direction', themeFlexDirection, 'row');
+  const flexDirection = select('Direction', themeFlexDirections, 'row');
   const alignItems = select('Align items', themeFlexAlignItems, 'center');
   const justifyContent = select(
     'Justify content',
@@ -61,8 +61,8 @@ export const GridOfBoxes = () => {
 
   return (
     <Flex bg="blue.100" p={4} direction={direction}>
-      {arrayOfColumnRows.map(() => (
-        <Flex bg="blue.200" width="100%">
+      {arrayOfColumnRows.map((index) => (
+        <Flex key={`flex.${index}`} bg="blue.200" width="100%">
           {arrayOfBoxes.map((_, index) => (
             <Box
               key={index}
