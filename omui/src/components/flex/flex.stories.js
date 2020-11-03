@@ -1,7 +1,7 @@
 import React from 'react';
 import { withKnobs, number, boolean, select } from '@storybook/addon-knobs';
 
-import { Flex } from './';
+import { Flex, Spacer } from './';
 import { Box } from '../../';
 import {
   themeFlexAlignItems,
@@ -76,6 +76,20 @@ export const GridOfBoxes = () => {
           ))}
         </Flex>
       ))}
+    </Flex>
+  );
+};
+
+export const WithSpacer = () => {
+  return (
+    <Flex>
+      <Box p="4" bg="red.400">
+        Box 1
+      </Box>
+      <Spacer />
+      <Box p="4" bg="green.400">
+        Box 2
+      </Box>
     </Flex>
   );
 };

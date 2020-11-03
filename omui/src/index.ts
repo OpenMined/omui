@@ -42,7 +42,7 @@ export { Divider } from './components/divider';
 export { Drawer } from './components/drawer';
 export { Editable } from './components/editable';
 export { VideoEmbed, MapEmbed } from './components/embed';
-export { Flex } from './components/flex';
+export { Flex, Spacer } from './components/flex';
 export { FormControl } from './components/form-control';
 export { Grid, SimpleGrid } from './components/grid';
 export { Heading } from './components/heading';

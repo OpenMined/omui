@@ -1,1 +1,1 @@
-export { Flex } from '@chakra-ui/core';
+export { Flex, Spacer } from '@chakra-ui/core';
