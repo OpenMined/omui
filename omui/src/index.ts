@@ -70,5 +70,6 @@ export { Textarea } from './components/textarea';
 export { Theme } from './components/theme';
 export { useToast } from './components/toast';
 export { Tooltip } from './components/tooltip';
+export { Wrap, WrapItem } from './components/wrap';
 
 export { useDisclosure, useClipboard } from '@chakra-ui/core';
