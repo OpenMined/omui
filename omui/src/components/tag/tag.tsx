@@ -2,7 +2,10 @@ import React from 'react';
 import {
   Tag as ChakraTag,
   TagLabel,
-  TagProps as ITagProps
+  TagProps as ITagProps,
+  TagLeftIcon,
+  TagRightIcon,
+  TagCloseButton
 } from '@chakra-ui/core';
 
 import { CloseButton } from '../close-button';
@@ -15,7 +18,7 @@ type TagProps = ITagProps & {
   onClose?: () => void;
 };
 
-export const Tag = ({
+const Tag = ({
   label,
   closable,
   leftElement,
@@ -30,3 +33,5 @@ export const Tag = ({
     {closable && <CloseButton onClick={onClose} size="sm" ml={2} mr={-2} />}
   </ChakraTag>
 );
+
+export { Tag, TagLabel, TagLeftIcon, TagRightIcon, TagCloseButton };

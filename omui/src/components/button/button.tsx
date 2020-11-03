@@ -2,7 +2,7 @@ import { IconButton as ChakraIconButton } from '@chakra-ui/core';
 
 import { default as ButtonStyle } from './button.style';
 
-export { Button } from '@chakra-ui/core';
+export { Button, ButtonGroup } from '@chakra-ui/core';
 
 export const IconButton = ChakraIconButton;
 

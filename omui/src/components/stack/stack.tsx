@@ -1,1 +1,1 @@
-export { Stack } from '@chakra-ui/core';
+export { Stack, HStack, VStack, StackDivider } from '@chakra-ui/core';

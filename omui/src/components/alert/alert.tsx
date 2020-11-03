@@ -17,7 +17,7 @@ type AlertProps = IAlertProps & {
   onClose?: () => void;
 };
 
-export const Alert = ({
+const Alert = ({
   title,
   closable,
   children,
@@ -47,3 +47,5 @@ Alert.defaultProps = {
   status: 'error',
   closable: true
 };
+
+export { Alert, AlertIcon, AlertTitle, AlertDescription };

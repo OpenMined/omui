@@ -17,13 +17,7 @@ type SliderProps = ISliderProps & {
   showMinMax?: boolean;
 };
 
-export const Slider = ({
-  icon,
-  showMinMax,
-  min,
-  max,
-  ...props
-}: SliderProps) => (
+const Slider = ({ icon, showMinMax, min, max, ...props }: SliderProps) => (
   <>
     <ChakraSlider {...props} min={min} max={max}>
       <SliderTrack>
@@ -53,3 +47,5 @@ Slider.defaultProps = {
   ...SliderStyle.defaultProps,
   showMinMax: true
 };
+
+export { Slider, SliderFilledTrack, SliderThumb, SliderTrack };

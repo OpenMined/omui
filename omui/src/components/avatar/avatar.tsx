@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Avatar as ChakraAvatar,
   AvatarBadge,
+  AvatarGroup,
   AvatarProps as IAvatarProps
 } from '@chakra-ui/core';
 
@@ -11,10 +12,10 @@ type AvatarProps = IAvatarProps & {
   badge?: keyof typeof colors;
 };
 
-export const Avatar = ({ badge, ...props }: AvatarProps) => (
+const Avatar = ({ badge, ...props }: AvatarProps) => (
   <ChakraAvatar {...props}>
     {badge && <AvatarBadge boxSize="1em" bg={`${badge}.500`} />}
   </ChakraAvatar>
 );
 
-export { AvatarGroup } from '@chakra-ui/core';
+export { Avatar, AvatarBadge, AvatarGroup };

@@ -1,7 +1,12 @@
 import React from 'react';
-import { withKnobs, number, select } from '@storybook/addon-knobs';
+import { withKnobs, number, select, boolean } from '@storybook/addon-knobs';
 
-import { Stack } from './';
+import {
+  Stack,
+  VStack as OMVStack,
+  HStack as OMHStack,
+  StackDivider
+} from './';
 import { Box } from '../../';
 
 import sizes from '../../theme/foundations/sizes';
@@ -40,5 +45,56 @@ export const Default = () => {
         </Box>
       ))}
     </Stack>
+  );
+};
+
+export const HStack = () => {
+  const numBoxes = number('Number of boxes in each', 6, {
+    min: 1,
+    max: 20,
+    step: 1
+  });
+
+  const hasDivider = boolean('Divider', false);
+
+  const arrayOfBoxes = [...Array(numBoxes).keys()];
+
+  return (
+    <OMHStack
+      spacing={4}
+      divider={hasDivider && <StackDivider borderColor="gray.200" />}
+    >
+      {arrayOfBoxes.map((_, index) => (
+        <Box key={index} width={200} p={2} bg="blue.400">
+          Box {index + 1}
+        </Box>
+      ))}
+    </OMHStack>
+  );
+};
+
+export const VStack = () => {
+  const numBoxes = number('Number of boxes in each', 6, {
+    min: 1,
+    max: 20,
+    step: 1
+  });
+
+  const hasDivider = boolean('Divider', false);
+
+  const arrayOfBoxes = [...Array(numBoxes).keys()];
+
+  return (
+    <OMVStack
+      spacing={4}
+      align="stretch"
+      divider={hasDivider && <StackDivider borderColor="gray.200" />}
+    >
+      {arrayOfBoxes.map((_, index) => (
+        <Box key={index} h="40px" p={2} bg="blue.400">
+          Box {index + 1}
+        </Box>
+      ))}
+    </OMVStack>
   );
 };

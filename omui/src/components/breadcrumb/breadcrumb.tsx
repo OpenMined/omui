@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Breadcrumb as ChakraBreadcrumb,
   BreadcrumbItem,
+  BreadcrumbSeparator,
   LinkProps as ILinkProps,
   BreadcrumbProps as IBreadcrumbProps
 } from '@chakra-ui/core';
@@ -65,4 +66,4 @@ const Breadcrumb = ({
   );
 };
 
-export { Breadcrumb, BreadcrumbItem };
+export { Breadcrumb, BreadcrumbItem, BreadcrumbSeparator };

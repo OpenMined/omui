@@ -2,7 +2,7 @@ import React from 'react';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import { PhoneIcon, CalendarIcon } from '@chakra-ui/icons';
 
-import { Button, IconButton } from './';
+import { Button, IconButton, ButtonGroup } from './';
 import { Button as ButtonStyle } from '../../theme';
 import { themeBaseColors } from '../../theme/helpers';
 
@@ -50,3 +50,12 @@ export const Icon = () => (
     isLoading={boolean('Is loading?', false)}
   />
 );
+
+export const WithGroup = () => {
+  return (
+    <ButtonGroup variant="outline" spacing="6">
+      <Button colorScheme="blue">Save</Button>
+      <Button>Cancel</Button>
+    </ButtonGroup>
+  );
+};

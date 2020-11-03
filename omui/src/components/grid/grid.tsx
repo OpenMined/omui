@@ -1,1 +1,1 @@
-export { Grid, SimpleGrid } from '@chakra-ui/core';
+export { Grid, SimpleGrid, GridItem } from '@chakra-ui/core';
