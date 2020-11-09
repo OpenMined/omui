@@ -1,2 +1,2 @@
-export { Tabs, TabList, TabPanel, TabPanels, Tab } from './tabs';
+export { Tabs, TabList, TabPanel, TabPanels } from './tabs';
 export { default as TabsStyle } from './tabs.style';
