@@ -17,6 +17,9 @@
     "openmined",
     "ui"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "scripts": {
