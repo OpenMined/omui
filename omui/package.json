@@ -3,7 +3,7 @@
   "description": "The OpenMined UI component system for usage in all our web applications",
   "author": "Patrick Cason <patrick@openmined.org>",
   "license": "Apache-2.0",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "homepage": "https://omui.openmined.org",
   "bugs": "https://github.com/openmined/omui/issues",
   "repository": {
