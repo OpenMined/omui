@@ -7,8 +7,6 @@ import {
   AlertProps as IAlertProps
 } from '@chakra-ui/core';
 
-import { Alert as AlertStyle } from '../../theme';
-
 import { CloseButton } from '../close-button';
 
 type AlertProps = IAlertProps & {
@@ -43,7 +41,6 @@ const Alert = ({
 
 // Additional defaultProps that we cannot set on the style
 Alert.defaultProps = {
-  ...AlertStyle.defaultProps,
   status: 'error',
   closable: true
 };

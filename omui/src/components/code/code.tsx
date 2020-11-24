@@ -3,44 +3,12 @@ import Highlight, { defaultProps, Language } from 'prism-react-renderer';
 import theme from 'prism-react-renderer/themes/vsDark';
 import Editor from 'react-simple-code-editor';
 import { Global, css } from '@emotion/core';
-import Prism from 'prism-react-renderer/prism';
 
 import { Box } from '../box';
 
 import { fonts } from '../../theme/foundations/typography';
 
 theme.plain['fontFamily'] = fonts.mono;
-
-(typeof global !== 'undefined' ? global : window)['Prism'] = Prism;
-
-require('prismjs/components/prism-markup');
-require('prismjs/components/prism-css');
-require('prismjs/components/prism-javascript');
-require('prismjs/components/prism-bash');
-require('prismjs/components/prism-c');
-require('prismjs/components/prism-csharp');
-require('prismjs/components/prism-cpp');
-require('prismjs/components/prism-clojure');
-require('prismjs/components/prism-docker');
-require('prismjs/components/prism-erlang');
-require('prismjs/components/prism-git');
-require('prismjs/components/prism-go');
-require('prismjs/components/prism-graphql');
-require('prismjs/components/prism-java');
-require('prismjs/components/prism-json');
-require('prismjs/components/prism-julia');
-require('prismjs/components/prism-kotlin');
-require('prismjs/components/prism-latex');
-require('prismjs/components/prism-markdown');
-require('prismjs/components/prism-objectivec');
-require('prismjs/components/prism-python');
-require('prismjs/components/prism-r');
-require('prismjs/components/prism-rust');
-require('prismjs/components/prism-jsx');
-require('prismjs/components/prism-tsx');
-require('prismjs/components/prism-swift');
-require('prismjs/components/prism-typescript');
-require('prismjs/components/prism-wasm');
 
 type CodeProps = {
   children: string;
