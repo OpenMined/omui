@@ -29,18 +29,16 @@ const Modal = ({
   ...props
 }: ModalProps) => (
   <SlideFade in={props.isOpen}>
-    {(styles) => (
-      <ChakraModal {...props}>
-        <ModalOverlay opacity={styles.opacity}>
-          <ModalContent {...(styles as ModalContentProps)}>
-            <ModalHeader>{header}</ModalHeader>
-            {showClose && <ModalCloseButton mt="0.4rem" />}
-            <ModalBody>{children}</ModalBody>
-            {footer && <ModalFooter>{footer}</ModalFooter>}
-          </ModalContent>
-        </ModalOverlay>
-      </ChakraModal>
-    )}
+    <ChakraModal {...props}>
+      <ModalOverlay>
+        <ModalContent>
+          <ModalHeader>{header}</ModalHeader>
+          {showClose && <ModalCloseButton mt="0.4rem" />}
+          <ModalBody>{children}</ModalBody>
+          {footer && <ModalFooter>{footer}</ModalFooter>}
+        </ModalContent>
+      </ModalOverlay>
+    </ChakraModal>
   </SlideFade>
 );
 
