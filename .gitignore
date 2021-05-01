@@ -10,6 +10,7 @@ Icon\r
 *.log
 node_modules
 report.*
+tailwind.css
 
 # Framer
 .config.json
