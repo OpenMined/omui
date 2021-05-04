@@ -1,3 +1,170 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap');
+
+@layer base {
+  .text-xsmall {
+    @apply text-xs font-medium font-roboto;
+  }
+
+  .text-small {
+    @apply text-sm font-medium font-roboto;
+  }
+
+  .text-medium {
+    @apply text-md font-medium font-roboto;
+  }
+
+  .text-large {
+    @apply text-lg font-medium font-roboto;
+  }
+
+  .text-xlarge {
+    @apply text-xl font-medium font-rubik;
+  }
+
+  .text-2xlarge {
+    @apply text-2xl font-medium font-rubik;
+  }
+
+  .text-3xlarge {
+    @apply text-3xl font-medium font-rubik;
+  }
+
+  .text-4xlarge {
+    @apply text-4xl font-medium font-rubik;
+  }
+
+  .text-5xlarge {
+    @apply text-5xl font-medium font-rubik;
+  }
+
+  .text-6xlarge {
+    @apply text-6xl font-medium font-rubik;
+  }
+
+  .text-xsmall-bold {
+    @apply text-xs font-bold font-roboto;
+  }
+
+  .text-small-bold {
+    @apply text-sm font-bold font-roboto;
+  }
+
+  .text-medium-bold {
+    @apply text-md font-bold font-roboto;
+  }
+
+  .text-large-bold {
+    @apply text-lg font-bold font-roboto;
+  }
+
+  /* next line heights, add to config and then add to lines */
+
+  .text-xlarge-bold {
+    @apply text-xl font-black font-rubik;
+  }
+
+  .text-2xlarge-bold {
+    @apply text-2xl font-black font-rubik;
+  }
+
+  .text-3xlarge-bold {
+    @apply text-3xl font-black font-rubik;
+  }
+
+  .text-4xlarge-bold {
+    @apply text-4xl font-black font-rubik;
+  }
+
+  .text-5xlarge-bold {
+    @apply text-5xl font-black font-rubik;
+  }
+
+  .text-6xlarge-bold {
+    @apply text-6xl font-black font-rubik;
+  }
+
+  .mono-xsmall {
+    @apply text-xs font-normal font-firacode;
+  }
+
+  .mono-small {
+    @apply text-sm font-normal font-firacode;
+  }
+
+  .mono-medium {
+    @apply text-md font-normal font-firacode;
+  }
+
+  .mono-large {
+    @apply text-lg font-normal font-firacode;
+  }
+
+  .mono-xlarge {
+    @apply text-xl font-medium font-firacode;
+  }
+
+  .mono-2xlarge {
+    @apply text-2xl font-medium font-firacode;
+  }
+
+  .mono-3xlarge {
+    @apply text-3xl font-medium font-firacode;
+  }
+
+  .mono-4xlarge {
+    @apply text-4xl font-medium font-firacode;
+  }
+
+  .mono-5xlarge {
+    @apply text-5xl font-medium font-firacode;
+  }
+
+  .mono-6xlarge {
+    @apply text-6xl font-medium font-firacode;
+  }
+
+  .mono-xsmall-bold {
+    @apply text-xs font-bold font-firacode;
+  }
+
+  .mono-small-bold {
+    @apply text-sm font-bold font-firacode;
+  }
+
+  .mono-medium-bold {
+    @apply text-md font-bold font-firacode;
+  }
+
+  .mono-large-bold {
+    @apply text-lg font-bold font-firacode;
+  }
+
+  .mono-xlarge-bold {
+    @apply text-xl font-bold font-firacode;
+  }
+
+  .mono-2xlarge-bold {
+    @apply text-2xl font-bold font-firacode;
+  }
+
+  .mono-3xlarge-bold {
+    @apply text-3xl font-bold font-firacode;
+  }
+
+  .mono-4xlarge-bold {
+    @apply text-4xl font-bold font-firacode;
+  }
+
+  .mono-5xlarge-bold {
+    @apply text-5xl font-bold font-firacode;
+  }
+
+  .mono-6xlarge-bold {
+    @apply text-6xl font-bold font-firacode;
+  }
+}
