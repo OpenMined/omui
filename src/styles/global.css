@@ -6,6 +6,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap');
 
 @layer base {
+
+  /* Default - regular */
+
   .text-xsmall {
     @apply text-xs font-medium font-roboto;
   }
@@ -46,6 +49,8 @@
     @apply text-6xl font-medium font-rubik;
   }
 
+  /* Default - bold */
+
   .text-xsmall-bold {
     @apply text-xs font-bold font-roboto;
   }
@@ -61,8 +66,6 @@
   .text-large-bold {
     @apply text-lg font-bold font-roboto;
   }
-
-  /* next line heights, add to config and then add to lines */
 
   .text-xlarge-bold {
     @apply text-xl font-black font-rubik;
@@ -88,83 +91,171 @@
     @apply text-6xl font-black font-rubik;
   }
 
+  /* Uppercase - regular */
+
+  .upper-xsmall {
+    @apply text-xs font-medium uppercase font-roboto;
+  }
+
+  .upper-small {
+    @apply text-sm font-medium uppercase font-roboto;
+  }
+
+  .upper-medium {
+    @apply text-md font-medium uppercase font-roboto;
+  }
+
+  .upper-large {
+    @apply text-lg font-medium uppercase font-roboto;
+  }
+
+  .upper-xlarge {
+    @apply text-xl font-medium uppercase font-rubik;
+  }
+
+  .upper-2xlarge {
+    @apply text-2xl font-medium uppercase font-rubik;
+  }
+
+  .upper-3xlarge {
+    @apply text-3xl font-medium uppercase font-rubik;
+  }
+
+  .upper-4xlarge {
+    @apply text-4xl-upper font-medium uppercase font-rubik;
+  }
+
+  .upper-5xlarge {
+    @apply text-5xl-upper font-medium uppercase font-rubik;
+  }
+
+  .upper-6xlarge {
+    @apply text-6xl-upper font-medium uppercase font-rubik;
+  }
+
+  /* Uppercase - bold */
+
+  .upper-xsmall-bold {
+    @apply text-xs font-bold uppercase font-roboto;
+  }
+
+  .upper-small-bold {
+    @apply text-sm font-bold uppercase font-roboto;
+  }
+
+  .upper-medium-bold {
+    @apply text-md font-bold uppercase font-roboto;
+  }
+
+  .upper-large-bold {
+    @apply text-lg font-bold uppercase font-roboto;
+  }
+
+  .upper-xlarge-bold {
+    @apply text-xl font-black uppercase font-rubik;
+  }
+
+  .upper-2xlarge-bold {
+    @apply text-2xl font-black uppercase font-rubik;
+  }
+
+  .upper-3xlarge-bold {
+    @apply text-3xl font-black uppercase font-rubik;
+  }
+
+  .upper-4xlarge-bold {
+    @apply text-4xl-upper font-black uppercase font-rubik;
+  }
+
+  .upper-5xlarge-bold {
+    @apply text-5xl-upper font-black uppercase font-rubik;
+  }
+
+  .upper-6xlarge-bold {
+    @apply text-6xl-upper font-black uppercase font-rubik;
+  }
+
+  /* Monospace - regular */
+
   .mono-xsmall {
-    @apply text-xs font-normal font-firacode;
+    @apply text-xs font-normal uppercase font-firacode;
   }
 
   .mono-small {
-    @apply text-sm font-normal font-firacode;
+    @apply text-sm font-normal uppercase font-firacode;
   }
 
   .mono-medium {
-    @apply text-md font-normal font-firacode;
+    @apply text-md font-normal uppercase font-firacode;
   }
 
   .mono-large {
-    @apply text-lg font-normal font-firacode;
+    @apply text-lg font-normal uppercase font-firacode;
   }
 
   .mono-xlarge {
-    @apply text-xl font-medium font-firacode;
+    @apply text-xl font-medium uppercase font-firacode;
   }
 
   .mono-2xlarge {
-    @apply text-2xl font-medium font-firacode;
+    @apply text-2xl font-medium uppercase font-firacode;
   }
 
   .mono-3xlarge {
-    @apply text-3xl font-medium font-firacode;
+    @apply text-3xl font-medium uppercase font-firacode;
   }
 
   .mono-4xlarge {
-    @apply text-4xl font-medium font-firacode;
+    @apply text-4xl font-medium uppercase font-firacode;
   }
 
   .mono-5xlarge {
-    @apply text-5xl font-medium font-firacode;
+    @apply text-5xl font-medium uppercase font-firacode;
   }
 
   .mono-6xlarge {
-    @apply text-6xl font-medium font-firacode;
+    @apply text-6xl font-medium uppercase font-firacode;
   }
 
+  /* Monospace - bold */
+
   .mono-xsmall-bold {
-    @apply text-xs font-bold font-firacode;
+    @apply text-xs font-bold uppercase font-firacode;
   }
 
   .mono-small-bold {
-    @apply text-sm font-bold font-firacode;
+    @apply text-sm font-bold uppercase font-firacode;
   }
 
   .mono-medium-bold {
-    @apply text-md font-bold font-firacode;
+    @apply text-md font-bold uppercase font-firacode;
   }
 
   .mono-large-bold {
-    @apply text-lg font-bold font-firacode;
+    @apply text-lg font-bold uppercase font-firacode;
   }
 
   .mono-xlarge-bold {
-    @apply text-xl font-bold font-firacode;
+    @apply text-xl font-bold uppercase font-firacode;
   }
 
   .mono-2xlarge-bold {
-    @apply text-2xl font-bold font-firacode;
+    @apply text-2xl font-bold uppercase font-firacode;
   }
 
   .mono-3xlarge-bold {
-    @apply text-3xl font-bold font-firacode;
+    @apply text-3xl font-bold uppercase font-firacode;
   }
 
   .mono-4xlarge-bold {
-    @apply text-4xl font-bold font-firacode;
+    @apply text-4xl font-bold uppercase font-firacode;
   }
 
   .mono-5xlarge-bold {
-    @apply text-5xl font-bold font-firacode;
+    @apply text-5xl font-bold uppercase font-firacode;
   }
 
   .mono-6xlarge-bold {
-    @apply text-6xl font-bold font-firacode;
+    @apply text-6xl font-bold uppercase font-firacode;
   }
 }
