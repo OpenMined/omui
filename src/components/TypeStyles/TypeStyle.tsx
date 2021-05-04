@@ -3,7 +3,7 @@ import cn from 'classnames'
 import type {ComponentProps} from 'react'
 
 // minor example
-export function TypeFace(props: ComponentProps<'typeface'>) {
+export function TypeStyle(props: ComponentProps<'typestyle'>) {
   return (
     <>
       <h1 className="text-4xlarge my-4">Default</h1>
