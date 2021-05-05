@@ -1,9 +1,7 @@
 import React from 'react'
-import cn from 'classnames'
-import type {ComponentProps} from 'react'
 
 // minor example
-export function TypeStyle(props: ComponentProps<'typestyle'>) {
+export function TypeStyle() {
   return (
     <>
       <h1 className="text-4xlarge my-4">Default</h1>
