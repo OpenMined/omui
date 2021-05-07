@@ -51,23 +51,17 @@ export function Text({
   }
 
   if (uppercase && ['4xl', '5xl', '6xl'].includes(size)) {
-    switch (size) {
-      case '4xl':
-        fontSize = `${fontSize}-upper`
-      case '5xl':
-        fontSize = `${fontSize}-upper`
-      case '6xl':
-        fontSize = `${fontSize}-upper`
+    if (size == '4xl') {
+      fontSize = 'text-4xl-upper'
+    } else if (size == '5xl') {
+      fontSize = 'text-5xl-upper'
+    } else {
+      fontSize = 'text-6xl-upper'
     }
   }
 
   if (mono && ['4xl', '5xl'].includes(size)) {
-    switch (size) {
-      case '4xl':
-        fontSize = `${fontSize}-mono`
-      case '5xl':
-        fontSize = `${fontSize}-mono`
-    }
+    fontSize = size == '4xl' ? 'text-4xl-mono' : 'text-5xl-mono'
   }
 
   const classes = cn(fontFamily, fontWeight, fontSize, className, underlined, uppercased)
