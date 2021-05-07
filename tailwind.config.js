@@ -1,3 +1,5 @@
+const omuiColors = require('./src/styles/colors')
+
 module.exports = {
   purge: ['src/**/*.{js,jsx,ts,tsx}'],
   darkMode: false, // or 'media' or 'class'
@@ -21,6 +23,13 @@ module.exports = {
       '6xl': ['4rem', '1.1'],
       '6xl-upper': ['4rem', '1.3'],
       '7xl': '5rem'
+    },
+    colors: {
+      ...omuiColors,
+      current: 'currentColor',
+      black: '#000',
+      white: '#fff',
+      transparent: 'transparent'
     },
     extend: {
       fontFamily: {
