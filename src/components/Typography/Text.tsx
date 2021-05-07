@@ -10,6 +10,9 @@ export function Text({
   as = 'h1',
   size = 'md',
   bold = false,
+  uppercase = false,
+  underline = false,
+  mono = false,
   className,
   children,
   ...props
@@ -17,11 +20,18 @@ export function Text({
   as: TextComponent
   size: TextSizes
   bold: boolean
+  uppercase: boolean
+  underline: boolean
+  mono: boolean
   className: string
 }>) {
-  const fontFamily = ['xs', 'sm', 'md', 'lg'].includes(size) ? 'font-roboto' : 'font-rubik'
+  const underlined = underline ? 'underline' : ''
 
-  const fontSize = `text-${size}`
+  let uppercased = uppercase ? 'uppercase' : ''
+
+  let fontSize = `text-${size}`
+
+  let fontFamily = ['xs', 'sm', 'md', 'lg'].includes(size) ? 'font-roboto' : 'font-rubik'
 
   let fontWeight: FontWeight
 
@@ -31,7 +41,36 @@ export function Text({
     fontWeight = bold ? 'font-black' : 'font-medium'
   }
 
-  const classes = cn(fontFamily, fontWeight, fontSize, className)
+  if (mono) {
+    fontFamily = 'fira-code'
+    uppercased = 'uppercase'
+  }
+
+  if (mono && bold) {
+    fontWeight = 'font-bold'
+  }
+
+  if (uppercase && ['4xl', '5xl', '6xl'].includes(size)) {
+    switch (size) {
+      case '4xl':
+        fontSize = `${fontSize}-upper`
+      case '5xl':
+        fontSize = `${fontSize}-upper`
+      case '6xl':
+        fontSize = `${fontSize}-upper`
+    }
+  }
+
+  if (mono && ['4xl', '5xl'].includes(size)) {
+    switch (size) {
+      case '4xl':
+        fontSize = `${fontSize}-mono`
+      case '5xl':
+        fontSize = `${fontSize}-mono`
+    }
+  }
+
+  const classes = cn(fontFamily, fontWeight, fontSize, className, underlined, uppercased)
 
   return React.createElement(as, {className: classes, ...props}, children)
 }
