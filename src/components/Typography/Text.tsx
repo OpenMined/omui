@@ -64,7 +64,7 @@ export function Text({
     fontSize = size == '4xl' ? 'text-4xl-mono' : 'text-5xl-mono'
   }
 
-  const classes = cn(fontFamily, fontWeight, fontSize, className, underlined, uppercased)
+  const classes = cn(fontFamily, fontWeight, fontSize, underlined, uppercased, className)
 
   return React.createElement(as, {className: classes, ...props}, children)
 }
