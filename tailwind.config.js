@@ -1,8 +1,10 @@
 const omuiColors = require('./src/styles/colors')
+const themes = require('./src/themes')
 
 module.exports = {
   purge: ['src/**/*.{js,jsx,ts,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class',
+  presets: [require('./src/themes/cyan')],
   theme: {
     fontSize: {
       xs: ['.75rem', '1.6'],
@@ -26,21 +28,33 @@ module.exports = {
     },
     colors: {
       ...omuiColors,
-      current: 'currentColor',
-      black: '#000',
       white: '#fff',
+      black: '#000',
+      'gradient-white': 'rgba(255, 255, 255, 0.5)',
+      'gradient-mostly-black': 'rgba(0, 0, 0, 0.75)'
+    },
+    fill: {
       transparent: 'transparent'
     },
     extend: {
+      boxShadow: {
+        'icon-border': '0 0 1px transparent',
+        'button-focus': '0px 0px 8px 1px text-primary-500'
+      },
       fontFamily: {
         roboto: ['"Roboto"', 'sans-serif'],
         rubik: ['"Rubik"', 'sans-serif'],
         firacode: ['"Fira Code"', 'monospace']
+      },
+      dropShadow: {
+        'button-hover': '-4px 4px 8px --color-primary-500'
       }
     }
   },
   variants: {
-    extend: {}
+    extend: {
+      dropShadow: ['hover', 'focus']
+    }
   },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/aspect-ratio')]
 }
