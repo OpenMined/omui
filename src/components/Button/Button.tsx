@@ -1,6 +1,5 @@
 import React from 'react'
 import cn from 'classnames'
-import type {PropsWithChildren} from 'react'
 
 type ButtonStyles = 'gray' | 'primary' | 'outline' | 'ghost' | 'link'
 type ButtonSizes = 'xs' | 'sm' | 'md' | 'lg' | 'responsive'
@@ -19,76 +18,62 @@ export function Button({
   size = 'md',
   status = 'normal',
   outline = 'square',
+  disabled,
   className,
-  children,
   ...props
-}: PropsWithChildren<{
+}: {
   style: ButtonStyles
   size: ButtonSizes
   status: ButtonStatus
   outline: ButtonOutline
-  className: String
-}>) {
+  className: string
+  disabled: boolean
+}) {
   const buttonSize = buttonSizes[size]
-  const fonts = 'font-bold font-roboto'
-  const linkHover = style === 'link' ? 'hover:underline hover:cursor-pointer' : ''
-  const radius = outline == 'square' ? 'rounded' : 'rounded-full'
-  const opacity = status == 'disabled' ? 'opacity-40' : 'opacity-100'
+  const fontWeight = 'font-bold'
+  const linkHover = style === 'link' ? 'inline-block hover:underline cursor-pointer' : ''
+  const radius = outline === 'square' ? 'rounded' : 'rounded-full'
 
-  let hover = 'hover:bg-gradient-to-r hover:from-white hover:to-transparent'
-  let textColor = 'text-cyan-600'
+  let hover = 'hover:from-gradient-white'
+  let textColor = 'text-primary-600'
   let backgroundColor = 'bg-transparent'
   let borderColor = 'border-transparent'
 
-  if (style == 'primary' || style == 'outline') {
-    borderColor = 'border-cyan-600'
-  }
+  let buttonClasses = ''
 
-  if (style == 'gray') {
-    textColor = 'text-primary-200'
-    backgroundColor = 'bg-gray-800'
-  }
-
-  if (style == 'primary') {
+  if (style === 'gray') {
+    buttonClasses = 'bg-gray-800 bg-gradient-to-r text-primary-200'
+  } else if (style === 'primary') {
     textColor = 'text-white'
-    backgroundColor = 'bg-cyan-500'
-  }
-
-  if (style == 'outline') {
-    const border = size == 'md' || size == 'lg' ? 'border-2' : 'border'
-    borderColor = `border-cyan-500 ${border}`
-    hover = 'hover:bg-primary-500 hover:text-white'
-  }
-
-  if (style == 'ghost') {
+    backgroundColor = 'bg-primary-500 bg-gradient-to-r'
+    borderColor = 'border-primary-600'
+  } else if (style === 'outline') {
+    const border = size === 'md' || size === 'lg' ? 'border-2' : 'border'
+    borderColor = `border-primary-500 ${border}`
+    backgroundColor = 'hover:bg-primary-500'
+    textColor = `${textColor} hover:text-white`
+  } else if (style == 'ghost') {
     hover = 'hover:bg-primary-100'
   }
 
   const classes = cn(
-    'flex items-center text-center',
-    fonts,
+    'flex items-center text-center space-x-2',
+    fontWeight,
     buttonSize,
     textColor,
     borderColor,
     backgroundColor,
     linkHover,
     radius,
-    opacity,
     hover,
+    buttonClasses,
+    disabled && 'opacity-40 cursor-not-allowed',
     className
   )
 
   if (style === 'link') {
-    return (
-      <a {...props} className={classes}>
-        {children}
-      </a>
-    )
+    return <a {...props} className={classes} />
   }
 
-  return (
-    <button {...props} className={classes}>
-      {children}
-    </button>
-  )
+  return <button {...props} className={classes} />
 }

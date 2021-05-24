@@ -50,8 +50,9 @@ const Template: Story = args => {
   return (
     <>
       <Button {...args}>
-        <Icon {...args} icon={RandomIcon} /> Button
-        <Icon {...args} icon={RandomIcon} />
+        <Icon {...args} style="ghost" icon={RandomIcon} />
+        <span>Button</span>
+        <Icon {...args} style="ghost" icon={RandomIcon} />
       </Button>
     </>
   )
