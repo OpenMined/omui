@@ -33,27 +33,22 @@ export function Button({
   const fontWeight = 'font-bold'
   const linkHover = style === 'link' ? 'inline-block hover:underline cursor-pointer' : ''
   const radius = outline === 'square' ? 'rounded' : 'rounded-full'
+  const textColor = 'text-primary-600'
+  const backgroundColor = 'bg-transparent'
+  const borderColor = 'border-transparent'
 
   let hover = 'hover:from-gradient-white'
-  let textColor = 'text-primary-600'
-  let backgroundColor = 'bg-transparent'
-  let borderColor = 'border-transparent'
-
-  let buttonClasses = ''
+  let buttonClasses = `${textColor} ${backgroundColor} ${borderColor}`
 
   if (style === 'gray') {
-    buttonClasses = 'bg-gray-800 bg-gradient-to-r text-primary-200'
+    buttonClasses = 'text-primary-200 bg-gray-800 bg-gradient-to-r'
   } else if (style === 'primary') {
-    textColor = 'text-white'
-    backgroundColor = 'bg-primary-500 bg-gradient-to-r'
-    borderColor = 'border-primary-600'
+    buttonClasses = 'text-white bg-primary-500 bg-gradient-to-r border-primary-600'
   } else if (style === 'outline') {
     const border = size === 'md' || size === 'lg' ? 'border-2' : 'border'
-    borderColor = `border-primary-500 ${border}`
-    backgroundColor = 'hover:bg-primary-500'
-    textColor = `${textColor} hover:text-white`
-  } else if (style == 'ghost') {
-    hover = 'hover:bg-primary-100'
+    buttonClasses = `${textColor} hover:text-white border-primary-500 hover:bg-primary-500 ${border}`
+  } else if (style === 'ghost') {
+    hover += ' hover:bg-primary-100'
   }
 
   const classes = cn(
