@@ -14,132 +14,51 @@ const messageIcon = () => (
   </svg>
 )
 
-const smSmileyIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M14 0.9375C6.50781 0.9375 0.4375 7.00781 0.4375 14.5C0.4375 21.9922 6.50781 28.0625 14 28.0625C21.4922 28.0625 27.5625 21.9922 27.5625 14.5C27.5625 7.00781 21.4922 0.9375 14 0.9375ZM18.375 10.125C19.3047 10.125 20.125 10.9453 20.125 11.875C20.125 12.8594 19.3047 13.625 18.375 13.625C17.3906 13.625 16.625 12.8594 16.625 11.875C16.625 10.9453 17.3906 10.125 18.375 10.125ZM9.625 10.125C10.5547 10.125 11.375 10.9453 11.375 11.875C11.375 12.8594 10.5547 13.625 9.625 13.625C8.64062 13.625 7.875 12.8594 7.875 11.875C7.875 10.9453 8.64062 10.125 9.625 10.125ZM20.2344 19.4766C18.7031 21.3359 16.4062 22.375 14 22.375C11.5391 22.375 9.24219 21.3359 7.71094 19.4766C6.94531 18.5469 8.3125 17.4531 9.02344 18.3281C10.2812 19.8047 12.0859 20.625 14 20.625C15.9141 20.625 17.6641 19.8047 18.9219 18.3281C19.6328 17.4531 21 18.5469 20.2344 19.4766Z"
-      fill="#2D2B3A"
-    />
-  </svg>
-)
-
-const mdSmileyIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M14 0.9375C6.50781 0.9375 0.4375 7.00781 0.4375 14.5C0.4375 21.9922 6.50781 28.0625 14 28.0625C21.4922 28.0625 27.5625 21.9922 27.5625 14.5C27.5625 7.00781 21.4922 0.9375 14 0.9375ZM18.375 10.125C19.3047 10.125 20.125 10.9453 20.125 11.875C20.125 12.8594 19.3047 13.625 18.375 13.625C17.3906 13.625 16.625 12.8594 16.625 11.875C16.625 10.9453 17.3906 10.125 18.375 10.125ZM9.625 10.125C10.5547 10.125 11.375 10.9453 11.375 11.875C11.375 12.8594 10.5547 13.625 9.625 13.625C8.64062 13.625 7.875 12.8594 7.875 11.875C7.875 10.9453 8.64062 10.125 9.625 10.125ZM20.2344 19.4766C18.7031 21.3359 16.4062 22.375 14 22.375C11.5391 22.375 9.24219 21.3359 7.71094 19.4766C6.94531 18.5469 8.3125 17.4531 9.02344 18.3281C10.2812 19.8047 12.0859 20.625 14 20.625C15.9141 20.625 17.6641 19.8047 18.9219 18.3281C19.6328 17.4531 21 18.5469 20.2344 19.4766Z"
-      fill="#2D2B3A"
-    />
-  </svg>
-)
-
-const userMessage = () => {
-  return (
-    <>
-      <hr />
-      <div className="p-3">
-        <Icon icon={messageIcon} style="ghost" />
-      </div>
-      <Text as="p" size="sm" className="p-3 text-gray-600">
-        Not seeing an answer to your specific question? Go to our{' '}
-        <Text as="a" underline={true} href="#" size="sm" className="text-primary-600">
-          discussion boad
-        </Text>{' '}
-        to get extra assistance.
-      </Text>
-    </>
-  )
-}
-
-const links = [
-  {
-    title: 'Text Here',
-    target: 'https://openmined.org',
-    disabled: false
-  },
-  {
-    title: 'Text Here',
-    target: 'https://openmined.org',
-    disabled: true
-  },
-  {
-    title: 'Text Here',
-    target: 'https://openmined.org',
-    disabled: false,
-    subtitle: 'Text Here'
-  },
-  {
-    title: 'Text Here',
-    target: 'https://openmined.org',
-    disabled: true,
-    subtitle: 'Text Here'
-  },
-  {
-    title: 'Text Here',
-    target: 'https://openmined.org',
-    disabled: false,
-    number: 1
-  },
-  {
-    title: 'Text Here',
-    target: 'https://openmined.org',
-    disabled: true,
-    number: 1
-  },
-  {
-    title: 'Text Here',
-    target: 'https://openmined.org',
-    icon: mdSmileyIcon,
-    subtitle: 'Text Here'
-  },
-  {
-    title: 'Text Here',
-    target: 'https://openmined.org',
-    icon: smSmileyIcon
-  },
-  {
-    title: 'Text Here',
-    target: 'https://openmined.org',
-    disabled: false,
-    avatar:
-      'https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light'
-  }
-]
-
-const prereqs = [
-  {
-    title: 'Text Here',
-    target: 'https://openmined.org',
-    disabled: false
-  },
-  {
-    title: 'Text Here',
-    target: 'https://openmined.org',
-    disabled: true
-  }
-]
-
 export function Sidebar({
-  heading = 'Heading 5',
-  hasMessage = true,
+  heading = '',
+  hasMessage = false,
+  borderLeft = false,
+  links,
+  prereqs,
   className,
 
   ...props
 }: {
   heading: string
   hasMessage: boolean
+  borderLeft: boolean
   icon: React.ReactType
+  links: []
+  prereqs: []
 
   className: string
   disabled: boolean
 }) {
-  const classes = cn('text-primary-600', className)
-
   const numberClasses = 'rounded-full bg-gray-800 text-gray-50 text-sm w-5 h-5 leading-snug'
+  const containerClasses = `sm:w-1/3 lg:w-1/4 ${borderLeft ? 'border-l-2 pl-6' : ''}`
+
+  const userMessage = () => {
+    return (
+      <>
+        <hr />
+        <div className="py-4">
+          <Icon icon={messageIcon} style="ghost" />
+        </div>
+        <Text as="p" size="sm" className="text-gray-600">
+          Not seeing an answer to your specific question? Go to our{' '}
+          <Text as="a" underline={true} href="#" size="sm" className="text-primary-600">
+            discussion boad
+          </Text>{' '}
+          to get extra assistance.
+        </Text>
+      </>
+    )
+  }
 
   const mapPrerequisites = prereqs => {
     return prereqs.map(prereq => (
-      <li>
-        <Text as="a" className="text-gray-600 hover:underline hover:text-primary-600" href="link.target" size="md">
+      <li className="pb-2">
+        <Text as="a" className="text-gray-600 hover:underline hover:text-primary-600" href={prereq.target} size="sm">
           {prereq.title}
         </Text>
       </li>
@@ -169,18 +88,24 @@ export function Sidebar({
   }
 
   return (
-    <div className="w-1/3">
-      {heading && <H5>{heading}</H5>}
-      <hr />
-      <ul>{mapLinks(links)}</ul>
-      <hr />
-      {prereqs && (
-        <Text as="h3" size="md" bold={true} className="text-gray-800">
-          Pre-Requisites
-        </Text>
+    <div className={containerClasses}>
+      {heading && (
+        <>
+          <H5 className="pb-1">{heading}</H5>
+          <hr />
+        </>
       )}
-      <ul className="list-disc p-6">{prereqs && mapPrerequisites(prereqs)}</ul>
+      <ul className="py-2">{links && mapLinks(links)}</ul>
       {hasMessage && userMessage()}
+      {prereqs && (
+        <div className="pt-4">
+          <hr />
+          <Text as="h3" size="md" bold={true} className="py-4 text-gray-800">
+            Pre-Requisites
+          </Text>
+        </div>
+      )}
+      <ul className="list-disc pl-6 pb-6">{prereqs && mapPrerequisites(prereqs)}</ul>
     </div>
   )
 }

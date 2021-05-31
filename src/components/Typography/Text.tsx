@@ -2,7 +2,7 @@ import React from 'react'
 import cn from 'classnames'
 import type {PropsWithChildren} from 'react'
 
-type TextComponent = 'p' | 'span' | 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+type TextComponent = 'p' | 'span' | 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'a'
 type TextSizes = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl'
 type FontWeight = 'font-medium' | 'font-normal' | 'font-black' | 'font-bold'
 
