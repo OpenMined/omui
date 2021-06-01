@@ -96,14 +96,14 @@ const Template: Story = args => {
     <div className="flex">
       <div className="sm:w-1/2">
         <Sidebar {...args} links={simpleLinks} heading="Heading 5" />
-        <Sidebar {...args} links={iconLinks} heading="Heading 5" />
+        <Sidebar {...args} links={iconLinks} progressPct={50} heading="Heading 5" />
         <br />
         <br />
         <Sidebar {...args} links={numberLinks} hasMessage={true} />
       </div>
       <div className="sm:w-1/2">
         <Sidebar {...args} links={avatarLinks} heading="Heading 5" />
-        <Sidebar {...args} links={iconLinks24} heading="Heading 5" />
+        <Sidebar {...args} links={iconLinks24} heading="Heading 5" progressPct={25} />
         <br />
         <br />
         <Sidebar {...args} links={iconLinks24} borderLeft={true} hasMessage={true} prereqs={prereqs} />

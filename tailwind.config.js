@@ -48,6 +48,10 @@ module.exports = {
       },
       dropShadow: {
         'button-hover': '-4px 4px 8px --color-primary-500'
+      },
+      strokeWidth: {
+        5: '5',
+        6: '6'
       }
     }
   },

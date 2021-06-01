@@ -4,6 +4,7 @@ import {H5, Text} from '../Typography/Text'
 import {Button} from '../Button/Button'
 import {Icon} from '../Icons/Icon'
 import {Avatar} from '../Avatar/Avatar'
+import {ProgressCircle} from '../ProgressCircle/ProgressCircle'
 
 const messageIcon = () => (
   <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,6 +19,7 @@ export function Sidebar({
   heading = '',
   hasMessage = false,
   borderLeft = false,
+  progressPct,
   links,
   prereqs,
   className,
@@ -27,6 +29,7 @@ export function Sidebar({
   heading: string
   hasMessage: boolean
   borderLeft: boolean
+  progressPct: number
   icon: React.ReactType
   links: []
   prereqs: []
@@ -106,6 +109,12 @@ export function Sidebar({
         </div>
       )}
       <ul className="list-disc pl-6 pb-6">{prereqs && mapPrerequisites(prereqs)}</ul>
+      {progressPct && (
+        <>
+          <hr />
+          {ProgressCircle(progressPct)}
+        </>
+      )}
     </div>
   )
 }
