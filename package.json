@@ -22,13 +22,9 @@
     "lint:fix": "eslint --fix .",
     "format": "pretty-quick --staged",
     "storybook": "start-storybook -p 6006",
+    "test": "jest",
     "build:storybook": "build-storybook",
     "build:tailwind": "postcss src/styles/global.css -o tailwind.css"
-  },
-  "jest": {
-    "transform": {
-      "^.+\\.[t|j]sx?$": "babel-jest"
-    }
   },
   "husky": {
     "hooks": {
@@ -54,7 +50,11 @@
     "@storybook/react": "^6.2.9",
     "@tailwindcss/aspect-ratio": "^0.2.0",
     "@tailwindcss/forms": "^0.3.2",
+    "@testing-library/jest-dom": "^5.13.0",
+    "@testing-library/react": "^11.2.7",
     "@types/classnames": "^2.3.1",
+    "@types/jest": "^26.0.23",
+    "@types/jest-in-case": "^1.0.3",
     "@types/react": "16.9.41",
     "@types/react-dom": "^16.9.8",
     "@types/tailwindcss": "^2.0.2",
@@ -62,16 +62,18 @@
     "@typescript-eslint/parser": "^3.4.0",
     "autoprefixer": "^10.2.5",
     "babel-eslint": "10.1.0",
-    "babel-jest": "^26.6.3",
+    "babel-jest": "^27.0.2",
     "babel-loader": "^8.1.0",
     "eslint": "^7.25.0",
-    "eslint-plugin-jest-dom": "^3.0.1",
+    "eslint-plugin-jest-dom": "^3.9.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.5",
     "eslint-plugin-testing-library": "^3.3.1",
     "goober": "^2.0.37",
     "husky": "^4.2.5",
+    "jest": "^27.0.4",
+    "jest-in-case": "^1.0.2",
     "parcel": "^2.0.0-beta.1",
     "postcss": "^8.2.13",
     "postcss-cli": "^8.3.1",
@@ -82,6 +84,7 @@
     "react-dom": "^17.0.2",
     "source-map-explorer": "^2.4.2",
     "tailwindcss": "^2.1.2",
+    "ts-jest": "^27.0.3",
     "ts-loader": "^7.0.5",
     "typescript": "^3.9.5"
   }

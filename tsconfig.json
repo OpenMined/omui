@@ -25,6 +25,6 @@
       "@/*": ["*"]
     }
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "test/jest-setup.js"],
   "exclude": ["node_modules", "build", "dist", "src/**/*.stories.js", "src/**/*.test.js"]
 }
