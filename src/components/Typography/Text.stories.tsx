@@ -1,14 +1,14 @@
 import React from 'react'
 import {Story, Meta} from '@storybook/react'
 
-import {Text, H1, H2, H3, H4, H5, H6, TextSizeType, TextProps} from './Text'
+import {Text, H1, H2, H3, H4, H5, H6, TextSizeProp, TextProps} from './Text'
 
 export default {
   title: 'Atoms/Type',
   component: Text
 } as Meta
 
-const types = ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl', '6xl'] as TextSizeType[]
+const types = ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl', '6xl'] as TextSizeProp[]
 
 const Template: Story<TextProps> = args => (
   <>

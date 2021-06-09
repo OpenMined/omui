@@ -2,47 +2,51 @@ import React from 'react'
 import cn from 'classnames'
 import type {PropsWithChildren} from 'react'
 
-export type TextAsType = 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
-export type TextSizeType = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl'
+export type TextAsProp = 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+export type TextSizeProp = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl'
 
 interface Props {
   /**
-   * The element of the text (default as `p`)
+   * The HTML element of the component.
+   * @defaultValue p
+   *
    */
-  as?: TextAsType
+  as?: TextAsProp
   /**
-   * The size of the text (default as `md`)
+   * The font size of the text.
+   * @defaultValue md
+   *
    */
-  size?: TextSizeType
+  size?: TextSizeProp
   /**
-   * Defines if the text should be bold
+   * Defines if the text should be bold.
    */
   bold?: boolean
   className?: string
 }
 
-interface TextAsMonoProps {
+interface TextMonoProps {
   /**
-   * Defines if the text should be mono faced
+   * Defines if the font family should be monospaced.
    */
   mono?: true
   underline?: never
   uppercase?: never
 }
 
-interface TextAsRegularProps {
+interface TextRegularProps {
   mono?: false
   /**
-   * Defines if the text should be underlined
+   * Defines if the text should be underlined.
    */
   underline?: boolean
   /**
-   * Defines if the text should be uppercased
+   * Defines if the text should be uppercased.
    */
   uppercase?: boolean
 }
 
-type DefaultProps<T> = PropsWithChildren<T & (TextAsMonoProps | TextAsRegularProps)>
+type DefaultProps<T> = PropsWithChildren<T & (TextMonoProps | TextRegularProps)>
 
 export type TextProps = DefaultProps<Props>
 
@@ -57,20 +61,20 @@ export function Text({
   children,
   ...props
 }: TextProps) {
-  const smallSized = React.useMemo(() => ['xs', 'sm', 'md', 'lg'].includes(size), [size])
+  const isRoboto = React.useMemo(() => ['xs', 'sm', 'md', 'lg'].includes(size), [size])
 
   const underlined = {underline: underline && !mono}
   const uppercased = {uppercase: uppercase || mono}
   const fontFamily = {
-    'font-roboto': smallSized && !mono,
-    'font-rubik': !smallSized && !mono,
+    'font-roboto': isRoboto && !mono,
+    'font-rubik': !isRoboto && !mono,
     'font-firacode': mono
   }
   const fontWeight = {
-    'font-normal': smallSized && !bold,
-    'font-medium': !smallSized && !bold,
-    'font-bold': (smallSized && bold) || (mono && bold),
-    'font-black': !smallSized && bold && !mono
+    'font-normal': isRoboto && !bold,
+    'font-medium': !isRoboto && !bold,
+    'font-bold': (isRoboto && bold) || (mono && bold),
+    'font-black': !isRoboto && bold && !mono
   }
 
   const uppercaseCustomRule = uppercase && ['4xl', '5xl', '6xl'].includes(size) && !mono
