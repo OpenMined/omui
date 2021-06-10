@@ -1,20 +1,20 @@
 import React, {PropsWithRef} from 'react'
 import cn from 'classnames'
 
-export type VariantProp = 'gray' | 'primary' | 'tertiary' | 'quaternary' | 'danger' | 'success'
-export type TypeProp = 'outline' | 'subtle' | 'solid'
+export type BadgeVariantProp = 'gray' | 'primary' | 'tertiary' | 'quaternary' | 'danger' | 'success'
+export type BadgeTypeProp = 'outline' | 'subtle' | 'solid'
 
 interface Props extends React.HTMLAttributes<HTMLSpanElement> {
   /**
    * The variant of the badge.
    * @defaultValue primary
    */
-  variant: VariantProp
+  variant: BadgeVariantProp
   /**
    * The type of the badge.
    * @defaultValue outline
    */
-  type: TypeProp
+  type: BadgeTypeProp
 }
 
 export type BadgeProps = PropsWithRef<Props>
