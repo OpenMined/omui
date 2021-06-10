@@ -5,7 +5,7 @@
         "jsx": true
       }
     },
-    "plugins": ["@typescript-eslint", "react-hooks"],
+    "plugins": ["@typescript-eslint", "react-hooks", "jest-dom"],
     "extends": [
       "plugin:@typescript-eslint/eslint-recommended",
       "plugin:@typescript-eslint/recommended"
