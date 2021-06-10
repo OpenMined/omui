@@ -1,38 +1,54 @@
 import React from 'react'
 import cn from 'classnames'
 
-export type AvatarProps = {
-  ratio?: '16:9' | '4:3' | '1:1'
-  orientation?: 'portrait' | 'landscape'
+export type RatioProp = '16:9' | '4:3' | '3:2' | '1:1'
+export type OrientationProp = 'portrait' | 'landscape'
+export type LoadingProp = 'lazy' | 'eager' | 'auto'
+
+export type ImageProps = {
+  /**
+   * The alt attribute of the image, required for a11y purposes
+   */
+  alt: string
+  /**
+   * The aspect ratio of the image.
+   * @defaultValue 16:9
+   */
+  ratio?: RatioProp
+  loading?: LoadingProp
+  /**
+   * The orientation of the image.
+   * If landscape=portrait, the aspect ratio will be reversed (16:9 → 9:16)
+   * @defaultValue landscape
+   */
+  orientation?: OrientationProp
+  containerProps?: React.ComponentProps<'div'>
+  containerClassName?: string
 } & React.ComponentProps<'img'>
 
-const ratios = {
-  '16:9': 'aspect-w-16 aspect-h-9',
-  '9:16': 'aspect-w-9 aspect-h-16',
-  '4:3': 'aspect-w-4 aspect-h-3',
-  '3:4': 'aspect-w-3 aspect-h-4',
-  '3:2': 'aspect-w-3 aspect-h-2',
-  '2:3': 'aspect-w-2 aspect-h-3',
-  '1:1': 'aspect-w-1 aspect-h-1'
-}
-
 export function Image({
-  src = '',
+  alt,
   orientation = 'landscape',
   ratio = '16:9',
+  containerClassName,
   className,
-  children,
+  containerProps,
   ...props
-}: AvatarProps) {
-  const aspectRatio = orientation === 'landscape' ? ratio : ratio.split(':')?.reverse().join(':')
-  const bg = 'bg-gradient-to-tr from-primary-200 to-error-200'
-  const opacity = 'hover:opacity-50'
+}: ImageProps) {
+  const splittedRatio = ratio.split(':')
+  const ratioByOrientation = orientation === 'landscape' ? splittedRatio : splittedRatio.reverse()
 
-  const classes = cn(ratios[aspectRatio], opacity, bg)
+  const aspectClasses = `aspect-w-${ratioByOrientation[0]} aspect-h-${ratioByOrientation[1]}`
+
+  const containerClasses = cn(
+    'bg-gradient-to-tr from-primary-200 to-error-200 hover:opacity-50 color-transparent',
+    aspectClasses,
+    containerProps?.className
+  )
 
   return (
-    <div className={classes}>
-      <img src={src} className="object-cover object-center" {...props} />
+    <div className={containerClasses} {...containerProps}>
+      <img alt={alt} className={cn('object-cover object-center', className)} {...props} />
     </div>
   )
 }
