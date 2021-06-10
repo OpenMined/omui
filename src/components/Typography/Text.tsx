@@ -45,7 +45,10 @@ interface TextRegularProps {
    */
   uppercase?: boolean
 }
-
+/**
+ * Wrapper for Text default props.
+ * @typeParam T - Props that do not have discriminated union.
+ */
 type DefaultProps<T> = PropsWithChildren<T & (TextMonoProps | TextRegularProps)>
 
 export type TextProps = DefaultProps<Props>
