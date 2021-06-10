@@ -1,40 +1,36 @@
-import React from 'react'
+import React, {PropsWithRef} from 'react'
 import cn from 'classnames'
 
-export type RatioProp = '16:9' | '4:3' | '3:2' | '1:1'
-export type OrientationProp = 'portrait' | 'landscape'
-export type LoadingProp = 'lazy' | 'eager' | 'auto'
+export type ImageRatioProp = '16:9' | '4:3' | '3:2' | '1:1'
+export type ImageOrientationProp = 'portrait' | 'landscape'
+export type ImageLoadingProp = 'lazy' | 'eager' | 'auto'
 
-export type ImageProps = {
-  /**
-   * The alt attribute of the image, required for a11y purposes
-   */
-  alt: string
-  /**
-   * The aspect ratio of the image.
-   * @defaultValue 16:9
-   */
-  ratio?: RatioProp
-  loading?: LoadingProp
-  /**
-   * The orientation of the image.
-   * If landscape=portrait, the aspect ratio will be reversed (16:9 → 9:16)
-   * @defaultValue landscape
-   */
-  orientation?: OrientationProp
-  containerProps?: React.ComponentProps<'div'>
-  containerClassName?: string
-} & React.ComponentProps<'img'>
+export type ImageProps = PropsWithRef<
+  {
+    /**
+     * The alt attribute of the image, required for a11y purposes.
+     */
+    alt: string
+    /**
+     * The aspect ratio of the image.
+     * @defaultValue 16:9
+     */
+    ratio?: ImageRatioProp
+    loading?: ImageLoadingProp
+    /**
+     * The orientation of the image.
+     * If landscape = portrait, the aspect ratio will be reversed (16:9 → 9:16).
+     * @defaultValue landscape
+     */
+    orientation?: ImageOrientationProp
+    containerProps?: React.ComponentProps<'div'>
+  } & React.ComponentProps<'img'>
+>
 
-export function Image({
-  alt,
-  orientation = 'landscape',
-  ratio = '16:9',
-  containerClassName,
-  className,
-  containerProps,
-  ...props
-}: ImageProps) {
+const Image = React.forwardRef<HTMLDivElement, ImageProps>(function Image(
+  {alt, orientation = 'landscape', ratio = '16:9', className, containerProps, ...props},
+  ref
+) {
   const splittedRatio = ratio.split(':')
   const ratioByOrientation = orientation === 'landscape' ? splittedRatio : splittedRatio.reverse()
 
@@ -47,8 +43,10 @@ export function Image({
   )
 
   return (
-    <div className={containerClasses} {...containerProps}>
+    <div {...containerProps} className={containerClasses} ref={ref}>
       <img alt={alt} className={cn('object-cover object-center', className)} {...props} />
     </div>
   )
-}
+})
+
+export {Image}
