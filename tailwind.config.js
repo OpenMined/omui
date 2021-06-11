@@ -48,9 +48,6 @@ module.exports = {
       },
       dropShadow: {
         'button-hover': '-4px 4px 8px --color-primary-500'
-      },
-      lineHeight: {
-        4.5: '1.125rem'
       }
     }
   },
