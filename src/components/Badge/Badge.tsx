@@ -5,7 +5,7 @@ import type {HTMLAttributes, PropsWithRef} from 'react'
 export type BadgeVariantProp = 'gray' | 'primary' | 'tertiary' | 'quaternary' | 'danger' | 'success'
 export type BadgeTypeProp = 'outline' | 'subtle' | 'solid'
 
-interface Props extends HTMLAttributes<HTMLSpanElement> {
+interface Props extends HTMLAttributes<HTMLDivElement> {
   /**
    * The variant of the badge.
    * @defaultValue primary
@@ -29,26 +29,44 @@ const colorByVariant = {
   success: 'success'
 }
 
-const defaultClass = 'border font-roboto text-xs font-bold px-1.5 py-0.5 rounded-sm'
+/**
+ * All possible Badge types in OMUI.
+ */
+type Badges = {
+  [k in BadgeVariantProp]: {
+    [o in BadgeTypeProp]: string
+  }
+}
 
-const Badge = forwardRef<HTMLSpanElement, Props>(function Badge(
+const badges: Badges = Object.assign(
+  {},
+  ...Object.keys(colorByVariant).map(variant => {
+    const color = colorByVariant[variant]
+    return {
+      [variant]: {
+        outline: [
+          'py-px border',
+          `border-${color}-500 text-${color}-600 dark:border-${color}-200 dark:text-${color}-200`
+        ],
+        subtle: ['py-0.5', `bg-${color}-100 text-${color}-600`],
+        solid: ['py-0.5', color === 'gray' ? `text-primary-200 bg-gray-800` : `text-white bg-${color}-500`]
+      }
+    }
+  })
+)
+
+const defaultClass = 'inline-block h-5.5 font-roboto text-xs font-bold px-1.5 rounded-sm leading-normal'
+
+const Badge = forwardRef<HTMLDivElement, Props>(function Badge(
   {className, children, variant = 'primary', type = 'outline', ...props},
   ref
 ) {
-  const color = colorByVariant[variant]
-
-  const types = {
-    outline: [`border-${color}-600 text-${color}-600 dark:border-${color}-200 dark:text-${color}-200`],
-    subtle: [`border-${color}-100 bg-${color}-100 text-${color}-600`],
-    solid: [`border-${color}-500 bg-${color}-500 ${color === 'gray' ? 'text-primary-200' : 'text-white'}`]
-  }
-
-  const classes = cn(defaultClass, types[type], className)
+  const classes = cn(defaultClass, badges[variant]?.[type], className)
 
   return (
-    <span className={classes} ref={ref} {...props}>
+    <div className={classes} ref={ref} {...props}>
       {children}
-    </span>
+    </div>
   )
 })
 
