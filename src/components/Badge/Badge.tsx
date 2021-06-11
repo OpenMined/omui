@@ -1,10 +1,11 @@
-import React, {PropsWithRef} from 'react'
+import React, {forwardRef} from 'react'
 import cn from 'classnames'
+import type {HTMLAttributes, PropsWithRef} from 'react'
 
 export type BadgeVariantProp = 'gray' | 'primary' | 'tertiary' | 'quaternary' | 'danger' | 'success'
 export type BadgeTypeProp = 'outline' | 'subtle' | 'solid'
 
-interface Props extends React.HTMLAttributes<HTMLSpanElement> {
+interface Props extends HTMLAttributes<HTMLSpanElement> {
   /**
    * The variant of the badge.
    * @defaultValue primary
@@ -30,7 +31,7 @@ const colorByVariant = {
 
 const defaultClass = 'border font-roboto text-xs font-bold px-1.5 py-0.5 rounded-sm'
 
-const Badge = React.forwardRef<HTMLSpanElement, Props>(function Badge(
+const Badge = forwardRef<HTMLSpanElement, Props>(function Badge(
   {className, children, variant = 'primary', type = 'outline', ...props},
   ref
 ) {
