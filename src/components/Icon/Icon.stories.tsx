@@ -1,7 +1,8 @@
 import React from 'react'
 import {Story, Meta} from '@storybook/react'
 
-import {Icon} from './Icon'
+import {Icon, IconContainerProp} from './Icon'
+import type {IconProps, IconVariantProp, IconSizeProp} from './Icon'
 
 const RandomIcon = ({className}: {className: string}) => (
   <svg className={className} role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
@@ -12,11 +13,37 @@ const RandomIcon = ({className}: {className: string}) => (
   </svg>
 )
 
-const Template: Story = args => <Icon {...args} icon={RandomIcon} />
+export const Template: Story<Omit<IconProps, 'ref'>> = args => <Icon {...args} icon={RandomIcon} />
 
+const size = ['xs', 'sm', 'md', 'lg', 'xl'].reverse() as IconSizeProp[]
+const container = ['square', 'round'] as IconContainerProp[]
+
+export const AllIcons: Story<Omit<IconProps, 'ref' & 'key'>> = (_, {argTypes}) => {
+  const {variant} = argTypes
+  return (
+    <div className="space-y-12">
+      {container.map((c: IconContainerProp) => (
+        <div className="space-y-4">
+          {variant.options.map((v: IconVariantProp) => (
+            <div className="flex items-center space-x-4">
+              {size.map((s: IconSizeProp) => (
+                <Icon container={c} size={s} variant={v} icon={RandomIcon} />
+              ))}
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  )
+}
 export default {
   title: 'Atoms/Icon',
   component: Icon
 } as Meta
 
-export const Default = Template.bind({})
+AllIcons.parameters = {
+  controls: {}
+}
+
+// export const Default = Template.bind({})
+// export const iconSet = AllIcons.bind({})
