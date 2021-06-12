@@ -1,11 +1,12 @@
 import React from 'react'
 import cn from 'classnames'
+import type {ElementType, ComponentPropsWithoutRef} from 'react'
 
-type IconSizeProp = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'custom'
-type IconVariantProp = 'gray' | 'solid' | 'subtle' | 'outline' | 'ghost'
-type IconContainerProp = 'round' | 'square'
+export type IconSizeProp = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+export type IconVariantProp = 'gray' | 'solid' | 'subtle' | 'outline' | 'ghost'
+export type IconContainerProp = 'round' | 'square'
 
-export type IconProps = {
+export interface IconProps {
   /**
    * The size of the icon.
    * @defaultValue md
@@ -21,22 +22,41 @@ export type IconProps = {
    * @defaultValue round
    */
   container?: IconContainerProp
-  icon: React.ElementType
-  containerProps?: React.ComponentPropsWithoutRef<'span'>
-  containerClassName?: string
+  /**
+   * The React Component containing the SVG icon
+   * @defaultValue null
+   */
+  icon: ElementType
+  /**
+   * Props that are passed to the <span> component placed before the icon
+   */
+  containerProps?: ComponentPropsWithoutRef<'span'>
+  /**
+   * Optional classes that are passed to the Icon component
+   */
   className?: string
 }
 
-const VARIANTS = {
-  OUTLINE:
-    'bg-transparent shadow-icon-border border-primary-500 border dark:border-primary-200 text-primary-500 dark:text-primary-200',
-  GRAY: 'bg-gray-800 text-primary-200',
-  SOLID: 'bg-primary-500 text-white',
-  SUBTLE: 'bg-primary-200 text-primary-600',
-  GHOST: 'text-primary-500'
+type Variants = {
+  [k in IconVariantProp]: string
 }
 
-const SIZES = {
+const variants: Variants = {
+  outline:
+    'bg-transparent shadow-icon-border border-primary-500 border dark:border-primary-200 text-primary-500 dark:text-primary-200',
+  gray: 'bg-gray-800 text-primary-200',
+  solid: 'bg-primary-500 text-white',
+  subtle: 'bg-primary-200 text-primary-600',
+  ghost: 'text-primary-500'
+}
+
+type Sizes = {
+  [k in 'container' | 'icon']: {
+    [o in IconSizeProp]: string
+  }
+}
+
+const sizes: Sizes = {
   container: {
     xs: 'w-6 h-6',
     sm: 'w-8 h-8',
@@ -53,34 +73,34 @@ const SIZES = {
   }
 }
 
+type Borders = {
+  [k in IconContainerProp]: string
+}
+
+const borders: Borders = {
+  round: 'rounded-full',
+  square: 'rounded-md'
+}
+
+const defaultClasses = 'flex items-center justify-center'
+
 const Icon = React.forwardRef<HTMLSpanElement, IconProps>(function Icon(
   {size = 'md', variant = 'solid', container = 'round', icon: IconElement, className, containerProps, ...props},
   ref
 ) {
-  const variants = {
-    [VARIANTS.OUTLINE]: variant === 'outline',
-    [VARIANTS.GRAY]: variant === 'gray',
-    [VARIANTS.SOLID]: variant === 'solid',
-    [VARIANTS.SUBTLE]: variant === 'subtle',
-    [VARIANTS.GHOST]: variant === 'ghost'
-  }
-  const borderRadius = {
-    'rounded-full': container === 'round',
-    'rounded-md': container === 'square'
-  }
-
-  const containerClassNames = cn(
-    'flex items-center justify-center',
-    variants,
-    borderRadius,
-    SIZES.container[size],
+  const containerClasses = cn(
+    defaultClasses,
+    variants[variant],
+    borders[container],
+    sizes.container[size],
     containerProps?.className
   )
-  const iconClassNames = cn(SIZES.icon[size], className)
+
+  const iconClasses = cn(sizes.icon[size], className)
 
   return (
-    <span {...containerProps} className={containerClassNames} ref={ref}>
-      <IconElement className={iconClassNames} {...props} />
+    <span {...containerProps} className={containerClasses} ref={ref}>
+      <IconElement className={iconClasses} {...props} />
     </span>
   )
 })
