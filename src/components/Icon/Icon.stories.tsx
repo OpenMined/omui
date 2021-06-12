@@ -16,7 +16,7 @@ const RandomIcon = ({className}: {className: string}) => (
 export const Template: Story = args => <Icon {...args} icon={RandomIcon} />
 
 const size = ['xs', 'sm', 'md', 'lg', 'xl'].reverse() as IconSizeProp[]
-const container = ['square', 'round'] as IconContainerProp[]
+const container: IconContainerProp[] = ['square', 'round']
 
 export const AllIcons: Story = (_, {argTypes}) => {
   const {variant} = argTypes
