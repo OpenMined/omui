@@ -38,12 +38,14 @@ export interface IconProps {
 }
 
 type Variants = {
-  [k in IconVariantProp]: string
+  [k in IconVariantProp]: string | string[]
 }
 
 const variants: Variants = {
-  outline:
-    'bg-transparent shadow-icon-border border-primary-500 border dark:border-primary-200 text-primary-500 dark:text-primary-200',
+  outline: [
+    'bg-transparent shadow-icon-border',
+    'border-primary-500 border dark:border-primary-200 text-primary-500 dark:text-primary-200'
+  ],
   gray: 'bg-gray-800 text-primary-200',
   solid: 'bg-primary-500 text-white',
   subtle: 'bg-primary-200 text-primary-600',
@@ -52,7 +54,7 @@ const variants: Variants = {
 
 type Sizes = {
   [k in 'container' | 'icon']: {
-    [o in IconSizeProp]: string
+    [o in IconSizeProp]: string | string[]
   }
 }
 
