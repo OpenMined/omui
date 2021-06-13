@@ -51,20 +51,19 @@ const Image = React.forwardRef<HTMLDivElement, ImageProps>(function Image(
   {alt = '', orientation = 'landscape', ratio = '16:9', className, containerProps, ...props},
   ref
 ) {
-  const splittedRatio = ratio.split(':')
-  const ratioByOrientation = orientation === 'landscape' ? splittedRatio : splittedRatio.reverse()
-
-  const aspectClasses = `aspect-w-${ratioByOrientation[0]} aspect-h-${ratioByOrientation[1]}`
-
+  const role = alt ? 'img' : 'presentation'
+  const splitRatio = ratio.split(':')
+  const ratioByOrientation = orientation === 'landscape' ? splitRatio : splitRatio.reverse()
   const containerClasses = cn(
-    'bg-gradient-to-tr from-primary-200 to-error-200 hover:opacity-50 color-transparent',
-    aspectClasses,
+    defaultContainerClasses,
+    validAspectRatios[ratioByOrientation.join(':')],
     containerProps?.className
   )
+  const classes = cn(defaultImageClasses, className)
 
   return (
     <div {...containerProps} className={containerClasses} ref={ref}>
-      <img alt={alt} className={cn('object-cover object-center', className)} {...props} />
+      <img className={classes} {...props} alt={alt} role={role} />
     </div>
   )
 })
