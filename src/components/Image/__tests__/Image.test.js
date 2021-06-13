@@ -5,7 +5,7 @@ import cases from 'jest-in-case'
 import {Image} from '../Image'
 
 cases(
-  'Validate image aspect ratios and orientations',
+  'styles:classes',
   ({params, result}) => {
     render(<Image containerProps={{'data-testid': 'test-id'}} {...params} />)
 
@@ -26,11 +26,20 @@ cases(
   ]
 )
 
-describe('Validate a11y', () => {
-  test('Should pass with no axe violations', async () => {
-    const {container} = render(<Image containerProps={{'data-testid': 'test-id'}} alt="Alternative text" />)
+describe('accessibility', () => {
+  test('Image has role=img when alt text is set and no other axe violations', async () => {
+    const {container, getByRole} = render(<Image containerProps={{'data-testid': 'test-id'}} alt="Alternative text" />)
+    const img = getByRole('img')
+    expect(img).toBeInTheDocument()
     const results = await axe(container)
+    expect(results).toHaveNoViolations()
+  })
 
+  test('Image has role=presentation when no alt text is set and no other axe violations', async () => {
+    const {container, getByRole} = render(<Image containerProps={{'data-testid': 'test-id'}} />)
+    const img = getByRole('presentation')
+    expect(img).toBeInTheDocument()
+    const results = await axe(container)
     expect(results).toHaveNoViolations()
   })
 })
