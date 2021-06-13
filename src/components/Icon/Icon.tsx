@@ -35,6 +35,13 @@ export interface IconProps {
    * Optional classes that are passed to the Icon component
    */
   className?: string
+  /** Icon title for accessibility purposes. Only to be used if the icon is a standalone, meaningful
+   * icon. If you're using SVGs, please add a <g aria-hidden> wrapper or similar to the element. The
+   * icon element will receive the following attributes: aria-hidden="false" role="img"
+   * focusable="false" and aria-label={title}. All attributes can be overwritten by passing them as
+   * props to the Icon component.
+   */
+  title?: string
 }
 
 type Variants = {
@@ -87,7 +94,7 @@ const borders: Borders = {
 const defaultClasses = 'flex items-center justify-center'
 
 const Icon = React.forwardRef<HTMLSpanElement, IconProps>(function Icon(
-  {size = 'md', variant = 'solid', container = 'round', icon: IconElement, className, containerProps, ...props},
+  {size = 'md', variant = 'solid', container = 'round', icon: IconElement, className, containerProps, title, ...props},
   ref
 ) {
   const containerClasses = cn(
@@ -102,7 +109,14 @@ const Icon = React.forwardRef<HTMLSpanElement, IconProps>(function Icon(
 
   return (
     <span {...containerProps} className={containerClasses} ref={ref}>
-      <IconElement className={iconClasses} {...props} />
+      <IconElement
+        className={iconClasses}
+        focusable={false}
+        aria-hidden={!title}
+        aria-label={title}
+        role={title ? 'img' : 'presentation'}
+        {...props}
+      />
     </span>
   )
 })
