@@ -11,5 +11,15 @@ module.exports = {
         }
       }
     }
-  ]
+  ],
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      shouldExtractLiteralValuesFromEnum: true,
+      compilerOptions: {
+        allowSyntheticDefaultImports: true,
+        esModuleInterop: true
+      }
+    }
+  }
 }
