@@ -42,7 +42,7 @@ describe('accessibility', () => {
     const component = await findByRole('img')
     expect(component).toHaveAttribute('aria-label', title)
     expect(component).toHaveAttribute('focusable', 'false')
-    expect(component).toHaveAttribute('aria-hidden', 'false')
+    expect(component).not.toHaveAttribute('aria-hidden', 'true')
     expect(await axe(container)).toHaveNoViolations()
   })
 
