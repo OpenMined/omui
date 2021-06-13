@@ -3,7 +3,6 @@ import cn from 'classnames'
 
 export type ImageRatioProp = '16:9' | '4:3' | '3:2' | '1:1'
 export type ImageOrientationProp = 'portrait' | 'landscape'
-export type ImageLoadingProp = 'lazy' | 'eager' | 'auto'
 
 export type ImageProps = PropsWithRef<
   {
@@ -16,7 +15,6 @@ export type ImageProps = PropsWithRef<
      * @defaultValue 16:9
      */
     ratio?: ImageRatioProp
-    loading?: ImageLoadingProp
     /**
      * The orientation of the image.
      * If landscape = portrait, the aspect ratio will be reversed (16:9 → 9:16).
