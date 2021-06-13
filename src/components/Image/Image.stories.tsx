@@ -1,11 +1,31 @@
 import React from 'react'
-import {Story, Meta} from '@storybook/react'
-import {Image, ImageProps} from './Image'
+import {Image} from './Image'
+import type {ImageProps} from './Image'
+import type {Story, Meta} from '@storybook/react'
 
 const Template: Story<ImageProps> = args => {
   return (
     <div className="w-2/4">
-      <Image orientation={args.orientation ?? 'landscape'} {...args} />
+      <Image {...args} />
+    </div>
+  )
+}
+
+const MultiTemplate: Story<ImageProps> = args => {
+  return (
+    <div className="w-1/4 space-y-6">
+      <div className="w-1/4">
+        <Image {...args} />
+      </div>
+      <div className="w-2/4">
+        <Image {...args} />
+      </div>
+      <div className="w-3/4">
+        <Image {...args} />
+      </div>
+      <div className="w-full">
+        <Image {...args} />
+      </div>
     </div>
   )
 }
@@ -13,27 +33,25 @@ const Template: Story<ImageProps> = args => {
 export default {
   title: 'Atoms/Images',
   component: Image,
-  parameters: {controls: {sort: 'requiredFirst'}},
-  argTypes: {
-    orientation: ['landscape', 'portrait'],
-    src: {
-      mapping: {
-        Invalid: undefined,
-        Fox: 'https://images.unsplash.com/photo-1623288749528-e40a033da0f7',
-        Building: 'https://images.unsplash.com/photo-1588892487050-67d92a5f4136'
-      },
-      defaultValue: 'Fox',
-      control: {
-        options: ['Invalid', 'Fox', 'Building'],
-        labels: {
-          Invalid: 'Invalid',
-          Fox: 'Fox',
-          Building: 'Building'
-        },
-        type: 'select'
-      }
+  parameters: {
+    controls: {
+      include: ['alt', 'ratio', 'orientation']
     }
   }
 } as Meta
 
-export const Default = Template.bind({})
+export const emptyImage = Template.bind({})
+
+export const imageOfAFox = Template.bind({})
+imageOfAFox.args = {
+  ...emptyImage.args,
+  alt: 'A beautiful fox',
+  src: 'https://images.unsplash.com/photo-1623288749528-e40a033da0f7'
+}
+
+export const imageOfAFoxInDifferentlySizedContainers = MultiTemplate.bind({})
+imageOfAFoxInDifferentlySizedContainers.args = {
+  ...emptyImage.args,
+  alt: 'A beautiful fox',
+  src: 'https://images.unsplash.com/photo-1623288749528-e40a033da0f7'
+}
