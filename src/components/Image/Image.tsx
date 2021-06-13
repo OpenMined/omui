@@ -1,9 +1,9 @@
-import React, {PropsWithRef} from 'react'
+import React from 'react'
 import cn from 'classnames'
+import type {PropsWithRef} from 'react'
 
 export type ImageRatioProp = '16:9' | '4:3' | '3:2' | '1:1'
 export type ImageOrientationProp = 'portrait' | 'landscape'
-
 export type ImageProps = PropsWithRef<
   {
     /**
@@ -19,12 +19,13 @@ export type ImageProps = PropsWithRef<
     ratio?: ImageRatioProp
     /**
      * The orientation of the image.
+     *
      * If landscape = portrait, the aspect ratio will be reversed (16:9 → 9:16).
      * @defaultValue landscape
      */
     orientation?: ImageOrientationProp
     /**
-     * Props passed to a <div> that engulfs the image.
+     * Props passed to a div that engulfs the image.
      */
     containerProps?: React.ComponentProps<'div'>
   } & React.ComponentProps<'img'>
@@ -33,7 +34,6 @@ export type ImageProps = PropsWithRef<
 type ValidAspectRatios = {
   [k in ImageRatioProp | '9:16' | '3:4' | '2:3']: string | string[]
 }
-
 const validAspectRatios: ValidAspectRatios = {
   '1:1': 'aspect-w-1 aspect-h-1',
   '2:3': 'aspect-w-2 aspect-h-3',
