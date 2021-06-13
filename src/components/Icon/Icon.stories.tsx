@@ -13,12 +13,12 @@ const RandomIcon = ({className}: {className: string}) => (
   </svg>
 )
 
-export const Template: Story = args => <Icon {...args} icon={RandomIcon} />
+export const Template: Story<IconProps> = args => <Icon {...args} icon={RandomIcon} />
 
 const size = ['xs', 'sm', 'md', 'lg', 'xl'].reverse() as IconSizeProp[]
 const container: IconContainerProp[] = ['square', 'round']
 
-export const AllIcons: Story = (_, {argTypes}) => {
+export const AllIcons: Story<IconProps> = (_, {argTypes}) => {
   const {variant} = argTypes
   return (
     <div className="space-y-12">
