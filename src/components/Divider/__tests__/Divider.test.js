@@ -1,47 +1,62 @@
 import {render, screen} from '@testing-library/react'
 import cases from 'jest-in-case'
+import {axe} from 'jest-axe'
 
 import {Divider} from '../Divider'
 
-cases(
-  'Validate Divider aria attribute',
-  ({params, result}) => {
-    render(<Divider data-testid="test-id" {...params} />)
-
-    const dividerElement = screen.getByTestId('test-id')
-    expect(dividerElement).toHaveAttribute('aria-orientation', result)
-  },
-  [
-    {
-      name: 'Should render aria attribute correctly',
-      params: {},
-      result: 'horizontal'
-    },
-    {
-      name: 'Should render aria attribute correctly',
-      params: {orientation: 'horizontal'},
-      result: 'horizontal'
-    },
-    {
-      name: 'Should render aria attribute correctly',
-      params: {orientation: 'vertical'},
-      result: 'vertical'
-    }
-  ]
-)
-
-describe('Validate Divider role attribute', () => {
-  test('Should not have aria role when component is a hr', () => {
-    render(<Divider data-testid="test-id" />)
-
-    const dividerElement = screen.getByTestId('test-id')
-    expect(dividerElement).not.toHaveAttribute('role')
+describe('accessibility', () => {
+  test('No accessibility violation caught', async () => {
+    const {container} = render(<Divider />)
+    const result = await axe(container)
+    expect(result).toHaveNoViolations()
   })
 
-  test('Should have role separator when component has children', () => {
-    render(<Divider data-testid="test-id" children="OMUI" />)
+  cases(
+    'accesibility:aria-orientation',
+    ({params, result}) => {
+      render(<Divider data-testid="test-id" {...params} />)
+      const dividerElement = screen.getByTestId('test-id')
+      expect(dividerElement).toHaveAttribute('aria-orientation', result)
+    },
+    [
+      {
+        name: 'Default props, divider aria-orientation is horizontal',
+        params: {},
+        result: 'horizontal'
+      },
+      {
+        name: 'Prop orientation="horizontal", then aria-orientation=horizontal',
+        params: {orientation: 'horizontal'},
+        result: 'horizontal'
+      },
+      {
+        name: 'Prop orientation="vertical", then aria-orientation=vertical',
+        params: {orientation: 'vertical'},
+        result: 'vertical'
+      }
+    ]
+  )
 
-    const dividerElement = screen.getByTestId('test-id')
-    expect(dividerElement).toHaveAttribute('role', 'separator')
-  })
+  cases(
+    'accesibility:role',
+    ({params}) => {
+      render(<Divider data-testid="test-id" {...params} />)
+      const dividerElement = screen.getByTestId('test-id')
+      expect(dividerElement).toHaveAttribute('role', 'separator')
+    },
+    [
+      {
+        name: 'Default props',
+        params: {}
+      },
+      {
+        name: 'Prop orientation="horizontal", then aria-orientation=horizontal',
+        params: {orientation: 'horizontal'}
+      },
+      {
+        name: 'Prop orientation="vertical", then aria-orientation=vertical',
+        params: {orientation: 'vertical'}
+      }
+    ]
+  )
 })
