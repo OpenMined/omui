@@ -1,9 +1,11 @@
 import React, {SVGProps, useContext} from 'react'
 import cn from 'classnames'
 import {Avatar} from '../Avatar/Avatar'
-import {Text, TextSizeProp} from '../Typography/Text'
-import {Icon} from '../Icons/Icon'
+import {Text} from '../Typography/Text'
+import {Icon} from '../Icon/Icon'
 import type {ElementType, HTMLAttributes, HTMLProps, PropsWithRef} from 'react'
+import type {IconSizeProp} from '../Icon/Icon'
+import type {TextSizeProp} from '../Typography/Text'
 
 export type ListVariantProps = 'bullet' | 'number' | 'avatar' | 'progress' | 'icon' | 'contained'
 export type ListSizeProp = 'md' | 'lg' | 'xl' | '2xl' | '3xl'
@@ -169,11 +171,11 @@ const ListProgressItem = ({className, children, ...props}: HTMLProps<HTMLLIEleme
 export type ListContainedProps = HTMLProps<HTMLLIElement> & {containedValue: number | string}
 
 const containedTextSize: ListByStringSizes<string> = {
-  md: 'xs',
-  lg: 'sm',
-  xl: 'md',
-  '2xl': 'lg',
-  '3xl': 'xl'
+  md: 'text-xs',
+  lg: 'text-sm',
+  xl: 'text-md',
+  '2xl': 'text-lg',
+  '3xl': 'text-xl'
 }
 
 const ListContainedItem = ({containedValue, className, children, ...props}: ListContainedProps) => {
@@ -184,7 +186,7 @@ const ListContainedItem = ({containedValue, className, children, ...props}: List
         className={cn(
           'flex items-center justify-center rounded-full text-gray-50 bg-gray-800 mr-2',
           containedSize[size],
-          `text-${containedTextSize[size]}`
+          containedTextSize[size]
         )}
       >
         {containedValue}
