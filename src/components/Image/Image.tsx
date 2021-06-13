@@ -7,9 +7,11 @@ export type ImageOrientationProp = 'portrait' | 'landscape'
 export type ImageProps = PropsWithRef<
   {
     /**
-     * The alt attribute of the image, required for a11y purposes.
+     * The alt attribute of the image, sometimes required for accessibility purposes. Please refer
+     * to {@link.https://www.w3.org/WAI/tutorials/images} for more information on image accessibility.
+     * @defaultValue ''
      */
-    alt: string
+    alt?: string
     /**
      * The aspect ratio of the image.
      * @defaultValue 16:9
@@ -26,7 +28,7 @@ export type ImageProps = PropsWithRef<
 >
 
 const Image = React.forwardRef<HTMLDivElement, ImageProps>(function Image(
-  {alt, orientation = 'landscape', ratio = '16:9', className, containerProps, ...props},
+  {alt = '', orientation = 'landscape', ratio = '16:9', className, containerProps, ...props},
   ref
 ) {
   const splittedRatio = ratio.split(':')
