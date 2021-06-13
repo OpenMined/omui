@@ -5,7 +5,7 @@ import {Image, ImageProps} from './Image'
 const Template: Story<ImageProps> = args => {
   return (
     <div className="w-2/4">
-      <Image {...args} />
+      <Image orientation={args.orientation ?? 'landscape'} {...args} />
     </div>
   )
 }
@@ -13,18 +13,20 @@ const Template: Story<ImageProps> = args => {
 export default {
   title: 'Atoms/Images',
   component: Image,
+  parameters: {controls: {sort: 'requiredFirst'}},
   argTypes: {
+    orientation: ['landscape', 'portrait'],
     src: {
       mapping: {
-        Empty: '',
+        Invalid: undefined,
         Fox: 'https://images.unsplash.com/photo-1623288749528-e40a033da0f7',
         Building: 'https://images.unsplash.com/photo-1588892487050-67d92a5f4136'
       },
       defaultValue: 'Fox',
       control: {
-        options: ['Empty', 'Fox', 'Building'],
+        options: ['Invalid', 'Fox', 'Building'],
         labels: {
-          Empty: 'Empty',
+          Invalid: 'Invalid',
           Fox: 'Fox',
           Building: 'Building'
         },
