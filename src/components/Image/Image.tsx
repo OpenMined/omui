@@ -30,6 +30,23 @@ export type ImageProps = PropsWithRef<
   } & React.ComponentProps<'img'>
 >
 
+type ValidAspectRatios = {
+  [k in ImageRatioProp | '9:16' | '3:4' | '2:3']: string | string[]
+}
+
+const validAspectRatios: ValidAspectRatios = {
+  '1:1': 'aspect-w-1 aspect-h-1',
+  '2:3': 'aspect-w-2 aspect-h-3',
+  '3:2': 'aspect-w-3 aspect-h-2',
+  '3:4': 'aspect-w-3 aspect-h-4',
+  '4:3': 'aspect-w-4 aspect-h-3',
+  '9:16': 'aspect-w-9 aspect-h-16',
+  '16:9': 'aspect-w-16 aspect-h-19'
+}
+
+const defaultContainerClasses = 'bg-gradient-to-tr from-primary-200 to-error-200 hover:opacity-50 color-transparent'
+const defaultImageClasses = 'object-cover object-center'
+
 const Image = React.forwardRef<HTMLDivElement, ImageProps>(function Image(
   {alt = '', orientation = 'landscape', ratio = '16:9', className, containerProps, ...props},
   ref
