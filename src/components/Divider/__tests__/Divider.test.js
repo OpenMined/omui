@@ -44,11 +44,4 @@ describe('Validate Divider role attribute', () => {
     const dividerElement = screen.getByTestId('test-id')
     expect(dividerElement).toHaveAttribute('role', 'separator')
   })
-
-  test('Should have role separator when component is not a hr', () => {
-    render(<Divider data-testid="test-id" component="div" />)
-
-    const dividerElement = screen.getByTestId('test-id')
-    expect(dividerElement).toHaveAttribute('role', 'separator')
-  })
 })
