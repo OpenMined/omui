@@ -16,7 +16,13 @@ import type {ListContainedProps, ListAvatarItemProps, ListIconProps, ListProps} 
 export default {
   title: 'Components/List',
   component: List,
+  parameters: {
+    controls: {
+      include: ['children', 'size']
+    }
+  },
   argTypes: {
+    children: {name: 'children', defaultValue: 'Text Here', control: {type: 'text'}},
     label: {name: 'label', defaultValue: 'Text Here', control: {type: 'text'}},
     description: {name: 'description', control: {type: 'text'}}
   }
@@ -24,31 +30,31 @@ export default {
 
 export const DefaultList: Story<ListProps> = args => (
   <List size={args.size}>
-    {Array.from(Array(10).keys()).map(el => (
-      <ListItem>{el}</ListItem>
+    {Array.from(Array(10).keys()).map(() => (
+      <ListItem>{args.children}</ListItem>
     ))}
   </List>
 )
 
 export const Ordered: Story<ListProps> = args => (
   <OrderedList size={args.size}>
-    {Array.from(Array(10).keys()).map(el => (
-      <ListItem>{el}</ListItem>
+    {Array.from(Array(10).keys()).map(() => (
+      <ListItem>{args.children}</ListItem>
     ))}
   </OrderedList>
 )
 
 export const Unordered: Story<ListProps> = args => (
   <UnorderedList size={args.size}>
-    {Array.from(Array(10).keys()).map(el => (
-      <ListItem>{el}</ListItem>
+    {Array.from(Array(10).keys()).map(() => (
+      <ListItem>{args.children}</ListItem>
     ))}
   </UnorderedList>
 )
 
 export const Avatar: Story<ListAvatarItemProps & ListProps> = args => (
   <List size={args.size}>
-    {Array.from(Array(10).keys()).map(el => (
+    {Array.from(Array(10).keys()).map(() => (
       <ListAvatarItem
         src="https://images.unsplash.com/photo-1623288749528-e40a033da0f7"
         label={args.label}
@@ -69,24 +75,24 @@ const RandomIcon = ({className}: {className: string}) => (
 
 export const Icon: Story<ListIconProps & ListProps> = args => (
   <List size={args.size}>
-    {Array.from(Array(10).keys()).map(el => (
-      <ListIconItem icon={RandomIcon}>{el}</ListIconItem>
+    {Array.from(Array(10).keys()).map(() => (
+      <ListIconItem icon={RandomIcon}>{args.children}</ListIconItem>
     ))}
   </List>
 )
 
 export const Progress: Story<ListProps> = args => (
   <List size={args.size}>
-    {Array.from(Array(10).keys()).map(el => (
-      <ListProgressItem>{el}</ListProgressItem>
+    {Array.from(Array(10).keys()).map(() => (
+      <ListProgressItem>{args.children}</ListProgressItem>
     ))}
   </List>
 )
 
 export const Contained: Story<ListContainedProps & ListProps> = args => (
   <List size={args.size}>
-    {Array.from(Array(10).keys()).map((el, idx) => (
-      <ListContainedItem containedValue={idx + 1}>{el}</ListContainedItem>
+    {Array.from(Array(10).keys()).map((_, idx) => (
+      <ListContainedItem containedValue={idx + 1}>{args.children}</ListContainedItem>
     ))}
   </List>
 )
