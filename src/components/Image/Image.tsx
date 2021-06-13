@@ -8,7 +8,7 @@ export type ImageProps = PropsWithRef<
   {
     /**
      * The alt attribute of the image, sometimes required for accessibility purposes. Please refer
-     * to {@link.https://www.w3.org/WAI/tutorials/images} for more information on image accessibility.
+     * to {@link https://www.w3.org/WAI/tutorials/images} for more information on image accessibility.
      * @defaultValue ''
      */
     alt?: string
