@@ -1,6 +1,6 @@
 import React from 'react'
-import type {Story, Meta} from '@storybook/react'
 import {Divider} from './Divider'
+import type {Story, Meta} from '@storybook/react'
 import type {DividerProps, DividerColor} from './Divider'
 
 export default {
