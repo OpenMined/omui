@@ -23,6 +23,9 @@ export type ImageProps = PropsWithRef<
      * @defaultValue landscape
      */
     orientation?: ImageOrientationProp
+    /**
+     * Props passed to a <div> that engulfs the image.
+     */
     containerProps?: React.ComponentProps<'div'>
   } & React.ComponentProps<'img'>
 >
