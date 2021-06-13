@@ -112,7 +112,7 @@ const Icon = React.forwardRef<HTMLSpanElement, IconProps>(function Icon(
       <IconElement
         className={iconClasses}
         focusable={false}
-        aria-hidden={!title}
+        aria-hidden={title ? undefined : true}
         aria-label={title}
         role={title ? 'img' : 'presentation'}
         {...props}
