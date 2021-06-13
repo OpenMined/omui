@@ -5,7 +5,7 @@ export type OrientationProp = 'horizontal' | 'vertical'
 
 export type DividerProps = PropsWithChildren<{
   /**
-   * Define if the divider should be vertical
+   * Define the orientation of the divider
    * @defaultValue horizontal
    */
   orientation?: OrientationProp
