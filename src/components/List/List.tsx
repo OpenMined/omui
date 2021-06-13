@@ -35,28 +35,38 @@ const spaceBetweenList: ListByStringSizes<string> = {
   '3xl': 'space-y-8'
 }
 
-function List({component: Component = 'ul', size = 'md', className, ...props}: ListProps) {
+function List({component: Component = 'ul', size = 'md', className, children, ...props}: ListProps) {
   const classes = cn(`text-${size} text-gray-600 dark:text-gray-200`, spaceBetweenList[size], className)
 
   return (
     <ListContext.Provider value={{size}}>
-      <Component className={classes} {...props} />
+      <Component
+        className={classes}
+        /**
+         * This role intends to fix the Safari accessibility issue with list-style-type: none
+         * @see https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html
+         */
+        role="list"
+        {...props}
+      >
+        {children}
+      </Component>
     </ListContext.Provider>
   )
 }
 
-function OrderedList(props: Exclude<ListProps, 'component'>) {
-  const classes = 'list-decimal list-inside'
-  return <List className={classes} {...props} component="ol" />
+function OrderedList({className, ...props}: Exclude<ListProps, 'component'>) {
+  const classes = cn('list-decimal list-inside', className)
+  return <List className={classes} component="ol" {...props} />
 }
 
-function UnorderedList(props: Exclude<ListProps, 'component'>) {
-  const classes = 'list-disc list-inside'
-  return <List className={classes} {...props} component="ul" />
+function UnorderedList({className, ...props}: Exclude<ListProps, 'component'>) {
+  const classes = cn('list-disc list-inside', className)
+  return <List className={classes} component="ul" {...props} />
 }
 
-const ListItem = ({children, ...props}: HTMLProps<HTMLLIElement>) => {
-  return <li {...props}>{children}</li>
+function ListItem(props: HTMLProps<HTMLLIElement>) {
+  return <li {...props} />
 }
 
 type TextSizes = ListByStringSizes<TextSizeProp>
@@ -91,13 +101,13 @@ const spaceForAvatar: ListByStringSizes<string> = {
 
 export type ListAvatarItemProps = HTMLProps<HTMLLIElement> & {description?: string}
 
-const ListAvatarItem = ({src, label, description, className, ...props}: ListAvatarItemProps) => {
+function ListAvatarItem({src, alt, label, description, className, ...props}: ListAvatarItemProps) {
   const {size} = useContext(ListContext)
   const classes = cn('flex items-center', className)
   const isLabelBold = !!(size !== '2xl' && size !== '3xl' && description)
   return (
     <ListItem className={classes} {...props}>
-      <Avatar src={src} size={size} />
+      <Avatar src={src} alt={alt} size={size} />
       <div className={cn('flex flex-col', spaceForAvatar[size])}>
         <Text size={textSizeForAvatar[size]} bold={isLabelBold}>
           {label}
@@ -118,7 +128,7 @@ const iconSize: ListByStringSizes<IconSizeProp> = {
 
 export type ListIconProps = HTMLProps<HTMLLIElement> & {icon: ElementType}
 
-const ListIconItem = ({icon, className, children, ...props}: ListIconProps) => {
+function ListIconItem({icon, className, children, ...props}: ListIconProps) {
   const {size} = useContext(ListContext)
   return (
     <ListItem className={cn('flex', className)} {...props}>
@@ -127,6 +137,7 @@ const ListIconItem = ({icon, className, children, ...props}: ListIconProps) => {
         size={iconSize[size]}
         variant="ghost"
         className="fill-gray-800 dark:fill-white"
+        title="Icon list item"
         containerProps={{className: 'mr-2'}}
       />
       {children}
@@ -151,7 +162,7 @@ const containedSize: ListByStringSizes<string> = {
   '3xl': 'w-8 h-8'
 }
 
-const ListProgressItem = ({className, children, ...props}: HTMLProps<HTMLLIElement>) => {
+function ListProgressItem({className, children, ...props}: HTMLProps<HTMLLIElement>) {
   const {size} = useContext(ListContext)
   return (
     <ListItem className={cn('flex items-center', className)} {...props}>
@@ -161,7 +172,7 @@ const ListProgressItem = ({className, children, ...props}: HTMLProps<HTMLLIEleme
           containedSize[size]
         )}
       >
-        <ProgressIcon />
+        <ProgressIcon role="img" focusable={false} aria-label="Progress list item" />
       </div>
       {children}
     </ListItem>
@@ -178,7 +189,7 @@ const containedTextSize: ListByStringSizes<string> = {
   '3xl': 'text-xl'
 }
 
-const ListContainedItem = ({containedValue, className, children, ...props}: ListContainedProps) => {
+function ListContainedItem({containedValue, className, children, ...props}: ListContainedProps) {
   const {size} = useContext(ListContext)
   return (
     <ListItem className={cn('flex items-center', className)} {...props}>
