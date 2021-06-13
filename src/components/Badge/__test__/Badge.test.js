@@ -39,22 +39,22 @@ cases(
     {
       name: 'Should have classes based on default type: outline',
       params: {},
-      result: 'border-primary-500 text-primary-600 dark:border-primary-200 dark:text-primary-200'
+      result: 'text-primary-600 dark:border-primary-200 dark:text-primary-200'
     },
     {
       name: 'Should have classes based on type subtle',
       params: {type: 'subtle'},
-      result: 'border-primary-100 bg-primary-100 text-primary-600'
+      result: 'bg-primary-100 text-primary-600'
     },
     {
       name: 'Should have classes based on type solid',
       params: {type: 'solid'},
-      result: 'border-primary-500 bg-primary-500 text-white'
+      result: 'bg-primary-500 text-white'
     },
     {
       name: 'Should have classes based on type solid following gray custom rule',
       params: {type: 'solid', variant: 'gray'},
-      result: 'border-gray-800 bg-gray-800 text-primary-200'
+      result: 'bg-gray-800 text-primary-200'
     }
   ]
 )
