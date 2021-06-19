@@ -1,6 +1,7 @@
 import React, {forwardRef} from 'react'
 import cn from 'classnames'
 import type {HTMLAttributes, PropsWithRef} from 'react'
+import type {OmuiColors} from '@/styles/colorType'
 
 export type BadgeVariantProp = 'gray' | 'primary' | 'tertiary' | 'quaternary' | 'danger' | 'success'
 export type BadgeTypeProp = 'outline' | 'subtle' | 'solid'
@@ -20,28 +21,25 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 
 export type BadgeProps = PropsWithRef<Props>
 
-const colorByVariant = {
+const VARIANT_COLORS: Record<BadgeVariantProp, OmuiColors> = {
   gray: 'gray',
   primary: 'primary',
   tertiary: 'violet',
   quaternary: 'blue',
   danger: 'error',
   success: 'success'
-}
+} as const
 
-/**
- * All possible Badge types in OMUI.
- */
 type Badges = {
-  [k in BadgeVariantProp]: {
-    [o in BadgeTypeProp]: string
+  [K in BadgeVariantProp]: {
+    [O in BadgeTypeProp]: string | string[]
   }
 }
 
 const badges: Badges = Object.assign(
   {},
-  ...Object.keys(colorByVariant).map(variant => {
-    const color = colorByVariant[variant]
+  ...(Object.keys(VARIANT_COLORS) as Array<BadgeVariantProp>).map(variant => {
+    const color = VARIANT_COLORS[variant]
     return {
       [variant]: {
         outline: [
