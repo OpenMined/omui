@@ -1,6 +1,8 @@
 import React from 'react'
 import cn from 'classnames'
-import type {ReactElement, MouseEventHandler, PropsWithChildren} from 'React'
+import {Text} from '../Typography/Text'
+import {Icon} from '../Icon/Icon'
+import type {ElementType, MouseEventHandler, PropsWithChildren} from 'React'
 import type {OmuiColors} from '@/styles/colorType'
 
 export type TagSizeProp = 'sm' | 'md' | 'lg'
@@ -56,7 +58,7 @@ interface PropsWithIcons extends Props {
   /**
    * Icon component to be rendered next to the Tag.
    */
-  icon: ReactElement
+  icon: ElementType
   /**
    * Position of the icon, left or right of the inner tag text. It is not allowed to have both positions or multiple icons.
    */
@@ -68,12 +70,6 @@ export type TagProps = PropsWithChildren<PropsWithoutIcons | PropsWithIcons>
 const tagTypeStyles: Record<TagTypeProp, string> = {
   round: 'rounded-full',
   square: 'rounded-sm'
-}
-
-const tagTextSize: Record<TagSizeProp, string> = {
-  sm: 'text-sm',
-  md: 'text-md',
-  lg: 'text-lg'
 }
 
 const tagBackgoundAndTextColor: Record<TagVariantProp, string> = Object.assign(
@@ -88,7 +84,6 @@ const tagBackgoundAndTextColor: Record<TagVariantProp, string> = Object.assign(
 )
 
 const defaultClasses = 'inline-flex items-center px-2.5 py-1 transition transition-colors'
-const defaultIconClasses = 'w-4 h-4'
 
 /**
  * Tags are meant to indicate categories and typically links out to filtering mechanism.
@@ -98,7 +93,7 @@ const Tag = ({
   size = 'md',
   tagType = 'square',
   disabled,
-  icon: Icon,
+  icon,
   iconSide,
   className,
   children,
@@ -108,20 +103,19 @@ const Tag = ({
   const Component: keyof JSX.IntrinsicElements = clickable ? 'button' : 'span'
   const classes = cn(
     defaultClasses,
-    tagTextSize[size],
     tagBackgoundAndTextColor[variant],
     tagTypeStyles[tagType],
     clickable && 'cursor-pointer',
     disabled && 'pointer-events-none opacity-50',
     className
   )
-  const iconClasses = cn(defaultIconClasses, iconSide === 'right' && 'ml-1.5', iconSide === 'left' && 'mr-1.5')
+  const iconClasses = cn(iconSide === 'right' && 'ml-1.5', iconSide === 'left' && 'mr-1.5')
 
   return (
     <Component {...props} className={classes}>
-      {Icon && iconSide === 'left' ? <span className={iconClasses}>{Icon}</span> : null}
-      {children}
-      {Icon && iconSide === 'right' ? <span className={iconClasses}>{Icon}</span> : null}
+      {icon && iconSide === 'left' ? <Icon icon={icon} size={size} variant="ghost" className={iconClasses} /> : null}
+      <Text size={size}>{children}</Text>
+      {icon && iconSide === 'right' ? <Icon icon={icon} size={size} variant="ghost" className={iconClasses} /> : null}
     </Component>
   )
 }
