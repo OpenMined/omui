@@ -23,7 +23,7 @@
     "format": "pretty-quick --staged",
     "storybook": "start-storybook -p 6006",
     "test": "jest",
-    "build:storybook": "build-storybook",
+    "build:storybook": "build-storybook -c .storybook -o public",
     "build:tailwind": "postcss src/styles/global.css -o tailwind.css"
   },
   "husky": {
