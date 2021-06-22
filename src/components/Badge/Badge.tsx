@@ -1,5 +1,6 @@
 import React, {forwardRef} from 'react'
 import cn from 'classnames'
+import {Text} from '../Typography/Text'
 import type {HTMLAttributes, PropsWithRef} from 'react'
 import type {OmuiColors} from '@/styles/colorType'
 
@@ -53,7 +54,7 @@ const badges: Badges = Object.assign(
   })
 )
 
-const defaultClass = 'inline-block h-5.5 font-roboto text-xs font-bold px-1.5 rounded-sm leading-normal'
+const defaultClass = 'inline-block h-5.5 px-1.5 rounded-sm leading-normal'
 
 const Badge = forwardRef<HTMLDivElement, Props>(function Badge(
   {className, children, variant = 'primary', type = 'outline', ...props},
@@ -63,7 +64,9 @@ const Badge = forwardRef<HTMLDivElement, Props>(function Badge(
 
   return (
     <div className={classes} ref={ref} {...props}>
-      {children}
+      <Text bold size="xs">
+        {children}
+      </Text>
     </div>
   )
 })
