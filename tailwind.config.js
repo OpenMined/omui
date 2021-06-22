@@ -46,6 +46,9 @@ module.exports = {
         rubik: ['"Rubik"', 'sans-serif'],
         firacode: ['"Fira Code"', 'monospace']
       },
+      spacing: {
+        4.5: '1.125rem'
+      },
       dropShadow: {
         'button-hover': '-4px 4px 8px --color-primary-500'
       }
