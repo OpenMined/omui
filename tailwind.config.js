@@ -4,7 +4,7 @@ const themes = require('./src/themes')
 module.exports = {
   purge: ['src/**/*.{js,jsx,ts,tsx}'],
   darkMode: 'class', // or 'media' or 'class',
-  presets: [require('./src/themes/cyan')],
+  presets: [themes.cyan],
   theme: {
     fontSize: {
       xs: ['.75rem', '1.6'],
@@ -45,6 +45,9 @@ module.exports = {
         roboto: ['"Roboto"', 'sans-serif'],
         rubik: ['"Rubik"', 'sans-serif'],
         firacode: ['"Fira Code"', 'monospace']
+      },
+      spacing: {
+        4.5: '1.125rem'
       },
       dropShadow: {
         'button-hover': '-4px 4px 8px --color-primary-500'

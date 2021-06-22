@@ -3,6 +3,7 @@ module.exports = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
+    '@storybook/addon-a11y',
     {
       name: '@storybook/addon-postcss',
       options: {
@@ -11,5 +12,15 @@ module.exports = {
         }
       }
     }
-  ]
+  ],
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      shouldExtractLiteralValuesFromEnum: true,
+      compilerOptions: {
+        allowSyntheticDefaultImports: true,
+        esModuleInterop: true
+      }
+    }
+  }
 }
