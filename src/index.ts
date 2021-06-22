@@ -5,11 +5,14 @@ export {Badge} from '@/components/Badge/Badge'
 export {Tag} from '@/components/Tag/Tag'
 export {
   List,
-  OrderedList,
-  UnorderedList,
   ListItem,
   ListAvatarItem,
   ListProgressItem,
   ListIconItem,
-  ListContainedItem
+  ListContainedItem,
+  ListItemContent,
+  OrderedList,
+  OrderedListItem,
+  UnorderedList,
+  UnorderedListItem
 } from '@/components/List/List'
