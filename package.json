@@ -21,7 +21,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "format": "pretty-quick --staged",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "yarn build:tailwind && start-storybook -p 6006",
     "test": "jest",
     "build:storybook": "build-storybook -c .storybook -o public",
     "build:tailwind": "postcss src/styles/global.css -o tailwind.css"
