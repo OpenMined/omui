@@ -1,9 +1,10 @@
-import React, {SVGProps, useContext} from 'react'
+import React, {createContext, useContext, useMemo} from 'react'
 import cn from 'classnames'
 import {Avatar} from '../Avatar/Avatar'
 import {Text} from '../Typography/Text'
 import {Icon} from '../Icon/Icon'
-import type {ElementType, HTMLAttributes, HTMLProps, PropsWithRef} from 'react'
+import {Progress} from '../../icons'
+import type {ReactNode, ElementType, HTMLAttributes, ComponentPropsWithoutRef, HTMLProps, PropsWithRef} from 'react'
 import type {IconSizeProp} from '../Icon/Icon'
 import type {TextSizeProp} from '../Typography/Text'
 
@@ -25,21 +26,35 @@ interface Props extends HTMLAttributes<HTMLUListElement> {
 
 export type ListProps = PropsWithRef<Props>
 
-const ListContext = React.createContext<{size: ListSizeProp}>({size: 'md'})
+const ListContext = createContext<{size: ListSizeProp}>({size: 'md'})
 
 const spaceBetweenList: ListByStringSizes<string> = {
-  md: 'space-y-5',
-  lg: 'space-y-7',
-  xl: 'space-y-8',
-  '2xl': 'space-y-8',
-  '3xl': 'space-y-8'
+  md: 'space-y-3',
+  lg: 'space-y-2',
+  xl: 'space-y-2',
+  '2xl': 'space-y-2',
+  '3xl': 'space-y-2'
+}
+
+type ListByStringSizes<T> = {
+  [k in ListSizeProp]: T
+}
+
+type TextSizes = ListByStringSizes<TextSizeProp>
+
+const textSize: TextSizes = {
+  md: 'md',
+  lg: 'md',
+  xl: 'lg',
+  '2xl': 'xl',
+  '3xl': '2xl'
 }
 
 function List({component: Component = 'ul', size = 'md', className, children, ...props}: ListProps) {
-  const classes = cn(`text-${size} text-gray-600 dark:text-gray-200`, spaceBetweenList[size], className)
-
+  const classes = cn(`text-gray-600 dark:text-gray-200`, spaceBetweenList[size], className)
+  const currentSize = useMemo<ListSizeProp>(() => size, [size])
   return (
-    <ListContext.Provider value={{size}}>
+    <ListContext.Provider value={{size: currentSize}}>
       <Component
         className={classes}
         /**
@@ -55,27 +70,118 @@ function List({component: Component = 'ul', size = 'md', className, children, ..
   )
 }
 
-function OrderedList({className, ...props}: Exclude<ListProps, 'component'>) {
-  const classes = cn('list-decimal list-inside', className)
-  return <List className={classes} component="ol" {...props} />
+const spaceInnerItems: ListByStringSizes<string> = {
+  md: 'space-x-2',
+  lg: 'space-x-2',
+  xl: 'space-x-2',
+  '2xl': 'space-x-3',
+  '3xl': 'space-x-4'
+}
+
+function RenderListChildren({children}: {children: ReactNode}) {
+  const {size} = useContext(ListContext)
+  return <>{typeof children === 'string' ? <Text size={textSize[size]}>{children}</Text> : children}</>
+}
+
+function ListItem(props: ComponentPropsWithoutRef<'li'>) {
+  const {size} = useContext(ListContext)
+  const {children, ...rest} = props
+  return (
+    <li className={cn('flex items-center', spaceInnerItems[size])} {...rest} role="listitem">
+      <RenderListChildren>{children}</RenderListChildren>
+    </li>
+  )
+}
+
+function PrefixedItem(props: ComponentPropsWithoutRef<'div'>) {
+  const {children, ...rest} = props
+  return (
+    <div className={cn('flex items-center')} {...rest}>
+      <RenderListChildren>{children}</RenderListChildren>
+    </div>
+  )
+}
+
+const containerSize: ListByStringSizes<string> = {
+  md: 'w-10 h-10',
+  lg: 'w-14 h-14',
+  xl: 'w-16 h-16',
+  '2xl': 'w-20 h-20',
+  '3xl': 'w-24 h-24'
+}
+
+function ListInnerContainer(props: HTMLProps<HTMLDivElement>) {
+  const {size} = useContext(ListContext)
+  return <div className={cn('flex items-center justify-center', containerSize[size])} {...props} />
+}
+
+const bulletSize: ListByStringSizes<string> = {
+  md: 'w-1.5 h-1.5',
+  lg: 'w-2 h-2',
+  xl: 'w-2.5 h-2.5',
+  '2xl': 'w-3 h-3',
+  '3xl': 'w-3.5 h-3.5'
+}
+
+function Bullet({size}: {size: string}) {
+  const classes = cn('rounded-full bg-gray-800 dark:bg-gray-200', bulletSize[size])
+  return <div className={classes} />
+}
+
+function PrefixedListMarker({isOrdered, listNumber}: {isOrdered: boolean; listNumber: number}) {
+  const {size} = useContext(ListContext)
+  return isOrdered ? <Text size={textSize[size]}>{listNumber}.</Text> : <Bullet size={size} />
+}
+
+function BuildPrefixedList({component = 'ul', className, ...props}: ListProps) {
+  const {children, ...rest} = props
+  const isOrdered = component === 'ol'
+  const classes = cn(isOrdered ? 'list-decimal' : 'list-disc', 'list-inside', className)
+  return (
+    <List className={classes} component="ol" {...rest}>
+      {React.Children.map(children, (child, index) => {
+        return (
+          <ListItem key={`ol-${props.id}-${index}`}>
+            <ListInnerContainer>
+              <PrefixedListMarker isOrdered={component === 'ol'} listNumber={index + 1} />
+            </ListInnerContainer>
+            {child}
+          </ListItem>
+        )
+      })}
+    </List>
+  )
+}
+
+function OrderedList({...props}: Exclude<ListProps, 'component'>) {
+  return <BuildPrefixedList {...props} component="ol" />
 }
 
 function UnorderedList({className, ...props}: Exclude<ListProps, 'component'>) {
-  const classes = cn('list-disc list-inside', className)
-  return <List className={classes} component="ul" {...props} />
+  return <BuildPrefixedList {...props} component="ul" />
 }
 
-function ListItem(props: HTMLProps<HTMLLIElement>) {
-  return <li {...props} />
+export type ListAvatarItemProps = HTMLProps<HTMLLIElement> & Pick<HTMLProps<HTMLImageElement>, 'src' | 'alt'>
+
+function ListAvatarItem({src, alt, className, children, ...props}: ListAvatarItemProps) {
+  const {size} = useContext(ListContext)
+  return (
+    <ListItem {...props}>
+      <ListInnerContainer>
+        <Avatar src={src} alt={alt} size={size} />
+      </ListInnerContainer>
+      <RenderListChildren>{children}</RenderListChildren>
+    </ListItem>
+  )
 }
 
-type TextSizes = ListByStringSizes<TextSizeProp>
-
-type ListByStringSizes<T> = {
-  [k in ListSizeProp]: T
+export type ListItemContentProps = {
+  label: string
+  description: string
+  className?: string | string[]
 }
 
-const textSizeForAvatar: TextSizes = {
+const textSizeForLabel: TextSizes = {
   md: 'sm',
   lg: 'md',
   xl: 'lg',
@@ -91,39 +197,33 @@ const textSizeForDescription: TextSizes = {
   '3xl': 'lg'
 }
 
-const spaceForAvatar: ListByStringSizes<string> = {
-  md: 'ml-3',
-  lg: 'ml-4',
-  xl: 'ml-4',
-  '2xl': 'ml-5',
-  '3xl': 'ml-6'
+const spacingBetweenText: ListByStringSizes<string> = {
+  md: '',
+  lg: '',
+  xl: '',
+  '2xl': 'space-y-0.5',
+  '3xl': 'space-y-2'
 }
 
-export type ListAvatarItemProps = HTMLProps<HTMLLIElement> & {description?: string}
-
-function ListAvatarItem({src, alt, label, description, className, ...props}: ListAvatarItemProps) {
+function ListItemContent({label, description, className}: ListItemContentProps) {
   const {size} = useContext(ListContext)
-  const classes = cn('flex items-center', className)
-  const isLabelBold = !!(size !== '2xl' && size !== '3xl' && description)
+  const isLabelBold = size !== '2xl' && size !== '3xl' && description !== undefined
   return (
-    <ListItem className={classes} {...props}>
-      <Avatar src={src} alt={alt} size={size} />
-      <div className={cn('flex flex-col', spaceForAvatar[size])}>
-        <Text size={textSizeForAvatar[size]} bold={isLabelBold}>
-          {label}
-        </Text>
-        {description && <Text size={textSizeForDescription[size]}>{description}</Text>}
-      </div>
-    </ListItem>
+    <div className={cn('flex flex-col w-full', spacingBetweenText[size], className)}>
+      <Text size={textSizeForLabel[size]} bold={isLabelBold}>
+        {label}
+      </Text>
+      <Text size={textSizeForDescription[size]}>{description}</Text>
+    </div>
   )
 }
 
-const iconSize: ListByStringSizes<IconSizeProp> = {
-  md: 'xs',
-  lg: 'sm',
-  xl: 'md',
-  '2xl': 'lg',
-  '3xl': 'xl'
+const iconSize: ListByStringSizes<string> = {
+  md: 'w-4 h-4',
+  lg: 'w-4.5 h-4.5',
+  xl: 'w-5 h-5',
+  '2xl': 'h-7 w-7',
+  '3xl': 'h-9 w-9'
 }
 
 export type ListIconProps = HTMLProps<HTMLLIElement> & {icon: ElementType}
@@ -131,80 +231,102 @@ export type ListIconProps = HTMLProps<HTMLLIElement> & {icon: ElementType}
 function ListIconItem({icon, className, children, ...props}: ListIconProps) {
   const {size} = useContext(ListContext)
   return (
-    <ListItem className={cn('flex', className)} {...props}>
-      <Icon
-        icon={icon}
-        size={iconSize[size]}
-        variant="ghost"
-        className="fill-gray-800 dark:fill-white"
-        title="Icon list item"
-        containerProps={{className: 'mr-2'}}
-      />
-      {children}
+    <ListItem {...props}>
+      <ListInnerContainer>
+        <Icon icon={icon} variant="ghost" title="Icon list item" className={iconSize[size]} />
+      </ListInnerContainer>
+      <RenderListChildren>{children}</RenderListChildren>
     </ListItem>
   )
 }
 
-const ProgressIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <path
-      d="M4.16133 9.11157C4.3957 9.34595 4.79414 9.34595 5.02852 9.11157L11.9191 2.22095C12.1535 1.98657 12.1535 1.58813 11.9191 1.35376L11.0754 0.51001C10.841 0.275635 10.466 0.275635 10.2316 0.51001L4.60664 6.13501L1.9582 3.51001C1.72383 3.27563 1.34883 3.27563 1.11445 3.51001L0.270703 4.35376C0.0363283 4.58813 0.0363283 4.98657 0.270703 5.22095L4.16133 9.11157Z"
-      fill="currentColor"
-    />
-  </svg>
-)
-
-const containedSize: ListByStringSizes<string> = {
-  md: 'w-4 h-4',
-  lg: 'w-5 h-5',
-  xl: 'w-6 h-6',
-  '2xl': 'w-7 h-7',
-  '3xl': 'w-8 h-8'
+const progressIconSize: ListByStringSizes<IconSizeProp> = {
+  md: 'xs',
+  lg: 'sm',
+  xl: 'md',
+  '2xl': 'lg',
+  '3xl': 'xl'
 }
 
 function ListProgressItem({className, children, ...props}: HTMLProps<HTMLLIElement>) {
   const {size} = useContext(ListContext)
   return (
-    <ListItem className={cn('flex items-center', className)} {...props}>
-      <div
-        className={cn(
-          'flex items-center justify-center rounded-full bg-success-500 text-gray-800 dark:text-white dark:bg-success-400 mr-2',
-          containedSize[size]
-        )}
-      >
-        <ProgressIcon role="img" focusable={false} aria-label="Progress list item" />
-      </div>
-      {children}
+    <ListItem {...props}>
+      <ListInnerContainer>
+        <Icon
+          icon={Progress}
+          variant="solid"
+          size={progressIconSize[size]}
+          className="text-gray-800 dark:text-white"
+          containerProps={{className: 'bg-success-500 dark:bg-success-400'}}
+        />
+      </ListInnerContainer>
+      <RenderListChildren>{children}</RenderListChildren>
     </ListItem>
   )
 }
 
 export type ListContainedProps = HTMLProps<HTMLLIElement> & {containedValue: number | string}
 
-const containedTextSize: ListByStringSizes<string> = {
-  md: 'text-xs',
-  lg: 'text-sm',
-  xl: 'text-md',
-  '2xl': 'text-lg',
-  '3xl': 'text-xl'
+const containedTextSize: ListByStringSizes<TextSizeProp> = {
+  md: 'xs',
+  lg: 'sm',
+  xl: 'md',
+  '2xl': 'lg',
+  '3xl': 'xl'
+}
+
+const containedCircleSize: ListByStringSizes<string> = {
+  md: 'w-4.5 h-4.5',
+  lg: 'w-6 h-6',
+  xl: 'w-8 h-8',
+  '2xl': 'w-10 h-10',
+  '3xl': 'w-12 h-12'
+}
+
+export type ListContainedNumberProps = {
+  value: string | number
+}
+
+function ListContainedNumber({value}: ListContainedNumberProps) {
+  const {size} = useContext(ListContext)
+  const isBold = size !== '3xl'
+  return (
+    <div
+      className={cn(
+        'flex items-center justify-center rounded-full text-gray-50 bg-gray-800',
+        containedCircleSize[size]
+      )}
+    >
+      <Text bold={isBold} size={containedTextSize[size]}>
+        {value}
+      </Text>
+    </div>
+  )
 }
 
 function ListContainedItem({containedValue, className, children, ...props}: ListContainedProps) {
-  const {size} = useContext(ListContext)
   return (
-    <ListItem className={cn('flex items-center', className)} {...props}>
-      <div
-        className={cn(
-          'flex items-center justify-center rounded-full text-gray-50 bg-gray-800 mr-2',
-          containedSize[size],
-          containedTextSize[size]
-        )}
-      >
-        {containedValue}
-      </div>
-      {children}
+    <ListItem {...props}>
+      <ListInnerContainer>
+        <ListContainedNumber value={containedValue} />
+      </ListInnerContainer>
+      <RenderListChildren>{children}</RenderListChildren>
     </ListItem>
   )
 }
 
-export {List, UnorderedList, OrderedList, ListItem, ListAvatarItem, ListIconItem, ListProgressItem, ListContainedItem}
+export {
+  List,
+  UnorderedList,
+  PrefixedItem as UnorderedListItem,
+  OrderedList,
+  PrefixedItem as OrderedListItem,
+  ListItem,
+  ListItemContent,
+  ListAvatarItem,
+  ListIconItem,
+  ListProgressItem,
+  ListContainedItem,
+  ListContainedNumber
+}
