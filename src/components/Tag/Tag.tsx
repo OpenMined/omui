@@ -99,7 +99,7 @@ const Tag = ({
   children,
   ...props
 }: TagProps) => {
-  const clickable = !!props.onClick
+  const clickable = typeof props.onClick === 'function'
   const Component: keyof JSX.IntrinsicElements = clickable ? 'button' : 'span'
   const classes = cn(
     defaultClasses,
