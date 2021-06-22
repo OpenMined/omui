@@ -54,7 +54,7 @@ const badges: Badges = Object.assign(
   })
 )
 
-const defaultClass = 'inline-block h-5.5 px-1.5 rounded-sm leading-normal'
+const defaultClass = 'inline-block text-xs leading-normal px-1.5 rounded-sm'
 
 const Badge = forwardRef<HTMLDivElement, Props>(function Badge(
   {className, children, variant = 'primary', type = 'outline', ...props},
@@ -64,7 +64,7 @@ const Badge = forwardRef<HTMLDivElement, Props>(function Badge(
 
   return (
     <div className={classes} ref={ref} {...props}>
-      <Text bold size="xs">
+      <Text bold size="xs" className="leading-normal">
         {children}
       </Text>
     </div>
