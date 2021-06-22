@@ -4,7 +4,7 @@ const themes = require('./src/themes')
 module.exports = {
   purge: ['src/**/*.{js,jsx,ts,tsx}'],
   darkMode: 'class', // or 'media' or 'class',
-  presets: [require('./src/themes/cyan')],
+  presets: [themes.cyan],
   theme: {
     fontSize: {
       xs: ['.75rem', '1.6'],

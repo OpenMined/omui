@@ -54,7 +54,7 @@ type DefaultProps<T> = PropsWithChildren<T & (TextMonoProps | TextRegularProps)>
 export type TextProps = DefaultProps<Props>
 
 export function Text({
-  as = 'p',
+  as = 'span',
   size = 'md',
   bold,
   uppercase,

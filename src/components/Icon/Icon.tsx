@@ -56,7 +56,7 @@ const variants: Variants = {
   gray: 'bg-gray-800 text-primary-200',
   solid: 'bg-primary-500 text-white',
   subtle: 'bg-primary-200 text-primary-600',
-  ghost: 'text-primary-500'
+  ghost: 'text-current'
 }
 
 type Sizes = {
@@ -104,8 +104,22 @@ const Icon = React.forwardRef<HTMLSpanElement, IconProps>(function Icon(
     sizes.container[size],
     containerProps?.className
   )
-
   const iconClasses = cn(sizes.icon[size], className)
+
+  if (variant === 'ghost') {
+    return (
+      <span ref={ref}>
+        <IconElement
+          className={iconClasses}
+          focusable={false}
+          aria-hidden={title ? undefined : true}
+          aria-label={title}
+          role={title ? 'img' : 'presentation'}
+          {...props}
+        />
+      </span>
+    )
+  }
 
   return (
     <span {...containerProps} className={containerClasses} ref={ref}>
