@@ -1,6 +1,7 @@
 import React from 'react'
 import {render, screen} from '@testing-library/react'
 import {axe} from 'jest-axe'
+import cases from 'jest-in-case'
 
 import {
   List,
@@ -77,11 +78,11 @@ describe('Lists', () => {
   describe('lists:unordered', () => {
     test('renders all list elements', () => {
       render(
-        <UnorderedListItem data-testid="list-id">
+        <UnorderedList data-testid="list-id">
           {list.map(i => (
             <UnorderedListItem key={i}>{i}</UnorderedListItem>
           ))}
-        </UnorderedListItem>
+        </UnorderedList>
       )
 
       const textElements = screen.getAllByText(/Item/)
@@ -119,11 +120,11 @@ describe('Lists', () => {
   describe('lists:ordered', () => {
     test('renders all list elements', () => {
       render(
-        <OrderedListItem data-testid="list-id">
+        <OrderedList data-testid="list-id">
           {list.map(i => (
             <OrderedListItem key={i}>{i}</OrderedListItem>
           ))}
-        </OrderedListItem>
+        </OrderedList>
       )
 
       const textElements = screen.getAllByText(/Item/)
@@ -362,7 +363,56 @@ describe('Lists', () => {
       expect(textElements.length).toBe(list.length)
     })
 
-    test('icon size is determined by the list size', () => {
+    describe('icon size is determined by the list size', () => {
+      cases(
+        'styles:classes',
+        ({params, itemResult, svgResult}) => {
+          render(
+            <List data-testid="list-id" {...params}>
+              <ListIconItem icon={RandomIcon} data-testid="li-item-id">
+                Text here
+              </ListIconItem>
+            </List>
+          )
+          const iconBox = screen.getByTestId('li-item-id').firstChild
+          const iconSvg = iconBox.firstChild.firstChild
+          expect(iconBox).toHaveClass(itemResult)
+          expect(iconSvg).toHaveClass(svgResult)
+        },
+        [
+          {
+            name: 'default list size renders default icon size',
+            params: {},
+            itemResult: 'w-10 h-10',
+            svgResult: 'w-4 h-4'
+          },
+          {
+            name: 'lg list size renders correct icon size',
+            params: {size: 'lg'},
+            itemResult: 'w-14 h-14',
+            svgResult: 'w-4.5 h-4.5'
+          },
+          {
+            name: 'xl list size renders correct icon size',
+            params: {size: 'xl'},
+            itemResult: 'w-16 h-16',
+            svgResult: 'w-5 h-5'
+          },
+          {
+            name: '2xl list size renders correct icon size',
+            params: {size: '2xl'},
+            itemResult: 'w-20 h-20',
+            svgResult: 'w-7 h-7'
+          },
+          {
+            name: '3xl list size renders correct icon size',
+            params: {size: '3xl'},
+            itemResult: 'w-24 h-24',
+            svgResult: 'w-9 h-9'
+          }
+        ]
+      )
+
       // TODO: Transform with cases
       const {rerender} = render(
         <List data-testid="list-id">
@@ -410,5 +460,53 @@ describe('Lists', () => {
       const results = await axe(container)
       expect(results).toHaveNoViolations()
     })
+  })
+
+  describe('lists:all', () => {
+    cases(
+      'accesibility:check for axe violations',
+      async ({ListType, ListItemType, params}) => {
+        const {container} = render(
+          <ListType data-testid="list-id">
+            <ListItemType data-testid="li-item-id" {...params}>
+              Text here
+            </ListItemType>
+          </ListType>
+        )
+
+        const results = await axe(container)
+        expect(results).toHaveNoViolations()
+      },
+      [
+        {
+          name: 'default list item has no axe violations',
+          ListType: List,
+          ListItemType: ListItem,
+          params: {}
+        },
+        {
+          name: 'progress list item has no axe violations',
+          ListType: List,
+          ListItemType: ListProgressItem,
+          params: {}
+        },
+        {
+          name: 'avatar list item has no axe violations',
+          ListType: List,
+          ListItemType: ListAvatarItem,
+          params: {src: 'src', alt: 'alt'}
+        },
+        {
+          name: 'ordered list item has no axe violations',
+          ListType: OrderedList,
+          ListItemType: OrderedListItem
+        },
+        {
+          name: 'unordered list item has no axe violations',
+          ListType: UnorderedList,
+          ListItemType: UnorderedListItem
+        }
+      ]
+    )
   })
 })
