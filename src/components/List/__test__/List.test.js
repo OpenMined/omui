@@ -19,6 +19,19 @@ const list = Array.from(Array(10).keys()).map(i => `Item ${i}`)
 
 describe('Lists', () => {
   describe('lists:default', () => {
+    test('renders all list elements', () => {
+      render(
+        <List data-testid="list-id">
+          {list.map(i => (
+            <ListItem key={i}>{i}</ListItem>
+          ))}
+        </List>
+      )
+
+      const textElements = screen.getAllByText(/Item/)
+      expect(textElements.length).toBe(list.length)
+    })
+
     test('renders the list item as children', () => {
       render(
         <List data-testid="list-id">
@@ -62,6 +75,19 @@ describe('Lists', () => {
   })
 
   describe('lists:unordered', () => {
+    test('renders all list elements', () => {
+      render(
+        <UnorderedListItem data-testid="list-id">
+          {list.map(i => (
+            <UnorderedListItem key={i}>{i}</UnorderedListItem>
+          ))}
+        </UnorderedListItem>
+      )
+
+      const textElements = screen.getAllByText(/Item/)
+      expect(textElements.length).toBe(list.length)
+    })
+
     test('renders the list as list-disc', () => {
       render(
         <UnorderedList data-testid="list-id">
@@ -91,6 +117,19 @@ describe('Lists', () => {
   })
 
   describe('lists:ordered', () => {
+    test('renders all list elements', () => {
+      render(
+        <OrderedListItem data-testid="list-id">
+          {list.map(i => (
+            <OrderedListItem key={i}>{i}</OrderedListItem>
+          ))}
+        </OrderedListItem>
+      )
+
+      const textElements = screen.getAllByText(/Item/)
+      expect(textElements.length).toBe(list.length)
+    })
+
     test('renders the list as list-decimal', () => {
       render(
         <OrderedList data-testid="list-id">
@@ -119,7 +158,22 @@ describe('Lists', () => {
     })
   })
 
-  describe('list:avatar', () => {
+  describe('lists:avatar', () => {
+    test('renders all list elements', () => {
+      render(
+        <List data-testid="list-id">
+          {list.map(i => (
+            <ListAvatarItem src={i} alt={i} key={i}>
+              Title {i}
+            </ListAvatarItem>
+          ))}
+        </List>
+      )
+
+      const textElements = screen.getAllByText(/Item/)
+      expect(textElements.length).toBe(list.length)
+    })
+
     test('renders the list of avatars and labels', () => {
       render(
         <List data-testid="list-id">
@@ -206,6 +260,19 @@ describe('Lists', () => {
   })
 
   describe('lists:progress', () => {
+    test('renders all list elements', () => {
+      render(
+        <List data-testid="list-id">
+          {list.map(i => (
+            <ListProgressItem key={i}>{i}</ListProgressItem>
+          ))}
+        </List>
+      )
+
+      const textElements = screen.getAllByText(/Item/)
+      expect(textElements.length).toBe(list.length)
+    })
+
     test('renders the progress icon and children', () => {
       render(
         <List data-testid="list-id">
