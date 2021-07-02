@@ -50,6 +50,9 @@ const textSize: TextSizes = {
   '3xl': '2xl'
 }
 
+/**
+ * Component that is used to represent independent lines of content.
+ */
 function List({component: Component = 'ul', size = 'md', className, children, ...props}: ListProps) {
   const classes = cn(`text-gray-600 dark:text-gray-200`, spaceBetweenList[size], className)
   const currentSize = useMemo<ListSizeProp>(() => size, [size])

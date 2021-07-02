@@ -18,11 +18,21 @@ import {
 
 const list = Array.from(Array(10).keys()).map(i => `Item ${i}`)
 
+const RandomIcon = ({className}) => (
+  <svg className={className} role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+    <path
+      fill="currentColor"
+      d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm80 168c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zm-160 0c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zm194.8 170.2C334.3 380.4 292.5 400 248 400s-86.3-19.6-114.8-53.8c-13.6-16.3 11-36.7 24.6-20.5 22.4 26.9 55.2 42.2 90.2 42.2s67.8-15.4 90.2-42.2c13.4-16.2 38.1 4.2 24.6 20.5z"
+    />
+  </svg>
+)
+
 describe('Lists', () => {
   describe('lists:default', () => {
     test('renders all list elements', () => {
+      console.log('test 1')
       render(
-        <List data-testid="list-id">
+        <List data-testid="list-id" key="list:default">
           {list.map(i => (
             <ListItem key={i}>{i}</ListItem>
           ))}
@@ -30,10 +40,11 @@ describe('Lists', () => {
       )
 
       const textElements = screen.getAllByText(/Item/)
-      expect(textElements.length).toBe(list.length)
+      expect(textElements).toHaveLength(list.length)
     })
 
     test('renders the list item as children', () => {
+      console.log('test 2')
       render(
         <List data-testid="list-id">
           {list.map(i => (
@@ -47,6 +58,7 @@ describe('Lists', () => {
     })
 
     test('accepts sizes=[md,lg,xl,2xl,3xl]', async () => {
+      console.log('test 3')
       render(
         <List data-testid="list-id" size="3xl">
           {list.map(i => (
@@ -62,6 +74,7 @@ describe('Lists', () => {
     })
 
     test('contains no axe violations', async () => {
+      console.log('test 4')
       const {container} = render(
         <List data-testid="list-id">
           {list.map(i => (
@@ -337,17 +350,7 @@ describe('Lists', () => {
     })
   })
 
-  const RandomIcon = ({className}) => (
-    <svg className={className} role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-      <path
-        fill="currentColor"
-        d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm80 168c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zm-160 0c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zm194.8 170.2C334.3 380.4 292.5 400 248 400s-86.3-19.6-114.8-53.8c-13.6-16.3 11-36.7 24.6-20.5 22.4 26.9 55.2 42.2 90.2 42.2s67.8-15.4 90.2-42.2c13.4-16.2 38.1 4.2 24.6 20.5z"
-      />
-    </svg>
-  )
-
   describe('lists:icons', () => {
-    // TODO: Expand this test to all list types
     test('renders all list elements', () => {
       render(
         <List data-testid="list-id">
@@ -363,89 +366,87 @@ describe('Lists', () => {
       expect(textElements.length).toBe(list.length)
     })
 
-    describe('icon size is determined by the list size', () => {
-      cases(
-        'styles:classes',
-        ({params, itemResult, svgResult}) => {
-          render(
-            <List data-testid="list-id" {...params}>
-              <ListIconItem icon={RandomIcon} data-testid="li-item-id">
-                Text here
-              </ListIconItem>
-            </List>
-          )
-          const iconBox = screen.getByTestId('li-item-id').firstChild
-          const iconSvg = iconBox.firstChild.firstChild
-          expect(iconBox).toHaveClass(itemResult)
-          expect(iconSvg).toHaveClass(svgResult)
+    cases(
+      'styles:classes',
+      ({params, itemResult, svgResult}) => {
+        render(
+          <List data-testid="list-id" {...params}>
+            <ListIconItem icon={RandomIcon} data-testid="li-item-id">
+              Text here
+            </ListIconItem>
+          </List>
+        )
+        const iconBox = screen.getByTestId('li-item-id').firstChild
+        const iconSvg = iconBox.firstChild.firstChild
+        expect(iconBox).toHaveClass(itemResult)
+        expect(iconSvg).toHaveClass(svgResult)
+      },
+      [
+        {
+          name: 'default list size renders default icon size',
+          params: {},
+          itemResult: 'w-10 h-10',
+          svgResult: 'w-4 h-4'
         },
-        [
-          {
-            name: 'default list size renders default icon size',
-            params: {},
-            itemResult: 'w-10 h-10',
-            svgResult: 'w-4 h-4'
-          },
-          {
-            name: 'lg list size renders correct icon size',
-            params: {size: 'lg'},
-            itemResult: 'w-14 h-14',
-            svgResult: 'w-4.5 h-4.5'
-          },
-          {
-            name: 'xl list size renders correct icon size',
-            params: {size: 'xl'},
-            itemResult: 'w-16 h-16',
-            svgResult: 'w-5 h-5'
-          },
-          {
-            name: '2xl list size renders correct icon size',
-            params: {size: '2xl'},
-            itemResult: 'w-20 h-20',
-            svgResult: 'w-7 h-7'
-          },
-          {
-            name: '3xl list size renders correct icon size',
-            params: {size: '3xl'},
-            itemResult: 'w-24 h-24',
-            svgResult: 'w-9 h-9'
-          }
-        ]
-      )
+        {
+          name: 'lg list size renders correct icon size',
+          params: {size: 'lg'},
+          itemResult: 'w-14 h-14',
+          svgResult: 'w-4.5 h-4.5'
+        },
+        {
+          name: 'xl list size renders correct icon size',
+          params: {size: 'xl'},
+          itemResult: 'w-16 h-16',
+          svgResult: 'w-5 h-5'
+        },
+        {
+          name: '2xl list size renders correct icon size',
+          params: {size: '2xl'},
+          itemResult: 'w-20 h-20',
+          svgResult: 'w-7 h-7'
+        },
+        {
+          name: '3xl list size renders correct icon size',
+          params: {size: '3xl'},
+          itemResult: 'w-24 h-24',
+          svgResult: 'w-9 h-9'
+        }
+      ]
+    )
 
-      // TODO: Transform with cases
-      const {rerender} = render(
-        <List data-testid="list-id">
-          {list.map(i => (
-            <ListIconItem icon={RandomIcon} key={i}>
-              {i}
-            </ListIconItem>
-          ))}
-        </List>
-      )
+    // // TODO: Transform with cases
+    // const {rerender} = render(
+    //   <List data-testid="list-id">
+    //     {list.map(i => (
+    //       <ListIconItem icon={RandomIcon} key={i}>
+    //         {i}
+    //       </ListIconItem>
+    //     ))}
+    //   </List>
+    // )
 
-      const firstListElement = screen.getByTestId('list-id').querySelector('li')
-      const iconBox = firstListElement.firstChild
-      expect(iconBox).toHaveClass('w-10 h-10')
-      const iconSvg = iconBox.firstChild.firstChild
-      expect(iconSvg).toHaveClass('w-4 h-4')
+    // const firstListElement = screen.getByTestId('list-id').querySelector('li')
+    // const iconBox = firstListElement.firstChild
+    // expect(iconBox).toHaveClass('w-10 h-10')
+    // const iconSvg = iconBox.firstChild.firstChild
+    // expect(iconSvg).toHaveClass('w-4 h-4')
 
-      rerender(
-        <List data-testid="list-id" size="2xl">
-          {list.map(i => (
-            <ListIconItem icon={RandomIcon} key={i}>
-              {i}
-            </ListIconItem>
-          ))}
-        </List>
-      )
+    // rerender(
+    //   <List data-testid="list-id" size="2xl">
+    //     {list.map(i => (
+    //       <ListIconItem icon={RandomIcon} key={i}>
+    //         {i}
+    //       </ListIconItem>
+    //     ))}
+    //   </List>
+    // )
 
-      const newFirstListElement = screen.getByTestId('list-id').querySelector('li')
-      const newIconBox = newFirstListElement.firstChild
-      expect(newIconBox).toHaveClass('w-20 h-20')
-      const newIconSvg = newIconBox.firstChild.firstChild
-      expect(newIconSvg).toHaveClass('w-7 h-7')
-    })
+    // const newFirstListElement = screen.getByTestId('list-id').querySelector('li')
+    // const newIconBox = newFirstListElement.firstChild
+    // expect(newIconBox).toHaveClass('w-20 h-20')
+    // const newIconSvg = newIconBox.firstChild.firstChild
+    // expect(newIconSvg).toHaveClass('w-7 h-7')
 
     test('contains no axe violations', async () => {
       // TODO: they should be instantiated using cases, perhaps?

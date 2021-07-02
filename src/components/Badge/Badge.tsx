@@ -37,6 +37,7 @@ type Badges = {
   }
 }
 
+// type Badges2 = Record<BadgeVariantProp, Record<BadgeTypeProp, string | string[]>>
 const badges: Badges = Object.assign(
   {},
   ...(Object.keys(VARIANT_COLORS) as Array<BadgeVariantProp>).map(variant => {
@@ -56,6 +57,9 @@ const badges: Badges = Object.assign(
 
 const defaultClass = 'inline-block text-xs leading-normal px-1.5 rounded-sm'
 
+/**
+ * Badges are used to indicate categories, rank, or classifier.
+ */
 const Badge = forwardRef<HTMLDivElement, Props>(function Badge(
   {className, children, variant = 'primary', type = 'outline', ...props},
   ref
