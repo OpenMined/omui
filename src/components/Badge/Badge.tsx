@@ -56,6 +56,9 @@ const badges: Badges = Object.assign(
 
 const defaultClass = 'inline-block text-xs leading-normal px-1.5 rounded-sm'
 
+/**
+ * Badges are used to indicate categories, rank, or classifier.
+ */
 const Badge = forwardRef<HTMLDivElement, Props>(function Badge(
   {className, children, variant = 'primary', type = 'outline', ...props},
   ref

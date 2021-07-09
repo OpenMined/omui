@@ -47,6 +47,9 @@ const validAspectRatios: ValidAspectRatios = {
 const defaultContainerClasses = 'bg-gradient-to-tr from-primary-200 to-error-200 hover:opacity-50 color-transparent'
 const defaultImageClasses = 'object-cover object-center'
 
+/**
+ * This frame contains the components used to house imagery.
+ */
 const Image = React.forwardRef<HTMLDivElement, ImageProps>(function Image(
   {alt = '', orientation = 'landscape', ratio = '16:9', className, containerProps, ...props},
   ref

@@ -117,5 +117,5 @@ export function H5(props: HeadingProps) {
 }
 
 export function H6(props: HeadingProps) {
-  return <Text {...props} as="h6" size="sm" />
+  return <Text {...props} as="h6" size="sm" bold />
 }

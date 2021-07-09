@@ -1,9 +1,23 @@
 import React from 'react'
 import cn from 'classnames'
 
+export type AvatarSize = 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl'
+export type AvatarVariant = 'primary' | 'error' | 'warning' | 'gray' | 'success'
 export type AvatarProps = {
-  size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl'
-  variant?: 'primary' | 'error' | 'warning' | 'gray' | 'success'
+  /**
+   * Sets the avatar size
+   * @defaultValue md
+   */
+  size?: AvatarSize
+  /**
+   * Sets the avatar variant to primary, error, warning, gray or success
+   * @defaultValue primary
+   */
+  variant?: AvatarVariant
+  /**
+   * Indicates active alert or notification, or indicates online status
+   * @defaultValue false
+   */
   show?: boolean
   className?: string
 } & React.ComponentProps<'img'>
@@ -26,7 +40,10 @@ const alertSizes = {
   '3xl': 'w-6 h-6'
 }
 
-export function Avatar({size = 'md', variant = 'primary', show, className, ...props}: AvatarProps) {
+/**
+ * Avatars are used to condense a profile or persona into more of an icon impression. They come in 6 sizes and can have an alert indicator to show or hide.
+ */
+function Avatar({size = 'md', variant = 'primary', show, className, ...props}: AvatarProps) {
   const classes = cn(avatarSizes[size], 'rounded-full', className)
   const indicatorClasses = cn(
     !show && 'hidden',
@@ -37,8 +54,10 @@ export function Avatar({size = 'md', variant = 'primary', show, className, ...pr
 
   return (
     <span className="inline-block relative">
-      <img className={classes} {...props} />
+      <img alt="" className={classes} {...props} />
       <span className={indicatorClasses} />
     </span>
   )
 }
+
+export {Avatar}

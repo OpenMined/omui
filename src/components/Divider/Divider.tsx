@@ -38,6 +38,9 @@ const orientationClasses: Orientation = {
   vertical: 'border-l h-full w-px'
 }
 
+/**
+ * Dividers are lines that fill their containers either vertically or horizontally. You can use the dividers below to help visually break your content or UI action areas.
+ */
 export function Divider({
   orientation = 'horizontal',
   color = 'dark',

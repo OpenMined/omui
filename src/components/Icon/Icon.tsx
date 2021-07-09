@@ -93,6 +93,11 @@ const borders: Borders = {
 
 const defaultClasses = 'flex items-center justify-center'
 
+/**
+ * You can pull icons from two places. 1. You can pull custom icons from the OM Main Library
+ * or you can pull icons from "Font Awesome". For best use download the Font Awesome type file so that
+ * you can keep the icon instances "live".
+ */
 const Icon = React.forwardRef<HTMLSpanElement, IconProps>(function Icon(
   {size = 'md', variant = 'solid', container = 'round', icon: IconElement, className, containerProps, title, ...props},
   ref

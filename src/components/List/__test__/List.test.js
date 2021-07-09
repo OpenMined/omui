@@ -1,6 +1,7 @@
 import React from 'react'
 import {render, screen} from '@testing-library/react'
 import {axe} from 'jest-axe'
+import cases from 'jest-in-case'
 
 import {
   List,
@@ -17,8 +18,30 @@ import {
 
 const list = Array.from(Array(10).keys()).map(i => `Item ${i}`)
 
+const RandomIcon = ({className}) => (
+  <svg className={className} role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+    <path
+      fill="currentColor"
+      d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm80 168c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zm-160 0c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zm194.8 170.2C334.3 380.4 292.5 400 248 400s-86.3-19.6-114.8-53.8c-13.6-16.3 11-36.7 24.6-20.5 22.4 26.9 55.2 42.2 90.2 42.2s67.8-15.4 90.2-42.2c13.4-16.2 38.1 4.2 24.6 20.5z"
+    />
+  </svg>
+)
+
 describe('Lists', () => {
   describe('lists:default', () => {
+    test('renders all list elements', () => {
+      render(
+        <List data-testid="list-id" key="list:default">
+          {list.map(i => (
+            <ListItem key={i}>{i}</ListItem>
+          ))}
+        </List>
+      )
+
+      const textElements = screen.getAllByText(/Item/)
+      expect(textElements).toHaveLength(list.length)
+    })
+
     test('renders the list item as children', () => {
       render(
         <List data-testid="list-id">
@@ -62,6 +85,19 @@ describe('Lists', () => {
   })
 
   describe('lists:unordered', () => {
+    test('renders all list elements', () => {
+      render(
+        <UnorderedList data-testid="list-id">
+          {list.map(i => (
+            <UnorderedListItem key={i}>{i}</UnorderedListItem>
+          ))}
+        </UnorderedList>
+      )
+
+      const textElements = screen.getAllByText(/Item/)
+      expect(textElements.length).toBe(list.length)
+    })
+
     test('renders the list as list-disc', () => {
       render(
         <UnorderedList data-testid="list-id">
@@ -91,6 +127,19 @@ describe('Lists', () => {
   })
 
   describe('lists:ordered', () => {
+    test('renders all list elements', () => {
+      render(
+        <OrderedList data-testid="list-id">
+          {list.map(i => (
+            <OrderedListItem key={i}>{i}</OrderedListItem>
+          ))}
+        </OrderedList>
+      )
+
+      const textElements = screen.getAllByText(/Item/)
+      expect(textElements.length).toBe(list.length)
+    })
+
     test('renders the list as list-decimal', () => {
       render(
         <OrderedList data-testid="list-id">
@@ -119,7 +168,22 @@ describe('Lists', () => {
     })
   })
 
-  describe('list:avatar', () => {
+  describe('lists:avatar', () => {
+    test('renders all list elements', () => {
+      render(
+        <List data-testid="list-id">
+          {list.map(i => (
+            <ListAvatarItem src={i} alt={i} key={i}>
+              Title {i}
+            </ListAvatarItem>
+          ))}
+        </List>
+      )
+
+      const textElements = screen.getAllByText(/Item/)
+      expect(textElements.length).toBe(list.length)
+    })
+
     test('renders the list of avatars and labels', () => {
       render(
         <List data-testid="list-id">
@@ -206,6 +270,19 @@ describe('Lists', () => {
   })
 
   describe('lists:progress', () => {
+    test('renders all list elements', () => {
+      render(
+        <List data-testid="list-id">
+          {list.map(i => (
+            <ListProgressItem key={i}>{i}</ListProgressItem>
+          ))}
+        </List>
+      )
+
+      const textElements = screen.getAllByText(/Item/)
+      expect(textElements.length).toBe(list.length)
+    })
+
     test('renders the progress icon and children', () => {
       render(
         <List data-testid="list-id">
@@ -269,17 +346,7 @@ describe('Lists', () => {
     })
   })
 
-  const RandomIcon = ({className}) => (
-    <svg className={className} role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-      <path
-        fill="currentColor"
-        d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm80 168c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zm-160 0c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zm194.8 170.2C334.3 380.4 292.5 400 248 400s-86.3-19.6-114.8-53.8c-13.6-16.3 11-36.7 24.6-20.5 22.4 26.9 55.2 42.2 90.2 42.2s67.8-15.4 90.2-42.2c13.4-16.2 38.1 4.2 24.6 20.5z"
-      />
-    </svg>
-  )
-
   describe('lists:icons', () => {
-    // TODO: Expand this test to all list types
     test('renders all list elements', () => {
       render(
         <List data-testid="list-id">
@@ -295,40 +362,54 @@ describe('Lists', () => {
       expect(textElements.length).toBe(list.length)
     })
 
-    test('icon size is determined by the list size', () => {
-      // TODO: Transform with cases
-      const {rerender} = render(
-        <List data-testid="list-id">
-          {list.map(i => (
-            <ListIconItem icon={RandomIcon} key={i}>
-              {i}
+    cases(
+      'styles:classes',
+      ({params, itemResult, svgResult}) => {
+        render(
+          <List data-testid="list-id" {...params}>
+            <ListIconItem icon={RandomIcon} data-testid="li-item-id">
+              Text here
             </ListIconItem>
-          ))}
-        </List>
-      )
-
-      const firstListElement = screen.getByTestId('list-id').querySelector('li')
-      const iconBox = firstListElement.firstChild
-      expect(iconBox).toHaveClass('w-10 h-10')
-      const iconSvg = iconBox.firstChild.firstChild
-      expect(iconSvg).toHaveClass('w-4 h-4')
-
-      rerender(
-        <List data-testid="list-id" size="2xl">
-          {list.map(i => (
-            <ListIconItem icon={RandomIcon} key={i}>
-              {i}
-            </ListIconItem>
-          ))}
-        </List>
-      )
-
-      const newFirstListElement = screen.getByTestId('list-id').querySelector('li')
-      const newIconBox = newFirstListElement.firstChild
-      expect(newIconBox).toHaveClass('w-20 h-20')
-      const newIconSvg = newIconBox.firstChild.firstChild
-      expect(newIconSvg).toHaveClass('w-7 h-7')
-    })
+          </List>
+        )
+        const iconBox = screen.getByTestId('li-item-id').firstChild
+        const iconSvg = iconBox.firstChild.firstChild
+        expect(iconBox).toHaveClass(itemResult)
+        expect(iconSvg).toHaveClass(svgResult)
+      },
+      [
+        {
+          name: 'default list size renders default icon size',
+          params: {},
+          itemResult: 'w-10 h-10',
+          svgResult: 'w-4 h-4'
+        },
+        {
+          name: 'lg list size renders correct icon size',
+          params: {size: 'lg'},
+          itemResult: 'w-14 h-14',
+          svgResult: 'w-4.5 h-4.5'
+        },
+        {
+          name: 'xl list size renders correct icon size',
+          params: {size: 'xl'},
+          itemResult: 'w-16 h-16',
+          svgResult: 'w-5 h-5'
+        },
+        {
+          name: '2xl list size renders correct icon size',
+          params: {size: '2xl'},
+          itemResult: 'w-20 h-20',
+          svgResult: 'w-7 h-7'
+        },
+        {
+          name: '3xl list size renders correct icon size',
+          params: {size: '3xl'},
+          itemResult: 'w-24 h-24',
+          svgResult: 'w-9 h-9'
+        }
+      ]
+    )
 
     test('contains no axe violations', async () => {
       // TODO: they should be instantiated using cases, perhaps?
@@ -343,5 +424,53 @@ describe('Lists', () => {
       const results = await axe(container)
       expect(results).toHaveNoViolations()
     })
+  })
+
+  describe('lists:all', () => {
+    cases(
+      'accesibility:check for axe violations',
+      async ({ListType, ListItemType, params}) => {
+        const {container} = render(
+          <ListType data-testid="list-id">
+            <ListItemType data-testid="li-item-id" {...params}>
+              Text here
+            </ListItemType>
+          </ListType>
+        )
+
+        const results = await axe(container)
+        expect(results).toHaveNoViolations()
+      },
+      [
+        {
+          name: 'default list item has no axe violations',
+          ListType: List,
+          ListItemType: ListItem,
+          params: {}
+        },
+        {
+          name: 'progress list item has no axe violations',
+          ListType: List,
+          ListItemType: ListProgressItem,
+          params: {}
+        },
+        {
+          name: 'avatar list item has no axe violations',
+          ListType: List,
+          ListItemType: ListAvatarItem,
+          params: {src: 'src', alt: 'alt'}
+        },
+        {
+          name: 'ordered list item has no axe violations',
+          ListType: OrderedList,
+          ListItemType: OrderedListItem
+        },
+        {
+          name: 'unordered list item has no axe violations',
+          ListType: UnorderedList,
+          ListItemType: UnorderedListItem
+        }
+      ]
+    )
   })
 })
