@@ -30,7 +30,6 @@ const RandomIcon = ({className}) => (
 describe('Lists', () => {
   describe('lists:default', () => {
     test('renders all list elements', () => {
-      console.log('test 1')
       render(
         <List data-testid="list-id" key="list:default">
           {list.map(i => (
@@ -44,7 +43,6 @@ describe('Lists', () => {
     })
 
     test('renders the list item as children', () => {
-      console.log('test 2')
       render(
         <List data-testid="list-id">
           {list.map(i => (
@@ -58,7 +56,6 @@ describe('Lists', () => {
     })
 
     test('accepts sizes=[md,lg,xl,2xl,3xl]', async () => {
-      console.log('test 3')
       render(
         <List data-testid="list-id" size="3xl">
           {list.map(i => (
@@ -74,7 +71,6 @@ describe('Lists', () => {
     })
 
     test('contains no axe violations', async () => {
-      console.log('test 4')
       const {container} = render(
         <List data-testid="list-id">
           {list.map(i => (
@@ -414,39 +410,6 @@ describe('Lists', () => {
         }
       ]
     )
-
-    // // TODO: Transform with cases
-    // const {rerender} = render(
-    //   <List data-testid="list-id">
-    //     {list.map(i => (
-    //       <ListIconItem icon={RandomIcon} key={i}>
-    //         {i}
-    //       </ListIconItem>
-    //     ))}
-    //   </List>
-    // )
-
-    // const firstListElement = screen.getByTestId('list-id').querySelector('li')
-    // const iconBox = firstListElement.firstChild
-    // expect(iconBox).toHaveClass('w-10 h-10')
-    // const iconSvg = iconBox.firstChild.firstChild
-    // expect(iconSvg).toHaveClass('w-4 h-4')
-
-    // rerender(
-    //   <List data-testid="list-id" size="2xl">
-    //     {list.map(i => (
-    //       <ListIconItem icon={RandomIcon} key={i}>
-    //         {i}
-    //       </ListIconItem>
-    //     ))}
-    //   </List>
-    // )
-
-    // const newFirstListElement = screen.getByTestId('list-id').querySelector('li')
-    // const newIconBox = newFirstListElement.firstChild
-    // expect(newIconBox).toHaveClass('w-20 h-20')
-    // const newIconSvg = newIconBox.firstChild.firstChild
-    // expect(newIconSvg).toHaveClass('w-7 h-7')
 
     test('contains no axe violations', async () => {
       // TODO: they should be instantiated using cases, perhaps?

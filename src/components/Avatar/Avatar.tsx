@@ -54,7 +54,7 @@ function Avatar({size = 'md', variant = 'primary', show, className, ...props}: A
 
   return (
     <span className="inline-block relative">
-      <img alt="avatar" className={classes} {...props} />
+      <img alt="" className={classes} {...props} />
       <span className={indicatorClasses} />
     </span>
   )

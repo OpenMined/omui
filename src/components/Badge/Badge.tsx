@@ -37,7 +37,6 @@ type Badges = {
   }
 }
 
-// type Badges2 = Record<BadgeVariantProp, Record<BadgeTypeProp, string | string[]>>
 const badges: Badges = Object.assign(
   {},
   ...(Object.keys(VARIANT_COLORS) as Array<BadgeVariantProp>).map(variant => {
